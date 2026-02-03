@@ -21,20 +21,29 @@ This repository includes:
     - Convergence information
     - Input parameters
     - Structural data
-
-These files enable full reproducibility of the reported defect-formation-energy calculations.
-
----
+- These files enable full reproducibility of the reported defect-formation-energy calculations.
 
 ### 2. Processed Defect Energetics Data
 - Tabulated defect formation energies extracted from the raw DFT outputs
 - CSV files used directly in the machine-learning analysis and descriptor maps
 - Data formatted for ease of reuse and inspection
 
-### 3. Processed Defect Energetics Data
-- Tabulated defect formation energies extracted from the raw DFT outputs
-- CSV files used directly in the machine-learning analysis and descriptor maps
-- Data formatted for ease of reuse and inspection
+---
+
+## Jupyter Notebooks
+
+This repository also includes two Jupyter notebooks that demonstrate analysis workflows:
+
+### `logistic_regression.ipynb`
+- Plots diffusion barrier energies
+- Plots progression of DFT and experimental data acquisition
+- Performs logistic regression model at each iteration of data acquisition
+- Plots the formation energy as a third axis to demonstrate correlation
+
+### `lattice_mismatch.ipynb`
+- Imports metals from the Materials Project database and calculates the lattice mismatch percent from niobium
+- Imports the most stable oxide for  each metal, and plots the oxide formation energy vs the lattice mismatch percent
+- Plots these values for the metals along with their logistic predictions
 
 ---
 
