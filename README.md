@@ -4,7 +4,7 @@ This repository contains the first-principles density functional theory (DFT) da
 
 **“Active-Learning Inspired *Ab Initio* Theory–Experiment Loop Approach for Management of Material Defects: Application to Superconducting Qubits”**
 
-The data provided here support the defect-energetics descriptors used in the theory–experiment–machine-learning workflow presented in the manuscript.
+The preprint is available at https://arxiv.org/abs/2510.02544. The data provided here support the defect-energetics descriptors used in the theory–experiment–machine-learning workflow presented in the manuscript.
 
 ---
 
@@ -12,20 +12,26 @@ The data provided here support the defect-energetics descriptors used in the the
 
 This repository includes:
 
-### 1. DFT Output Files
-- Complete DFT output files for all calculations reported in the manuscript  
-- Each directory corresponds to a specific material and defect configuration
-- Output files include:
-  - Total energies
-  - Convergence information
-  - Input parameters
-  - Structural data
+### 1. DFT Input and Output Files
+- Complete DFT input and output files for all calculations reported in the manuscript
+- Data is split into interstitial and vacancy calculations
+  - Each directory corresponds to a specific material
+  - Output files include:
+    - Total energies
+    - Convergence information
+    - Input parameters
+    - Structural data
 
 These files enable full reproducibility of the reported defect-formation-energy calculations.
 
 ---
 
 ### 2. Processed Defect Energetics Data
+- Tabulated defect formation energies extracted from the raw DFT outputs
+- CSV files used directly in the machine-learning analysis and descriptor maps
+- Data formatted for ease of reuse and inspection
+
+### 3. Processed Defect Energetics Data
 - Tabulated defect formation energies extracted from the raw DFT outputs
 - CSV files used directly in the machine-learning analysis and descriptor maps
 - Data formatted for ease of reuse and inspection
