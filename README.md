@@ -14,13 +14,19 @@ This repository includes:
 
 ### 1. DFT Input and Output Files
 - Complete DFT input and output files for all calculations reported in the manuscript
-- Data is split into interstitial and vacancy calculations
-  - Each directory corresponds to a specific material
-  - Output files include:
-    - Total energies
-    - Convergence information
-    - Input parameters
-    - Structural data
+- Separated in interstitial and vacancy calculations
+  - interstitial calculation folders have the following files:
+    - Xx_ion.in         - input file for the relaxation of the supercell of the metal
+    - Xx_ion.out        - output file for the relaxation of the supercell of the metal
+    - Xx_oct.in         - input file for the relaxation of the supercell of the metal with an octohedral oxygen interstitial
+    - Xx_oct.out        - output file for the relaxation of the supercell of the metal with an octohedral oxygen interstitial
+    - Xx_tet.in         - input file for the relaxation of the supercell of the metal with an tetrahedral oxygen interstitial
+    - Xx_tet.out        - out file for the relaxation of the supercell of the metal with an tetrahedral oxygen interstitial
+  - vacancy calculation folders have the following files:
+    - XxO_ion.in        - input file for the relaxation of the supercell of the metal oxide
+    - XxO_ion.out       - output file for the relaxation of the supercell of the metal oxide
+    - XxO_vac.in        - input file for the relaxation of the supercell of the metal oxide with an oxygen vacancy
+    - XxO_vac.out       - output file for the relaxation of the supercell of the metal oxide with an oxygen vacancy
 - These files enable full reproducibility of the reported defect-formation-energy calculations.
 
 ### 2. Processed Defect Energetics Data
