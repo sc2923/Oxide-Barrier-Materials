@@ -29,17 +29,17 @@ This repository includes:
 
 ### 1. DFT Input and Output Files
 - Complete DFT input and output files (`DFT_data` folder) for all calculations reported in the manuscript
-- Separated in interstitial (`DFT_data/interstitials` folder) and vacancy (`DFT_data/vacancies` folder) calculations
+- Separated into interstitial (`DFT_data/interstitials` folder) and vacancy (`DFT_data/vacancies` folder) calculations
   - interstitial calculation folders (`DFT_data/interstitials/Xx` folder where `Xx` is the element name of the host metal) contain the following files:
-    - `Xx_ion.in`         - input file for the relaxation of the reference supercell of the bulk metal
-    - `Xx_ion.out`        - output file for the relaxation of the reference supercell of the bulk metal
+    - `Xx_ion.in`         - input file for the relaxation of the reference supercell for the bulk metal
+    - `Xx_ion.out`        - output file for the relaxation of the reference supercell for the bulk metal
     - `Xx_oct.in`         - input file for the relaxation of the supercell of the metal with an octohedral oxygen interstitial
     - `Xx_oct.out`        - output file for the relaxation of the supercell of the metal with an octohedral oxygen interstitial
     - `Xx_tet.in`         - input file for the relaxation of the supercell of the metal with an tetrahedral oxygen interstitial
     - `Xx_tet.out`        - out file for the relaxation of the supercell of the metal with an tetrahedral oxygen interstitial
   - vacancy calculation folders (`DFT_data/vacancies/Xx` folder where `Xx` is the element name of the host metal) contain the following files:
-    - `XxO_ion.in`        - input file for the relaxation of the supercell of the metal oxide
-    - `XxO_ion.out`       - output file for the relaxation of the supercell of the metal oxide
+    - `XxO_ion.in`        - input file for the relaxation of the reference supercell for the bulk metal oxide
+    - `XxO_ion.out`       - output file for the relaxation of the reference supercell for the bulk metal oxide
     - `XxO_vac.in`        - input file for the relaxation of the supercell of the metal oxide with an oxygen vacancy
     - `XxO_vac.out`       - output file for the relaxation of the supercell of the metal oxide with an oxygen vacancy
 - These files enable full reproducibility of the reported defect-formation-energy calculations.
