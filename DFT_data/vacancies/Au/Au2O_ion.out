@@ -1,0 +1,1227 @@
+--------------------------------------------------------------------------
+[[14527,1],2]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node3223
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+
+*************** JDFTx 1.7.0  ***************
+
+Start date and time: Wed Apr 17 12:29:44 2024
+Executable jdftx with command-line: -i /home/cam559/Valla_project/Au/Au16O8.in
+Running on hosts (process indices):  node3223.physics.cornell.edu (0-9)
+Divided in process groups (process indices):  0 (0)  1 (1)  2 (2)  3 (3)  4 (4)  5 (5)  6 (6)  7 (7)  8 (8)  9 (9)
+Resource initialization completed at t[s]:      0.00
+Run totals: 10 processes, 40 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+coords-type Cartesian
+core-overlap-check vector
+coulomb-interaction Periodic
+davidson-band-ratio 1.1
+dump End Ecomponents
+dump-name Au16O8.$VAR
+elec-cutoff 20 100
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBE
+elec-smearing Fermi 0.004
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+electronic-scf  \
+	nIterations	50 \
+	energyDiffThreshold	1e-08 \
+	residualThreshold	1e-07 \
+	mixFraction	0.5 \
+	qMetric	0.8 \
+	history	10 \
+	nEigSteps	2 \
+	eigDiffThreshold	1e-08 \
+	mixedVariable	Density \
+	qKerker	0.8 \
+	qKappa	-1 \
+	verbose	no \
+	mixFractionMag	1.5
+exchange-regularization WignerSeitzTruncated
+fluid None
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42 \
+	tauNuc 343133 \
+	poleEl 15 7 1
+forces-output-coords Positions
+ion Au   4.491870000000000   4.491870000000000   0.000000000000000 1
+ion Au   0.000000000000000   4.491870000000000   4.491869999999999 1
+ion Au   4.491870000000000   0.000000000000000   4.491869999999999 1
+ion Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+ion Au   4.491870000000000  13.475611000000002   0.000000000000000 1
+ion Au   0.000000000000000  13.475611000000002   4.491869999999999 1
+ion Au   4.491870000000000   8.983739999999999   4.491869999999999 1
+ion Au   0.000000000000000   8.983739999999999   0.000000000000000 1
+ion Au  13.475611000000002   4.491870000000000   0.000000000000000 1
+ion Au   8.983739999999999   4.491870000000000   4.491869999999999 1
+ion Au  13.475611000000002   0.000000000000000   4.491869999999999 1
+ion Au   8.983739999999999   0.000000000000000   0.000000000000000 1
+ion Au  13.475611000000002  13.475611000000002   0.000000000000000 1
+ion Au   8.983739999999999  13.475611000000002   4.491869999999999 1
+ion Au  13.475611000000002   8.983739999999999   4.491869999999999 1
+ion Au   8.983739999999999   8.983739999999999   0.000000000000000 1
+ion O   2.245935000000000   2.245935000000000   2.245934999999999 1
+ion O   6.737805000000000   6.737805000000000   6.737804999999998 1
+ion O   2.245935000000000  11.229676000000000   2.245934999999999 1
+ion O   6.737805000000000  15.721546000000000   6.737804999999998 1
+ion O  11.229676000000000   2.245935000000000   2.245934999999999 1
+ion O  15.721546000000000   6.737805000000000   6.737804999999998 1
+ion O  11.229676000000000  11.229676000000000   2.245934999999999 1
+ion O  15.721546000000000  15.721546000000000   6.737804999999998 1
+ion-species GBRV/$ID_pbe.uspp
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0.0001 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.000000000000   0.000000000000   0.000000000000  1.00000000000000
+kpoint-folding 3 3 6 
+latt-move-scale 1 1 1
+latt-scale 1 1 1 
+lattice  \
+	  17.967480999999999    0.000000000000000    0.000000000000000  \
+	   0.000000000000000   17.967480999999999   -0.000000000000000  \
+	  -0.000000000000000    0.000000000000000    8.983739999999999 
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          10 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.004
+pcm-variant GLSSA13
+spintype no-spin
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+
+
+
+---------- Setting up symmetries ----------
+
+Found 16 point-group symmetries of the bravais lattice
+Found 64 space-group symmetries with basis
+Applied RMS atom displacement 4.03973e-07 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[      17.9675            0            0  ]
+[            0      17.9675            0  ]
+[            0            0      8.98374  ]
+unit cell volume = 2900.22
+G =
+[   0.349698          0         -0  ]
+[          0   0.349698          0  ]
+[          0         -0   0.699395  ]
+Minimum fftbox size, Smin = [  84  84  44  ]
+Chosen fftbox size, S = [  84  84  48  ]
+
+---------- Initializing tighter grid for wavefunction operations ----------
+R = 
+[      17.9675            0            0  ]
+[            0      17.9675            0  ]
+[            0            0      8.98374  ]
+unit cell volume = 2900.22
+G =
+[   0.349698          0         -0  ]
+[          0   0.349698          0  ]
+[          0         -0   0.699395  ]
+Minimum fftbox size, Smin = [  76  76  40  ]
+Chosen fftbox size, S = [  80  80  40  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBE GGA exchange.
+Initalized PBE GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0
+
+Reading pseudopotential file '/home/cam559/JDFTx/build/pseudopotentials/GBRV/au_pbe.uspp':
+  Title: Au.  Created by USPP 7.3.6 on 14-9-2013
+  Reference state energy: -57.375295.  11 valence electrons in orbitals:
+    |520>  occupation: 10  eigenvalue: -0.252742
+    |600>  occupation: 1  eigenvalue: -0.211744
+    |610>  occupation: 0  eigenvalue: -0.028291
+  lMax: 3  lLocal: -1  QijEcut: 5
+  7 projectors sampled on a log grid with 755 points:
+    l: 0  eig: -0.211744  rCut: 2.3
+    l: 0  eig: 0.500000  rCut: 2.3
+    l: 1  eig: -0.028291  rCut: 2.35
+    l: 1  eig: 0.850000  rCut: 2.35
+    l: 2  eig: -0.252741  rCut: 2.1
+    l: 2  eig: 1.000000  rCut: 2.1
+    l: 3  eig: 0.000000  rCut: 2.5
+  Partial core density with radius 1
+  Transforming core density to a uniform radial grid of dG=0.02 with 1341 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1341 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1341 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 2.50 bohrs.
+
+Reading pseudopotential file '/home/cam559/JDFTx/build/pseudopotentials/GBRV/o_pbe.uspp':
+  Title: O.  Created by USPP 7.3.6 on 3-2-2014
+  Reference state energy: -15.894388.  6 valence electrons in orbitals:
+    |200>  occupation: 2  eigenvalue: -0.878823
+    |210>  occupation: 4  eigenvalue: -0.332131
+  lMax: 2  lLocal: 2  QijEcut: 6
+  5 projectors sampled on a log grid with 511 points:
+    l: 0  eig: -0.878823  rCut: 1.25
+    l: 0  eig: 0.000000  rCut: 1.25
+    l: 1  eig: -0.332132  rCut: 1.25
+    l: 1  eig: 0.000000  rCut: 1.25
+    l: 2  eig: 1.000000  rCut: 1.25
+  Partial core density with radius 0.7
+  Transforming core density to a uniform radial grid of dG=0.02 with 1341 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1341 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1341 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.25 bohrs.
+
+Initialized 2 species with 24 total atoms.
+
+Folded 1 k-points by 3x3x6 to 54 k-points.
+
+---------- Setting up k-points, bands, fillings ----------
+Reduced to 12 k-points under symmetry. 
+Computing the number of bands and number of electrons
+Calculating initial fillings.
+nElectrons: 224.000000   nBands: 176   nStates: 12
+
+----- Setting up reduced wavefunction bases (one per k-point) -----
+average nbasis = 12385.722 , ideal nbasis = 12389.979
+
+---------- Setting up ewald sum ----------
+Optimum gaussian width for ewald sums = 3.349799 bohr.
+Real space sum over 539 unit cells with max indices [  3  3  5  ]
+Reciprocal space sum over 5733 terms with max indices [  10  10  6  ]
+
+---------- Allocating electronic variables ----------
+Initializing wave functions:  linear combination of atomic orbitals
+Au pseudo-atom occupations:   s ( 1 )  p ( 0 )  d ( 10 )
+O pseudo-atom occupations:   s ( 2 )  p ( 4 )
+	FillingsUpdate:  mu: +0.389722769  nElectrons: 224.000000
+LCAOMinimize: Iter:   0  F: -681.5261134878527400  |grad|_K:  3.764e-03  alpha:  1.000e+00
+	FillingsUpdate:  mu: +0.347642846  nElectrons: 224.000000
+LCAOMinimize: Iter:   1  F: -682.3224377381174008  |grad|_K:  8.424e-04  alpha:  2.368e-01  linmin: -3.564e-01  cgtest:  8.549e-01  t[s]:     22.96
+LCAOMinimize: Encountered beta<0, resetting CG.
+	FillingsUpdate:  mu: +0.348127937  nElectrons: 224.000000
+LCAOMinimize: Iter:   2  F: -682.3708179225078538  |grad|_K:  3.189e-04  alpha:  3.597e-01  linmin: -1.971e-02  cgtest:  1.020e-01  t[s]:     30.84
+	FillingsUpdate:  mu: +0.355685322  nElectrons: 224.000000
+LCAOMinimize: Iter:   3  F: -682.3789243494416041  |grad|_K:  5.768e-05  alpha:  4.191e-01  linmin:  3.630e-02  cgtest: -2.976e-01  t[s]:     38.67
+	FillingsUpdate:  mu: +0.355784441  nElectrons: 224.000000
+LCAOMinimize: Iter:   4  F: -682.3791544741809503  |grad|_K:  1.633e-05  alpha:  3.817e-01  linmin: -2.445e-03  cgtest:  1.610e-01  t[s]:     46.61
+	FillingsUpdate:  mu: +0.355466707  nElectrons: 224.000000
+LCAOMinimize: Iter:   5  F: -682.3791934058164088  |grad|_K:  2.429e-06  alpha:  7.792e-01  linmin:  1.321e-02  cgtest: -6.357e-02  t[s]:     54.70
+	FillingsUpdate:  mu: +0.355505059  nElectrons: 224.000000
+LCAOMinimize: Iter:   6  F: -682.3791937726182368  |grad|_K:  9.505e-07  alpha:  3.341e-01  linmin: -8.873e-05  cgtest:  2.808e-02  t[s]:     62.55
+	FillingsUpdate:  mu: +0.355516176  nElectrons: 224.000000
+LCAOMinimize: Iter:   7  F: -682.3791938578674490  |grad|_K:  7.071e-08  alpha:  5.019e-01  linmin: -7.795e-04  cgtest: -2.527e-02  t[s]:     70.41
+LCAOMinimize: Converged (|Delta F|<1.000000e-06 for 2 iters).
+
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   gga-PBE exchange-correlation functional:
+      J.P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996)
+
+   Pseudopotentials:
+      KF Garrity, JW Bennett, KM Rabe and D Vanderbilt, Comput. Mater. Sci. 81, 446 (2014)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+Initialization completed successfully at t[s]:     72.69
+
+
+--------- Lattice Minimization ---------
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.355516176  nElectrons: 224.000000
+	FillingsUpdate:  mu: +0.349129091  nElectrons: 224.000000
+SCF: Cycle:  0   F: -682.641484898699559   dF: -2.623e-01   |Residual|: 2.023e-01   |deigs|: 2.630e-02  t[s]:     98.62
+	FillingsUpdate:  mu: +0.354496900  nElectrons: 224.000000
+SCF: Cycle:  1   F: -682.662052858518109   dF: -2.057e-02   |Residual|: 6.020e-02   |deigs|: 6.921e-03  t[s]:    119.24
+	FillingsUpdate:  mu: +0.355039701  nElectrons: 224.000000
+SCF: Cycle:  2   F: -682.666555388418601   dF: -4.503e-03   |Residual|: 4.864e-02   |deigs|: 3.107e-03  t[s]:    140.08
+	FillingsUpdate:  mu: +0.354875332  nElectrons: 224.000000
+SCF: Cycle:  3   F: -682.667114413829154   dF: -5.590e-04   |Residual|: 9.983e-03   |deigs|: 4.149e-04  t[s]:    160.71
+	FillingsUpdate:  mu: +0.354960197  nElectrons: 224.000000
+SCF: Cycle:  4   F: -682.667145779587827   dF: -3.137e-05   |Residual|: 3.057e-03   |deigs|: 2.522e-04  t[s]:    173.91
+	FillingsUpdate:  mu: +0.354993835  nElectrons: 224.000000
+SCF: Cycle:  5   F: -682.667147826602672   dF: -2.047e-06   |Residual|: 4.753e-04   |deigs|: 9.538e-05  t[s]:    187.13
+	FillingsUpdate:  mu: +0.354993665  nElectrons: 224.000000
+SCF: Cycle:  6   F: -682.667148255226721   dF: -4.286e-07   |Residual|: 2.301e-04   |deigs|: 7.993e-05  t[s]:    200.36
+	FillingsUpdate:  mu: +0.355005674  nElectrons: 224.000000
+SCF: Cycle:  7   F: -682.667148432815679   dF: -1.776e-07   |Residual|: 4.332e-05   |deigs|: 6.962e-05  t[s]:    213.78
+	FillingsUpdate:  mu: +0.355005244  nElectrons: 224.000000
+SCF: Cycle:  8   F: -682.667148488435146   dF: -5.562e-08   |Residual|: 3.173e-05   |deigs|: 1.029e-04  t[s]:    227.00
+	FillingsUpdate:  mu: +0.355005804  nElectrons: 224.000000
+SCF: Cycle:  9   F: -682.667148512111112   dF: -2.368e-08   |Residual|: 7.785e-06   |deigs|: 6.682e-05  t[s]:    240.32
+	FillingsUpdate:  mu: +0.355005938  nElectrons: 224.000000
+SCF: Cycle: 10   F: -682.667148522072921   dF: -9.962e-09   |Residual|: 8.821e-06   |deigs|: 3.284e-05  t[s]:    253.68
+	FillingsUpdate:  mu: +0.355006057  nElectrons: 224.000000
+SCF: Cycle: 11   F: -682.667148526295136   dF: -4.222e-09   |Residual|: 2.716e-06   |deigs|: 3.197e-05  t[s]:    266.93
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+# Lattice vectors:
+R = 
+[      17.9675            0            0  ]
+[            0      17.9675            0  ]
+[            0            0      8.98374  ]
+unit cell volume = 2900.22
+
+# Strain tensor in Cartesian coordinates:
+[            0            0            0  ]
+[            0            0            0  ]
+[            0            0            0  ]
+
+# Stress tensor in Cartesian coordinates [Eh/a0^3]:
+[ -7.72419e-05            0            0  ]
+[            0 -7.72419e-05            0  ]
+[            0            0 -7.55073e-05  ]
+
+# Ionic positions in cartesian coordinates:
+ion Au   4.491870166666667   4.491870166666667  -0.000000000000000 1
+ion Au  -0.000000083333333   4.491870166666667   4.491869999999999 1
+ion Au   4.491870166666667  -0.000000083333333   4.491869999999999 1
+ion Au  -0.000000083333333  -0.000000083333333  -0.000000000000000 1
+ion Au   4.491870166666667  13.475610666666668  -0.000000000000000 1
+ion Au  -0.000000083333333  13.475610666666668   4.491869999999999 1
+ion Au   4.491870166666667   8.983740416666667   4.491869999999999 1
+ion Au  -0.000000083333333   8.983740416666667  -0.000000000000000 1
+ion Au  13.475610666666668   4.491870166666667  -0.000000000000000 1
+ion Au   8.983740416666667   4.491870166666667   4.491869999999999 1
+ion Au  13.475610666666668  -0.000000083333333   4.491869999999999 1
+ion Au   8.983740416666667  -0.000000083333333  -0.000000000000000 1
+ion Au  13.475610666666668  13.475610666666668  -0.000000000000000 1
+ion Au   8.983740416666667  13.475610666666668   4.491869999999999 1
+ion Au  13.475610666666668   8.983740416666667   4.491869999999999 1
+ion Au   8.983740416666667   8.983740416666667  -0.000000000000000 1
+ion O   2.245935041666666   2.245935041666666   2.245934999999999 1
+ion O   6.737805291666667   6.737805291666667   6.737804999999998 1
+ion O   2.245935041666666  11.229675541666667   2.245934999999999 1
+ion O   6.737805291666667  15.721545791666667   6.737804999999998 1
+ion O  11.229675541666667   2.245935041666666   2.245934999999999 1
+ion O  15.721545791666667   6.737805291666667   6.737804999999998 1
+ion O  11.229675541666667  11.229675541666667   2.245934999999999 1
+ion O  15.721545791666667  15.721545791666667   6.737804999999998 1
+
+# Forces in Cartesian coordinates:
+force Au   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O   0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force O   0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -599.4850804695928446
+       EH =      144.0786842148231983
+     Eloc =     -278.6750533899346465
+      Enl =      -48.1343631872674962
+      Exc =     -526.4090308199238279
+ Exc_core =      365.7434149149837026
+       KE =      260.2170859182286904
+-------------------------------------
+     Etot =     -682.6643428186831670
+       TS =        0.0028057076120204
+-------------------------------------
+        F =     -682.6671485262951364
+
+LatticeMinimize: Iter:   0  F: -682.667148526295136  |grad|_K:  2.701e-02  t[s]:    277.55
+
+#--- Lowdin population analysis ---
+# oxidation-state Au +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216
+# oxidation-state O -0.410 -0.410 -0.410 -0.410 -0.410 -0.410 -0.410 -0.410
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.355006057  nElectrons: 224.000000
+	FillingsUpdate:  mu: +0.352368652  nElectrons: 224.000000
+SCF: Cycle:  0   F: -682.667760119985360   dF: +3.282e-05   |Residual|: 6.268e-03   |deigs|: 3.300e-05  t[s]:    303.30
+	FillingsUpdate:  mu: +0.352703026  nElectrons: 224.000000
+SCF: Cycle:  1   F: -682.667817944422495   dF: -5.782e-05   |Residual|: 1.684e-03   |deigs|: 2.856e-04  t[s]:    316.57
+	FillingsUpdate:  mu: +0.352710742  nElectrons: 224.000000
+SCF: Cycle:  2   F: -682.667821611786280   dF: -3.667e-06   |Residual|: 4.790e-04   |deigs|: 6.828e-05  t[s]:    329.93
+	FillingsUpdate:  mu: +0.352709881  nElectrons: 224.000000
+SCF: Cycle:  3   F: -682.667821756291914   dF: -1.445e-07   |Residual|: 2.127e-04   |deigs|: 2.800e-05  t[s]:    343.24
+	FillingsUpdate:  mu: +0.352713790  nElectrons: 224.000000
+SCF: Cycle:  4   F: -682.667821765846384   dF: -9.554e-09   |Residual|: 5.868e-05   |deigs|: 2.424e-05  t[s]:    356.52
+	FillingsUpdate:  mu: +0.352718766  nElectrons: 224.000000
+SCF: Cycle:  5   F: -682.667821772088359   dF: -6.242e-09   |Residual|: 2.983e-05   |deigs|: 2.454e-05  t[s]:    369.65
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+# Lattice vectors:
+R = 
+[      17.9873            0            0  ]
+[            0      17.9873            0  ]
+[            0            0      8.99341  ]
+unit cell volume = 2909.75
+
+# Strain tensor in Cartesian coordinates:
+[   0.00110153            0            0  ]
+[            0   0.00110153            0  ]
+[            0            0   0.00107679  ]
+
+# Stress tensor in Cartesian coordinates [Eh/a0^3]:
+[ -6.51734e-05            0            0  ]
+[            0 -6.51734e-05            0  ]
+[            0            0 -6.34485e-05  ]
+
+# Ionic positions in cartesian coordinates:
+ion Au   4.496818102957389   4.496818102957389  -0.000000000000000 1
+ion Au  -0.000000083425127   4.496818102957389   4.496706819230625 1
+ion Au   4.496818102957389  -0.000000083425127   4.496706819230625 1
+ion Au  -0.000000083425127  -0.000000083425127  -0.000000000000000 1
+ion Au   4.496818102957389  13.490454475722423  -0.000000000000000 1
+ion Au  -0.000000083425127  13.490454475722423   4.496706819230625 1
+ion Au   4.496818102957389   8.993636289339905   4.496706819230625 1
+ion Au  -0.000000083425127   8.993636289339905  -0.000000000000000 1
+ion Au  13.490454475722423   4.496818102957389  -0.000000000000000 1
+ion Au   8.993636289339905   4.496818102957389   4.496706819230625 1
+ion Au  13.490454475722423  -0.000000083425127   4.496706819230625 1
+ion Au   8.993636289339905  -0.000000083425127  -0.000000000000000 1
+ion Au  13.490454475722423  13.490454475722423  -0.000000000000000 1
+ion Au   8.993636289339905  13.490454475722423   4.496706819230625 1
+ion Au  13.490454475722423   8.993636289339905   4.496706819230625 1
+ion Au   8.993636289339905   8.993636289339905  -0.000000000000000 1
+ion O   2.248409009766130   2.248409009766130   2.248353409615313 1
+ion O   6.745227196148647   6.745227196148647   6.745060228845938 1
+ion O   2.248409009766130  11.242045382531165   2.248353409615313 1
+ion O   6.745227196148647  15.738863568913683   6.745060228845938 1
+ion O  11.242045382531165   2.248409009766130   2.248353409615313 1
+ion O  15.738863568913683   6.745227196148647   6.745060228845938 1
+ion O  11.242045382531165  11.242045382531165   2.248353409615313 1
+ion O  15.738863568913683  15.738863568913683   6.745060228845938 1
+
+# Forces in Cartesian coordinates:
+force Au  -0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000   0.000000000000000 1
+force O   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000   0.000000000000000 1
+force O   0.000000000000000   0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+
+# Energy components:
+   Eewald =     -598.8303878492907870
+       EH =      144.3910689347824814
+     Eloc =     -279.6195901672139144
+      Enl =      -48.1598590287969159
+      Exc =     -526.3886091243865621
+ Exc_core =      365.7434051298109239
+       KE =      260.1990190325640242
+-------------------------------------
+     Etot =     -682.6649530725309205
+       TS =        0.0028686995574780
+-------------------------------------
+        F =     -682.6678217720883595
+
+LatticeMinimize: Iter:   1  F: -682.667821772088359  |grad|_K:  2.283e-02  alpha:  1.000e+00  linmin: -1.000e+00  t[s]:    380.47
+
+#--- Lowdin population analysis ---
+# oxidation-state Au +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216 +0.216
+# oxidation-state O -0.410 -0.410 -0.410 -0.410 -0.410 -0.410 -0.410 -0.410
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.352718766  nElectrons: 224.000000
+	FillingsUpdate:  mu: +0.338586970  nElectrons: 224.000000
+SCF: Cycle:  0   F: -682.667784322747366   dF: +9.638e-04   |Residual|: 3.363e-02   |deigs|: 1.736e-04  t[s]:    413.68
+	FillingsUpdate:  mu: +0.340384492  nElectrons: 224.000000
+SCF: Cycle:  1   F: -682.669441780409215   dF: -1.657e-03   |Residual|: 9.700e-03   |deigs|: 1.549e-03  t[s]:    433.75
+	FillingsUpdate:  mu: +0.340436257  nElectrons: 224.000000
+SCF: Cycle:  2   F: -682.669567764526732   dF: -1.260e-04   |Residual|: 3.106e-03   |deigs|: 3.416e-04  t[s]:    447.03
+	FillingsUpdate:  mu: +0.340417650  nElectrons: 224.000000
+SCF: Cycle:  3   F: -682.669574767612630   dF: -7.003e-06   |Residual|: 1.100e-03   |deigs|: 5.859e-05  t[s]:    460.39
+	FillingsUpdate:  mu: +0.340458858  nElectrons: 224.000000
+SCF: Cycle:  4   F: -682.669574986030284   dF: -2.184e-07   |Residual|: 2.194e-04   |deigs|: 3.923e-05  t[s]:    473.85
+	FillingsUpdate:  mu: +0.340471885  nElectrons: 224.000000
+SCF: Cycle:  5   F: -682.669575017682519   dF: -3.165e-08   |Residual|: 1.621e-04   |deigs|: 1.436e-05  t[s]:    487.26
+	FillingsUpdate:  mu: +0.340469806  nElectrons: 224.000000
+SCF: Cycle:  6   F: -682.669575037035997   dF: -1.935e-08   |Residual|: 1.738e-05   |deigs|: 7.498e-06  t[s]:    500.68
+	FillingsUpdate:  mu: +0.340469267  nElectrons: 224.000000
+SCF: Cycle:  7   F: -682.669575038296102   dF: -1.260e-09   |Residual|: 1.156e-05   |deigs|: 6.260e-06  t[s]:    513.97
+	FillingsUpdate:  mu: +0.340469543  nElectrons: 224.000000
+SCF: Cycle:  8   F: -682.669575038814742   dF: -5.186e-10   |Residual|: 4.024e-06   |deigs|: 5.517e-06  t[s]:    527.23
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+# Lattice vectors:
+R = 
+[      18.0952            0            0  ]
+[            0      18.0952            0  ]
+[            0            0      9.04595  ]
+unit cell volume = 2961.98
+
+# Strain tensor in Cartesian coordinates:
+[   0.00710994            0            0  ]
+[            0   0.00710994            0  ]
+[            0            0   0.00692527  ]
+
+# Stress tensor in Cartesian coordinates [Eh/a0^3]:
+[ -4.00779e-06            0            0  ]
+[            0 -4.00779e-06            0  ]
+[            0            0 -2.38904e-06  ]
+
+# Ionic positions in cartesian coordinates:
+ion Au   4.523807110578542   4.523807110578542  -0.000000000000000 1
+ion Au  -0.000000083925828   4.523807110578542   4.522977421075435 1
+ion Au   4.523807110578542  -0.000000083925828   4.522977421075435 1
+ion Au  -0.000000083925828  -0.000000083925828  -0.000000000000000 1
+ion Au   4.523807110578542  13.571421499587284  -0.000000000000000 1
+ion Au  -0.000000083925828  13.571421499587284   4.522977421075435 1
+ion Au   4.523807110578542   9.047614305082913   4.522977421075435 1
+ion Au  -0.000000083925828   9.047614305082913  -0.000000000000000 1
+ion Au  13.571421499587284   4.523807110578542  -0.000000000000000 1
+ion Au   9.047614305082913   4.523807110578542   4.522977421075435 1
+ion Au  13.571421499587284  -0.000000083925828   4.522977421075435 1
+ion Au   9.047614305082913  -0.000000083925828  -0.000000000000000 1
+ion Au  13.571421499587284  13.571421499587284  -0.000000000000000 1
+ion Au   9.047614305082913  13.571421499587284   4.522977421075435 1
+ion Au  13.571421499587284   9.047614305082913   4.522977421075435 1
+ion Au   9.047614305082913   9.047614305082913  -0.000000000000000 1
+ion O   2.261903513326356   2.261903513326356   2.261488710537717 1
+ion O   6.785710707830727   6.785710707830727   6.784466131613152 1
+ion O   2.261903513326356  11.309517902335099   2.261488710537717 1
+ion O   6.785710707830727  15.833325096839470   6.784466131613152 1
+ion O  11.309517902335099   2.261903513326356   2.261488710537717 1
+ion O  15.833325096839470   6.785710707830727   6.784466131613152 1
+ion O  11.309517902335099  11.309517902335099   2.261488710537717 1
+ion O  15.833325096839470  15.833325096839470   6.784466131613152 1
+
+# Forces in Cartesian coordinates:
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force O   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force O   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O   0.000000000000000   0.000000000000000   0.000000000000000 1
+force O   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O   0.000000000000000   0.000000000000000   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -595.2892554817503878
+       EH =      146.0947760271262723
+     Eloc =     -284.7437400011565956
+      Enl =      -48.2969885070702460
+      Exc =     -526.2813127862068541
+ Exc_core =      365.7433563683153466
+       KE =      260.1068094187812108
+-------------------------------------
+     Etot =     -682.6663549619611331
+       TS =        0.0032200768536082
+-------------------------------------
+        F =     -682.6695750388147417
+
+LatticeMinimize: Iter:   2  F: -682.669575038814742  |grad|_K:  1.278e-03  alpha:  1.000e+00  linmin: -9.793e-01  t[s]:    537.98
+
+#--- Lowdin population analysis ---
+# oxidation-state Au +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215
+# oxidation-state O -0.409 -0.409 -0.409 -0.409 -0.409 -0.409 -0.409 -0.409
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.340469543  nElectrons: 224.000000
+	FillingsUpdate:  mu: +0.339668211  nElectrons: 224.000000
+SCF: Cycle:  0   F: -682.669575070012797   dF: +3.067e-06   |Residual|: 1.923e-03   |deigs|: 6.804e-06  t[s]:    563.71
+	FillingsUpdate:  mu: +0.339771040  nElectrons: 224.000000
+SCF: Cycle:  1   F: -682.669580519444480   dF: -5.449e-06   |Residual|: 5.277e-04   |deigs|: 8.750e-05  t[s]:    576.93
+	FillingsUpdate:  mu: +0.339773235  nElectrons: 224.000000
+SCF: Cycle:  2   F: -682.669580881729530   dF: -3.623e-07   |Residual|: 1.557e-04   |deigs|: 1.828e-05  t[s]:    590.12
+	FillingsUpdate:  mu: +0.339772836  nElectrons: 224.000000
+SCF: Cycle:  3   F: -682.669580897705032   dF: -1.598e-08   |Residual|: 6.677e-05   |deigs|: 4.353e-06  t[s]:    603.19
+	FillingsUpdate:  mu: +0.339774155  nElectrons: 224.000000
+SCF: Cycle:  4   F: -682.669580898756180   dF: -1.051e-09   |Residual|: 1.758e-05   |deigs|: 3.429e-06  t[s]:    616.44
+	FillingsUpdate:  mu: +0.339775666  nElectrons: 224.000000
+SCF: Cycle:  5   F: -682.669580899298467   dF: -5.423e-10   |Residual|: 9.630e-06   |deigs|: 3.147e-06  t[s]:    629.73
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+# Lattice vectors:
+R = 
+[      18.1024            0            0  ]
+[            0      18.1024            0  ]
+[            0            0      9.04807  ]
+unit cell volume = 2965.01
+
+# Strain tensor in Cartesian coordinates:
+[   0.00750672            0            0  ]
+[            0   0.00750672            0  ]
+[            0            0   0.00716035  ]
+
+# Stress tensor in Cartesian coordinates [Eh/a0^3]:
+[ -5.67769e-07            0            0  ]
+[            0 -5.67769e-07            0  ]
+[            0            0  9.90876e-07  ]
+
+# Ionic positions in cartesian coordinates:
+ion Au   4.525589372935398   4.525589372935398  -0.000000000000000 1
+ion Au  -0.000000083958893   4.525589372935398   4.524033373729746 1
+ion Au   4.525589372935398  -0.000000083958893   4.524033373729746 1
+ion Au  -0.000000083958893  -0.000000083958893  -0.000000000000000 1
+ion Au   4.525589372935398  13.576768286723979  -0.000000000000000 1
+ion Au  -0.000000083958893  13.576768286723979   4.524033373729746 1
+ion Au   4.525589372935398   9.051178829829688   4.524033373729746 1
+ion Au  -0.000000083958893   9.051178829829688  -0.000000000000000 1
+ion Au  13.576768286723979   4.525589372935398  -0.000000000000000 1
+ion Au   9.051178829829688   4.525589372935398   4.524033373729746 1
+ion Au  13.576768286723979  -0.000000083958893   4.524033373729746 1
+ion Au   9.051178829829688  -0.000000083958893  -0.000000000000000 1
+ion Au  13.576768286723979  13.576768286723979  -0.000000000000000 1
+ion Au   9.051178829829688  13.576768286723979   4.524033373729746 1
+ion Au  13.576768286723979   9.051178829829688   4.524033373729746 1
+ion Au   9.051178829829688   9.051178829829688  -0.000000000000000 1
+ion O   2.262794644488252   2.262794644488252   2.262016686864873 1
+ion O   6.788384101382543   6.788384101382543   6.786050060594619 1
+ion O   2.262794644488252  11.313973558276833   2.262016686864873 1
+ion O   6.788384101382543  15.839563015171125   6.786050060594619 1
+ion O  11.313973558276833   2.262794644488252   2.262016686864873 1
+ion O  15.839563015171125   6.788384101382543   6.786050060594619 1
+ion O  11.313973558276833  11.313973558276833   2.262016686864873 1
+ion O  15.839563015171125  15.839563015171125   6.786050060594619 1
+
+# Forces in Cartesian coordinates:
+force Au  -0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force O   0.000000000000000   0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force O   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -595.0866513138308846
+       EH =      146.1926224317413414
+     Eloc =     -285.0373861906373349
+      Enl =      -48.3048155129486787
+      Exc =     -526.2751874750464367
+ Exc_core =      365.7433537170817885
+       KE =      260.1017241575988237
+-------------------------------------
+     Etot =     -682.6663401860413387
+       TS =        0.0032407132571115
+-------------------------------------
+        F =     -682.6695808992984666
+
+LatticeMinimize: Iter:   3  F: -682.669580899298467  |grad|_K:  2.652e-04  alpha:  1.000e+00  linmin: -2.804e-01  t[s]:    640.47
+
+#--- Lowdin population analysis ---
+# oxidation-state Au +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215
+# oxidation-state O -0.408 -0.408 -0.408 -0.408 -0.408 -0.408 -0.408 -0.408
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.339775666  nElectrons: 224.000000
+	FillingsUpdate:  mu: +0.339763685  nElectrons: 224.000000
+SCF: Cycle:  0   F: -682.669581368539752   dF: -6.633e-08   |Residual|: 9.528e-05   |deigs|: 2.774e-06  t[s]:    666.16
+	FillingsUpdate:  mu: +0.339765827  nElectrons: 224.000000
+SCF: Cycle:  1   F: -682.669581373856545   dF: -5.317e-09   |Residual|: 4.136e-05   |deigs|: 3.067e-06  t[s]:    679.40
+	FillingsUpdate:  mu: +0.339765730  nElectrons: 224.000000
+SCF: Cycle:  2   F: -682.669581374521727   dF: -6.652e-10   |Residual|: 1.823e-05   |deigs|: 2.140e-06  t[s]:    692.70
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+LatticeMinimize: 	Wolfe criterion not satisfied: alpha: 1  (E-E0)/|gdotd0|: -0.986912  gdotd/gdotd0: 0.981251 (taking cubic step)
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.339765730  nElectrons: 224.000000
+	FillingsUpdate:  mu: +0.339743551  nElectrons: 224.000000
+SCF: Cycle:  0   F: -682.669582259783283   dF: -2.706e-07   |Residual|: 1.694e-04   |deigs|: 2.191e-06  t[s]:    729.19
+	FillingsUpdate:  mu: +0.339746601  nElectrons: 224.000000
+SCF: Cycle:  1   F: -682.669582272028947   dF: -1.225e-08   |Residual|: 7.398e-05   |deigs|: 2.929e-06  t[s]:    742.34
+	FillingsUpdate:  mu: +0.339746152  nElectrons: 224.000000
+SCF: Cycle:  2   F: -682.669582273898754   dF: -1.870e-09   |Residual|: 1.462e-05   |deigs|: 1.459e-06  t[s]:    755.48
+	FillingsUpdate:  mu: +0.339746544  nElectrons: 224.000000
+SCF: Cycle:  3   F: -682.669582274110553   dF: -2.118e-10   |Residual|: 6.176e-06   |deigs|: 1.251e-06  t[s]:    768.76
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+# Lattice vectors:
+R = 
+[      18.1054            0            0  ]
+[            0      18.1054            0  ]
+[            0            0      9.04538  ]
+unit cell volume = 2965.14
+
+# Strain tensor in Cartesian coordinates:
+[   0.00767785            0            0  ]
+[            0   0.00767785            0  ]
+[            0            0    0.0068612  ]
+
+# Stress tensor in Cartesian coordinates [Eh/a0^3]:
+[ -4.19891e-07            0            0  ]
+[            0 -4.19891e-07            0  ]
+[            0            0  9.93051e-07  ]
+
+# Ionic positions in cartesian coordinates:
+ion Au   4.526358084788277   4.526358084788277  -0.000000000000000 1
+ion Au  -0.000000083973154   4.526358084788277   4.522689625550587 1
+ion Au   4.526358084788277  -0.000000083973154   4.522689625550587 1
+ion Au  -0.000000083973154  -0.000000083973154  -0.000000000000000 1
+ion Au   4.526358084788277  13.579074422311139  -0.000000000000000 1
+ion Au  -0.000000083973154  13.579074422311139   4.522689625550587 1
+ion Au   4.526358084788277   9.052716253549708   4.522689625550587 1
+ion Au  -0.000000083973154   9.052716253549708  -0.000000000000000 1
+ion Au  13.579074422311139   4.526358084788277  -0.000000000000000 1
+ion Au   9.052716253549708   4.526358084788277   4.522689625550587 1
+ion Au  13.579074422311139  -0.000000083973154   4.522689625550587 1
+ion Au   9.052716253549708  -0.000000083973154  -0.000000000000000 1
+ion Au  13.579074422311139  13.579074422311139  -0.000000000000000 1
+ion Au   9.052716253549708  13.579074422311139   4.522689625550587 1
+ion Au  13.579074422311139   9.052716253549708   4.522689625550587 1
+ion Au   9.052716253549708   9.052716253549708  -0.000000000000000 1
+ion O   2.263179000407560   2.263179000407560   2.261344812775294 1
+ion O   6.789537169168992   6.789537169168992   6.784034438325881 1
+ion O   2.263179000407560  11.315895337930424   2.261344812775294 1
+ion O   6.789537169168992  15.842253506691854   6.784034438325881 1
+ion O  11.315895337930424   2.263179000407560   2.261344812775294 1
+ion O  15.842253506691854   6.789537169168992   6.784034438325881 1
+ion O  11.315895337930424  11.315895337930424   2.261344812775294 1
+ion O  15.842253506691854  15.842253506691854   6.784034438325881 1
+
+# Forces in Cartesian coordinates:
+force Au   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force O   0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O   0.000000000000000   0.000000000000000  -0.000000000000000 1
+
+# Energy components:
+   Eewald =     -595.0782205546947807
+       EH =      146.1967850753517837
+     Eloc =     -285.0496702746228266
+      Enl =      -48.3051508330472288
+      Exc =     -526.2749763877781106
+ Exc_core =      365.7433531512348281
+       KE =      260.1015391297237329
+-------------------------------------
+     Etot =     -682.6663406938326943
+       TS =        0.0032415802778418
+-------------------------------------
+        F =     -682.6695822741105530
+
+LatticeMinimize: Iter:   4  F: -682.669582274110553  |grad|_K:  2.406e-04  alpha:  3.000e+00  linmin: -9.901e-01  t[s]:    779.51
+
+#--- Lowdin population analysis ---
+# oxidation-state Au +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215
+# oxidation-state O -0.408 -0.408 -0.408 -0.408 -0.408 -0.408 -0.408 -0.408
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.339746544  nElectrons: 224.000000
+	FillingsUpdate:  mu: +0.339891766  nElectrons: 224.000000
+SCF: Cycle:  0   F: -682.669585274336100   dF: -7.192e-06   |Residual|: 9.383e-04   |deigs|: 1.415e-06  t[s]:    805.16
+	FillingsUpdate:  mu: +0.339872314  nElectrons: 224.000000
+SCF: Cycle:  1   F: -682.669585718953272   dF: -4.446e-07   |Residual|: 4.089e-04   |deigs|: 1.694e-05  t[s]:    818.51
+	FillingsUpdate:  mu: +0.339873612  nElectrons: 224.000000
+SCF: Cycle:  2   F: -682.669585773094013   dF: -5.414e-08   |Residual|: 1.561e-04   |deigs|: 6.453e-06  t[s]:    831.62
+	FillingsUpdate:  mu: +0.339872840  nElectrons: 224.000000
+SCF: Cycle:  3   F: -682.669585796279648   dF: -2.319e-08   |Residual|: 4.154e-05   |deigs|: 3.548e-06  t[s]:    845.03
+	FillingsUpdate:  mu: +0.339872476  nElectrons: 224.000000
+SCF: Cycle:  4   F: -682.669585798100343   dF: -1.821e-09   |Residual|: 2.265e-05   |deigs|: 1.206e-06  t[s]:    858.32
+	FillingsUpdate:  mu: +0.339872147  nElectrons: 224.000000
+SCF: Cycle:  5   F: -682.669585798436060   dF: -3.357e-10   |Residual|: 7.984e-06   |deigs|: 9.728e-07  t[s]:    871.65
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+# Lattice vectors:
+R = 
+[       18.114            0            0  ]
+[            0       18.114            0  ]
+[            0            0      9.03512  ]
+unit cell volume = 2964.59
+
+# Strain tensor in Cartesian coordinates:
+[   0.00815625            0            0  ]
+[            0   0.00815625            0  ]
+[            0            0   0.00571953  ]
+
+# Stress tensor in Cartesian coordinates [Eh/a0^3]:
+[ -9.15681e-07            0            0  ]
+[            0 -9.15681e-07            0  ]
+[            0            0 -1.57281e-08  ]
+
+# Ionic positions in cartesian coordinates:
+ion Au   4.528506969322650   4.528506969322650  -0.000000000000000 1
+ion Au  -0.000000084013020   4.528506969322650   4.517561369039434 1
+ion Au   4.528506969322650  -0.000000084013020   4.517561369039434 1
+ion Au  -0.000000084013020  -0.000000084013020  -0.000000000000000 1
+ion Au   4.528506969322650  13.585521075993990  -0.000000000000000 1
+ion Au  -0.000000084013020  13.585521075993990   4.517561369039434 1
+ion Au   4.528506969322650   9.057014022658318   4.517561369039434 1
+ion Au  -0.000000084013020   9.057014022658318  -0.000000000000000 1
+ion Au  13.585521075993990   4.528506969322650  -0.000000000000000 1
+ion Au   9.057014022658318   4.528506969322650   4.517561369039434 1
+ion Au  13.585521075993990  -0.000000084013020   4.517561369039434 1
+ion Au   9.057014022658318  -0.000000084013020  -0.000000000000000 1
+ion Au  13.585521075993990  13.585521075993990  -0.000000000000000 1
+ion Au   9.057014022658318  13.585521075993990   4.517561369039434 1
+ion Au  13.585521075993990   9.057014022658318   4.517561369039434 1
+ion Au   9.057014022658318   9.057014022658318  -0.000000000000000 1
+ion O   2.264253442654814   2.264253442654814   2.258780684519717 1
+ion O   6.792760495990484   6.792760495990484   6.776342053559151 1
+ion O   2.264253442654814  11.321267549326155   2.258780684519717 1
+ion O   6.792760495990484  15.849774602661824   6.776342053559151 1
+ion O  11.321267549326155   2.264253442654814   2.258780684519717 1
+ion O  15.849774602661824   6.792760495990484   6.776342053559151 1
+ion O  11.321267549326155  11.321267549326155   2.258780684519717 1
+ion O  15.849774602661824  15.849774602661824   6.776342053559151 1
+
+# Forces in Cartesian coordinates:
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O   0.000000000000000  -0.000000000000000   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -595.1151975347636380
+       EH =      146.1789218973941900
+     Eloc =     -284.9960113416398713
+      Enl =      -48.3037540540424857
+      Exc =     -526.2761242590457869
+ Exc_core =      365.7433520102300122
+       KE =      260.1024654011487200
+-------------------------------------
+     Etot =     -682.6663478807188312
+       TS =        0.0032379177172679
+-------------------------------------
+        F =     -682.6695857984360600
+
+LatticeMinimize: Iter:   5  F: -682.669585798436060  |grad|_K:  2.692e-04  alpha:  1.000e+00  linmin: -4.990e-01  t[s]:    882.43
+
+#--- Lowdin population analysis ---
+# oxidation-state Au +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215
+# oxidation-state O -0.408 -0.408 -0.408 -0.408 -0.408 -0.408 -0.408 -0.408
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.339872147  nElectrons: 224.000000
+	FillingsUpdate:  mu: +0.339243173  nElectrons: 224.000000
+SCF: Cycle:  0   F: -682.669581095733747   dF: +1.456e-06   |Residual|: 1.525e-03   |deigs|: 1.000e-06  t[s]:    908.13
+	FillingsUpdate:  mu: +0.339324047  nElectrons: 224.000000
+SCF: Cycle:  1   F: -682.669584477662738   dF: -3.382e-06   |Residual|: 4.334e-04   |deigs|: 6.861e-05  t[s]:    921.40
+	FillingsUpdate:  mu: +0.339325542  nElectrons: 224.000000
+SCF: Cycle:  2   F: -682.669584712299184   dF: -2.346e-07   |Residual|: 1.350e-04   |deigs|: 1.415e-05  t[s]:    934.57
+	FillingsUpdate:  mu: +0.339325205  nElectrons: 224.000000
+SCF: Cycle:  3   F: -682.669584723506318   dF: -1.121e-08   |Residual|: 5.895e-05   |deigs|: 2.495e-06  t[s]:    947.71
+	FillingsUpdate:  mu: +0.339326247  nElectrons: 224.000000
+SCF: Cycle:  4   F: -682.669584724598053   dF: -1.092e-09   |Residual|: 1.443e-05   |deigs|: 1.704e-06  t[s]:    961.03
+	FillingsUpdate:  mu: +0.339327467  nElectrons: 224.000000
+SCF: Cycle:  5   F: -682.669584724884089   dF: -2.860e-10   |Residual|: 9.352e-06   |deigs|: 1.364e-06  t[s]:    974.45
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+LatticeMinimize: 	Wolfe criterion not satisfied: alpha: 1  (E-E0)/|gdotd0|: 0.484953  gdotd/gdotd0: -1.97981 (taking cubic step)
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.339327467  nElectrons: 224.000000
+	FillingsUpdate:  mu: +0.339743730  nElectrons: 224.000000
+SCF: Cycle:  0   F: -682.669584572322719   dF: +6.266e-07   |Residual|: 1.005e-03   |deigs|: 9.310e-07  t[s]:   1010.52
+	FillingsUpdate:  mu: +0.339690391  nElectrons: 224.000000
+SCF: Cycle:  1   F: -682.669586040448280   dF: -1.468e-06   |Residual|: 2.848e-04   |deigs|: 4.523e-05  t[s]:   1023.76
+	FillingsUpdate:  mu: +0.339689418  nElectrons: 224.000000
+SCF: Cycle:  2   F: -682.669586141490527   dF: -1.010e-07   |Residual|: 8.894e-05   |deigs|: 9.353e-06  t[s]:   1036.98
+	FillingsUpdate:  mu: +0.339689641  nElectrons: 224.000000
+SCF: Cycle:  3   F: -682.669586146227516   dF: -4.737e-09   |Residual|: 3.888e-05   |deigs|: 1.863e-06  t[s]:   1050.62
+	FillingsUpdate:  mu: +0.339688939  nElectrons: 224.000000
+SCF: Cycle:  4   F: -682.669586146668280   dF: -4.408e-10   |Residual|: 9.198e-06   |deigs|: 1.445e-06  t[s]:   1064.09
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+# Lattice vectors:
+R = 
+[      18.1165            0            0  ]
+[            0      18.1165            0  ]
+[            0            0      9.03508  ]
+unit cell volume = 2965.39
+
+# Strain tensor in Cartesian coordinates:
+[   0.00829504            0            0  ]
+[            0   0.00829504            0  ]
+[            0            0    0.0057151  ]
+
+# Stress tensor in Cartesian coordinates [Eh/a0^3]:
+[  6.18568e-08            0            0  ]
+[            0  6.18568e-08            0  ]
+[            0            0  9.08553e-07  ]
+
+# Ionic positions in cartesian coordinates:
+ion Au   4.529130418353165   4.529130418353165  -0.000000000000000 1
+ion Au  -0.000000084024587   4.529130418353165   4.517541495652148 1
+ion Au   4.529130418353165  -0.000000084024587   4.517541495652148 1
+ion Au  -0.000000084024587  -0.000000084024587  -0.000000000000000 1
+ion Au   4.529130418353165  13.587391423108668  -0.000000000000000 1
+ion Au  -0.000000084024587  13.587391423108668   4.517541495652148 1
+ion Au   4.529130418353165   9.058260920730916   4.517541495652148 1
+ion Au  -0.000000084024587   9.058260920730916  -0.000000000000000 1
+ion Au  13.587391423108668   4.529130418353165  -0.000000000000000 1
+ion Au   9.058260920730916   4.529130418353165   4.517541495652148 1
+ion Au  13.587391423108668  -0.000000084024587   4.517541495652148 1
+ion Au   9.058260920730916  -0.000000084024587  -0.000000000000000 1
+ion Au  13.587391423108668  13.587391423108668  -0.000000000000000 1
+ion Au   9.058260920730916  13.587391423108668   4.517541495652148 1
+ion Au  13.587391423108668   9.058260920730916   4.517541495652148 1
+ion Au   9.058260920730916   9.058260920730916  -0.000000000000000 1
+ion O   2.264565167164288   2.264565167164288   2.258770747826074 1
+ion O   6.793695669542040   6.793695669542040   6.776312243478222 1
+ion O   2.264565167164288  11.322826171919793   2.258770747826074 1
+ion O   6.793695669542040  15.851956674297544   6.776312243478222 1
+ion O  11.322826171919793   2.264565167164288   2.258770747826074 1
+ion O  15.851956674297544   6.793695669542040   6.776312243478222 1
+ion O  11.322826171919793  11.322826171919793   2.258770747826074 1
+ion O  15.851956674297544  15.851956674297544   6.776312243478222 1
+
+# Forces in Cartesian coordinates:
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O   0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force O   0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O   0.000000000000000   0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -595.0614867494214195
+       EH =      146.2046848408266158
+     Eloc =     -285.0737328042588956
+      Enl =      -48.3058077221418642
+      Exc =     -526.2744194837238183
+ Exc_core =      365.7433511995487834
+       KE =      260.1010679733632287
+-------------------------------------
+     Etot =     -682.6663427458072420
+       TS =        0.0032434008610357
+-------------------------------------
+        F =     -682.6695861466682800
+
+LatticeMinimize: Iter:   6  F: -682.669586146668280  |grad|_K:  1.898e-04  alpha:  3.378e-01  linmin:  7.335e-02  t[s]:   1074.79
+
+#--- Lowdin population analysis ---
+# oxidation-state Au +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215
+# oxidation-state O -0.408 -0.408 -0.408 -0.408 -0.408 -0.408 -0.408 -0.408
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.339688939  nElectrons: 224.000000
+	FillingsUpdate:  mu: +0.339763351  nElectrons: 224.000000
+SCF: Cycle:  0   F: -682.669586314537355   dF: -6.180e-09   |Residual|: 1.771e-04   |deigs|: 1.251e-06  t[s]:   1100.31
+	FillingsUpdate:  mu: +0.339754238  nElectrons: 224.000000
+SCF: Cycle:  1   F: -682.669586357746084   dF: -4.321e-08   |Residual|: 5.440e-05   |deigs|: 7.804e-06  t[s]:   1113.57
+	FillingsUpdate:  mu: +0.339754147  nElectrons: 224.000000
+SCF: Cycle:  2   F: -682.669586360929770   dF: -3.184e-09   |Residual|: 1.978e-05   |deigs|: 2.085e-06  t[s]:   1126.76
+	FillingsUpdate:  mu: +0.339754177  nElectrons: 224.000000
+SCF: Cycle:  3   F: -682.669586361142024   dF: -2.123e-10   |Residual|: 8.489e-06   |deigs|: 1.341e-06  t[s]:   1139.96
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+# Lattice vectors:
+R = 
+[      18.1166            0            0  ]
+[            0      18.1166            0  ]
+[            0            0      9.03417  ]
+unit cell volume = 2965.1
+
+# Strain tensor in Cartesian coordinates:
+[   0.00829705            0            0  ]
+[            0   0.00829705            0  ]
+[            0            0   0.00561389  ]
+
+# Stress tensor in Cartesian coordinates [Eh/a0^3]:
+[ -3.04095e-07            0            0  ]
+[            0 -3.04095e-07            0  ]
+[            0            0  5.15979e-07  ]
+
+# Ionic positions in cartesian coordinates:
+ion Au   4.529139437356413   4.529139437356413  -0.000000000000000 1
+ion Au  -0.000000084024754   4.529139437356413   4.517086873388814 1
+ion Au   4.529139437356413  -0.000000084024754   4.517086873388814 1
+ion Au  -0.000000084024754  -0.000000084024754  -0.000000000000000 1
+ion Au   4.529139437356413  13.587418480118746  -0.000000000000000 1
+ion Au  -0.000000084024754  13.587418480118746   4.517086873388814 1
+ion Au   4.529139437356413   9.058278958737580   4.517086873388814 1
+ion Au  -0.000000084024754   9.058278958737580  -0.000000000000000 1
+ion Au  13.587418480118746   4.529139437356413  -0.000000000000000 1
+ion Au   9.058278958737580   4.529139437356413   4.517086873388814 1
+ion Au  13.587418480118746  -0.000000084024754   4.517086873388814 1
+ion Au   9.058278958737580  -0.000000084024754  -0.000000000000000 1
+ion Au  13.587418480118746  13.587418480118746  -0.000000000000000 1
+ion Au   9.058278958737580  13.587418480118746   4.517086873388814 1
+ion Au  13.587418480118746   9.058278958737580   4.517086873388814 1
+ion Au   9.058278958737580   9.058278958737580  -0.000000000000000 1
+ion O   2.264569676665829   2.264569676665829   2.258543436694407 1
+ion O   6.793709198046995   6.793709198046995   6.775630310083221 1
+ion O   2.264569676665829  11.322848719428164   2.258543436694407 1
+ion O   6.793709198046995  15.851988240809330   6.775630310083221 1
+ion O  11.322848719428164   2.264569676665829   2.258543436694407 1
+ion O  15.851988240809330   6.793709198046995   6.775630310083221 1
+ion O  11.322848719428164  11.322848719428164   2.258543436694407 1
+ion O  15.851988240809330  15.851988240809330   6.775630310083221 1
+
+# Forces in Cartesian coordinates:
+force Au   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000  -0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000  -0.000000000000000 1
+force Au  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force Au   0.000000000000000   0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000   0.000000000000000 1
+force O   0.000000000000000   0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000   0.000000000000000  -0.000000000000000 1
+force O   0.000000000000000   0.000000000000000   0.000000000000000 1
+force O   0.000000000000000   0.000000000000000   0.000000000000000 1
+force O  -0.000000000000000  -0.000000000000000  -0.000000000000000 1
+
+# Energy components:
+   Eewald =     -595.0806827963880323
+       EH =      146.1955036258413543
+     Eloc =     -285.0459512013449626
+      Enl =      -48.3050826063914727
+      Exc =     -526.2750514628576184
+ Exc_core =      365.7433513360802522
+       KE =      260.1015681863766531
+-------------------------------------
+     Etot =     -682.6663449186837624
+       TS =        0.0032414424582751
+-------------------------------------
+        F =     -682.6695863611420236
+
+LatticeMinimize: Iter:   7  F: -682.669586361142024  |grad|_K:  1.397e-04  alpha:  1.000e+00  linmin: -7.858e-01  t[s]:   1150.82
+LatticeMinimize: Converged (|Delta F|<1.000000e-06 for 2 iters).
+
+#--- Lowdin population analysis ---
+# oxidation-state Au +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215 +0.215
+# oxidation-state O -0.408 -0.408 -0.408 -0.408 -0.408 -0.408 -0.408 -0.408
+
+
+Dumping 'Au16O8.Ecomponents' ... done
+End date and time: Wed Apr 17 12:48:59 2024  (Duration: 0-0:19:15.51)
+Done!

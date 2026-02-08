@@ -1,0 +1,39 @@
+lattice \
+12.472192  0.000000  0.000000  \
+0.000000  12.472192  0.000000  \
+0.000000  0.000000  12.472192  
+
+dump-name Ta16.$VAR
+initial-state Ta16.$VAR
+elec-cutoff 20 100
+kpoint-folding 4 4 4
+elec-smearing Fermi 0.004
+
+coords-type cartesian
+ion Ta 0.001000 0.000000 0.000000 	 1
+ion Ta 3.118048 3.117048 3.118048 	 1
+ion Ta 0.000000 0.000000 6.235096 	 1
+ion Ta 3.118048 3.118048 9.354144 	 1
+ion Ta 0.000000 6.236096 0.000000 	 1
+ion Ta 3.118048 9.354144 3.118048 	 1
+ion Ta 0.000000 6.236096 6.236096 	 1
+ion Ta 3.118048 9.354144 9.354144 	 1
+ion Ta 6.236096 0.000000 0.000000 	 1
+ion Ta 9.354144 3.118048 3.118048 	 1
+ion Ta 6.236096 0.000000 6.236096 	 1
+ion Ta 9.344144 3.118048 9.354144 	 1
+ion Ta 6.236096 6.236096 0.000000 	 1
+ion Ta 9.354144 9.354144 3.128048 	 1
+ion Ta 6.236096 6.236096 6.236096 	 1
+ion Ta 9.354144 9.355144 9.354144 	 1
+ion O 3.136945 0.018897 0.018897 	 1
+
+ion-species GBRV/$ID_pbe.uspp
+
+coulomb-interaction periodic
+
+ionic-minimize \ 
+    nIterations 30 \ 
+    energyDiffThreshold 1e-6 \ 
+
+dump End Ecomponents

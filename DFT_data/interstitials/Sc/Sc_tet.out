@@ -1,0 +1,299 @@
+--------------------------------------------------------------------------
+Initialization of PSM library failed.
+
+  Error: PSM is in the finalized state
+--------------------------------------------------------------------------
+
+*************** JDFTx 1.7.0 (git hash 3664913) ***************
+
+Start date and time: Thu Jun 27 03:41:05 2024
+Executable jdftx with command-line: -i Sc_tet.in
+Running on hosts (process indices):  node3205.physics.cornell.edu (0-15)
+Divided in process groups (process indices):  0 (0)  1 (1)  2 (2)  3 (3)  4 (4)  5 (5)  6 (6)  7 (7)  8 (8)  9 (9)  10 (10)  11 (11)  12 (12)  13 (13)  14 (14)  15 (15)
+Resource initialization completed at t[s]:      0.00
+Run totals: 16 processes, 32 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+coords-type Lattice
+core-overlap-check vector
+coulomb-interaction Periodic
+davidson-band-ratio 1.1
+dump End Ecomponents
+dump-name /data/rc652/Sc/tet/Sc_tet.$VAR
+elec-cutoff 20 100
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBEsol
+elec-smearing Fermi 0.01
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+electronic-scf  \
+	nIterations	50 \
+	energyDiffThreshold	1e-08 \
+	residualThreshold	1e-07 \
+	mixFraction	0.5 \
+	qMetric	0.8 \
+	history	10 \
+	nEigSteps	2 \
+	eigDiffThreshold	1e-08 \
+	mixedVariable	Density \
+	qKerker	0.8 \
+	qKappa	-1 \
+	verbose	no \
+	mixFractionMag	1.5
+exchange-regularization WignerSeitzTruncated
+fluid None
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42 \
+	tauNuc 343133 \
+	poleEl 15 7 1
+forces-output-coords Positions
+ion Sc   0.125090000000000   0.220360000000000   0.121410000000000 1
+ion Sc   0.226780000000000   0.122820000000000   0.365740000000000 1
+ion Sc   0.113200000000000   0.226480000000000   0.620080000000000 1
+ion Sc   0.234440000000000   0.106620000000000   0.883900000000000 1
+ion Sc   0.106320000000000   0.557700000000000   0.114500000000000 1
+ion Sc   0.216610000000000   0.419930000000000   0.375690000000000 1
+ion Sc   0.112550000000000   0.557830000000000   0.615770000000000 1
+ion Sc   0.216980000000000   0.438560000000000   0.874870000000000 1
+ion Sc   0.094650000000000   0.895620000000000   0.122220000000000 1
+ion Sc   0.214660000000000   0.779800000000000   0.366550000000000 1
+ion Sc   0.117670000000000   0.890560000000000   0.608270000000000 1
+ion Sc   0.226440000000000   0.781520000000000   0.877060000000000 1
+ion Sc   0.435590000000000   0.222070000000000   0.115920000000000 1
+ion Sc   0.550900000000000   0.103290000000000   0.396970000000000 1
+ion Sc   0.457340000000000   0.209740000000000   0.642800000000000 1
+ion Sc   0.577500000000000   0.097020000000000   0.865270000000000 1
+ion Sc   0.431550000000000   0.537180000000000   0.123700000000000 1
+ion Sc   0.537030000000000   0.453520000000000   0.367210000000000 1
+ion Sc   0.448440000000000   0.549710000000000   0.617630000000000 1
+ion Sc   0.558410000000000   0.440830000000000   0.869300000000000 1
+ion Sc   0.442150000000000   0.885820000000000   0.110030000000000 1
+ion Sc   0.559670000000000   0.775490000000000   0.371790000000000 1
+ion Sc   0.441080000000000   0.873980000000000   0.633130000000000 1
+ion Sc   0.551010000000000   0.758290000000000   0.868080000000000 1
+ion Sc   0.762740000000000   0.228090000000000   0.123350000000000 1
+ion Sc   0.886330000000000   0.109950000000000   0.362460000000000 1
+ion Sc   0.783360000000000   0.211790000000000   0.639590000000000 1
+ion Sc   0.901540000000000   0.097290000000000   0.855560000000000 1
+ion Sc   0.758510000000000   0.558260000000000   0.126630000000000 1
+ion Sc   0.893040000000000   0.443440000000000   0.358530000000000 1
+ion Sc   0.782390000000000   0.554650000000000   0.621070000000000 1
+ion Sc   0.892530000000000   0.445910000000000   0.877910000000000 1
+ion Sc   0.771720000000000   0.891620000000000   0.132840000000000 1
+ion Sc   0.891710000000000   0.776190000000000   0.382390000000000 1
+ion Sc   0.781600000000000   0.899910000000000   0.622920000000000 1
+ion Sc   0.884830000000000   0.777630000000000   0.867850000000000 1
+ion O   0.150000000000000   0.900000000000000   0.450000000000000 1
+ion-species GBRV/$ID_pbesol.uspp
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          30 \
+	history              15 \
+	knormThreshold       0.0001 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.500000000000   0.500000000000   0.500000000000  1.00000000000000
+kpoint-folding 3 3 3 
+latt-move-scale 1 1 1
+latt-scale 1 1 1 
+lattice  \
+	   9.281260403368679    9.281260403368679   -0.000000000000000  \
+	 -16.075615228412456   16.075615228412456    0.000000000000000  \
+	  -0.000000000000000   -0.000000000000000   19.578199465614315 
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.01
+pcm-variant GLSSA13
+perturb-minimize  \
+	nIterations            0 \
+	algorithm              MINRES \
+	residualTol            0.0001 \
+	residualDiffThreshold  0.0001 \
+	CGBypass               no \
+	recomputeResidual      no
+spintype no-spin
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+
+
+
+---------- Setting up symmetries ----------
+
+Found 24 point-group symmetries of the bravais lattice
+Found 1 space-group symmetries with basis
+Applied RMS atom displacement 0 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[      9.28126      9.28126            0  ]
+[     -16.0756      16.0756            0  ]
+[            0            0      19.5782  ]
+unit cell volume = 5842.21
+G =
+[   0.338488  -0.195426          0  ]
+[   0.338488   0.195426          0  ]
+[          0          0   0.320928  ]
+Minimum fftbox size, Smin = [  84  84  92  ]
+Chosen fftbox size, S = [  84  84  96  ]
+
+---------- Initializing tighter grid for wavefunction operations ----------
+R = 
+[      9.28126      9.28126            0  ]
+[     -16.0756      16.0756            0  ]
+[            0            0      19.5782  ]
+unit cell volume = 5842.21
+G =
+[   0.338488  -0.195426          0  ]
+[   0.338488   0.195426          0  ]
+[          0          0   0.320928  ]
+Minimum fftbox size, Smin = [  76  76  80  ]
+Chosen fftbox size, S = [  80  80  80  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBEsol GGA exchange.
+Initalized PBEsol GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0
+
+Reading pseudopotential file '/home/rc652/build/pseudopotentials/GBRV/sc_pbesol.uspp':
+  Title: Sc.  Created by USPP 7.3.6 on 23-7-2013
+  Reference state energy: -46.940880.  11 valence electrons in orbitals:
+    |300>  occupation: 2  eigenvalue: -2.016614
+    |310>  occupation: 6  eigenvalue: -1.232889
+    |400>  occupation: 2  eigenvalue: -0.153915
+    |320>  occupation: 1  eigenvalue: -0.119309
+    |410>  occupation: 0  eigenvalue: -0.053306
+  lMax: 2  lLocal: 3  QijEcut: 5
+  6 projectors sampled on a log grid with 593 points:
+    l: 0  eig: -2.016614  rCut: 2.2
+    l: 0  eig: -0.153915  rCut: 2.2
+    l: 1  eig: -1.232889  rCut: 2.2
+    l: 1  eig: -0.053306  rCut: 2.2
+    l: 2  eig: -0.119309  rCut: 2.2
+    l: 2  eig: 0.150000  rCut: 2.2
+  Partial core density with radius 1
+  Transforming core density to a uniform radial grid of dG=0.02 with 1622 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1622 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1622 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 2.20 bohrs.
+
+Reading pseudopotential file '/home/rc652/build/pseudopotentials/GBRV/o_pbesol.uspp':
+  Title: O.  Created by USPP 7.3.6 on 3-2-2014
+  Reference state energy: -15.849885.  6 valence electrons in orbitals:
+    |200>  occupation: 2  eigenvalue: -0.873214
+    |210>  occupation: 4  eigenvalue: -0.330058
+  lMax: 2  lLocal: 2  QijEcut: 6
+  5 projectors sampled on a log grid with 511 points:
+    l: 0  eig: -0.873214  rCut: 1.25
+    l: 0  eig: 0.000000  rCut: 1.25
+    l: 1  eig: -0.330058  rCut: 1.25
+    l: 1  eig: 0.000000  rCut: 1.25
+    l: 2  eig: 1.000000  rCut: 1.25
+  Partial core density with radius 0.7
+  Transforming core density to a uniform radial grid of dG=0.02 with 1622 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1622 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1622 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.25 bohrs.
+
+Initialized 2 species with 37 total atoms.
+
+Folded 1 k-points by 3x3x3 to 27 k-points.
+
+---------- Setting up k-points, bands, fillings ----------
+Adding inversion symmetry to k-mesh for non-inversion-symmetric unit cell.
+Reduced to 14 k-points under symmetry. 
+Computing the number of bands and number of electrons
+Calculating initial fillings.
+nElectrons: 402.000000   nBands: 472   nStates: 14
+
+----- Setting up reduced wavefunction bases (one per k-point) -----
+average nbasis = 24961.037 , ideal nbasis = 24958.374
+
+---------- Setting up ewald sum ----------
+Optimum gaussian width for ewald sums = 3.936125 bohr.
+Real space sum over 567 unit cells with max indices [  4  4  3  ]
+Reciprocal space sum over 6859 terms with max indices [  9  9  9  ]
+
+---------- Allocating electronic variables ----------
+Initializing wave functions:  linear combination of atomic orbitals
+Sc pseudo-atom occupations:   s ( 2 2 )  p ( 6 0 )  d ( 1 )
+O pseudo-atom occupations:   s ( 2 )  p ( 4 )

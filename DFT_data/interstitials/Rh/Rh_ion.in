@@ -1,0 +1,51 @@
+include /data/rc652/Rh/lat/Rh_lat.lattice
+
+coords-type lattice
+
+ion	Rh	0.00	0.00	-0.00	0
+ion	Rh	-0.01903	0.24681	0.24081	1
+ion	Rh	0.26717	0.01153	0.25302	1
+ion	Rh	0.24991	0.26491	-0.00658	1
+ion	Rh	0.01516	-0.01942	0.49912	1
+ion	Rh	-0.00051	0.24911	0.73032	1
+ion	Rh	0.25437	0.01931	0.75323	1
+ion	Rh	0.25229	0.24609	0.5068	1
+ion	Rh	-0.00493	0.5169	0.00569	1
+ion	Rh	-0.00377	0.76561	0.24467	1
+ion	Rh	0.25307	0.51348	0.25859	1
+ion	Rh	0.25277	0.74375	0.01204	1
+ion	Rh	-0.01361	0.50944	0.49532	1
+ion	Rh	-0.0003	0.75346	0.73176	1
+ion	Rh	0.25078	0.5123	0.73453	1
+ion	Rh	0.26302	0.74288	0.49948	1
+ion	Rh	0.52524	0.00601	0.00084	1
+ion	Rh	0.50364	0.25874	0.24814	1
+ion	Rh	0.76573	0.01701	0.25694	1
+ion	Rh	0.73862	0.2357	0.00841	1
+ion	Rh	0.50191	0.00492	0.50276	1
+ion	Rh	0.48604	0.24297	0.73119	1
+ion	Rh	0.74753	-0.00382	0.75334	1
+ion	Rh	0.74893	0.25497	0.48907	1
+ion	Rh	0.49825	0.51014	0.00878	1
+ion	Rh	0.50637	0.74094	0.24008	1
+ion	Rh	0.73725	0.51142	0.25879	1
+ion	Rh	0.75336	0.74237	-0.00868	1
+ion	Rh	0.49802	0.48634	0.49981	1
+ion	Rh	0.48688	0.74608	0.74665	1
+ion	Rh	0.75485	0.49863	0.74546	1
+ion	Rh	0.73385	0.74732	0.498	1
+
+kpoint-folding 4 4 4
+ion-species GBRV/$ID_pbesol.uspp
+elec-ex-corr gga-PBEsol
+elec-cutoff 20 100
+elec-smearing Fermi 0.01
+electronic-SCF
+coulomb-interaction periodic
+
+ionic-minimize \ 
+    nIterations 30 \ 
+    energyDiffThreshold 1e-6 \ 
+
+dump-name /data/rc652/Rh/ion/Rh_ion.$VAR
+dump End Ecomponents

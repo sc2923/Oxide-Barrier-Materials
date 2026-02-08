@@ -1,0 +1,2637 @@
+--------------------------------------------------------------------------
+[[701,1],1]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node3223
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+
+*************** JDFTx 1.7.0 (git hash 3664913) ***************
+
+Start date and time: Sat Jul 13 23:33:52 2024
+Executable jdftx with command-line: -i Os_oct.in
+Running on hosts (process indices):  node3223.physics.cornell.edu (0-15)
+Divided in process groups (process indices):  0 (0)  1 (1)  2 (2)  3 (3)  4 (4)  5 (5)  6 (6)  7 (7)  8 (8)  9 (9)  10 (10)  11 (11)  12 (12)  13 (13)  14 (14)  15 (15)
+Resource initialization completed at t[s]:      0.00
+Run totals: 16 processes, 32 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+coords-type Lattice
+core-overlap-check vector
+coulomb-interaction Periodic
+davidson-band-ratio 1.1
+dump End Ecomponents
+dump-name /data/rc652/Os/oct/Os_oct.$VAR
+elec-cutoff 20 100
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBEsol
+elec-smearing Fermi 0.01
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+electronic-scf  \
+	nIterations	50 \
+	energyDiffThreshold	1e-08 \
+	residualThreshold	1e-07 \
+	mixFraction	0.5 \
+	qMetric	0.8 \
+	history	10 \
+	nEigSteps	2 \
+	eigDiffThreshold	1e-08 \
+	mixedVariable	Density \
+	qKerker	0.8 \
+	qKappa	-1 \
+	verbose	no \
+	mixFractionMag	1.5
+exchange-regularization WignerSeitzTruncated
+fluid None
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42 \
+	tauNuc 343133 \
+	poleEl 15 7 1
+forces-output-coords Positions
+ion Os   0.111710000000000   0.213580000000000   0.121580000000000 1
+ion Os   0.215310000000000   0.105690000000000   0.385860000000000 1
+ion Os   0.117620000000000   0.225330000000000   0.615380000000000 1
+ion Os   0.234830000000000   0.103270000000000   0.860670000000000 1
+ion Os   0.126170000000000   0.556680000000000   0.133360000000000 1
+ion Os   0.232270000000000   0.440970000000000   0.378540000000000 1
+ion Os   0.104340000000000   0.555720000000000   0.616050000000000 1
+ion Os   0.222030000000000   0.459570000000000   0.877410000000000 1
+ion Os   0.114380000000000   0.887180000000000   0.127870000000000 1
+ion Os   0.227230000000000   0.787880000000000   0.379140000000000 1
+ion Os   0.113010000000000   0.881590000000000   0.613190000000000 1
+ion Os   0.212260000000000   0.798960000000000   0.877350000000000 1
+ion Os   0.436020000000000   0.209130000000000   0.121700000000000 1
+ion Os   0.562130000000000   0.122550000000000   0.371650000000000 1
+ion Os   0.461190000000000   0.237180000000000   0.622960000000000 1
+ion Os   0.545110000000000   0.108170000000000   0.877870000000000 1
+ion Os   0.438530000000000   0.567340000000000   0.121880000000000 1
+ion Os   0.576830000000000   0.443140000000000   0.366380000000000 1
+ion Os   0.450400000000000   0.552580000000000   0.623970000000000 1
+ion Os   0.547920000000000   0.448540000000000   0.871220000000000 1
+ion Os   0.438430000000000   0.880080000000000   0.126920000000000 1
+ion Os   0.568890000000000   0.756100000000000   0.358360000000000 1
+ion Os   0.442530000000000   0.903330000000000   0.639360000000000 1
+ion Os   0.568800000000000   0.793980000000000   0.873780000000000 1
+ion Os   0.795610000000000   0.213330000000000   0.118820000000000 1
+ion Os   0.881070000000000   0.114320000000000   0.370000000000000 1
+ion Os   0.763200000000000   0.235710000000000   0.626980000000000 1
+ion Os   0.884450000000000   0.113910000000000   0.883190000000000 1
+ion Os   0.782350000000000   0.557440000000000   0.144410000000000 1
+ion Os   0.881930000000000   0.453250000000000   0.364050000000000 1
+ion Os   0.788410000000000   0.583780000000000   0.622180000000000 1
+ion Os   0.880960000000000   0.448880000000000   0.858190000000000 1
+ion Os   0.780820000000000   0.916290000000000   0.124700000000000 1
+ion Os   0.885210000000000   0.769930000000000   0.384490000000000 1
+ion Os   0.786560000000000   0.895910000000000   0.613990000000000 1
+ion Os   0.871850000000000   0.776870000000000   0.881450000000000 1
+ion O   0.330000000000000   0.380000000000000   0.550000000000000 1
+ion-species GBRV/$ID_pbesol.uspp
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          30 \
+	history              15 \
+	knormThreshold       0.0001 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.500000000000   0.500000000000   0.500000000000  1.00000000000000
+kpoint-folding 4 4 4 
+latt-move-scale 1 1 1
+latt-scale 1 1 1 
+lattice  \
+	   7.739106857880295    7.739106857880295   -0.000000000000000  \
+	 -13.404525036094944   13.404525036094944   -0.000000000000000  \
+	   0.000000000000000   -0.000000000000000   16.318266833082383 
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.01
+pcm-variant GLSSA13
+perturb-minimize  \
+	nIterations            0 \
+	algorithm              MINRES \
+	residualTol            0.0001 \
+	residualDiffThreshold  0.0001 \
+	CGBypass               no \
+	recomputeResidual      no
+spintype no-spin
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+
+
+
+---------- Setting up symmetries ----------
+
+Found 24 point-group symmetries of the bravais lattice
+Found 1 space-group symmetries with basis
+Applied RMS atom displacement 0 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[      7.73911      7.73911            0  ]
+[     -13.4045      13.4045            0  ]
+[            0            0      16.3183  ]
+unit cell volume = 3385.68
+G =
+[   0.405937  -0.234368          0  ]
+[   0.405937   0.234368          0  ]
+[          0          0    0.38504  ]
+Minimum fftbox size, Smin = [  72  72  76  ]
+Chosen fftbox size, S = [  72  72  80  ]
+
+---------- Initializing tighter grid for wavefunction operations ----------
+R = 
+[      7.73911      7.73911            0  ]
+[     -13.4045      13.4045            0  ]
+[            0            0      16.3183  ]
+unit cell volume = 3385.68
+G =
+[   0.405937  -0.234368          0  ]
+[   0.405937   0.234368          0  ]
+[          0          0    0.38504  ]
+Minimum fftbox size, Smin = [  64  64  68  ]
+Chosen fftbox size, S = [  64  64  70  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBEsol GGA exchange.
+Initalized PBEsol GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0
+
+Reading pseudopotential file '/home/rc652/build/pseudopotentials/GBRV/os_pbesol.uspp':
+  Title: Os.  Created by USPP 7.3.6 on 3-2-2014
+  Reference state energy: -98.687589.  16 valence electrons in orbitals:
+    |500>  occupation: 2  eigenvalue: -3.559978
+    |510>  occupation: 6  eigenvalue: -2.060221
+    |520>  occupation: 5.5  eigenvalue: -0.405934
+    |600>  occupation: 2  eigenvalue: -0.369345
+    |610>  occupation: 0  eigenvalue: -0.156692
+  lMax: 3  lLocal: 3  QijEcut: 6
+  8 projectors sampled on a log grid with 745 points:
+    l: 0  eig: -0.369345  rCut: 1.35
+    l: 0  eig: -3.559978  rCut: 1.35
+    l: 1  eig: -2.060221  rCut: 1.45
+    l: 1  eig: -0.156692  rCut: 1.45
+    l: 2  eig: -0.405934  rCut: 1.45
+    l: 2  eig: 1.000000  rCut: 1.45
+    l: 3  eig: 0.500000  rCut: 2
+    l: 3  eig: -0.500000  rCut: 2
+  Partial core density with radius 1.2
+  Transforming core density to a uniform radial grid of dG=0.02 with 1657 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1657 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1657 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 2.00 bohrs.
+
+Reading pseudopotential file '/home/rc652/build/pseudopotentials/GBRV/o_pbesol.uspp':
+  Title: O.  Created by USPP 7.3.6 on 3-2-2014
+  Reference state energy: -15.849885.  6 valence electrons in orbitals:
+    |200>  occupation: 2  eigenvalue: -0.873214
+    |210>  occupation: 4  eigenvalue: -0.330058
+  lMax: 2  lLocal: 2  QijEcut: 6
+  5 projectors sampled on a log grid with 511 points:
+    l: 0  eig: -0.873214  rCut: 1.25
+    l: 0  eig: 0.000000  rCut: 1.25
+    l: 1  eig: -0.330058  rCut: 1.25
+    l: 1  eig: 0.000000  rCut: 1.25
+    l: 2  eig: 1.000000  rCut: 1.25
+  Partial core density with radius 0.7
+  Transforming core density to a uniform radial grid of dG=0.02 with 1657 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1657 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1657 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.25 bohrs.
+
+Initialized 2 species with 37 total atoms.
+
+Folded 1 k-points by 4x4x4 to 64 k-points.
+
+---------- Setting up k-points, bands, fillings ----------
+Adding inversion symmetry to k-mesh for non-inversion-symmetric unit cell.
+Reduced to 32 k-points under symmetry. 
+Computing the number of bands and number of electrons
+Calculating initial fillings.
+nElectrons: 582.000000   nBands: 472   nStates: 32
+
+----- Setting up reduced wavefunction bases (one per k-point) -----
+average nbasis = 14465.188 , ideal nbasis = 14463.896
+
+---------- Setting up ewald sum ----------
+Optimum gaussian width for ewald sums = 3.281647 bohr.
+Real space sum over 567 unit cells with max indices [  4  4  3  ]
+Reciprocal space sum over 6859 terms with max indices [  9  9  9  ]
+
+---------- Allocating electronic variables ----------
+Initializing wave functions:  linear combination of atomic orbitals
+Os pseudo-atom occupations:   s ( 2 0 )  p ( 6 0 )  d ( 8 )
+O pseudo-atom occupations:   s ( 2 )  p ( 4 )
+	FillingsUpdate:  mu: +0.954395376  nElectrons: 582.000000
+LCAOMinimize: Iter:   0  F: -3330.5734361535760399  |grad|_K:  1.202e-03  alpha:  1.000e+00
+	FillingsUpdate:  mu: +0.963669510  nElectrons: 582.000000
+LCAOMinimize: Iter:   1  F: -3331.9903747407242918  |grad|_K:  1.069e-03  alpha:  1.952e-01  linmin: -1.169e-01  cgtest:  3.647e-01  t[s]:    131.23
+	FillingsUpdate:  mu: +0.982599715  nElectrons: 582.000000
+LCAOMinimize: Iter:   2  F: -3332.8082023433153154  |grad|_K:  1.066e-03  alpha:  1.607e-01  linmin:  7.151e-03  cgtest: -2.622e-01  t[s]:    174.49
+	FillingsUpdate:  mu: +0.995078694  nElectrons: 582.000000
+LCAOMinimize: Iter:   3  F: -3333.2868613538767022  |grad|_K:  6.605e-04  alpha:  1.201e-01  linmin:  2.330e-03  cgtest:  6.377e-01  t[s]:    217.70
+LCAOMinimize: Encountered beta<0, resetting CG.
+	FillingsUpdate:  mu: +0.995604214  nElectrons: 582.000000
+LCAOMinimize: Iter:   4  F: -3333.4170461004750905  |grad|_K:  3.934e-04  alpha:  8.276e-02  linmin:  5.049e-04  cgtest:  1.863e-03  t[s]:    261.33
+	FillingsUpdate:  mu: +0.997556755  nElectrons: 582.000000
+LCAOMinimize: Iter:   5  F: -3333.4983872952748243  |grad|_K:  2.177e-04  alpha:  1.461e-01  linmin: -6.252e-03  cgtest:  4.599e-02  t[s]:    304.81
+	FillingsUpdate:  mu: +0.998579934  nElectrons: 582.000000
+LCAOMinimize: Iter:   6  F: -3333.5141877116898286  |grad|_K:  8.371e-05  alpha:  9.188e-02  linmin: -1.372e-04  cgtest: -7.165e-02  t[s]:    347.03
+	FillingsUpdate:  mu: +0.999918876  nElectrons: 582.000000
+LCAOMinimize: Iter:   7  F: -3333.5193027223185709  |grad|_K:  8.050e-05  alpha:  2.048e-01  linmin:  2.223e-03  cgtest:  2.434e-03  t[s]:    389.23
+	FillingsUpdate:  mu: +1.001200665  nElectrons: 582.000000
+LCAOMinimize: Iter:   8  F: -3333.5232505316075731  |grad|_K:  6.589e-05  alpha:  1.713e-01  linmin:  5.729e-04  cgtest:  2.050e-02  t[s]:    432.55
+	FillingsUpdate:  mu: +1.001623722  nElectrons: 582.000000
+LCAOMinimize: Iter:   9  F: -3333.5244557559294662  |grad|_K:  1.438e-05  alpha:  7.741e-02  linmin: -2.424e-03  cgtest:  2.444e-02  t[s]:    475.60
+	FillingsUpdate:  mu: +1.001590076  nElectrons: 582.000000
+LCAOMinimize: Iter:  10  F: -3333.5245348689754792  |grad|_K:  7.512e-06  alpha:  1.066e-01  linmin:  1.243e-04  cgtest: -5.722e-03  t[s]:    518.21
+	FillingsUpdate:  mu: +1.001604514  nElectrons: 582.000000
+LCAOMinimize: Iter:  11  F: -3333.5245619613224335  |grad|_K:  3.510e-06  alpha:  1.342e-01  linmin:  8.252e-05  cgtest:  2.635e-03  t[s]:    561.50
+	FillingsUpdate:  mu: +1.001604909  nElectrons: 582.000000
+LCAOMinimize: Iter:  12  F: -3333.5245684057035760  |grad|_K:  2.232e-06  alpha:  1.461e-01  linmin:  1.025e-06  cgtest:  6.615e-04  t[s]:    604.24
+	FillingsUpdate:  mu: +1.001600088  nElectrons: 582.000000
+LCAOMinimize: Iter:  13  F: -3333.5245701505355100  |grad|_K:  1.554e-06  alpha:  9.783e-02  linmin: -1.275e-05  cgtest: -2.269e-05  t[s]:    647.78
+	FillingsUpdate:  mu: +1.001587941  nElectrons: 582.000000
+LCAOMinimize: Iter:  14  F: -3333.5245721302640050  |grad|_K:  1.165e-06  alpha:  2.289e-01  linmin: -7.289e-06  cgtest: -1.363e-04  t[s]:    690.51
+	FillingsUpdate:  mu: +1.001586893  nElectrons: 582.000000
+LCAOMinimize: Iter:  15  F: -3333.5245726903467585  |grad|_K:  4.862e-07  alpha:  1.152e-01  linmin: -1.417e-06  cgtest: -1.213e-04  t[s]:    733.43
+	FillingsUpdate:  mu: +1.001584524  nElectrons: 582.000000
+LCAOMinimize: Iter:  16  F: -3333.5245727809442542  |grad|_K:  2.401e-07  alpha:  1.068e-01  linmin: -5.071e-04  cgtest:  1.757e-03  t[s]:    776.89
+LCAOMinimize: Converged (|Delta F|<1.000000e-06 for 2 iters).
+
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   gga-PBEsol exchange-correlation functional:
+      J.P. Perdew et al., Phys. Rev. Lett. 100, 136406 (2008)
+
+   Pseudopotentials:
+      KF Garrity, JW Bennett, KM Rabe and D Vanderbilt, Comput. Mater. Sci. 81, 446 (2014)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+Initialization completed successfully at t[s]:    802.32
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +1.001584524  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.995296280  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3334.491648451063611   dF: -9.671e-01   |Residual|: 4.160e-01   |deigs|: 7.732e-02  t[s]:   1001.92
+	FillingsUpdate:  mu: +0.985292777  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3334.638442066777316   dF: -1.468e-01   |Residual|: 1.696e-01   |deigs|: 1.383e-02  t[s]:   1174.45
+	FillingsUpdate:  mu: +0.982035442  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3334.567710503358740   dF: +7.073e-02   |Residual|: 1.185e-01   |deigs|: 5.928e-03  t[s]:   1348.21
+	FillingsUpdate:  mu: +0.981586090  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3334.672268781429921   dF: -1.046e-01   |Residual|: 3.470e-02   |deigs|: 3.401e-03  t[s]:   1520.14
+	FillingsUpdate:  mu: +0.981743115  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3334.676286935192820   dF: -4.018e-03   |Residual|: 2.009e-02   |deigs|: 4.962e-04  t[s]:   1620.57
+	FillingsUpdate:  mu: +0.981824589  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3334.677446199671977   dF: -1.159e-03   |Residual|: 8.470e-03   |deigs|: 3.207e-04  t[s]:   1722.41
+	FillingsUpdate:  mu: +0.981815375  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3334.677683503500248   dF: -2.373e-04   |Residual|: 2.887e-03   |deigs|: 9.565e-05  t[s]:   1822.99
+	FillingsUpdate:  mu: +0.981793828  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3334.677722879511293   dF: -3.938e-05   |Residual|: 1.152e-03   |deigs|: 4.953e-05  t[s]:   1922.02
+	FillingsUpdate:  mu: +0.981774361  nElectrons: 582.000000
+SCF: Cycle:  8   F: -3334.677726061981957   dF: -3.182e-06   |Residual|: 4.944e-04   |deigs|: 2.975e-05  t[s]:   2023.02
+	FillingsUpdate:  mu: +0.981777089  nElectrons: 582.000000
+SCF: Cycle:  9   F: -3334.677726483960214   dF: -4.220e-07   |Residual|: 3.109e-04   |deigs|: 8.136e-06  t[s]:   2123.35
+	FillingsUpdate:  mu: +0.981782368  nElectrons: 582.000000
+SCF: Cycle: 10   F: -3334.677726885251104   dF: -4.013e-07   |Residual|: 8.222e-05   |deigs|: 7.161e-06  t[s]:   2224.47
+	FillingsUpdate:  mu: +0.981781139  nElectrons: 582.000000
+SCF: Cycle: 11   F: -3334.677726878265275   dF: +6.986e-09   |Residual|: 7.078e-05   |deigs|: 2.240e-06  t[s]:   2325.12
+	FillingsUpdate:  mu: +0.981781179  nElectrons: 582.000000
+SCF: Cycle: 12   F: -3334.677726905095369   dF: -2.683e-08   |Residual|: 2.132e-05   |deigs|: 1.098e-06  t[s]:   2425.64
+	FillingsUpdate:  mu: +0.981781124  nElectrons: 582.000000
+SCF: Cycle: 13   F: -3334.677726905068539   dF: +2.683e-11   |Residual|: 1.126e-05   |deigs|: 6.973e-07  t[s]:   2526.57
+	FillingsUpdate:  mu: +0.981781130  nElectrons: 582.000000
+SCF: Cycle: 14   F: -3334.677726905952113   dF: -8.836e-10   |Residual|: 3.057e-06   |deigs|: 6.905e-07  t[s]:   2622.14
+	FillingsUpdate:  mu: +0.981781157  nElectrons: 582.000000
+SCF: Cycle: 15   F: -3334.677726906109456   dF: -1.573e-10   |Residual|: 1.797e-06   |deigs|: 5.231e-07  t[s]:   2693.66
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.111710000000000   0.213580000000000   0.121580000000000 1
+ion Os   0.215310000000000   0.105690000000000   0.385860000000000 1
+ion Os   0.117620000000000   0.225330000000000   0.615380000000000 1
+ion Os   0.234830000000000   0.103270000000000   0.860670000000000 1
+ion Os   0.126170000000000   0.556680000000000   0.133360000000000 1
+ion Os   0.232270000000000   0.440970000000000   0.378540000000000 1
+ion Os   0.104340000000000   0.555720000000000   0.616050000000000 1
+ion Os   0.222030000000000   0.459570000000000   0.877410000000000 1
+ion Os   0.114380000000000   0.887180000000000   0.127870000000000 1
+ion Os   0.227230000000000   0.787880000000000   0.379140000000000 1
+ion Os   0.113010000000000   0.881590000000000   0.613190000000000 1
+ion Os   0.212260000000000   0.798960000000000   0.877350000000000 1
+ion Os   0.436020000000000   0.209130000000000   0.121700000000000 1
+ion Os   0.562130000000000   0.122550000000000   0.371650000000000 1
+ion Os   0.461190000000000   0.237180000000000   0.622960000000000 1
+ion Os   0.545110000000000   0.108170000000000   0.877870000000000 1
+ion Os   0.438530000000000   0.567340000000000   0.121880000000000 1
+ion Os   0.576830000000000   0.443140000000000   0.366380000000000 1
+ion Os   0.450400000000000   0.552580000000000   0.623970000000000 1
+ion Os   0.547920000000000   0.448540000000000   0.871220000000000 1
+ion Os   0.438430000000000   0.880080000000000   0.126920000000000 1
+ion Os   0.568890000000000   0.756100000000000   0.358360000000000 1
+ion Os   0.442530000000000   0.903330000000000   0.639360000000000 1
+ion Os   0.568800000000000   0.793980000000000   0.873780000000000 1
+ion Os   0.795610000000000   0.213330000000000   0.118820000000000 1
+ion Os   0.881070000000000   0.114320000000000   0.370000000000000 1
+ion Os   0.763200000000000   0.235710000000000   0.626980000000000 1
+ion Os   0.884450000000000   0.113910000000000   0.883190000000000 1
+ion Os   0.782350000000000   0.557440000000000   0.144410000000000 1
+ion Os   0.881930000000000   0.453250000000000   0.364050000000000 1
+ion Os   0.788410000000000   0.583780000000000   0.622180000000000 1
+ion Os   0.880960000000000   0.448880000000000   0.858190000000000 1
+ion Os   0.780820000000000   0.916290000000000   0.124700000000000 1
+ion Os   0.885210000000000   0.769930000000000   0.384490000000000 1
+ion Os   0.786560000000000   0.895910000000000   0.613990000000000 1
+ion Os   0.871850000000000   0.776870000000000   0.881450000000000 1
+ion O   0.330000000000000   0.380000000000000   0.550000000000000 1
+
+# Forces in Lattice coordinates:
+force Os   0.234942148294977   0.242183592168360  -0.051384908670635 1
+force Os   0.444980361363715  -0.561678134271197  -1.350137016516706 1
+force Os  -3.758553251974306  -0.939878279491439   2.283384951741978 1
+force Os  -1.308036510206670   1.295212528969308   0.582174172512589 1
+force Os  -0.887497076094753   0.459834240343497  -0.289921690879719 1
+force Os  -1.288787773860530   1.015155098960981  -1.925943135079476 1
+force Os   0.166044869693761   0.071638323390057   0.375106497572028 1
+force Os   0.005888192732796  -0.242115450571554  -0.210077643946464 1
+force Os  -0.346128083190121   0.210368610699947   0.103280734121005 1
+force Os   0.411166015400504  -0.464502605359981  -0.289411751608857 1
+force Os  -0.370176414891222   0.446159836708003   0.721257432481394 1
+force Os   0.709472282829226  -1.669551022919470  -0.114469573347654 1
+force Os   0.034657539165900   0.473274772675498   0.098160833922639 1
+force Os   0.041209767592223  -0.585853461206084  -0.060704664619293 1
+force Os   0.557073707330314  -1.211863906919942   0.147801043827957 1
+force Os   0.588176828684916   0.220512991693769   0.169522405057437 1
+force Os   0.989547782553201  -1.170002505108698  -0.425868548853602 1
+force Os  -0.907098408767426   0.486125997662183  -0.393929954716187 1
+force Os   2.561174189974790  10.246874126717081   6.866152537430791 1
+force Os   0.336739670943845  -0.112399396116326   0.690996872398313 1
+force Os  -0.010017390985522   0.480554597451240   0.167188322660417 1
+force Os  -1.105545719457832   1.431463418676940   0.879047006550686 1
+force Os   0.524171347412660  -0.610238698210429  -0.809138648303055 1
+force Os  -0.454737608215182  -0.119342000751278  -0.047608465358151 1
+force Os  -1.604720617553165   1.998664057035956   0.293516409276760 1
+force Os   0.269595142407787  -0.054620257594458   0.580156746785231 1
+force Os   1.011544081821311  -0.867753352541371  -0.239334130222725 1
+force Os   0.492461945959345  -0.012455859558175  -1.288089492360407 1
+force Os  -0.146686468586420   0.209905483618080  -2.033999541582138 1
+force Os   1.393357311609713  -1.241349725060921   0.739145487674566 1
+force Os   0.167916850295291  -0.995463709461444   0.620280690217863 1
+force Os   0.235842682299066   0.094903603353949   0.917105377786502 1
+force Os   0.877118860312005  -1.855845988957580  -0.063412107446029 1
+force Os   0.208214070186402   0.675894379602574  -1.008066328969926 1
+force Os  -0.498467854685211   0.524882017102593   0.565897136995855 1
+force Os   0.614397353968027  -0.098481822531084   0.079809002570259 1
+force O  -0.189756912916665  -7.770807190990201  -6.280330244934712 1
+
+# Energy components:
+   Eewald =    -2924.0424380281383492
+       EH =      420.7783980031243800
+     Eloc =     -718.1814215633748972
+      Enl =     -838.9812898828448624
+      Exc =     -676.1385185669849989
+ Exc_core =      254.9051663916524149
+       KE =     1147.2084288028172523
+-------------------------------------
+     Etot =    -3334.4516748437490605
+       TS =        0.2260520623606113
+-------------------------------------
+        F =    -3334.6777269061094557
+
+IonicMinimize: Iter:   0  F: -3334.677726906109456  |grad|_K:  1.261e-01  t[s]:   2721.25
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.009 -0.009 +0.012 +0.021 +0.006 -0.004 -0.018 -0.006 +0.022 +0.028 +0.028 +0.035 +0.021 +0.019 +0.021 +0.030 +0.020 +0.003 +0.120 -0.015 +0.018 +0.015 +0.021 -0.003 +0.039 +0.013 +0.018 +0.014 +0.049 +0.035 +0.024 +0.012 +0.037 +0.024 -0.025 +0.003
+# oxidation-state O +0.233
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.981781157  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.983114327  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3328.351947836190448   dF: +5.829e+00   |Residual|: 9.283e-01   |deigs|: 2.817e-03  t[s]:   2957.62
+	FillingsUpdate:  mu: +0.981047802  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3326.724192101760764   dF: +1.628e+00   |Residual|: 1.048e+00   |deigs|: 2.890e-02  t[s]:   3129.09
+	FillingsUpdate:  mu: +0.982134564  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3334.447551270151507   dF: -7.723e+00   |Residual|: 2.175e-01   |deigs|: 2.406e-02  t[s]:   3300.27
+	FillingsUpdate:  mu: +0.981702722  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3334.758217300231081   dF: -3.107e-01   |Residual|: 1.122e-01   |deigs|: 2.609e-03  t[s]:   3471.35
+	FillingsUpdate:  mu: +0.981601023  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3334.814002039900060   dF: -5.578e-02   |Residual|: 5.250e-02   |deigs|: 1.271e-03  t[s]:   3641.63
+	FillingsUpdate:  mu: +0.981580848  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3334.828120880017195   dF: -1.412e-02   |Residual|: 1.670e-02   |deigs|: 5.260e-04  t[s]:   3765.68
+	FillingsUpdate:  mu: +0.981548942  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3334.828026306054653   dF: +9.457e-05   |Residual|: 1.159e-02   |deigs|: 2.113e-04  t[s]:   3865.13
+	FillingsUpdate:  mu: +0.981564367  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3334.828854445871002   dF: -8.281e-04   |Residual|: 2.267e-03   |deigs|: 1.416e-04  t[s]:   3966.22
+	FillingsUpdate:  mu: +0.981564566  nElectrons: 582.000000
+SCF: Cycle:  8   F: -3334.828859426934741   dF: -4.981e-06   |Residual|: 1.486e-03   |deigs|: 2.842e-05  t[s]:   4067.09
+	FillingsUpdate:  mu: +0.981564441  nElectrons: 582.000000
+SCF: Cycle:  9   F: -3334.828869895078242   dF: -1.047e-05   |Residual|: 4.221e-04   |deigs|: 1.612e-05  t[s]:   4169.37
+	FillingsUpdate:  mu: +0.981565233  nElectrons: 582.000000
+SCF: Cycle: 10   F: -3334.828869945576116   dF: -5.050e-08   |Residual|: 2.452e-04   |deigs|: 4.059e-06  t[s]:   4271.41
+	FillingsUpdate:  mu: +0.981565374  nElectrons: 582.000000
+SCF: Cycle: 11   F: -3334.828870289491078   dF: -3.439e-07   |Residual|: 7.496e-05   |deigs|: 2.753e-06  t[s]:   4372.33
+	FillingsUpdate:  mu: +0.981565204  nElectrons: 582.000000
+SCF: Cycle: 12   F: -3334.828870293593354   dF: -4.102e-09   |Residual|: 4.200e-05   |deigs|: 6.519e-07  t[s]:   4473.52
+	FillingsUpdate:  mu: +0.981565170  nElectrons: 582.000000
+SCF: Cycle: 13   F: -3334.828870301406823   dF: -7.813e-09   |Residual|: 2.096e-05   |deigs|: 4.580e-07  t[s]:   4574.42
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.111913955479520   0.213786030105197   0.121560157969624 1
+ion Os   0.215404035828578   0.105495720031595   0.385338164286206 1
+ion Os   0.115197853477063   0.223715148952292   0.616262593249677 1
+ion Os   0.234451705822672   0.103637301296365   0.860895041234802 1
+ion Os   0.125793338555128   0.556689227450173   0.133247958729131 1
+ion Os   0.231822520813153   0.441182392202283   0.377795603696971 1
+ion Os   0.104455644089515   0.555808605780394   0.616195005434104 1
+ion Os   0.221964041373429   0.459433011419591   0.877328820051301 1
+ion Os   0.114241995525714   0.887201381990543   0.127909939336102 1
+ion Os   0.227332498313890   0.787731699241829   0.379028155830866 1
+ion Os   0.112925752986468   0.881739559930129   0.613468799698447 1
+ion Os   0.212188236660672   0.798206862750435   0.877305774484125 1
+ion Os   0.436175415382423   0.209411040067624   0.121737960392204 1
+ion Os   0.561985824476472   0.122226228313134   0.371626555697421 1
+ion Os   0.461162025751771   0.236645386087892   0.623017147326851 1
+ion Os   0.545510088220852   0.108464786468717   0.877935543067706 1
+ion Os   0.438761744448311   0.566953229662531   0.121715412547630 1
+ion Os   0.576449640749817   0.443158673854937   0.366227757453496 1
+ion Os   0.454801900621162   0.559183157552933   0.626623924642860 1
+ion Os   0.548080711141114   0.448572074121292   0.871487103386329 1
+ion Os   0.438561909759881   0.880352414772670   0.126984640898144 1
+ion Os   0.568666719835884   0.756603343582574   0.358699788526888 1
+ion Os   0.442655489704259   0.903130584668880   0.639047270983275 1
+ion Os   0.568505349791892   0.793781410838269   0.873761617640548 1
+ion Os   0.795263234680391   0.214015278351354   0.118933469232002 1
+ion Os   0.881208797985820   0.114365940272283   0.370224261459381 1
+ion Os   0.763530911297277   0.235502663549052   0.626887511833805 1
+ion Os   0.884728536515164   0.114043923943116   0.882692146896136 1
+ion Os   0.782326106752295   0.557518238629991   0.143623837733174 1
+ion Os   0.882372619560343   0.452938015438922   0.364335713789798 1
+ion Os   0.788221088480520   0.583257886019018   0.622419770166574 1
+ion Os   0.881122288968071   0.449001923306522   0.858544498849086 1
+ion Os   0.780790911136607   0.915478165058946   0.124675509216580 1
+ion Os   0.885522863928759   0.770376812550640   0.384100381453280 1
+ion Os   0.786424812023180   0.896067909603245   0.614208749834800 1
+ion Os   0.872173744754058   0.776989570100919   0.881480867042085 1
+ion O   0.327665685107876   0.375494402033712   0.547572545928594 1
+
+# Forces in Lattice coordinates:
+force Os   0.208628966260220   0.245875957187637  -0.056218946009360 1
+force Os   0.416475834761327  -0.558471798623296  -1.315797056760335 1
+force Os  -3.608214502846651  -0.730375463216657   2.229780946236673 1
+force Os  -1.260576730717106   1.238329602437698   0.578734113171994 1
+force Os  -0.870569633889788   0.460223349758170  -0.312081489675894 1
+force Os  -1.164650789945159   0.949876687791559  -1.670925173958798 1
+force Os   0.177852722731440   0.064807169943821   0.374778118472784 1
+force Os   0.021313114426406  -0.256062877133735  -0.239642559234241 1
+force Os  -0.338304739545374   0.212469447010887   0.095752086038360 1
+force Os   0.394196712460433  -0.457474642563676  -0.273152300516704 1
+force Os  -0.356697245929795   0.430763923817976   0.698325141102739 1
+force Os   0.691392502330380  -1.599692522764577  -0.113626121569778 1
+force Os   0.040110017526963   0.459695507150426   0.087749918300454 1
+force Os   0.043379187595857  -0.571240991992722  -0.059604187852617 1
+force Os   0.423477673223740  -1.008707879045543   0.125439549008019 1
+force Os   0.556617838636956   0.218126462134244   0.150262080199235 1
+force Os   0.952805795218437  -1.117858102805645  -0.390065600247164 1
+force Os  -0.883008796134024   0.508943280831109  -0.335063915905837 1
+force Os   1.415178898642230   6.896645967750150   4.375049533831435 1
+force Os   0.337831529330286  -0.126786972773533   0.672130029303872 1
+force Os  -0.002307392974570   0.457407874430016   0.157387446195339 1
+force Os  -1.075854757399929   1.402353294835827   0.839962133191283 1
+force Os   0.517753502348730  -0.614310037735206  -0.784101455826750 1
+force Os  -0.447513521490840  -0.109905341536337  -0.048041406137466 1
+force Os  -1.530365140010706   1.885137949326201   0.280349107060021 1
+force Os   0.256351294463161  -0.063671183327870   0.536406670131207 1
+force Os   0.995852420743556  -0.843961251547400  -0.229803220852059 1
+force Os   0.467898255662063  -0.010351377792889  -1.212655005604681 1
+force Os  -0.139640070475830   0.186816062609644  -1.935387621350277 1
+force Os   1.311876555110902  -1.169601571219931   0.692904131731477 1
+force Os   0.174563473846040  -0.965095166197746   0.574385159753452 1
+force Os   0.241425022459011   0.084304594171236   0.899295760482805 1
+force Os   0.835214633222535  -1.754908621076858  -0.068861098630954 1
+force Os   0.200691308418399   0.640153932482261  -0.968647524821097 1
+force Os  -0.494845513445992   0.466474554889556   0.538380205577526 1
+force Os   0.619127315650633  -0.101349455888305   0.078568361685591 1
+force O   0.871987808346192  -4.748706251045771  -3.973965012091472 1
+
+# Energy components:
+   Eewald =    -2927.2327444739389648
+       EH =      418.0256655204398726
+     Eloc =     -712.1076170968262886
+      Enl =     -838.9226259434205986
+      Exc =     -676.0259051772405883
+ Exc_core =      254.9051125069440786
+       KE =     1146.7549995549861706
+-------------------------------------
+     Etot =    -3334.6031151090564890
+       TS =        0.2257551923505386
+-------------------------------------
+        F =    -3334.8288703014068233
+
+IonicMinimize: Iter:   1  F: -3334.828870301406823  |grad|_K:  8.811e-02  alpha:  1.029e-01  linmin: -9.795e-01  t[s]:   4601.89
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.009 -0.004 +0.029 +0.019 +0.005 +0.010 -0.016 -0.004 +0.023 +0.029 +0.027 +0.034 +0.021 +0.019 +0.033 +0.030 +0.021 +0.012 +0.105 -0.010 +0.018 +0.015 +0.023 +0.002 +0.037 +0.014 +0.018 +0.013 +0.048 +0.035 +0.024 +0.013 +0.035 +0.025 -0.020 +0.005
+# oxidation-state O +0.159
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.981565170  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.983671903  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3321.135638649174325   dF: +1.273e+01   |Residual|: 1.277e+00   |deigs|: 4.926e-03  t[s]:   4839.53
+	FillingsUpdate:  mu: +0.981428057  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3318.468387067001004   dF: +2.667e+00   |Residual|: 1.487e+00   |deigs|: 3.572e-02  t[s]:   5011.91
+	FillingsUpdate:  mu: +0.982532143  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3334.323611424338651   dF: -1.586e+01   |Residual|: 2.914e-01   |deigs|: 3.505e-02  t[s]:   5181.34
+	FillingsUpdate:  mu: +0.981622051  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3334.776089239486282   dF: -4.525e-01   |Residual|: 1.830e-01   |deigs|: 3.403e-03  t[s]:   5354.28
+	FillingsUpdate:  mu: +0.981425600  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3334.934825948218986   dF: -1.587e-01   |Residual|: 7.022e-02   |deigs|: 2.160e-03  t[s]:   5527.30
+	FillingsUpdate:  mu: +0.981345828  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3334.958007283202278   dF: -2.318e-02   |Residual|: 2.326e-02   |deigs|: 7.904e-04  t[s]:   5685.17
+	FillingsUpdate:  mu: +0.981287412  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3334.957905692698660   dF: +1.016e-04   |Residual|: 1.697e-02   |deigs|: 3.031e-04  t[s]:   5786.56
+	FillingsUpdate:  mu: +0.981302665  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3334.959528397719623   dF: -1.623e-03   |Residual|: 3.551e-03   |deigs|: 2.079e-04  t[s]:   5889.19
+	FillingsUpdate:  mu: +0.981300729  nElectrons: 582.000000
+SCF: Cycle:  8   F: -3334.959541344566333   dF: -1.295e-05   |Residual|: 2.030e-03   |deigs|: 4.027e-05  t[s]:   5991.82
+	FillingsUpdate:  mu: +0.981302151  nElectrons: 582.000000
+SCF: Cycle:  9   F: -3334.959563996769248   dF: -2.265e-05   |Residual|: 6.582e-04   |deigs|: 2.210e-05  t[s]:   6093.58
+	FillingsUpdate:  mu: +0.981304854  nElectrons: 582.000000
+SCF: Cycle: 10   F: -3334.959564418905757   dF: -4.221e-07   |Residual|: 3.139e-04   |deigs|: 5.738e-06  t[s]:   6195.40
+	FillingsUpdate:  mu: +0.981304704  nElectrons: 582.000000
+SCF: Cycle: 11   F: -3334.959564892889375   dF: -4.740e-07   |Residual|: 1.193e-04   |deigs|: 2.629e-06  t[s]:   6298.29
+	FillingsUpdate:  mu: +0.981304290  nElectrons: 582.000000
+SCF: Cycle: 12   F: -3334.959564926392432   dF: -3.350e-08   |Residual|: 5.403e-05   |deigs|: 1.065e-06  t[s]:   6400.97
+	FillingsUpdate:  mu: +0.981304135  nElectrons: 582.000000
+SCF: Cycle: 13   F: -3334.959564933337788   dF: -6.945e-09   |Residual|: 3.511e-05   |deigs|: 5.766e-07  t[s]:   6501.84
+	FillingsUpdate:  mu: +0.981304040  nElectrons: 582.000000
+SCF: Cycle: 14   F: -3334.959564937352752   dF: -4.015e-09   |Residual|: 1.455e-05   |deigs|: 4.878e-07  t[s]:   6604.22
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.112313338686554   0.214219544162833   0.121510179768410 1
+ion Os   0.215557360562289   0.105047494120760   0.384238521350411 1
+ion Os   0.110384721809787   0.220732241944870   0.618128417703808 1
+ion Os   0.233658906843303   0.104378058782683   0.861384400123046 1
+ion Os   0.125000382971882   0.556726916894647   0.132972558625088 1
+ion Os   0.231020825737184   0.441642205740724   0.376501169099086 1
+ion Os   0.104726006961370   0.556001229045297   0.616512839061042 1
+ion Os   0.221835929876921   0.459120020349991   0.877111300600126 1
+ion Os   0.113956587666262   0.887260146722900   0.127987586032610 1
+ion Os   0.227530917164949   0.787403304066155   0.378804319636114 1
+ion Os   0.112752235080212   0.882050723908663   0.614050208550163 1
+ion Os   0.212063948959233   0.796673771028066   0.877209834245920 1
+ion Os   0.436513880448154   0.210006450493579   0.121807427661053 1
+ion Os   0.561688059232726   0.121546534242929   0.371576569160440 1
+ion Os   0.461037464893363   0.235740910020759   0.623112822274352 1
+ion Os   0.546323611859076   0.109075944416640   0.878053772677737 1
+ion Os   0.439249333127082   0.566170915628591   0.121401822785522 1
+ion Os   0.575684813375086   0.443268395991131   0.365971957039124 1
+ion Os   0.458899195132216   0.565938110891968   0.629133543009750 1
+ion Os   0.548421401813614   0.448615147206884   0.872048251207071 1
+ion Os   0.438843800968154   0.880912249943857   0.127113479745340 1
+ion Os   0.568206495791477   0.757679947843039   0.359393561567419 1
+ion Os   0.442914236488472   0.902678514602869   0.638394204906027 1
+ion Os   0.567882180592392   0.793371249839369   0.873720700515833 1
+ion Os   0.794536824448357   0.215368751427595   0.119164998617139 1
+ion Os   0.881478380471143   0.114435835707995   0.370658261178261 1
+ion Os   0.764249714526804   0.235079018577580   0.626697204287338 1
+ion Os   0.885293498535631   0.114317769283698   0.881699833941997 1
+ion Os   0.782264781491332   0.557651345015322   0.142029575915302 1
+ion Os   0.883254139698350   0.452314390138819   0.364901276529701 1
+ion Os   0.787849503271908   0.582178352218860   0.622884953826006 1
+ion Os   0.881479035699102   0.449254102575180   0.859298873582295 1
+ion Os   0.780743946565236   0.913854044003752   0.124614509274754 1
+ion Os   0.886159458416146   0.771279563256666   0.383297694598840 1
+ion Os   0.786077628479870   0.896302845664180   0.614652256689631 1
+ion Os   0.872890805900117   0.777250992793285   0.881546969984859 1
+ion O   0.327616646454248   0.372612961447863   0.545314144228385 1
+
+# Forces in Lattice coordinates:
+force Os   0.155314343990504   0.252676718387475  -0.055123025926539 1
+force Os   0.352898052221669  -0.495065976164019  -1.191110151601963 1
+force Os  -2.946052624183982  -0.394857310282562   1.818414506837557 1
+force Os  -1.157859713619466   1.120971606555002   0.558115260662890 1
+force Os  -0.820126932761201   0.441988595899192  -0.330836914260574 1
+force Os  -1.025412846106314   0.835090206971037  -1.351755808102792 1
+force Os   0.182995452731986   0.059723980036769   0.367915701388586 1
+force Os   0.044817895903150  -0.271949431554717  -0.264104906677198 1
+force Os  -0.317518906376276   0.209030839508062   0.069601912168325 1
+force Os   0.359397295220617  -0.439636197455315  -0.243519410987879 1
+force Os  -0.326492282675434   0.402750498562455   0.650792026382039 1
+force Os   0.660051294165391  -1.462977501873314  -0.111684409291283 1
+force Os   0.047269306191678   0.433526335708009   0.071964472311326 1
+force Os   0.049953307988114  -0.540627984622190  -0.055690430327560 1
+force Os   0.314526564234600  -0.859819734216630   0.118159482729504 1
+force Os   0.498270315484402   0.204788486922631   0.116142624935640 1
+force Os   0.881206327762839  -1.020595058269046  -0.330637151320690 1
+force Os  -0.796264979043647   0.499950973579529  -0.306178254570152 1
+force Os   0.666831621062982   4.889308450200999   2.884973675051092 1
+force Os   0.328161165453027  -0.139243706608156   0.621458271126004 1
+force Os   0.014510361143878   0.412578014828158   0.135742004659488 1
+force Os  -1.022480291920029   1.337290839811954   0.772924913803802 1
+force Os   0.486611214189909  -0.588374990138951  -0.730691687528430 1
+force Os  -0.427152124186757  -0.084738981682896  -0.016645237118171 1
+force Os  -1.385415068286259   1.666859745986839   0.248846147700375 1
+force Os   0.235773872542847  -0.077697699937370   0.453264548901531 1
+force Os   0.957468419203587  -0.798471991506965  -0.213311212521744 1
+force Os   0.418197188601577  -0.008215824954611  -1.070814889352337 1
+force Os  -0.122634744721870   0.144945662448484  -1.743608695535215 1
+force Os   1.155857999030740  -1.028914666872351   0.609876544250689 1
+force Os   0.170112447271620  -0.899757064107086   0.485949430724894 1
+force Os   0.244230233808644   0.066680647017897   0.860070633536477 1
+force Os   0.750729193770575  -1.563383671027479  -0.072897971753707 1
+force Os   0.179111588392105   0.572905527920592  -0.885298072511951 1
+force Os  -0.460389011969288   0.390083945326695   0.490635678773260 1
+force Os   0.611379670457102  -0.101443054301269   0.065910876957908 1
+force O   1.041477421059793  -3.164400845248052  -2.428778134588812 1
+
+# Energy components:
+   Eewald =    -2931.4320913960077633
+       EH =      414.2361838096321662
+     Eloc =     -703.9396191388337911
+      Enl =     -838.8387671330337980
+      Exc =     -675.8956420831116247
+ Exc_core =      254.9050687873873358
+       KE =     1146.2298616677953760
+-------------------------------------
+     Etot =    -3334.7350054861717581
+       TS =        0.2245594511809293
+-------------------------------------
+        F =    -3334.9595649373527522
+
+IonicMinimize: Iter:   2  F: -3334.959564937352752  |grad|_K:  6.506e-02  alpha:  4.113e-01  linmin: -9.961e-01  t[s]:   6631.41
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.010 +0.001 +0.039 +0.017 +0.005 +0.022 -0.013 -0.002 +0.024 +0.030 +0.026 +0.033 +0.022 +0.020 +0.042 +0.028 +0.020 +0.019 +0.098 -0.007 +0.017 +0.014 +0.025 +0.006 +0.034 +0.015 +0.018 +0.013 +0.047 +0.034 +0.022 +0.014 +0.032 +0.025 -0.014 +0.007
+# oxidation-state O +0.098
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.981304040  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.984165805  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3311.005073830563106   dF: +2.231e+01   |Residual|: 1.635e+00   |deigs|: 7.946e-03  t[s]:   6870.55
+	FillingsUpdate:  mu: +0.982760128  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3308.222957250921354   dF: +2.782e+00   |Residual|: 1.889e+00   |deigs|: 4.153e-02  t[s]:   7042.87
+	FillingsUpdate:  mu: +0.983176451  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3334.162842882397854   dF: -2.594e+01   |Residual|: 3.664e-01   |deigs|: 4.633e-02  t[s]:   7214.05
+	FillingsUpdate:  mu: +0.981551775  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3334.646850915769392   dF: -4.840e-01   |Residual|: 2.809e-01   |deigs|: 4.155e-03  t[s]:   7386.25
+	FillingsUpdate:  mu: +0.981274132  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3335.051340508322028   dF: -4.045e-01   |Residual|: 7.849e-02   |deigs|: 3.760e-03  t[s]:   7559.15
+	FillingsUpdate:  mu: +0.981096719  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3335.075150306914111   dF: -2.381e-02   |Residual|: 3.145e-02   |deigs|: 1.021e-03  t[s]:   7716.76
+	FillingsUpdate:  mu: +0.981006271  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3335.075462093017450   dF: -3.118e-04   |Residual|: 2.142e-02   |deigs|: 3.617e-04  t[s]:   7818.36
+	FillingsUpdate:  mu: +0.981006821  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3335.077841743157933   dF: -2.380e-03   |Residual|: 5.178e-03   |deigs|: 2.294e-04  t[s]:   7918.93
+	FillingsUpdate:  mu: +0.981000527  nElectrons: 582.000000
+SCF: Cycle:  8   F: -3335.077883678900889   dF: -4.194e-05   |Residual|: 2.578e-03   |deigs|: 5.656e-05  t[s]:   8021.02
+	FillingsUpdate:  mu: +0.981006751  nElectrons: 582.000000
+SCF: Cycle:  9   F: -3335.077919051002482   dF: -3.537e-05   |Residual|: 1.022e-03   |deigs|: 2.735e-05  t[s]:   8124.16
+	FillingsUpdate:  mu: +0.981013078  nElectrons: 582.000000
+SCF: Cycle: 10   F: -3335.077921303053245   dF: -2.252e-06   |Residual|: 4.058e-04   |deigs|: 1.197e-05  t[s]:   8224.70
+	FillingsUpdate:  mu: +0.981012175  nElectrons: 582.000000
+SCF: Cycle: 11   F: -3335.077921928891556   dF: -6.258e-07   |Residual|: 1.846e-04   |deigs|: 3.613e-06  t[s]:   8327.70
+	FillingsUpdate:  mu: +0.981011302  nElectrons: 582.000000
+SCF: Cycle: 12   F: -3335.077922051291353   dF: -1.224e-07   |Residual|: 7.360e-05   |deigs|: 2.150e-06  t[s]:   8429.22
+	FillingsUpdate:  mu: +0.981010751  nElectrons: 582.000000
+SCF: Cycle: 13   F: -3335.077922053035763   dF: -1.744e-09   |Residual|: 4.936e-05   |deigs|: 9.710e-07  t[s]:   8531.96
+	FillingsUpdate:  mu: +0.981010676  nElectrons: 582.000000
+SCF: Cycle: 14   F: -3335.077922066440351   dF: -1.340e-08   |Residual|: 1.279e-05   |deigs|: 4.898e-07  t[s]:   8633.89
+	FillingsUpdate:  mu: +0.981010749  nElectrons: 582.000000
+SCF: Cycle: 15   F: -3335.077922067153850   dF: -7.135e-10   |Residual|: 8.011e-06   |deigs|: 2.835e-07  t[s]:   8735.35
+	FillingsUpdate:  mu: +0.981010768  nElectrons: 582.000000
+SCF: Cycle: 16   F: -3335.077922067455347   dF: -3.015e-10   |Residual|: 3.435e-06   |deigs|: 1.780e-07  t[s]:   8824.64
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.112872903790221   0.214940053945976   0.121425263051745 1
+ion Os   0.215740463084948   0.104363005583910   0.382538133307192 1
+ion Os   0.104534157879647   0.217561946143970   0.620504674613984 1
+ion Os   0.232368468622381   0.105504458941711   0.862222081230358 1
+ion Os   0.123701214844333   0.556813317213927   0.132439112697425 1
+ion Os   0.229789823263076   0.442309712348888   0.374803666302745 1
+ion Os   0.105218534163993   0.556342006131761   0.617072260130216 1
+ion Os   0.221654143305399   0.458542294493498   0.876672979435212 1
+ion Os   0.113502206512668   0.887387258765034   0.128066867642241 1
+ion Os   0.227806023915719   0.786810422893572   0.378463239934033 1
+ion Os   0.112492906161600   0.882574597609001   0.614998759742533 1
+ion Os   0.211961935746112   0.794291022411173   0.877040171331989 1
+ion Os   0.437106858624386   0.211011681607581   0.121899897679867 1
+ion Os   0.561221270328779   0.120426223291601   0.371495109456156 1
+ion Os   0.460711238478283   0.234329513373590   0.623281754658949 1
+ion Os   0.547585399662481   0.110041666738847   0.878193739866633 1
+ion Os   0.440057424319905   0.564951341320031   0.120961304057785 1
+ion Os   0.574573443782772   0.443564485428723   0.365544692307183 1
+ion Os   0.462338143280673   0.572844313875608   0.631450854281543 1
+ion Os   0.548985346606575   0.448640960751417   0.872949587171499 1
+ion Os   0.439337687313447   0.881808752663197   0.127298443327619 1
+ion Os   0.567435906843450   0.759502023930994   0.360506540131335 1
+ion Os   0.443323130661124   0.901903843694480   0.637329222977002 1
+ion Os   0.566864319777849   0.792747771581719   0.873726237980285 1
+ion Os   0.793337255072626   0.217346738401780   0.119513375294201 1
+ion Os   0.881880117746302   0.114485626377262   0.371262062475509 1
+ion Os   0.765498483133559   0.234394462923251   0.626387827056197 1
+ion Os   0.886157384978739   0.114738537542155   0.880212229223454 1
+ion Os   0.782142853047817   0.557785399061326   0.139562090325546 1
+ion Os   0.884573513625997   0.451389791990522   0.365745583658420 1
+ion Os   0.787261272437142   0.580425834996252   0.623533247010957 1
+ion Os   0.882103391991881   0.449657767660800   0.860579091062135 1
+ion Os   0.780693190978660   0.911394593413033   0.124496978509479 1
+ion Os   0.887130360153663   0.772660473738322   0.382028216124150 1
+ion Os   0.785457111299030   0.896558708694205   0.615352925219486 1
+ion Os   0.874159367710559   0.777710732421945   0.881635596367699 1
+ion O   0.328782746854203   0.370398658038938   0.543706184357235 1
+
+# Forces in Lattice coordinates:
+force Os   0.079847024197588   0.259318402329414  -0.049329588745691 1
+force Os   0.277231274279523  -0.398711107185676  -1.013545795278262 1
+force Os  -2.189404113339005  -0.101930386898199   1.319608133370842 1
+force Os  -0.998543268769451   0.945714766386719   0.522219927343728 1
+force Os  -0.729326867757379   0.399568113452511  -0.342482560667513 1
+force Os  -0.851422359973918   0.686452045877720  -1.005365996810364 1
+force Os   0.177887410538468   0.058634021009577   0.350367449523174 1
+force Os   0.070916672867840  -0.283922248441956  -0.262080910782074 1
+force Os  -0.279469661203745   0.197659796606974   0.025483671714643 1
+force Os   0.302189780611852  -0.403841766528169  -0.204804968386629 1
+force Os  -0.284925252396109   0.363260910440048   0.576479352046802 1
+force Os   0.612722515654558  -1.257779337239600  -0.103221704846331 1
+force Os   0.054050142258684   0.391197727232239   0.054310378902461 1
+force Os   0.057453657133687  -0.487360974883517  -0.049401969550467 1
+force Os   0.242852878425920  -0.749436712962813   0.116839820885406 1
+force Os   0.413257454460484   0.180907747333790   0.070064525242431 1
+force Os   0.764913037798815  -0.871136918887634  -0.246247572671261 1
+force Os  -0.665603334342944   0.460966128543324  -0.281332459689853 1
+force Os   0.181788482255405   3.545079515954086   1.892098442751266 1
+force Os   0.308098878393380  -0.147487100513168   0.529862188163055 1
+force Os   0.033193513360995   0.350712338687862   0.099718388114013 1
+force Os  -0.938351377213846   1.227491472826010   0.674764743252112 1
+force Os   0.428974204192250  -0.528848776133340  -0.649622107346862 1
+force Os  -0.386759666611233  -0.052085013982819   0.043716615607904 1
+force Os  -1.179725557472208   1.363748430282016   0.203589502520985 1
+force Os   0.213975516247798  -0.093874431090560   0.337393786023241 1
+force Os   0.879087204364397  -0.720778692966725  -0.187719965355358 1
+force Os   0.344230777325836  -0.005245344211646  -0.861580229175941 1
+force Os  -0.098562168321360   0.092709616596573  -1.468724247739022 1
+force Os   0.936718363231006  -0.829500862649027   0.496612179419228 1
+force Os   0.148065988303483  -0.795907002145975   0.365609102953529 1
+force Os   0.241636048253443   0.040434152174124   0.793775429053748 1
+force Os   0.630308154404674  -1.298374516666588  -0.072359364880142 1
+force Os   0.142806280781873   0.476876207202115  -0.756715806005578 1
+force Os  -0.396166670986781   0.293503517456699   0.422435068854392 1
+force Os   0.584322483969933  -0.098249019958059   0.036103102574757 1
+force O   0.871457936266429  -2.208649549807181  -1.377933907989229 1
+
+# Energy components:
+   Eewald =    -2936.2030655472344733
+       EH =      409.8410670095627779
+     Eloc =     -694.5671557418746715
+      Enl =     -838.7411158036746883
+      Exc =     -675.7560636044853482
+ Exc_core =      254.9050332960192122
+       KE =     1145.6659067272307766
+-------------------------------------
+     Etot =    -3334.8553936644561873
+       TS =        0.2225284029989559
+-------------------------------------
+        F =    -3335.0779220674553471
+
+IonicMinimize: Iter:   3  F: -3335.077922067455347  |grad|_K:  4.838e-02  alpha:  3.314e-01  linmin: -9.820e-01  t[s]:   8852.01
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.011 +0.007 +0.046 +0.015 +0.007 +0.031 -0.010 -0.000 +0.025 +0.031 +0.025 +0.031 +0.022 +0.020 +0.050 +0.027 +0.020 +0.025 +0.095 -0.004 +0.017 +0.012 +0.025 +0.010 +0.030 +0.015 +0.018 +0.013 +0.044 +0.033 +0.019 +0.015 +0.029 +0.025 -0.007 +0.011
+# oxidation-state O +0.045
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.981010768  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.984623123  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3299.557056346590343   dF: +3.317e+01   |Residual|: 1.934e+00   |deigs|: 1.091e-02  t[s]:   9092.16
+	FillingsUpdate:  mu: +0.985465690  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3298.591497403769608   dF: +9.656e-01   |Residual|: 2.193e+00   |deigs|: 4.753e-02  t[s]:   9263.03
+	FillingsUpdate:  mu: +0.983895418  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3334.081203040279888   dF: -3.549e+01   |Residual|: 4.254e-01   |deigs|: 5.718e-02  t[s]:   9436.99
+	FillingsUpdate:  mu: +0.981391011  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3334.310019784213182   dF: -2.288e-01   |Residual|: 3.902e-01   |deigs|: 4.651e-03  t[s]:   9611.74
+	FillingsUpdate:  mu: +0.981116385  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3335.160784334692835   dF: -8.508e-01   |Residual|: 7.495e-02   |deigs|: 6.366e-03  t[s]:   9785.93
+	FillingsUpdate:  mu: +0.980848269  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3335.174441487015883   dF: -1.366e-02   |Residual|: 4.030e-02   |deigs|: 1.120e-03  t[s]:   9946.40
+	FillingsUpdate:  mu: +0.980746777  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3335.176723482618399   dF: -2.282e-03   |Residual|: 2.383e-02   |deigs|: 3.578e-04  t[s]:  10048.57
+	FillingsUpdate:  mu: +0.980725174  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3335.179317404301401   dF: -2.594e-03   |Residual|: 6.953e-03   |deigs|: 2.103e-04  t[s]:  10149.29
+	FillingsUpdate:  mu: +0.980715098  nElectrons: 582.000000
+SCF: Cycle:  8   F: -3335.179422895805601   dF: -1.055e-04   |Residual|: 3.278e-03   |deigs|: 6.691e-05  t[s]:  10250.33
+	FillingsUpdate:  mu: +0.980725243  nElectrons: 582.000000
+SCF: Cycle:  9   F: -3335.179465464731948   dF: -4.257e-05   |Residual|: 1.490e-03   |deigs|: 2.918e-05  t[s]:  10352.11
+	FillingsUpdate:  mu: +0.980734656  nElectrons: 582.000000
+SCF: Cycle: 10   F: -3335.179473920034525   dF: -8.455e-06   |Residual|: 5.459e-04   |deigs|: 2.142e-05  t[s]:  10454.47
+	FillingsUpdate:  mu: +0.980732680  nElectrons: 582.000000
+SCF: Cycle: 11   F: -3335.179475309621012   dF: -1.390e-06   |Residual|: 2.650e-04   |deigs|: 5.669e-06  t[s]:  10556.36
+	FillingsUpdate:  mu: +0.980731585  nElectrons: 582.000000
+SCF: Cycle: 12   F: -3335.179475599426496   dF: -2.898e-07   |Residual|: 1.003e-04   |deigs|: 2.974e-06  t[s]:  10660.27
+	FillingsUpdate:  mu: +0.980730590  nElectrons: 582.000000
+SCF: Cycle: 13   F: -3335.179475608720168   dF: -9.294e-09   |Residual|: 4.858e-05   |deigs|: 1.537e-06  t[s]:  10763.64
+	FillingsUpdate:  mu: +0.980730651  nElectrons: 582.000000
+SCF: Cycle: 14   F: -3335.179475622654081   dF: -1.393e-08   |Residual|: 1.412e-05   |deigs|: 5.688e-07  t[s]:  10866.20
+	FillingsUpdate:  mu: +0.980730764  nElectrons: 582.000000
+SCF: Cycle: 15   F: -3335.179475622770497   dF: -1.164e-10   |Residual|: 6.415e-06   |deigs|: 2.707e-07  t[s]:  10967.18
+	FillingsUpdate:  mu: +0.980730791  nElectrons: 582.000000
+SCF: Cycle: 16   F: -3335.179475622921018   dF: -1.505e-10   |Residual|: 5.217e-06   |deigs|: 1.964e-07  t[s]:  11058.20
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.113441248409357   0.215991972901135   0.121307334953889 1
+ion Os   0.215933175175375   0.103541192281632   0.380299195751997 1
+ion Os   0.099116276671701   0.215406186783219   0.622779439561490 1
+ion Os   0.230573358024601   0.106908125064409   0.863503562988591 1
+ion Os   0.121882756368362   0.556963871742066   0.131513316972547 1
+ion Os   0.228182064082595   0.443109191937958   0.373033555244767 1
+ion Os   0.106006538849212   0.556898475034384   0.617948493050493 1
+ion Os   0.221448926160069   0.457582149789196   0.875974426637204 1
+ion Os   0.112909283764033   0.887637858208652   0.128038482880284 1
+ion Os   0.228063629208127   0.785854685372962   0.378019682521323 1
+ion Os   0.112168128330928   0.883363084191097   0.616334784079485 1
+ion Os   0.212080977117950   0.791220667961467   0.876787665099932 1
+ion Os   0.438026005991377   0.212499241547575   0.121998724290926 1
+ion Os   0.560614464532436   0.118841010459995   0.371380382412083 1
+ion Os   0.460119783066841   0.232216047414579   0.623576293226848 1
+ion Os   0.549207576221595   0.111319275202155   0.878271094733944 1
+ion Os   0.441195635605183   0.563368874344641   0.120510949693381 1
+ion Os   0.573270565161794   0.444166248560560   0.364881231732267 1
+ion Os   0.464714605299641   0.579804802727410   0.633391484133347 1
+ion Os   0.549809382455086   0.448599568200343   0.874133179448600 1
+ion Os   0.440103904951231   0.883049775747691   0.127479968102928 1
+ion Os   0.566283074521748   0.762210007024958   0.362041987445498 1
+ion Os   0.443866171072730   0.900779977568653   0.635819168041959 1
+ion Os   0.565453579809712   0.791974879651591   0.873965489493922 1
+ion Os   0.791596154074487   0.219656484153772   0.119941696116028 1
+ion Os   0.882416169618571   0.114439410149761   0.371877951064949 1
+ion Os   0.767380330717107   0.233438039401124   0.625956136609602 1
+ion Os   0.887235447271091   0.115269819671034   0.878437698724711 1
+ion Os   0.781931619816107   0.557812634023418   0.136359117706190 1
+ion Os   0.886185333546627   0.450296164465767   0.366779747693448 1
+ion Os   0.786406948928264   0.577950454626168   0.624210799123470 1
+ion Os   0.883066310167559   0.450191104075329   0.862500261986975 1
+ion Os   0.780664120663833   0.908293534609525   0.124306381980272 1
+ion Os   0.888323997373826   0.774395925735323   0.380343511590411 1
+ion Os   0.784528914365225   0.896692800620815   0.616298250324448 1
+ion Os   0.876149507578799   0.778427432400347   0.881669613586426 1
+ion O   0.330004035026819   0.367989026349293   0.543228940995361 1
+
+# Forces in Lattice coordinates:
+force Os  -0.001140480020938   0.259579823712741  -0.038008755987246 1
+force Os   0.210135427755123  -0.294255546548323  -0.816555943132320 1
+force Os  -1.600390012251881   0.060083833743328   0.921994211149426 1
+force Os  -0.797500609657804   0.737628100015463   0.464492185432127 1
+force Os  -0.596476194729579   0.329707119452809  -0.337916867790965 1
+force Os  -0.651760423635753   0.530903598046057  -0.690239180177139 1
+force Os   0.159044043731162   0.060883114392960   0.316363004489155 1
+force Os   0.095468575722852  -0.283323340925401  -0.221858947929643 1
+force Os  -0.222268353139728   0.175679585772158  -0.026334319250813 1
+force Os   0.222875803901440  -0.344328427813869  -0.163192881344246 1
+force Os  -0.239954104063174   0.315621425756552   0.477111616393395 1
+force Os   0.549710509408305  -1.000970992788651  -0.086429978591475 1
+force Os   0.056109947969978   0.331993600936802   0.037828921559678 1
+force Os   0.061156322335839  -0.407490445354708  -0.038074229491429 1
+force Os   0.207133954857466  -0.653218955075897   0.109952613041159 1
+force Os   0.312424695285571   0.145685465280508   0.018341785192508 1
+force Os   0.604610220660900  -0.674601278696116  -0.144722962762094 1
+force Os  -0.522597228691333   0.398899932782064  -0.233296325926834 1
+force Os  -0.095935499544214   2.528816626791059   1.184241085075581 1
+force Os   0.273380654107381  -0.142604596469029   0.389440808502508 1
+force Os   0.043922987192625   0.280324397370280   0.050396321705665 1
+force Os  -0.815045388867003   1.065964919466548   0.549014255267789 1
+force Os   0.346163761251998  -0.434582045558043  -0.547849506108280 1
+force Os  -0.321728701962533  -0.024801164308897   0.117024831178339 1
+force Os  -0.939694816711810   1.024193523172091   0.156352786061248 1
+force Os   0.195827637577150  -0.106560618037744   0.212399711810766 1
+force Os   0.751017366813154  -0.605792034717499  -0.153879618967806 1
+force Os   0.255592790598240  -0.002717304306682  -0.613955951305538 1
+force Os  -0.076199167693329   0.049964320408770  -1.145153481431450 1
+force Os   0.690506373131622  -0.603967219264454   0.378419835238635 1
+force Os   0.109232541378587  -0.660598572107562   0.236554867382963 1
+force Os   0.229968087590047   0.005831933526840   0.690374523996732 1
+force Os   0.490491648736334  -1.003539899058963  -0.061480914518890 1
+force Os   0.093555241281293   0.364833801133779  -0.592051880359310 1
+force Os  -0.304239667672338   0.190313321103323   0.338710346007596 1
+force Os   0.526602607496259  -0.089882470247599  -0.014741701108250 1
+force O   0.699821151199061  -1.522517563635565  -0.724358317155239 1
+
+# Energy components:
+   Eewald =    -2940.8143155567322538
+       EH =      405.5383295806472006
+     Eloc =     -685.4499327634613337
+      Enl =     -838.6461856083180919
+      Exc =     -675.6246190858325917
+ Exc_core =      254.9050013927318332
+       KE =     1145.1321228907797831
+-------------------------------------
+     Etot =    -3334.9595991501855679
+       TS =        0.2198764727353048
+-------------------------------------
+        F =    -3335.1794756229210179
+
+IonicMinimize: Iter:   4  F: -3335.179475622921018  |grad|_K:  3.533e-02  alpha:  3.108e-01  linmin: -9.747e-01  t[s]:  11085.83
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.013 +0.012 +0.053 +0.012 +0.010 +0.038 -0.007 +0.001 +0.027 +0.031 +0.022 +0.029 +0.022 +0.020 +0.056 +0.025 +0.019 +0.029 +0.094 -0.002 +0.017 +0.010 +0.024 +0.014 +0.026 +0.016 +0.017 +0.013 +0.042 +0.031 +0.015 +0.016 +0.026 +0.025 -0.001 +0.014
+# oxidation-state O +0.003
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.980730791  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.984515548  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3291.326642962119422   dF: +4.097e+01   |Residual|: 2.112e+00   |deigs|: 1.283e-02  t[s]:  11325.01
+	FillingsUpdate:  mu: +0.987575334  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3292.924497833816531   dF: -1.598e+00   |Residual|: 2.345e+00   |deigs|: 5.234e-02  t[s]:  11498.46
+	FillingsUpdate:  mu: +0.984263762  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3334.048696197523441   dF: -4.112e+01   |Residual|: 4.669e-01   |deigs|: 6.423e-02  t[s]:  11671.01
+	FillingsUpdate:  mu: +0.981230487  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3334.011539148310021   dF: +3.716e-02   |Residual|: 4.609e-01   |deigs|: 5.221e-03  t[s]:  11843.11
+	FillingsUpdate:  mu: +0.980944951  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3335.242768333209369   dF: -1.231e+00   |Residual|: 7.526e-02   |deigs|: 8.341e-03  t[s]:  12015.08
+	FillingsUpdate:  mu: +0.980625352  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3335.251715304266781   dF: -8.947e-03   |Residual|: 4.754e-02   |deigs|: 1.217e-03  t[s]:  12173.46
+	FillingsUpdate:  mu: +0.980536244  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3335.256960216603602   dF: -5.245e-03   |Residual|: 2.440e-02   |deigs|: 3.174e-04  t[s]:  12274.78
+	FillingsUpdate:  mu: +0.980495010  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3335.259347150512895   dF: -2.387e-03   |Residual|: 8.202e-03   |deigs|: 1.994e-04  t[s]:  12378.22
+	FillingsUpdate:  mu: +0.980486841  nElectrons: 582.000000
+SCF: Cycle:  8   F: -3335.259503186494385   dF: -1.560e-04   |Residual|: 4.139e-03   |deigs|: 7.221e-05  t[s]:  12480.39
+	FillingsUpdate:  mu: +0.980496809  nElectrons: 582.000000
+SCF: Cycle:  9   F: -3335.259563103817072   dF: -5.992e-05   |Residual|: 1.932e-03   |deigs|: 3.364e-05  t[s]:  12581.37
+	FillingsUpdate:  mu: +0.980508011  nElectrons: 582.000000
+SCF: Cycle: 10   F: -3335.259580426438333   dF: -1.732e-05   |Residual|: 7.641e-04   |deigs|: 2.773e-05  t[s]:  12684.73
+	FillingsUpdate:  mu: +0.980505552  nElectrons: 582.000000
+SCF: Cycle: 11   F: -3335.259583828257291   dF: -3.402e-06   |Residual|: 3.306e-04   |deigs|: 8.658e-06  t[s]:  12786.75
+	FillingsUpdate:  mu: +0.980504516  nElectrons: 582.000000
+SCF: Cycle: 12   F: -3335.259584373794951   dF: -5.455e-07   |Residual|: 1.205e-04   |deigs|: 4.090e-06  t[s]:  12889.62
+	FillingsUpdate:  mu: +0.980503299  nElectrons: 582.000000
+SCF: Cycle: 13   F: -3335.259584392648776   dF: -1.885e-08   |Residual|: 5.003e-05   |deigs|: 1.882e-06  t[s]:  12993.97
+	FillingsUpdate:  mu: +0.980503416  nElectrons: 582.000000
+SCF: Cycle: 14   F: -3335.259584405447640   dF: -1.280e-08   |Residual|: 1.832e-05   |deigs|: 7.099e-07  t[s]:  13097.09
+	FillingsUpdate:  mu: +0.980503512  nElectrons: 582.000000
+SCF: Cycle: 15   F: -3335.259584406387603   dF: -9.400e-10   |Residual|: 8.959e-06   |deigs|: 4.604e-07  t[s]:  13199.95
+	FillingsUpdate:  mu: +0.980503548  nElectrons: 582.000000
+SCF: Cycle: 16   F: -3335.259584406670456   dF: -2.829e-10   |Residual|: 6.268e-06   |deigs|: 4.230e-07  t[s]:  13295.60
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.113771211899053   0.217364748330550   0.121185422862109 1
+ion Os   0.216192642249690   0.102769202423473   0.377681189635557 1
+ion Os   0.094206303224796   0.214255164997293   0.624786099867263 1
+ion Os   0.228454473993691   0.108376643680214   0.865232159427985 1
+ion Os   0.119743028374077   0.557154715985896   0.130102668326557 1
+ion Os   0.226483304179232   0.444015890818932   0.371520054957149 1
+ion Os   0.107096486717367   0.557725376800992   0.619151023758601 1
+ion Os   0.221302323757925   0.456181703309465   0.875143623955144 1
+ion Os   0.112322747063193   0.888076070418782   0.127736207402740 1
+ion Os   0.228106567209441   0.784509988841036   0.377507618680376 1
+ion Os   0.111792747624630   0.884429505344114   0.617954448994976 1
+ion Os   0.212745383248556   0.787994337687868   0.876481706065482 1
+ion Os   0.439259489040322   0.214411998624536   0.122085933205836 1
+ion Os   0.559974624828214   0.116949974190609   0.371259705708119 1
+ion Os   0.459375515901076   0.229316942344171   0.624012080397150 1
+ion Os   0.550921160198635   0.112711325741632   0.878148436219937 1
+ion Os   0.442520871554267   0.561713098678488   0.120290262551328 1
+ion Os   0.571956651750670   0.445116216287241   0.364070393011802 1
+ion Os   0.465931368068914   0.586616369778445   0.634782506175069 1
+ion Os   0.550877135477992   0.448472100149678   0.875269029299613 1
+ion Os   0.441119802588771   0.884548107685722   0.127514608968061 1
+ion Os   0.564772604556077   0.765739027310493   0.363856926053205 1
+ion Os   0.444464445832046   0.899429600631872   0.633924601358192 1
+ion Os   0.563813742019819   0.791174023174777   0.874718839347880 1
+ion Os   0.789350195643669   0.221794773625536   0.120402276742642 1
+ion Os   0.883127144894058   0.114240407909876   0.372269918292525 1
+ion Os   0.769793371695912   0.232296756151643   0.625440642530856 1
+ion Os   0.888313177537122   0.115808061114292   0.876823931356154 1
+ion Os   0.781614465083105   0.557672717703314   0.132836747843311 1
+ion Os   0.887808024451990   0.449287135132940   0.367878291143559 1
+ion Os   0.785229031350874   0.574864404307069   0.624684747115998 1
+ion Os   0.884357940820230   0.450725504695109   0.865007653808133 1
+ion Os   0.780652757984475   0.904934089899220   0.124076604812641 1
+ion Os   0.889444704321603   0.776164448951756   0.378491014026564 1
+ion Os   0.783418973197669   0.896562798003157   0.617390363091876 1
+ion Os   0.878860420102548   0.779396106069837   0.881443400806034 1
+ion O   0.331185161558291   0.365360663199972   0.543738862199579 1
+
+# Forces in Lattice coordinates:
+force Os  -0.064126315843878   0.244926589762996  -0.019460327867076 1
+force Os   0.153835082602310  -0.194071560862438  -0.618220581859303 1
+force Os  -1.120871610829124   0.116244625998760   0.613238148112408 1
+force Os  -0.586060923314026   0.537602069846156   0.380675010153972 1
+force Os  -0.443220136979628   0.243677079720593  -0.308109313457764 1
+force Os  -0.464501682759441   0.390437921991414  -0.445007582640243 1
+force Os   0.125351940730496   0.061074087807954   0.265264091122669 1
+force Os   0.112096919275848  -0.263271841040416  -0.155166715297464 1
+force Os  -0.152907096690579   0.141716770172193  -0.068484944288150 1
+force Os   0.131983298717726  -0.261955168603324  -0.129059330652002 1
+force Os  -0.195092643441595   0.261123780154552   0.365086094401239 1
+force Os   0.470285941901651  -0.731635080531859  -0.063570062534574 1
+force Os   0.050948681821110   0.260899229810221   0.024218406546904 1
+force Os   0.055450878321683  -0.306542457839811  -0.025325157164714 1
+force Os   0.183217785965866  -0.544560682696613   0.094346752507102 1
+force Os   0.216868333754570   0.102968755876650  -0.023494383249835 1
+force Os   0.425880037915377  -0.463387291783446  -0.053963258027793 1
+force Os  -0.391650248736193   0.321947565215306  -0.160128618872383 1
+force Os  -0.203137563223684   1.682153437285871   0.695804955293313 1
+force Os   0.222648296174361  -0.117608156356128   0.222940112933850 1
+force Os   0.036857804037184   0.216068403120896  -0.001082530784707 1
+force Os  -0.656979429457232   0.863400451926078   0.411821980342157 1
+force Os   0.243847368307175  -0.310049219222909  -0.439835147208947 1
+force Os  -0.237758317061763  -0.011008036090977   0.174783137310603 1
+force Os  -0.700342152212525   0.709993881218954   0.118189004329009 1
+force Os   0.177132193631789  -0.107832745910049   0.103877644512476 1
+force Os   0.582803058088743  -0.463083778563408  -0.115665047036765 1
+force Os   0.164582693160322  -0.003284389875531  -0.372342703043984 1
+force Os  -0.061321615572303   0.031958505089387  -0.822846291374965 1
+force Os   0.464288842144216  -0.396405792182762   0.278190735896400 1
+force Os   0.067717022941479  -0.512902348584323   0.131672029124341 1
+force Os   0.205203753313940  -0.028242072223363   0.550794233314578 1
+force Os   0.355821613435599  -0.728841605494614  -0.041607721731307 1
+force Os   0.044045627419448   0.255056030514277  -0.420325385359264 1
+force Os  -0.197926236366905   0.102476318790143   0.252387750774865 1
+force Os   0.436273909562420  -0.079916756940120  -0.072964695588561 1
+force O   0.548451352009134  -1.019193648173492  -0.327036357675054 1
+
+# Energy components:
+   Eewald =    -2944.5464029974227742
+       EH =      402.0340306772502572
+     Eloc =     -678.0412809366524698
+      Enl =     -838.5716939756468946
+      Exc =     -675.5175364181571922
+ Exc_core =      254.9049764419112023
+       KE =     1144.6953920921228018
+-------------------------------------
+     Etot =    -3335.0425151165941315
+       TS =        0.2170692900764325
+-------------------------------------
+        F =    -3335.2595844066704558
+
+IonicMinimize: Iter:   5  F: -3335.259584406670456  |grad|_K:  2.466e-02  alpha:  3.196e-01  linmin: -9.694e-01  t[s]:  13323.01
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.014 +0.017 +0.061 +0.008 +0.014 +0.043 -0.004 +0.002 +0.028 +0.030 +0.018 +0.027 +0.023 +0.020 +0.060 +0.023 +0.019 +0.032 +0.095 -0.001 +0.017 +0.008 +0.022 +0.018 +0.023 +0.016 +0.016 +0.015 +0.040 +0.030 +0.010 +0.018 +0.023 +0.025 +0.004 +0.017
+# oxidation-state O -0.030
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.980503548  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.983931661  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3285.136322518404540   dF: +4.665e+01   |Residual|: 2.255e+00   |deigs|: 1.455e-02  t[s]:  13561.12
+	FillingsUpdate:  mu: +0.988636512  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3287.996115966232992   dF: -2.860e+00   |Residual|: 2.450e+00   |deigs|: 5.599e-02  t[s]:  13733.63
+	FillingsUpdate:  mu: +0.984496381  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3334.003990784050984   dF: -4.601e+01   |Residual|: 5.043e-01   |deigs|: 6.900e-02  t[s]:  13904.27
+	FillingsUpdate:  mu: +0.981117911  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3333.781232707217441   dF: +2.228e-01   |Residual|: 5.104e-01   |deigs|: 6.053e-03  t[s]:  14075.46
+	FillingsUpdate:  mu: +0.980827168  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3335.297285556911902   dF: -1.516e+00   |Residual|: 8.233e-02   |deigs|: 9.638e-03  t[s]:  14247.07
+	FillingsUpdate:  mu: +0.980463168  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3335.308205683946653   dF: -1.092e-02   |Residual|: 5.329e-02   |deigs|: 1.318e-03  t[s]:  14407.67
+	FillingsUpdate:  mu: +0.980376792  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3335.315827723634811   dF: -7.622e-03   |Residual|: 2.617e-02   |deigs|: 3.466e-04  t[s]:  14521.53
+	FillingsUpdate:  mu: +0.980322235  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3335.318559930663014   dF: -2.732e-03   |Residual|: 9.152e-03   |deigs|: 2.173e-04  t[s]:  14622.24
+	FillingsUpdate:  mu: +0.980317671  nElectrons: 582.000000
+SCF: Cycle:  8   F: -3335.318744290656014   dF: -1.844e-04   |Residual|: 4.808e-03   |deigs|: 7.427e-05  t[s]:  14725.28
+	FillingsUpdate:  mu: +0.980327462  nElectrons: 582.000000
+SCF: Cycle:  9   F: -3335.318835145783851   dF: -9.086e-05   |Residual|: 2.240e-03   |deigs|: 3.913e-05  t[s]:  14827.50
+	FillingsUpdate:  mu: +0.980338910  nElectrons: 582.000000
+SCF: Cycle: 10   F: -3335.318860576539464   dF: -2.543e-05   |Residual|: 8.908e-04   |deigs|: 2.951e-05  t[s]:  14929.19
+	FillingsUpdate:  mu: +0.980336687  nElectrons: 582.000000
+SCF: Cycle: 11   F: -3335.318865328943048   dF: -4.752e-06   |Residual|: 3.506e-04   |deigs|: 8.973e-06  t[s]:  15031.66
+	FillingsUpdate:  mu: +0.980335836  nElectrons: 582.000000
+SCF: Cycle: 12   F: -3335.318865953709519   dF: -6.248e-07   |Residual|: 1.408e-04   |deigs|: 4.097e-06  t[s]:  15132.65
+	FillingsUpdate:  mu: +0.980334505  nElectrons: 582.000000
+SCF: Cycle: 13   F: -3335.318865991925122   dF: -3.822e-08   |Residual|: 5.140e-05   |deigs|: 2.037e-06  t[s]:  15236.74
+	FillingsUpdate:  mu: +0.980334636  nElectrons: 582.000000
+SCF: Cycle: 14   F: -3335.318866003558469   dF: -1.163e-08   |Residual|: 2.254e-05   |deigs|: 7.983e-07  t[s]:  15338.95
+	FillingsUpdate:  mu: +0.980334702  nElectrons: 582.000000
+SCF: Cycle: 15   F: -3335.318866004984557   dF: -1.426e-09   |Residual|: 1.274e-05   |deigs|: 6.498e-07  t[s]:  15440.34
+	FillingsUpdate:  mu: +0.980334745  nElectrons: 582.000000
+SCF: Cycle: 16   F: -3335.318866005466134   dF: -4.816e-10   |Residual|: 6.928e-06   |deigs|: 6.674e-07  t[s]:  15538.67
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.113688058537354   0.219137133150446   0.121136602045447 1
+ion Os   0.216645693352828   0.102219769373180   0.374667055350644 1
+ion Os   0.089376399404167   0.213665214460343   0.626618217715736 1
+ion Os   0.226150298340884   0.109945069826347   0.867419286764042 1
+ion Os   0.117391589067396   0.557331747472863   0.128089830634457 1
+ion Os   0.224797643027475   0.445125665121491   0.370244397246720 1
+ion Os   0.108460778088801   0.558873824040709   0.620718096315025 1
+ion Os   0.221329103543857   0.454255271606379   0.874363675312293 1
+ion Os   0.111914432921408   0.888769983517751   0.126990774116275 1
+ion Os   0.227687526259578   0.782764168835042   0.376859700397176 1
+ion Os   0.111321424799557   0.885833384558942   0.619824798179515 1
+ion Os   0.214328017734699   0.784967757176783   0.876158618255226 1
+ion Os   0.440806572000430   0.216741291464539   0.122156921476592 1
+ion Os   0.559371615221676   0.114903635860823   0.371154703529966 1
+ion Os   0.458615403957176   0.225509662418836   0.624596962804703 1
+ion Os   0.552599454403796   0.114080925954620   0.877708447842353 1
+ion Os   0.443907555408848   0.560218597624171   0.120490008589807 1
+ion Os   0.570564906370829   0.446411586199345   0.363308740606845 1
+ion Os   0.466157021326012   0.593101259997066   0.635776955104486 1
+ion Os   0.552225036480543   0.448337269287360   0.875914103439406 1
+ion Os   0.442319625318667   0.886333830374879   0.127216883068394 1
+ion Os   0.562922121878448   0.770182935540835   0.365891717657167 1
+ion Os   0.445032724252579   0.898060569909011   0.631548553081844 1
+ion Os   0.562086403196452   0.790378288045433   0.876296391405953 1
+ion Os   0.786527794136300   0.223574820931305   0.120944819130140 1
+ion Os   0.884159069227263   0.113887216917467   0.372271724716338 1
+ion Os   0.772640335783997   0.231036605824251   0.624862732657948 1
+ion Os   0.889175725628122   0.116222471726266   0.875737795724921 1
+ion Os   0.781182250781881   0.557472879818882   0.129153888472877 1
+ion Os   0.889354182401643   0.448502454275646   0.369105470806503 1
+ion Os   0.783603809461964   0.571090612284954   0.624871342432206 1
+ion Os   0.885990801004959   0.451107789158462   0.868064014350874 1
+ion Os   0.780621932165574   0.901307370424543   0.123873210955020 1
+ion Os   0.890263010888492   0.777770373195357   0.376614237110334 1
+ion Os   0.782359677989717   0.896169132778879   0.618607468984033 1
+ion Os   0.882285348501365   0.780560285778476   0.880642220348538 1
+ion O   0.332496657135267   0.362309145068319   0.544999633370199 1
+
+# Forces in Lattice coordinates:
+force Os  -0.094425581866181   0.205024185206972   0.005428786776784 1
+force Os   0.100786445197835  -0.101337028275045  -0.422047867656727 1
+force Os  -0.663033891445222   0.098301002545210   0.357057143226900 1
+force Os  -0.374913613215552   0.355323730357863   0.268798388779287 1
+force Os  -0.285202642556171   0.153641431164408  -0.240577948223532 1
+force Os  -0.302911671859860   0.266489430475359  -0.263250859098024 1
+force Os   0.080197785918659   0.051911226545053   0.194324538332747 1
+force Os   0.113181188183829  -0.216364261884514  -0.080370539406259 1
+force Os  -0.082099874035210   0.097009078415418  -0.087938629585649 1
+force Os   0.040685537891508  -0.159364293887994  -0.103294284880354 1
+force Os  -0.144575351009109   0.195040902529880   0.246026004364278 1
+force Os   0.362047017249218  -0.462151451087940  -0.039879368022703 1
+force Os   0.038104654052859   0.182950636268571   0.012030785112721 1
+force Os   0.035691157836369  -0.187917536760822  -0.016026717448018 1
+force Os   0.147575594800339  -0.400164525758299   0.072422751556622 1
+force Os   0.136026685805303   0.055411363407010  -0.040909481143196 1
+force Os   0.250521025202017  -0.261557449642122   0.005533842258386 1
+force Os  -0.271314446008229   0.233452610560824  -0.073227464866076 1
+force Os  -0.174297477060607   0.897798660542409   0.356626474218799 1
+force Os   0.156706030466026  -0.075102611761150   0.069091400462010 1
+force Os   0.012474998400674   0.161057776182039  -0.040596731358503 1
+force Os  -0.467430245331135   0.621157233600522   0.274591478006420 1
+force Os   0.127882099211705  -0.163238832859007  -0.330089410652634 1
+force Os  -0.143851293137624  -0.011375274689716   0.184897193586611 1
+force Os  -0.465659907355652   0.434109536922315   0.090775044186941 1
+force Os   0.148448630095177  -0.091733434529462   0.020655311512984 1
+force Os   0.380279374346507  -0.301019131412370  -0.079798109523805 1
+force Os   0.077013581906495  -0.007387547646311  -0.157586337739250 1
+force Os  -0.053701145060789   0.037098683128458  -0.512051064203809 1
+force Os   0.267994720070548  -0.218863392968378   0.193195293664616 1
+force Os   0.037713261200890  -0.355940417277996   0.057942836600667 1
+force Os   0.163648059146476  -0.052656506155179   0.375978773048550 1
+force Os   0.232425567637930  -0.478145968108576  -0.017131196089503 1
+force Os   0.007602199402243   0.151937351682251  -0.257570755735760 1
+force Os  -0.095970029649089   0.037286300669893   0.168837227474628 1
+force Os   0.316518760559961  -0.071345638878149  -0.116027274115648 1
+force O   0.385335924379787  -0.620369767847447  -0.077782633412260 1
+
+# Energy components:
+   Eewald =    -2947.1604918224579706
+       EH =      399.5791092205897144
+     Eloc =     -672.8397446333276548
+      Enl =     -838.5240147713361694
+      Exc =     -675.4389329446264583
+ Exc_core =      254.9049560769186087
+       KE =     1144.3747167460523997
+-------------------------------------
+     Etot =    -3335.1044021281868481
+       TS =        0.2144638772791768
+-------------------------------------
+        F =    -3335.3188660054661341
+
+IonicMinimize: Iter:   6  F: -3335.318866005466134  |grad|_K:  1.523e-02  alpha:  3.858e-01  linmin: -9.727e-01  t[s]:  15565.87
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.016 +0.021 +0.069 +0.005 +0.018 +0.046 -0.002 +0.003 +0.030 +0.029 +0.014 +0.025 +0.022 +0.019 +0.065 +0.022 +0.019 +0.035 +0.096 -0.000 +0.018 +0.005 +0.020 +0.021 +0.021 +0.015 +0.015 +0.017 +0.038 +0.028 +0.005 +0.019 +0.022 +0.025 +0.009 +0.019
+# oxidation-state O -0.057
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.980334745  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.982818186  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3295.225111527427543   dF: +3.678e+01   |Residual|: 2.080e+00   |deigs|: 1.266e-02  t[s]:  15806.66
+	FillingsUpdate:  mu: +0.984479741  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3292.497130274843585   dF: +2.728e+00   |Residual|: 2.279e+00   |deigs|: 4.871e-02  t[s]:  15979.03
+	FillingsUpdate:  mu: +0.983947210  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3334.328167228507027   dF: -4.183e+01   |Residual|: 4.396e-01   |deigs|: 6.154e-02  t[s]:  16150.59
+	FillingsUpdate:  mu: +0.980774135  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3334.085487643248143   dF: +2.427e-01   |Residual|: 4.628e-01   |deigs|: 6.247e-03  t[s]:  16322.20
+	FillingsUpdate:  mu: +0.980678473  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3335.337777269617618   dF: -1.252e+00   |Residual|: 7.133e-02   |deigs|: 8.720e-03  t[s]:  16496.94
+	FillingsUpdate:  mu: +0.980346741  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3335.345178307274637   dF: -7.401e-03   |Residual|: 4.776e-02   |deigs|: 1.110e-03  t[s]:  16655.00
+	FillingsUpdate:  mu: +0.980264308  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3335.350927300888088   dF: -5.749e-03   |Residual|: 2.316e-02   |deigs|: 3.343e-04  t[s]:  16757.63
+	FillingsUpdate:  mu: +0.980218756  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3335.352997777138626   dF: -2.070e-03   |Residual|: 8.082e-03   |deigs|: 1.826e-04  t[s]:  16859.07
+	FillingsUpdate:  mu: +0.980220103  nElectrons: 582.000000
+SCF: Cycle:  8   F: -3335.353147660141985   dF: -1.499e-04   |Residual|: 3.519e-03   |deigs|: 5.285e-05  t[s]:  16961.01
+	FillingsUpdate:  mu: +0.980229585  nElectrons: 582.000000
+SCF: Cycle:  9   F: -3335.353201416280172   dF: -5.376e-05   |Residual|: 1.711e-03   |deigs|: 3.184e-05  t[s]:  17063.77
+	FillingsUpdate:  mu: +0.980238195  nElectrons: 582.000000
+SCF: Cycle: 10   F: -3335.353213728141782   dF: -1.231e-05   |Residual|: 6.692e-04   |deigs|: 2.119e-05  t[s]:  17164.64
+	FillingsUpdate:  mu: +0.980236010  nElectrons: 582.000000
+SCF: Cycle: 11   F: -3335.353216281979712   dF: -2.554e-06   |Residual|: 2.662e-04   |deigs|: 7.074e-06  t[s]:  17266.35
+	FillingsUpdate:  mu: +0.980235409  nElectrons: 582.000000
+SCF: Cycle: 12   F: -3335.353216537110256   dF: -2.551e-07   |Residual|: 1.381e-04   |deigs|: 2.930e-06  t[s]:  17367.56
+	FillingsUpdate:  mu: +0.980234244  nElectrons: 582.000000
+SCF: Cycle: 13   F: -3335.353216590399370   dF: -5.329e-08   |Residual|: 4.220e-05   |deigs|: 1.756e-06  t[s]:  17468.41
+	FillingsUpdate:  mu: +0.980234406  nElectrons: 582.000000
+SCF: Cycle: 14   F: -3335.353216596955463   dF: -6.556e-09   |Residual|: 2.473e-05   |deigs|: 7.479e-07  t[s]:  17570.83
+	FillingsUpdate:  mu: +0.980234394  nElectrons: 582.000000
+SCF: Cycle: 15   F: -3335.353216598871313   dF: -1.916e-09   |Residual|: 1.486e-05   |deigs|: 6.356e-07  t[s]:  17673.21
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.113175697546830   0.221156640060544   0.121306896164834 1
+ion Os   0.217332408031933   0.102094221029281   0.371498404420078 1
+ion Os   0.085267385458843   0.213322737568013   0.628187647789663 1
+ion Os   0.224095613867421   0.111676674269855   0.869720609816112 1
+ion Os   0.115141373671711   0.557432800267211   0.125766257596318 1
+ion Os   0.223192303386188   0.446437529732129   0.369070272013626 1
+ion Os   0.109807970941510   0.560140140262053   0.622440217240777 1
+ion Os   0.221643153806424   0.452034212466653   0.873888657607898 1
+ion Os   0.111846169554553   0.889638928307480   0.125822207600994 1
+ion Os   0.226647290647354   0.780942160141955   0.375993723469438 1
+ion Os   0.110770283464223   0.887444177563566   0.621719569069294 1
+ion Os   0.216834540046997   0.782681910928938   0.875870439784559 1
+ion Os   0.442459325724683   0.219222518207888   0.122193370697618 1
+ion Os   0.558864925087208   0.113144258152323   0.371056290803374 1
+ion Os   0.458029953589207   0.221321765385578   0.625275293565337 1
+ion Os   0.554085145114858   0.115181178651690   0.877039935607995 1
+ion Os   0.445126855387996   0.559192149550245   0.121082619593565 1
+ion Os   0.569059437217189   0.447851135105461   0.362948606152063 1
+ion Os   0.465745952677178   0.597789126373856   0.636648327765212 1
+ion Os   0.553723916208318   0.448369965438100   0.875683021664686 1
+ion Os   0.443419604555775   0.888315409743560   0.126496886030492 1
+ion Os   0.560992785640905   0.775073909695749   0.367939351996108 1
+ion Os   0.445387095888879   0.897175020334259   0.628754856199754 1
+ion Os   0.560574156680481   0.789596899810126   0.878550667076877 1
+ion Os   0.783429037848267   0.224897095633184   0.121653470524158 1
+ion Os   0.885548529194514   0.113509957416086   0.371811543232130 1
+ion Os   0.775338481653479   0.229837157713460   0.624251186981424 1
+ion Os   0.889481320053584   0.116285948934230   0.875569639674429 1
+ion Os   0.780686553458009   0.557511075827569   0.125795120761307 1
+ion Os   0.890678173664738   0.448052848054225   0.370484503064823 1
+ion Os   0.781759142250908   0.567037258899227   0.624819049995607 1
+ion Os   0.887749211955166   0.451156222565879   0.871152930802103 1
+ion Os   0.780561105666547   0.897632877362687   0.123804780055888 1
+ion Os   0.890632880148309   0.778966709045085   0.374958031864376 1
+ion Os   0.781686725768567   0.895664701529662   0.619848678686538 1
+ion Os   0.885886134257638   0.781591081294044   0.879108443357690 1
+ion O   0.333699359883607   0.358781596678147   0.546688491272853 1
+
+# Forces in Lattice coordinates:
+force Os  -0.085773684248409   0.139944730631302   0.024679204558342 1
+force Os   0.050649105050449  -0.028201045477276  -0.247951894960755 1
+force Os  -0.272742572310399   0.039453483248649   0.174351814193178 1
+force Os  -0.186961236087573   0.198384407705168   0.150325910410123 1
+force Os  -0.146409596331007   0.080078002395761  -0.140316971983614 1
+force Os  -0.178788710632048   0.167659887526337  -0.140573526927141 1
+force Os   0.040415325587573   0.029025524532726   0.112508249822520 1
+force Os   0.090787169007016  -0.143362514350711  -0.023334673536148 1
+force Os  -0.030426235777478   0.053013939910680  -0.080294015422045 1
+force Os  -0.027624933823086  -0.057980387949934  -0.078013225896465 1
+force Os  -0.085955286911797   0.120780467519441   0.133312305073247 1
+force Os   0.226097320283220  -0.224809083747667  -0.023689074667088 1
+force Os   0.019864762302669   0.114404321985772   0.000281919782788 1
+force Os   0.003128882904238  -0.068011413531156  -0.013808306504073 1
+force Os   0.096146553372933  -0.234056709564098   0.053407741054080 1
+force Os   0.078412254691101   0.012687321574477  -0.027505364655257 1
+force Os   0.108128483344698  -0.102177843848026   0.026561615658280 1
+force Os  -0.165640576429312   0.147148786451207   0.000904524480553 1
+force Os  -0.075578498526979   0.279671517539636   0.138080774141522 1
+force Os   0.091673442384162  -0.035239988633656  -0.018631987206947 1
+force Os  -0.013677779532226   0.111884225644351  -0.050928098986191 1
+force Os  -0.272431869053952   0.362998440993726   0.158801069391050 1
+force Os   0.037527260333801  -0.053261206776481  -0.224288340362868 1
+force Os  -0.058411734388942  -0.021561824738534   0.127320044483849 1
+force Os  -0.252733345275454   0.216218048155307   0.070352968575661 1
+force Os   0.105056766785282  -0.060801722676406  -0.023442446725395 1
+force Os   0.184780438046193  -0.153399155345435  -0.052521242331261 1
+force Os   0.011137036358775  -0.011951234878301  -0.010156935954069 1
+force Os  -0.048325030020477   0.047269057801334  -0.247219338818817 1
+force Os   0.112727372739560  -0.084103372094749   0.119927561381187 1
+force Os   0.028884077157042  -0.205990253128054   0.012354078699225 1
+force Os   0.108412596387957  -0.058878006404112   0.192850913279378 1
+force Os   0.127396953596401  -0.262068375710207   0.003285408557235 1
+force Os  -0.007292654704633   0.068185429345858  -0.123792563518853 1
+force Os  -0.029113333980211  -0.000705786225720   0.095293286141987 1
+force Os   0.187879433144943  -0.061465177595264  -0.117434927778868 1
+force O   0.227579816642213  -0.322476909424823   0.043970311974867 1
+
+# Energy components:
+   Eewald =    -2948.4965418198139560
+       EH =      398.3358887249161739
+     Eloc =     -670.1814539218192976
+      Enl =     -838.5054451561906035
+      Exc =     -675.3948483773588123
+ Exc_core =      254.9049482660370813
+       KE =     1144.1969051693026813
+-------------------------------------
+     Etot =    -3335.1405471149269033
+       TS =        0.2126694839444036
+-------------------------------------
+        F =    -3335.3532165988713132
+
+IonicMinimize: Iter:   7  F: -3335.353216598871313  |grad|_K:  7.746e-03  alpha:  4.963e-01  linmin: -9.814e-01  t[s]:  17700.47
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.018 +0.025 +0.077 +0.003 +0.022 +0.047 -0.002 +0.003 +0.032 +0.028 +0.009 +0.024 +0.022 +0.018 +0.069 +0.022 +0.019 +0.038 +0.096 +0.001 +0.018 +0.004 +0.018 +0.023 +0.020 +0.014 +0.014 +0.020 +0.036 +0.027 +0.001 +0.020 +0.020 +0.025 +0.012 +0.021
+# oxidation-state O -0.077
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.980234394  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.981571832  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3311.140291202553726   dF: +2.129e+01   |Residual|: 1.771e+00   |deigs|: 9.954e-03  t[s]:  17937.81
+	FillingsUpdate:  mu: +0.979106324  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3304.814752474809211   dF: +6.326e+00   |Residual|: 1.878e+00   |deigs|: 3.515e-02  t[s]:  18109.29
+	FillingsUpdate:  mu: +0.982987265  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3334.376150017508735   dF: -2.956e+01   |Residual|: 3.759e-01   |deigs|: 4.533e-02  t[s]:  18282.04
+	FillingsUpdate:  mu: +0.980590633  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3334.837963348960784   dF: -4.618e-01   |Residual|: 3.077e-01   |deigs|: 3.499e-03  t[s]:  18452.70
+	FillingsUpdate:  mu: +0.980564692  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3335.357434710030702   dF: -5.195e-01   |Residual|: 5.782e-02   |deigs|: 5.167e-03  t[s]:  18626.07
+	FillingsUpdate:  mu: +0.980283728  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3335.364179673421859   dF: -6.745e-03   |Residual|: 3.646e-02   |deigs|: 7.431e-04  t[s]:  18786.41
+	FillingsUpdate:  mu: +0.980179649  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3335.366867490698951   dF: -2.688e-03   |Residual|: 1.683e-02   |deigs|: 2.791e-04  t[s]:  18888.64
+	FillingsUpdate:  mu: +0.980158491  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3335.367940634985644   dF: -1.073e-03   |Residual|: 6.103e-03   |deigs|: 1.115e-04  t[s]:  18989.76
+	FillingsUpdate:  mu: +0.980173280  nElectrons: 582.000000
+SCF: Cycle:  8   F: -3335.368041542665196   dF: -1.009e-04   |Residual|: 2.063e-03   |deigs|: 4.544e-05  t[s]:  19092.51
+	FillingsUpdate:  mu: +0.980180949  nElectrons: 582.000000
+SCF: Cycle:  9   F: -3335.368055489850121   dF: -1.395e-05   |Residual|: 1.100e-03   |deigs|: 2.176e-05  t[s]:  19196.85
+	FillingsUpdate:  mu: +0.980186487  nElectrons: 582.000000
+SCF: Cycle: 10   F: -3335.368059543215168   dF: -4.053e-06   |Residual|: 3.335e-04   |deigs|: 1.204e-05  t[s]:  19298.62
+	FillingsUpdate:  mu: +0.980184022  nElectrons: 582.000000
+SCF: Cycle: 11   F: -3335.368059803275173   dF: -2.601e-07   |Residual|: 2.344e-04   |deigs|: 5.412e-06  t[s]:  19400.05
+	FillingsUpdate:  mu: +0.980183850  nElectrons: 582.000000
+SCF: Cycle: 12   F: -3335.368060037337727   dF: -2.341e-07   |Residual|: 1.124e-04   |deigs|: 2.463e-06  t[s]:  19502.14
+	FillingsUpdate:  mu: +0.980182912  nElectrons: 582.000000
+SCF: Cycle: 13   F: -3335.368060088858783   dF: -5.152e-08   |Residual|: 2.515e-05   |deigs|: 1.285e-06  t[s]:  19602.95
+	FillingsUpdate:  mu: +0.980183048  nElectrons: 582.000000
+SCF: Cycle: 14   F: -3335.368060089479968   dF: -6.212e-10   |Residual|: 2.138e-05   |deigs|: 4.795e-07  t[s]:  19705.34
+	FillingsUpdate:  mu: +0.980183026  nElectrons: 582.000000
+SCF: Cycle: 15   F: -3335.368060092404448   dF: -2.924e-09   |Residual|: 6.526e-06   |deigs|: 4.112e-07  t[s]:  19807.57
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.112351610707016   0.223285587380688   0.121817183423556 1
+ion Os   0.218203632457670   0.102498162942777   0.368167135613005 1
+ion Os   0.082432090739712   0.212879430848795   0.629722621281638 1
+ion Os   0.222620520634708   0.113724840102550   0.871885523383827 1
+ion Os   0.113176365044627   0.557552439481356   0.123564650034456 1
+ion Os   0.221496914611512   0.448089218939023   0.367692308565615 1
+ion Os   0.110953590341863   0.561246033617991   0.624110661861749 1
+ion Os   0.222291058800525   0.449782238497789   0.873780298893364 1
+ion Os   0.112068940739338   0.890579118881725   0.124298340865726 1
+ion Os   0.224921007262722   0.779405780268734   0.374813476054297 1
+ion Os   0.110254337678160   0.889186471733177   0.623493070136627 1
+ion Os   0.220001895330560   0.781332403922358   0.875563821657062 1
+ion Os   0.444129468911590   0.221877200810541   0.122139239387086 1
+ion Os   0.558364974021672   0.112123080484585   0.370870116724341 1
+ion Os   0.457701470819466   0.217260959328343   0.626128607909144 1
+ion Os   0.555487029810488   0.115908726733945   0.876427828606231 1
+ion Os   0.446101017065699   0.558750592720272   0.121891077362535 1
+ion Os   0.567344193126949   0.449381113873391   0.363266509252869 1
+ion Os   0.465191699797580   0.599699430907970   0.637623896562420 1
+ion Os   0.555333881031149   0.448642566438055   0.874689978119580 1
+ion Os   0.444221201709703   0.890527751831156   0.125431416017867 1
+ion Os   0.559075715100627   0.779947562675991   0.370053889904718 1
+ion Os   0.445399542664756   0.896794479294160   0.625415051991952 1
+ion Os   0.559418627729484   0.788668522814511   0.880903764461465 1
+ion Os   0.780347757142422   0.225938938904271   0.122692307055616 1
+ion Os   0.887293989939675   0.113250025073654   0.370960941276560 1
+ion Os   0.777400346357708   0.228673467252028   0.623517426657031 1
+ion Os   0.889021454134684   0.115824171989119   0.876429937567559 1
+ion Os   0.780107346914997   0.558042181945654   0.123006242121656 1
+ion Os   0.891673466092259   0.447952313633789   0.372088450934646 1
+ion Os   0.780145144290090   0.563070180367506   0.624592240752747 1
+ion Os   0.889453423411725   0.450747462368463   0.873790560574044 1
+ion Os   0.780494784240676   0.893981228707178   0.123950540851987 1
+ion Os   0.890667115840343   0.779742718149461   0.373593899152673 1
+ion Os   0.781342786346036   0.895081378195346   0.621098747302009 1
+ion Os   0.889256992828902   0.782158674674916   0.876892597027523 1
+ion O   0.334614606322909   0.354553544208730   0.548535640654819 1
+
+# Forces in Lattice coordinates:
+force Os  -0.048707862194877   0.060639365473196   0.019100941816638 1
+force Os   0.004156245875208   0.023169336574903  -0.096456811249645 1
+force Os  -0.011943663784737  -0.009568483980117   0.059951239012418 1
+force Os  -0.032094242618114   0.056901848598138   0.048368364488729 1
+force Os  -0.036089932001461   0.030829118161322  -0.035724952906450 1
+force Os  -0.078539069869938   0.086916753298449  -0.052214485774174 1
+force Os   0.019446661240217  -0.005189425860663   0.035353062513327 1
+force Os   0.040356738484670  -0.048509813716450   0.009515222593907 1
+force Os  -0.005062644470160   0.017568768994869  -0.056149730132078 1
+force Os  -0.058053023759654   0.022783737547166  -0.043239916600877 1
+force Os  -0.016221143001410   0.040662028701718   0.032426967528998 1
+force Os   0.076186011556663  -0.039622485446399  -0.016097139676188 1
+force Os   0.001284227548984   0.060464785514841  -0.009986981915255 1
+force Os  -0.031959305706840   0.036242268520491  -0.016061556981448 1
+force Os   0.047772356457013  -0.084339461830677   0.045189045865974 1
+force Os   0.038940525660124  -0.019197286478410   0.002549540078286 1
+force Os   0.002547353414909   0.011229034197120   0.021559320792223 1
+force Os  -0.072796516903132   0.070788096825371   0.044036777050334 1
+force Os  -0.006364294925422  -0.071714831210120  -0.017837378081162 1
+force Os   0.041518529577335  -0.014193681830308  -0.031532930491294 1
+force Os  -0.021570843619699   0.055167580812093  -0.032569650507296 1
+force Os  -0.086274735902473   0.105259404748986   0.057787153786577 1
+force Os   0.003203701684539  -0.027540481888100  -0.105477123803484 1
+force Os   0.008194865435801  -0.030899618251188   0.029732871150205 1
+force Os  -0.065142408481814   0.052380083894246   0.042111765840853 1
+force Os   0.043298510421083  -0.021120987581164  -0.024150594192248 1
+force Os   0.040595100209195  -0.046596921966016  -0.026239580674325 1
+force Os  -0.020789644741957  -0.011666099330593   0.054518021041229 1
+force Os  -0.032415714277161   0.036338960808443  -0.044314953779164 1
+force Os  -0.006322727668671   0.010973977019096   0.047925398576947 1
+force Os   0.032280168145751  -0.072943277472673  -0.012179285571885 1
+force Os   0.045055545162625  -0.044348272981092   0.031710018150587 1
+force Os   0.032285659224841  -0.071087625318502   0.010371962679493 1
+force Os  -0.008608797263904   0.010117212374451  -0.020654591019080 1
+force Os  -0.003091798894135  -0.015096624793561   0.030555348010768 1
+force Os   0.064310489602765  -0.041715914661641  -0.066622909300103 1
+force O   0.100016230083777  -0.117520335905244   0.075934942847353 1
+
+# Energy components:
+   Eewald =    -2948.9641067277057118
+       EH =      397.9185745777779175
+     Eloc =     -669.2623639956751731
+      Enl =     -838.5063082635363116
+      Exc =     -675.3774740302159216
+ Exc_core =      254.9049529577707176
+       KE =     1144.1304669947426191
+-------------------------------------
+     Etot =    -3335.1562584868420345
+       TS =        0.2118016055623057
+-------------------------------------
+        F =    -3335.3680600924044484
+
+IonicMinimize: Iter:   8  F: -3335.368060092404448  |grad|_K:  2.705e-03  alpha:  7.384e-01  linmin: -8.699e-01  t[s]:  19834.42
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.020 +0.030 +0.083 +0.002 +0.026 +0.047 -0.002 +0.002 +0.033 +0.026 +0.004 +0.023 +0.021 +0.016 +0.073 +0.021 +0.020 +0.041 +0.095 +0.002 +0.019 +0.003 +0.016 +0.025 +0.020 +0.013 +0.014 +0.022 +0.034 +0.027 -0.002 +0.022 +0.020 +0.025 +0.014 +0.023
+# oxidation-state O -0.091
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.980183026  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.980749056  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3331.159680144137837   dF: +3.149e+00   |Residual|: 9.316e-01   |deigs|: 3.195e-03  t[s]:  20073.92
+	FillingsUpdate:  mu: +0.977792461  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3329.579883332142799   dF: +1.580e+00   |Residual|: 8.148e-01   |deigs|: 1.225e-02  t[s]:  20245.84
+	FillingsUpdate:  mu: +0.981134890  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3334.694430367015684   dF: -5.115e+00   |Residual|: 2.688e-01   |deigs|: 1.454e-02  t[s]:  20417.31
+	FillingsUpdate:  mu: +0.980273509  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3335.335695335846140   dF: -6.413e-01   |Residual|: 7.481e-02   |deigs|: 2.689e-03  t[s]:  20587.45
+	FillingsUpdate:  mu: +0.980336367  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3335.368469134590214   dF: -3.277e-02   |Residual|: 2.705e-02   |deigs|: 7.288e-04  t[s]:  20742.33
+	FillingsUpdate:  mu: +0.980181273  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3335.370608676440952   dF: -2.140e-03   |Residual|: 1.463e-02   |deigs|: 3.055e-04  t[s]:  20843.77
+	FillingsUpdate:  mu: +0.980138182  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3335.370989243570421   dF: -3.806e-04   |Residual|: 5.101e-03   |deigs|: 1.544e-04  t[s]:  20945.04
+	FillingsUpdate:  mu: +0.980146901  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3335.371078883193604   dF: -8.964e-05   |Residual|: 2.426e-03   |deigs|: 3.736e-05  t[s]:  21046.42
+	FillingsUpdate:  mu: +0.980163926  nElectrons: 582.000000
+SCF: Cycle:  8   F: -3335.371099805775884   dF: -2.092e-05   |Residual|: 5.591e-04   |deigs|: 2.857e-05  t[s]:  21147.50
+	FillingsUpdate:  mu: +0.980166043  nElectrons: 582.000000
+SCF: Cycle:  9   F: -3335.371099477973075   dF: +3.278e-07   |Residual|: 4.556e-04   |deigs|: 6.425e-06  t[s]:  21249.73
+	FillingsUpdate:  mu: +0.980165957  nElectrons: 582.000000
+SCF: Cycle: 10   F: -3335.371100599498732   dF: -1.122e-06   |Residual|: 1.122e-04   |deigs|: 3.489e-06  t[s]:  21352.56
+	FillingsUpdate:  mu: +0.980164851  nElectrons: 582.000000
+SCF: Cycle: 11   F: -3335.371100588777153   dF: +1.072e-08   |Residual|: 7.672e-05   |deigs|: 1.547e-06  t[s]:  21454.71
+	FillingsUpdate:  mu: +0.980165065  nElectrons: 582.000000
+SCF: Cycle: 12   F: -3335.371100610119811   dF: -2.134e-08   |Residual|: 4.189e-05   |deigs|: 7.987e-07  t[s]:  21557.48
+	FillingsUpdate:  mu: +0.980164827  nElectrons: 582.000000
+SCF: Cycle: 13   F: -3335.371100614467650   dF: -4.348e-09   |Residual|: 1.909e-05   |deigs|: 5.058e-07  t[s]:  21659.77
+	FillingsUpdate:  mu: +0.980164886  nElectrons: 582.000000
+SCF: Cycle: 14   F: -3335.371100618086530   dF: -3.619e-09   |Residual|: 4.988e-06   |deigs|: 2.885e-07  t[s]:  21760.99
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.111672739501457   0.224596179156982   0.122278920651502 1
+ion Os   0.218787825406206   0.103382109988186   0.365889078804040 1
+ion Os   0.081728463318481   0.212314108960992   0.631079771100308 1
+ion Os   0.222440547301212   0.115153551015467   0.873078063388186 1
+ion Os   0.112417079173028   0.557966317462522   0.122640436635843 1
+ion Os   0.220277508894019   0.449726459703341   0.366477498678032 1
+ion Os   0.111566190313907   0.561475659059763   0.624992324032783 1
+ion Os   0.222867540798983   0.448721638180773   0.874017158611873 1
+ion Os   0.112232007961631   0.891136536974183   0.122957629632138 1
+ion Os   0.223276597036702   0.779108469235888   0.373803156580385 1
+ion Os   0.110355385520282   0.890354674690714   0.624302277039309 1
+ion Os   0.222077994794582   0.781278888545747   0.875206158203230 1
+ion Os   0.445249915899084   0.224008571647642   0.121923276217510 1
+ion Os   0.557906804992553   0.112739898599344   0.370519058645356 1
+ion Os   0.457892535413289   0.215002506324194   0.627176763135811 1
+ion Os   0.556486393443083   0.115937553991554   0.876428178462764 1
+ion Os   0.446404623701199   0.559171995203777   0.122450433180840 1
+ion Os   0.566051004889641   0.450583856957887   0.364255192839400 1
+ion Os   0.464690255672685   0.598623187625486   0.637827466066717 1
+ion Os   0.556546149536395   0.448881102415701   0.873882570021884 1
+ion Os   0.444461918014935   0.892094122276981   0.124634357988667 1
+ion Os   0.557875218320945   0.782258274948272   0.371430682003908 1
+ion Os   0.445048869351840   0.895974041015555   0.622919070931331 1
+ion Os   0.559142313900929   0.787768647067331   0.881759933196044 1
+ion Os   0.778899884852958   0.226584430562650   0.123674659136722 1
+ion Os   0.888476543342659   0.113250610637472   0.370352666568897 1
+ion Os   0.778071267198046   0.227769732164146   0.622911659989510 1
+ion Os   0.888101489391126   0.115069610962729   0.877743005949345 1
+ion Os   0.779614043982017   0.558729509231596   0.121924103124451 1
+ion Os   0.891679281963766   0.448236555917501   0.373227851744260 1
+ion Os   0.779891135899424   0.560999792653131   0.624290418773243 1
+ion Os   0.890298826297781   0.450000769827864   0.874644474677676 1
+ion Os   0.780384362832573   0.892021907652087   0.124198611802994 1
+ion Os   0.890511226840572   0.779937533836172   0.373099025475569 1
+ion Os   0.781020211328806   0.894510579857569   0.621836556895442 1
+ion Os   0.890868230112131   0.781886574307940   0.875267393804053 1
+ion O   0.335087612801076   0.350904041340862   0.549800116009978 1
+
+# Forces in Lattice coordinates:
+force Os  -0.014049609986894   0.013129546606151  -0.001247453573519 1
+force Os  -0.019475102293750   0.034760854273583  -0.011299363128615 1
+force Os   0.035108987527638  -0.007852585674276   0.006730515508573 1
+force Os   0.027785625216730  -0.018578320391696   0.001865687773289 1
+force Os  -0.003602086697767   0.019387671409858   0.005154788447315 1
+force Os  -0.023913878233979   0.034785076670691   0.001474313274255 1
+force Os   0.012095186986315  -0.019271366089444  -0.008947321906981 1
+force Os   0.003861512029358   0.007229642267740   0.009463826566778 1
+force Os  -0.007048122356755   0.010400682469303  -0.022348602475204 1
+force Os  -0.038938661735416   0.042005179352011  -0.008727732850395 1
+force Os   0.017899842015029  -0.000644909452166  -0.016466550875023 1
+force Os  -0.001368979510886   0.021133251011527  -0.013468658350526 1
+force Os  -0.006195292415931   0.028648203603990  -0.007002900366622 1
+force Os  -0.029286610252733   0.045028093341207  -0.006148938825581 1
+force Os   0.037920222676569  -0.040560712855474   0.043356957964884 1
+force Os   0.015963490872341  -0.025451602426961   0.011258913774076 1
+force Os  -0.025438429448715   0.038733603915470   0.006346241624712 1
+force Os  -0.024916019746682   0.030979926724623   0.035186323129400 1
+force Os  -0.006510481121725  -0.117268726762123  -0.084400848217276 1
+force Os   0.013421401257012  -0.004530205924635  -0.007447632501541 1
+force Os  -0.004354953762114   0.009322833524435  -0.004631830343578 1
+force Os   0.000896080786596  -0.008025710367320  -0.009681097973167 1
+force Os   0.002558414757899  -0.023140473740893  -0.020103185591547 1
+force Os   0.018783063304605  -0.024441449062073  -0.022630123441694 1
+force Os   0.016272737568833  -0.010333758980260   0.015347673154077 1
+force Os  -0.003339958929120   0.007004460785302   0.005743814102520 1
+force Os   0.009709090771202  -0.017834519709121  -0.012160533947928 1
+force Os  -0.006991879862619  -0.011439514011332   0.031328793306094 1
+force Os  -0.009377892057343   0.008107356030921   0.029632609084884 1
+force Os  -0.037433076726703   0.032368506197632   0.000473559202079 1
+force Os   0.023477281811482  -0.003954745209227  -0.008794233004566 1
+force Os   0.007354395285989  -0.015949891487979  -0.017556970244135 1
+force Os  -0.016536794522782   0.021266638039360   0.008610992580228 1
+force Os  -0.006064199093427   0.003544189534943   0.019391686960216 1
+force Os   0.003224336147322  -0.012596053139115  -0.005199779173648 1
+force Os   0.000682467148748  -0.012471039861744  -0.011703691404556 1
+force O   0.037586421539957  -0.039590837041319   0.058502576640924 1
+
+# Energy components:
+   Eewald =    -2949.0463015792729493
+       EH =      397.8545337443891299
+     Eloc =     -669.1105492636635290
+      Enl =     -838.5100616578466770
+      Exc =     -675.3749641428955783
+ Exc_core =      254.9049553723818349
+       KE =     1144.1229254451579891
+-------------------------------------
+     Etot =    -3335.1594620817495525
+       TS =        0.2116385363371800
+-------------------------------------
+        F =    -3335.3711006180865297
+
+IonicMinimize: Iter:   9  F: -3335.371100618086530  |grad|_K:  1.536e-03  alpha:  1.000e+00  linmin: -3.530e-01  t[s]:  21788.89
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.021 +0.033 +0.085 +0.002 +0.029 +0.047 -0.002 +0.002 +0.034 +0.025 +0.002 +0.023 +0.021 +0.015 +0.077 +0.021 +0.020 +0.042 +0.093 +0.002 +0.019 +0.004 +0.015 +0.025 +0.020 +0.011 +0.014 +0.022 +0.033 +0.026 -0.002 +0.022 +0.020 +0.025 +0.015 +0.023
+# oxidation-state O -0.096
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.980164886  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.980132383  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3335.088548543461911   dF: -6.740e-02   |Residual|: 4.762e-01   |deigs|: 9.757e-04  t[s]:  22024.62
+	FillingsUpdate:  mu: +0.980028879  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3335.216924905115320   dF: -1.284e-01   |Residual|: 2.144e-01   |deigs|: 1.675e-03  t[s]:  22194.58
+	FillingsUpdate:  mu: +0.980310360  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3335.086921068118500   dF: +1.300e-01   |Residual|: 2.048e-01   |deigs|: 1.493e-03  t[s]:  22366.72
+	FillingsUpdate:  mu: +0.980204682  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3335.369051505869265   dF: -2.821e-01   |Residual|: 2.643e-02   |deigs|: 2.652e-03  t[s]:  22537.38
+	FillingsUpdate:  mu: +0.980196256  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3335.371291882935566   dF: -2.240e-03   |Residual|: 1.515e-02   |deigs|: 1.401e-04  t[s]:  22638.00
+	FillingsUpdate:  mu: +0.980161169  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3335.372022589287553   dF: -7.307e-04   |Residual|: 5.749e-03   |deigs|: 8.766e-05  t[s]:  22739.36
+	FillingsUpdate:  mu: +0.980161131  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3335.372091118041226   dF: -6.853e-05   |Residual|: 1.767e-03   |deigs|: 6.165e-05  t[s]:  22841.75
+	FillingsUpdate:  mu: +0.980163826  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3335.372097335502076   dF: -6.217e-06   |Residual|: 1.085e-03   |deigs|: 1.654e-05  t[s]:  22943.34
+	FillingsUpdate:  mu: +0.980166830  nElectrons: 582.000000
+SCF: Cycle:  8   F: -3335.372104340892292   dF: -7.005e-06   |Residual|: 2.565e-04   |deigs|: 9.843e-06  t[s]:  23043.51
+	FillingsUpdate:  mu: +0.980167127  nElectrons: 582.000000
+SCF: Cycle:  9   F: -3335.372104332566323   dF: +8.326e-09   |Residual|: 1.658e-04   |deigs|: 1.884e-06  t[s]:  23146.18
+	FillingsUpdate:  mu: +0.980167264  nElectrons: 582.000000
+SCF: Cycle: 10   F: -3335.372104459621369   dF: -1.271e-07   |Residual|: 4.999e-05   |deigs|: 1.174e-06  t[s]:  23248.78
+	FillingsUpdate:  mu: +0.980166988  nElectrons: 582.000000
+SCF: Cycle: 11   F: -3335.372104461539038   dF: -1.918e-09   |Residual|: 2.234e-05   |deigs|: 3.443e-07  t[s]:  23349.49
+	FillingsUpdate:  mu: +0.980167094  nElectrons: 582.000000
+SCF: Cycle: 12   F: -3335.372104462394418   dF: -8.554e-10   |Residual|: 1.791e-05   |deigs|: 2.634e-07  t[s]:  23452.22
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.111424026628253   0.225149487363765   0.122266061429121 1
+ion Os   0.218810310960038   0.104360462444334   0.365000652480381 1
+ion Os   0.081433876293903   0.211811875458354   0.631931439341919 1
+ion Os   0.222884114838128   0.115326814371435   0.873446649540920 1
+ion Os   0.112295787740429   0.558752120002180   0.122559558431254 1
+ion Os   0.219613737411126   0.450966035876647   0.366010716435172 1
+ion Os   0.111842994505379   0.561051816941390   0.624956766515271 1
+ion Os   0.223193490459332   0.448870582288296   0.874222462476289 1
+ion Os   0.112077163221802   0.891522815902365   0.122234943739568 1
+ion Os   0.222457669472627   0.779874289568079   0.373409150558162 1
+ion Os   0.111029697048288   0.890938836457359   0.624138122710018 1
+ion Os   0.222651907347068   0.781581604945487   0.874769888584493 1
+ion Os   0.445827841986006   0.225490209662166   0.121746484614473 1
+ion Os   0.557490260357758   0.113765518978959   0.370319914195503 1
+ion Os   0.458596259767946   0.213474855235360   0.628540823560622 1
+ion Os   0.556983881957826   0.115437096447130   0.876758424907671 1
+ion Os   0.446370723467000   0.560017278960976   0.122597590089351 1
+ion Os   0.565296552083774   0.451526471664908   0.365207939786122 1
+ion Os   0.463830197892112   0.596713878290824   0.636653440073992 1
+ion Os   0.557249225075610   0.449011441894516   0.873792437173597 1
+ion Os   0.444629222605069   0.892736602378121   0.124478544883719 1
+ion Os   0.557463089539217   0.782613405990367   0.371522863871966 1
+ion Os   0.444750346911333   0.894860885794795   0.621912134783922 1
+ion Os   0.559150003594047   0.786937204514747   0.881262000869853 1
+ion Os   0.778941010763693   0.226995689830629   0.124268507889201 1
+ion Os   0.888688741594509   0.113490233385395   0.370609490032999 1
+ion Os   0.778487798255956   0.227000093973896   0.622455858303587 1
+ion Os   0.887712001538159   0.114493104087952   0.878397924496543 1
+ion Os   0.779329830645919   0.558954411333769   0.122093915630959 1
+ion Os   0.891114141711889   0.448627426575387   0.373534799673908 1
+ion Os   0.780589311995612   0.560726389479876   0.624172616682586 1
+ion Os   0.890506640705039   0.449535141192390   0.874568163015404 1
+ion Os   0.780113515191084   0.891828349009243   0.124445380423280 1
+ion Os   0.890535138882247   0.780308903810322   0.373321859760037 1
+ion Os   0.780758988229446   0.894084534694320   0.621919853654962 1
+ion Os   0.891095023657199   0.781498422725673   0.874810526193498 1
+ion O   0.335135475665179   0.347825708468588   0.550562093189678 1
+
+# Forces in Lattice coordinates:
+force Os  -0.005073084782120   0.006017308688890  -0.003398938854583 1
+force Os  -0.015452189845468   0.026974162716219   0.012156323197328 1
+force Os   0.052806769494655  -0.008405402541034  -0.014247396864023 1
+force Os   0.017965105305278  -0.017419228356453  -0.007499628009085 1
+force Os  -0.002300614069379   0.010414831799271   0.005155773358219 1
+force Os  -0.003180918255786   0.009027532042321   0.008570126035799 1
+force Os  -0.008104388022275   0.000251587713721  -0.014055139836911 1
+force Os  -0.000127477778175   0.006791668048541   0.000820955799933 1
+force Os  -0.002136346713890   0.011737918403939   0.003600917967259 1
+force Os  -0.009298781078926   0.020492061557079  -0.000850509699897 1
+force Os   0.004643244445657  -0.003220704386570  -0.008522307505885 1
+force Os  -0.009859904919995   0.012437132096553   0.001601812941443 1
+force Os  -0.002865757539888  -0.001316160785675   0.003194555771556 1
+force Os  -0.005459886016755   0.011476154494916   0.002746791481700 1
+force Os   0.011846082048184   0.003632190132986   0.022594903952966 1
+force Os   0.014905515900475  -0.020293449011880   0.019246133631501 1
+force Os  -0.014350372745716   0.017717051497677  -0.004150277463847 1
+force Os  -0.002850307796340   0.009767326037341   0.014732988985104 1
+force Os   0.004035221239521  -0.087725284331772  -0.065425284799269 1
+force Os  -0.004949463749127   0.005122613477561  -0.008757913231140 1
+force Os  -0.003195854840818  -0.000902346962010  -0.003577026893302 1
+force Os   0.005566487379281  -0.002903345004971  -0.021201820043350 1
+force Os   0.006252330031236  -0.010554971113280   0.007490246919604 1
+force Os   0.003268181039921  -0.011651950455778  -0.030486902625885 1
+force Os   0.018927270656577  -0.016070341706310  -0.006136641049949 1
+force Os  -0.010548175194093   0.014496164750775  -0.004610955429079 1
+force Os  -0.015520314787515   0.009997266895681  -0.001621717975665 1
+force Os  -0.000372339849246  -0.005337090279240   0.016165958742710 1
+force Os  -0.004549344909621   0.007999131401539   0.027418302715559 1
+force Os  -0.020074733613331   0.018415069538381  -0.008966433239372 1
+force Os   0.003320788359118   0.006542282590678   0.001935121946636 1
+force Os   0.000352376732778  -0.000289832081133  -0.009377003268217 1
+force Os  -0.015711754184086   0.027634975570538   0.000690269756789 1
+force Os  -0.006518250225243   0.006465367052939   0.008916964594649 1
+force Os   0.001315481537622  -0.017248737351148  -0.004947761332189 1
+force Os  -0.010347442384995   0.002587726665453   0.002783320465074 1
+force O   0.026996881509063  -0.048598459078191   0.047955139025098 1
+
+# Energy components:
+   Eewald =    -2949.0752178060893129
+       EH =      397.8305711812244567
+     Eloc =     -669.0559725788313017
+      Enl =     -838.5104402817203209
+      Exc =     -675.3740215679308676
+ Exc_core =      254.9049554659829937
+       KE =     1144.1196024514856617
+-------------------------------------
+     Etot =    -3335.1605231358780657
+       TS =        0.2115813265162835
+-------------------------------------
+        F =    -3335.3721044623944181
+
+IonicMinimize: Iter:  10  F: -3335.372104462394418  |grad|_K:  1.106e-03  alpha:  1.000e+00  linmin: -4.810e-01  t[s]:  23479.31
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.021 +0.035 +0.085 +0.002 +0.030 +0.046 -0.002 +0.002 +0.034 +0.025 +0.001 +0.023 +0.021 +0.014 +0.079 +0.021 +0.020 +0.041 +0.092 +0.002 +0.020 +0.005 +0.015 +0.024 +0.019 +0.010 +0.015 +0.022 +0.032 +0.026 -0.001 +0.023 +0.020 +0.025 +0.015 +0.023
+# oxidation-state O -0.098
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.980167094  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.979827486  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3334.499594986551074   dF: +2.725e-01   |Residual|: 6.403e-01   |deigs|: 1.814e-03  t[s]:  23716.78
+	FillingsUpdate:  mu: +0.980575756  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3334.614733488050206   dF: -1.151e-01   |Residual|: 4.006e-01   |deigs|: 5.733e-03  t[s]:  23886.87
+	FillingsUpdate:  mu: +0.979921000  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3334.975474160169597   dF: -3.607e-01   |Residual|: 2.429e-01   |deigs|: 3.625e-03  t[s]:  24057.89
+	FillingsUpdate:  mu: +0.980366122  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3335.354003181690132   dF: -3.785e-01   |Residual|: 5.704e-02   |deigs|: 3.263e-03  t[s]:  24230.17
+	FillingsUpdate:  mu: +0.980206518  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3335.370069461828280   dF: -1.607e-02   |Residual|: 2.409e-02   |deigs|: 4.069e-04  t[s]:  24388.03
+	FillingsUpdate:  mu: +0.980202157  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3335.372308434458319   dF: -2.239e-03   |Residual|: 1.253e-02   |deigs|: 2.301e-04  t[s]:  24490.13
+	FillingsUpdate:  mu: +0.980153490  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3335.372583798534379   dF: -2.754e-04   |Residual|: 3.728e-03   |deigs|: 1.187e-04  t[s]:  24591.68
+	FillingsUpdate:  mu: +0.980165403  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3335.372628274862564   dF: -4.448e-05   |Residual|: 2.024e-03   |deigs|: 2.528e-05  t[s]:  24693.78
+	FillingsUpdate:  mu: +0.980170877  nElectrons: 582.000000
+SCF: Cycle:  8   F: -3335.372647670351398   dF: -1.940e-05   |Residual|: 4.508e-04   |deigs|: 1.567e-05  t[s]:  24794.99
+	FillingsUpdate:  mu: +0.980172623  nElectrons: 582.000000
+SCF: Cycle:  9   F: -3335.372647569561195   dF: +1.008e-07   |Residual|: 3.665e-04   |deigs|: 3.777e-06  t[s]:  24897.49
+	FillingsUpdate:  mu: +0.980172498  nElectrons: 582.000000
+SCF: Cycle: 10   F: -3335.372648318827487   dF: -7.493e-07   |Residual|: 7.971e-05   |deigs|: 1.996e-06  t[s]:  24999.24
+	FillingsUpdate:  mu: +0.980172078  nElectrons: 582.000000
+SCF: Cycle: 11   F: -3335.372648307576128   dF: +1.125e-08   |Residual|: 6.364e-05   |deigs|: 8.088e-07  t[s]:  25100.76
+	FillingsUpdate:  mu: +0.980172057  nElectrons: 582.000000
+SCF: Cycle: 12   F: -3335.372648325272166   dF: -1.770e-08   |Residual|: 2.802e-05   |deigs|: 4.176e-07  t[s]:  25202.51
+	FillingsUpdate:  mu: +0.980171987  nElectrons: 582.000000
+SCF: Cycle: 13   F: -3335.372648327613661   dF: -2.341e-09   |Residual|: 1.126e-05   |deigs|: 2.695e-07  t[s]:  25304.81
+	FillingsUpdate:  mu: +0.980171977  nElectrons: 582.000000
+SCF: Cycle: 14   F: -3335.372648328425839   dF: -8.122e-10   |Residual|: 3.387e-06   |deigs|: 1.375e-07  t[s]:  25402.75
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.111302600145077   0.226042738954913   0.122124872669422 1
+ion Os   0.218831607571870   0.106073948274370   0.364498657165670 1
+ion Os   0.082710185150524   0.211625691037018   0.632517123950161 1
+ion Os   0.223263989268580   0.115306740395123   0.873626452947582 1
+ion Os   0.111927938125800   0.559806556990279   0.122500485623773 1
+ion Os   0.218920656869576   0.452388488248295   0.365521530568590 1
+ion Os   0.111546327328248   0.560806401873898   0.624520511842225 1
+ion Os   0.223570296581380   0.449109684597372   0.874237116877994 1
+ion Os   0.112207842184579   0.892628890725743   0.122083266959310 1
+ion Os   0.222185425059867   0.781114851892446   0.373008825445443 1
+ion Os   0.111382118266417   0.891398364426295   0.624096117302551 1
+ion Os   0.222795248360103   0.781416705173348   0.874643126653684 1
+ion Os   0.446079010147581   0.226346034287466   0.121895819443146 1
+ion Os   0.557178309235904   0.114429725761610   0.370359932156224 1
+ion Os   0.459839416743771   0.212916851573811   0.630370296338424 1
+ion Os   0.558092535210302   0.114627330026760   0.877941976993658 1
+ion Os   0.446257748825605   0.560733703180679   0.122353968896943 1
+ion Os   0.564665745094479   0.452725224131796   0.366253140399836 1
+ion Os   0.462764676117342   0.593307678974163   0.634344179617737 1
+ion Os   0.557631629840742   0.449326395511007   0.873495759023886 1
+ion Os   0.444607648234240   0.893265976884727   0.124207774453234 1
+ion Os   0.557243398145910   0.783707896478516   0.370992930671619 1
+ion Os   0.444855299849675   0.893613293437746   0.621330260708678 1
+ion Os   0.558549946676632   0.785570516676865   0.879643732616713 1
+ion Os   0.779190468713029   0.227402180067743   0.124376150092768 1
+ion Os   0.888809562099273   0.114334036504086   0.370589386045195 1
+ion Os   0.778320858864859   0.226606894308716   0.622061780604518 1
+ion Os   0.887561749879832   0.113952950519943   0.879109761590574 1
+ion Os   0.779107633614894   0.559632972462114   0.122591748856703 1
+ion Os   0.890583216865066   0.449125988499302   0.373614327951294 1
+ion Os   0.781044380883187   0.560394047929471   0.624457910642121 1
+ion Os   0.890932365197623   0.449454406552861   0.874649424737696 1
+ion Os   0.779851433879127   0.892199251195476   0.124564571229198 1
+ion Os   0.890607815792800   0.781215336063752   0.373362540026598 1
+ion Os   0.779876848753485   0.892688524735409   0.622041751239011 1
+ion Os   0.891119439393449   0.781335416745678   0.874641064904757 1
+ion O   0.334944627029174   0.341528304901204   0.552271722753064 1
+
+# Forces in Lattice coordinates:
+force Os   0.010082784000387  -0.005117359928649  -0.000991815726123 1
+force Os  -0.002796773759269   0.010016343661579   0.035355242765865 1
+force Os  -0.113268077352064   0.021272458344770  -0.012057266404255 1
+force Os   0.017316424382202  -0.017465571006031   0.001106921122148 1
+force Os   0.017001647351527  -0.010957274183248   0.009877480664737 1
+force Os   0.012590221031280  -0.002082267324279   0.009414059590044 1
+force Os   0.002074951506198  -0.001908671225771  -0.008513971911695 1
+force Os  -0.009194518347622   0.007373954382382  -0.013935251892809 1
+force Os  -0.001842090399261   0.000751882284174   0.010164894886963 1
+force Os   0.003446714896073   0.001652307584580   0.014743786100940 1
+force Os   0.008474792295210  -0.013845329842883  -0.001948618448771 1
+force Os  -0.015936818993708   0.023574876355732  -0.003198336163545 1
+force Os   0.001110724465217   0.001616672479783  -0.000468422876760 1
+force Os   0.000545734925565   0.008572896444106   0.007254700611788 1
+force Os   0.111279957295343  -0.130753479540193   0.048366437289763 1
+force Os  -0.026613704060234   0.017429133112627  -0.021662731293804 1
+force Os  -0.005523365696902   0.005638276323435   0.004435748833797 1
+force Os   0.019188269432354  -0.008011025869681  -0.022769114555601 1
+force Os  -0.034611586372338  -0.015960483618979  -0.063816272068665 1
+force Os  -0.000633400704781  -0.007172128246438   0.021754792088617 1
+force Os   0.008053725944062  -0.020251401406499  -0.001803919928497 1
+force Os   0.017707744381239  -0.028298480432347  -0.010189838416520 1
+force Os  -0.009309893280426   0.015320941484973   0.031435408973927 1
+force Os   0.004399270396888  -0.001307899444959  -0.004737234343630 1
+force Os   0.006098499251437  -0.003143671665500  -0.001956495403919 1
+force Os  -0.002443011789785   0.004695291756810   0.017435430415357 1
+force Os   0.042773861221433  -0.010923851838140   0.009962886429057 1
+force Os   0.007505764258510   0.006004736225093  -0.041203965918658 1
+force Os  -0.005157509960217  -0.002193763645737   0.012089753596506 1
+force Os  -0.013235342720578   0.011741124519410  -0.009117208512067 1
+force Os  -0.001097056244439   0.022812250514259  -0.011762362244063 1
+force Os  -0.015153201586331   0.006488371076885  -0.004190600469046 1
+force Os  -0.016687865644737   0.017594983503916  -0.009796502519939 1
+force Os  -0.004528228794795  -0.002638374191655   0.006658976851227 1
+force Os   0.009321189823672   0.032810448846671  -0.003048719270231 1
+force Os  -0.012612904002560   0.010795298512239   0.006635711911377 1
+force O  -0.008832841217271   0.049558594901959  -0.009396581287191 1
+
+# Energy components:
+   Eewald =    -2949.1187180061074287
+       EH =      397.7768113261269036
+     Eloc =     -668.9593233164443973
+      Enl =     -838.5050735519114369
+      Exc =     -675.3733653579552083
+ Exc_core =      254.9049551348197156
+       KE =     1144.1135739187152467
+-------------------------------------
+     Etot =    -3335.1611398527570600
+       TS =        0.2115084756687536
+-------------------------------------
+        F =    -3335.3726483284258393
+
+IonicMinimize: Iter:  11  F: -3335.372648328425839  |grad|_K:  1.542e-03  alpha:  8.854e-01  linmin:  1.021e-01  t[s]:  25430.00
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.021 +0.038 +0.085 +0.002 +0.032 +0.042 -0.002 +0.001 +0.033 +0.025 -0.000 +0.022 +0.021 +0.012 +0.083 +0.021 +0.020 +0.040 +0.088 +0.002 +0.020 +0.008 +0.014 +0.023 +0.020 +0.010 +0.014 +0.022 +0.032 +0.026 -0.001 +0.023 +0.020 +0.025 +0.014 +0.023
+# oxidation-state O -0.093
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.980171977  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.980028238  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3334.608716939511851   dF: +5.722e-01   |Residual|: 4.074e-01   |deigs|: 6.324e-04  t[s]:  25667.66
+	FillingsUpdate:  mu: +0.980063901  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3334.581586550289103   dF: +2.713e-02   |Residual|: 3.406e-01   |deigs|: 3.926e-03  t[s]:  25841.90
+	FillingsUpdate:  mu: +0.980228489  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3335.269165789318322   dF: -6.876e-01   |Residual|: 1.143e-01   |deigs|: 4.429e-03  t[s]:  26012.39
+	FillingsUpdate:  mu: +0.980241312  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3335.367993688645583   dF: -9.883e-02   |Residual|: 3.508e-02   |deigs|: 1.133e-03  t[s]:  26184.32
+	FillingsUpdate:  mu: +0.980201571  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3335.372440107760667   dF: -4.446e-03   |Residual|: 1.304e-02   |deigs|: 3.412e-04  t[s]:  26284.52
+	FillingsUpdate:  mu: +0.980181715  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3335.372872568462299   dF: -4.325e-04   |Residual|: 7.085e-03   |deigs|: 1.085e-04  t[s]:  26385.23
+	FillingsUpdate:  mu: +0.980172540  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3335.372971815915207   dF: -9.925e-05   |Residual|: 2.075e-03   |deigs|: 5.772e-05  t[s]:  26488.47
+	FillingsUpdate:  mu: +0.980171066  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3335.372984348988666   dF: -1.253e-05   |Residual|: 1.280e-03   |deigs|: 1.895e-05  t[s]:  26591.06
+	FillingsUpdate:  mu: +0.980176318  nElectrons: 582.000000
+SCF: Cycle:  8   F: -3335.372992850519495   dF: -8.502e-06   |Residual|: 2.425e-04   |deigs|: 9.535e-06  t[s]:  26693.31
+	FillingsUpdate:  mu: +0.980176225  nElectrons: 582.000000
+SCF: Cycle:  9   F: -3335.372992908324704   dF: -5.781e-08   |Residual|: 1.679e-04   |deigs|: 2.143e-06  t[s]:  26796.27
+	FillingsUpdate:  mu: +0.980176454  nElectrons: 582.000000
+SCF: Cycle: 10   F: -3335.372993056374071   dF: -1.480e-07   |Residual|: 4.280e-05   |deigs|: 9.879e-07  t[s]:  26898.36
+	FillingsUpdate:  mu: +0.980176182  nElectrons: 582.000000
+SCF: Cycle: 11   F: -3335.372993052581023   dF: +3.793e-09   |Residual|: 3.311e-05   |deigs|: 4.009e-07  t[s]:  26999.81
+	FillingsUpdate:  mu: +0.980176293  nElectrons: 582.000000
+SCF: Cycle: 12   F: -3335.372993057887015   dF: -5.306e-09   |Residual|: 1.725e-05   |deigs|: 3.061e-07  t[s]:  27102.02
+	FillingsUpdate:  mu: +0.980176236  nElectrons: 582.000000
+SCF: Cycle: 13   F: -3335.372993059167129   dF: -1.280e-09   |Residual|: 8.068e-06   |deigs|: 1.638e-07  t[s]:  27204.66
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.111408124823738   0.226347355374973   0.122051619464510 1
+ion Os   0.218865426759494   0.106913693599474   0.364826106527830 1
+ion Os   0.081340792005287   0.210892966357294   0.632550145813661 1
+ion Os   0.223623543750263   0.115086429768622   0.873667880556029 1
+ion Os   0.112053712571583   0.560178813563761   0.122654487596605 1
+ion Os   0.218897456844092   0.452998320487298   0.365478641024023 1
+ion Os   0.111434803853284   0.560663383779031   0.624207058985599 1
+ion Os   0.223608427024607   0.449313364210860   0.874083242677792 1
+ion Os   0.112226301207045   0.893037938526188   0.122172165715043 1
+ion Os   0.222178910922735   0.781709989253131   0.373066997938535 1
+ion Os   0.111577132232228   0.891370167671909   0.624007549322997 1
+ion Os   0.222724238682211   0.781705748933529   0.874553624865266 1
+ion Os   0.446186734845997   0.226688870314384   0.121947177963887 1
+ion Os   0.557156628515862   0.114902189667841   0.370472990515983 1
+ion Os   0.461211380059076   0.211321843289618   0.631701476085020 1
+ion Os   0.558146987257064   0.114364155790569   0.878134293679609 1
+ion Os   0.446139073953261   0.561103639295651   0.122311090623933 1
+ion Os   0.564737859748828   0.453198144911418   0.366378517216194 1
+ion Os   0.461857815031316   0.591716442644077   0.632792648670629 1
+ion Os   0.557678190527033   0.449308782029407   0.873671988972558 1
+ion Os   0.444547985443711   0.893126328419293   0.124103759501750 1
+ion Os   0.557265981625831   0.783655119903935   0.370610463158923 1
+ion Os   0.444854868994977   0.893344076511347   0.621567434819386 1
+ion Os   0.558426738317410   0.785076351346705   0.878917849425368 1
+ion Os   0.779445972026833   0.227533583279951   0.124387098778248 1
+ion Os   0.888821420877932   0.114735291590748   0.370832536840281 1
+ion Os   0.778926084470119   0.226666775487583   0.622047526215782 1
+ion Os   0.887701129253096   0.113926917428525   0.878864648042828 1
+ion Os   0.778914735798388   0.559796120763700   0.123018516590701 1
+ion Os   0.890203274219749   0.449433044772418   0.373499455578055 1
+ion Os   0.781466139453129   0.560781809809254   0.624419048671481 1
+ion Os   0.890835637522642   0.449401837832107   0.874566384714475 1
+ion Os   0.779597736294226   0.892605016748051   0.124495002313172 1
+ion Os   0.890520515955816   0.781456659994087   0.373512293003443 1
+ion Os   0.780046656644949   0.892878880310360   0.622021559612740 1
+ion Os   0.890918242828876   0.781338228831895   0.874697056917687 1
+ion O   0.334813339657312   0.339581717501005   0.552609661599976 1
+
+# Forces in Lattice coordinates:
+force Os   0.007247075041154  -0.006372238125967  -0.000063789021029 1
+force Os   0.007234272006510  -0.000306961808335   0.025707605986111 1
+force Os   0.008340419178113   0.012422196928609  -0.022961113883761 1
+force Os  -0.008613062627931   0.006702262293773  -0.002506674269446 1
+force Os   0.004514017549373  -0.006923456765390  -0.003105440051871 1
+force Os   0.015291665360457  -0.011422438392777   0.010552696355483 1
+force Os  -0.000506719107918   0.006756333754174   0.002866098242280 1
+force Os  -0.004971520851342  -0.002067020666430  -0.016092628518687 1
+force Os  -0.002223518583367   0.000729013199309   0.012613737381380 1
+force Os   0.011136172746368  -0.006973110407315   0.008761236628722 1
+force Os  -0.001169693977566  -0.000289314741922   0.004622626624928 1
+force Os  -0.008004926125417  -0.001311824061177   0.003104287275546 1
+force Os   0.003389265254226  -0.007258012615906   0.006000317751923 1
+force Os   0.009827840662351  -0.009190402735213  -0.001498947016133 1
+force Os  -0.043295062576731   0.039191746488474  -0.012440203594628 1
+force Os  -0.001853151889532   0.002297761621932   0.015069375741378 1
+force Os   0.004572408013168  -0.009507925475579  -0.003429811724090 1
+force Os   0.010082570074894  -0.013551204238441  -0.016698428072763 1
+force Os  -0.017811406390357   0.027632552685226  -0.013695602599327 1
+force Os  -0.005118511992457  -0.002531814479363   0.006138988635978 1
+force Os   0.004168268865023  -0.007817506958067   0.003445602994511 1
+force Os   0.004571432865206  -0.001492127320381   0.007574565394346 1
+force Os   0.010756491712991  -0.025759669991073   0.013090919626266 1
+force Os  -0.001751095601527  -0.004095194177591  -0.008184403711360 1
+force Os  -0.004456142047440   0.004908434917308  -0.006292457304782 1
+force Os  -0.002499189792477  -0.000033923424010  -0.007921643465649 1
+force Os   0.016908253732626   0.006422881800796   0.002007456064122 1
+force Os  -0.001448439115262   0.007829087945215  -0.009977397592680 1
+force Os   0.003542172130082  -0.001758381219368  -0.014831911144295 1
+force Os   0.006703847124704  -0.001059635665458  -0.005973081142984 1
+force Os  -0.013842059174965   0.010151903749029  -0.003621282611499 1
+force Os  -0.009827758822233   0.016853925735077   0.011023457085451 1
+force Os  -0.000749694349372   0.002767077544635  -0.009099829973044 1
+force Os   0.000981665642287   0.003043206279471  -0.006552846394675 1
+force Os  -0.015539004151927   0.003436528256837  -0.000415447076207 1
+force Os  -0.004855014914301   0.006674581150673   0.006537831879258 1
+force O   0.018773188827504  -0.044347161710127   0.016252106300791 1
+
+# Energy components:
+   Eewald =    -2949.0864607257999523
+       EH =      397.8127033761792291
+     Eloc =     -669.0261984002536337
+      Enl =     -838.5088747457078853
+      Exc =     -675.3735212084568502
+ Exc_core =      254.9049563865632706
+       KE =     1144.1158373768903402
+-------------------------------------
+     Etot =    -3335.1615579405861354
+       TS =        0.2114351185808812
+-------------------------------------
+        F =    -3335.3729930591671291
+
+IonicMinimize: Iter:  12  F: -3335.372993059167129  |grad|_K:  6.979e-04  alpha:  1.000e+00  linmin:  1.546e-01  t[s]:  27232.43
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.020 +0.039 +0.085 +0.002 +0.032 +0.041 -0.001 +0.001 +0.033 +0.026 -0.001 +0.023 +0.021 +0.010 +0.085 +0.022 +0.020 +0.040 +0.087 +0.001 +0.020 +0.010 +0.014 +0.022 +0.019 +0.010 +0.014 +0.023 +0.032 +0.026 -0.001 +0.023 +0.020 +0.026 +0.014 +0.023
+# oxidation-state O -0.095
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.980176236  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.980171498  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3335.372980708717023   dF: +1.599e-05   |Residual|: 3.331e-03   |deigs|: 1.311e-06  t[s]:  27405.32
+	FillingsUpdate:  mu: +0.980187867  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3335.372914783755277   dF: +6.592e-05   |Residual|: 4.883e-03   |deigs|: 7.452e-05  t[s]:  27504.75
+	FillingsUpdate:  mu: +0.980176252  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3335.373080804834899   dF: -1.660e-04   |Residual|: 7.964e-04   |deigs|: 4.296e-05  t[s]:  27604.30
+	FillingsUpdate:  mu: +0.980178053  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3335.373080929022308   dF: -1.242e-07   |Residual|: 5.920e-04   |deigs|: 6.259e-06  t[s]:  27705.47
+	FillingsUpdate:  mu: +0.980176915  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3335.373082703020373   dF: -1.774e-06   |Residual|: 2.158e-04   |deigs|: 4.766e-06  t[s]:  27804.35
+	FillingsUpdate:  mu: +0.980177111  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3335.373082867442463   dF: -1.644e-07   |Residual|: 1.071e-04   |deigs|: 2.465e-06  t[s]:  27905.97
+	FillingsUpdate:  mu: +0.980177011  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3335.373082880594666   dF: -1.315e-08   |Residual|: 4.298e-05   |deigs|: 8.809e-07  t[s]:  28009.21
+	FillingsUpdate:  mu: +0.980177022  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3335.373082889569105   dF: -8.974e-09   |Residual|: 1.766e-05   |deigs|: 2.661e-07  t[s]:  28110.48
+	FillingsUpdate:  mu: +0.980177008  nElectrons: 582.000000
+SCF: Cycle:  8   F: -3335.373082890625028   dF: -1.056e-09   |Residual|: 3.976e-06   |deigs|: 8.838e-08  t[s]:  28211.32
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.111504148908006   0.226268762300954   0.122041553089038 1
+ion Os   0.218940895646105   0.106930014940261   0.365203859520538 1
+ion Os   0.081381291946033   0.211051959733885   0.632264121610534 1
+ion Os   0.223567122526944   0.115047646357298   0.873592093957789 1
+ion Os   0.112114129055968   0.560074011430448   0.122677218840479 1
+ion Os   0.219104422504759   0.452863858227441   0.365630506689852 1
+ion Os   0.111412236297329   0.560765204878745   0.624183117540226 1
+ion Os   0.223501659499961   0.449288516939384   0.873920704972829 1
+ion Os   0.112226741193284   0.893029678721560   0.122382156311614 1
+ion Os   0.222379596611417   0.781685888373501   0.373203019793419 1
+ion Os   0.111508289145661   0.891272578122583   0.624037559612561 1
+ion Os   0.222525650609011   0.781661360157924   0.874624569382011 1
+ion Os   0.446113015957012   0.226464225837257   0.122023610618219 1
+ion Os   0.557271010180994   0.114793635584393   0.370504846325024 1
+ion Os   0.461027604574894   0.211545110335104   0.631594041153977 1
+ion Os   0.558068245626406   0.114403865136295   0.878234086293811 1
+ion Os   0.446119039999865   0.560971165771487   0.122259772957022 1
+ion Os   0.564892454309977   0.453031438162838   0.366148683690886 1
+ion Os   0.461764485186233   0.591889142629182   0.632609389207424 1
+ion Os   0.557512407214877   0.449233289867056   0.873757711221518 1
+ion Os   0.444518356893460   0.892947106496944   0.124147077349032 1
+ion Os   0.557381509778737   0.783575544859462   0.370591679399892 1
+ion Os   0.444867481504643   0.893229826620448   0.621851931710217 1
+ion Os   0.558380206757605   0.785074366386402   0.878817873411738 1
+ion Os   0.779475250204541   0.227519097982528   0.124261137065449 1
+ion Os   0.888754805621079   0.114742812246700   0.370780119133254 1
+ion Os   0.779164177582400   0.226949632767589   0.622125787448276 1
+ion Os   0.887798854889127   0.114080674985945   0.878673916885342 1
+ion Os   0.778962889197946   0.559783905630138   0.122963602104465 1
+ion Os   0.890289209769953   0.449452168138045   0.373389633219982 1
+ion Os   0.781344945045134   0.560935838868250   0.624403805370951 1
+ion Os   0.890769007865053   0.449592987825156   0.874631302768058 1
+ion Os   0.779608144581200   0.892738842429053   0.124388532152209 1
+ion Os   0.890534058051401   0.781474087267401   0.373469491164656 1
+ion Os   0.779953032060162   0.892915632259257   0.621995362117230 1
+ion Os   0.890821759603166   0.781432901159773   0.874828050402515 1
+ion O   0.334801863599656   0.339443220569313   0.552688075507963 1
+
+# Forces in Lattice coordinates:
+force Os   0.003227226051419  -0.002838064832266   0.001101032718719 1
+force Os   0.007346085504875  -0.003139548358739   0.013866757111622 1
+force Os   0.004551620334390   0.005326261319313  -0.012974576523687 1
+force Os  -0.009776822317946   0.008101381557959   0.000962853248688 1
+force Os   0.004444009082624  -0.005627406175934  -0.001033435049982 1
+force Os   0.005121086488955  -0.002495760039098   0.003685980493517 1
+force Os  -0.003209986783978   0.006970908351324   0.003245018085500 1
+force Os  -0.002387177417773  -0.002986755981362  -0.008948167215968 1
+force Os  -0.000831893791296   0.000917763202599   0.007943529620480 1
+force Os   0.005811049524191  -0.004973866736152   0.003721395635273 1
+force Os  -0.003244280876725   0.001476929757182   0.004756721643190 1
+force Os  -0.002195607723378  -0.002211562539203   0.002306039462937 1
+force Os   0.000981930570892  -0.003672453423923   0.003275479038210 1
+force Os   0.008128368808920  -0.006967741199514   0.001893860540798 1
+force Os  -0.003014171108039   0.000912513734466  -0.002287497462865 1
+force Os  -0.001969298783109   0.002069019047810   0.002252423778995 1
+force Os   0.002917150869455  -0.006223231988647  -0.002448445207821 1
+force Os   0.005904926359839  -0.006638675760742  -0.009689464915938 1
+force Os  -0.006223014142190   0.006345904017678  -0.007665894521365 1
+force Os  -0.003780213482833  -0.000847714446671  -0.000404549373308 1
+force Os   0.002879417608460  -0.003940168092754   0.001900264622635 1
+force Os   0.001130376718460   0.002521319971136   0.005217360453385 1
+force Os   0.001585706607150  -0.006082919933442   0.004826914699259 1
+force Os  -0.002055280318135  -0.003995375855470  -0.003981830502872 1
+force Os  -0.003513221400781   0.004823155605846  -0.001499892130180 1
+force Os  -0.000736318435367  -0.001106929259077  -0.007786650622832 1
+force Os   0.000136425226410   0.010056134608823   0.000435428436857 1
+force Os  -0.002727681822020   0.006462884880948  -0.005772441512673 1
+force Os   0.002132994318331   0.000788000890985  -0.012198405852554 1
+force Os   0.006550437744653  -0.001009222370824  -0.000845381843378 1
+force Os  -0.007833057535051   0.003595470160484  -0.004056126745017 1
+force Os  -0.005602501657853   0.009945662454450   0.006037513376007 1
+force Os   0.001332096205546  -0.001827629799176  -0.005343028655064 1
+force Os   0.001217575680451   0.002065135532069  -0.005708732804555 1
+force Os  -0.011306477931011   0.004365735565500   0.001968937597107 1
+force Os  -0.001658693898184   0.003999145327988   0.000157791078650 1
+force O   0.006340688396242  -0.020549367523830   0.013145723874083 1
+
+# Energy components:
+   Eewald =    -2949.0957352031646224
+       EH =      397.8006716720964846
+     Eloc =     -669.0044380515552120
+      Enl =     -838.5074285293940193
+      Exc =     -675.3730942556076116
+ Exc_core =      254.9049558593356153
+       KE =     1144.1133847418504956
+-------------------------------------
+     Etot =    -3335.1616837664378181
+       TS =        0.2113991241871183
+-------------------------------------
+        F =    -3335.3730828906250281
+
+IonicMinimize: Iter:  13  F: -3335.373082890625028  |grad|_K:  3.425e-04  alpha:  1.000e+00  linmin: -7.260e-01  t[s]:  28238.62
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.020 +0.039 +0.085 +0.002 +0.032 +0.040 -0.001 +0.002 +0.033 +0.026 -0.001 +0.023 +0.021 +0.011 +0.085 +0.022 +0.020 +0.040 +0.086 +0.001 +0.020 +0.010 +0.014 +0.022 +0.019 +0.010 +0.014 +0.022 +0.032 +0.026 -0.001 +0.023 +0.019 +0.026 +0.014 +0.023
+# oxidation-state O -0.094
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.980177008  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.980172177  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3335.373054144820344   dF: -8.855e-05   |Residual|: 3.408e-03   |deigs|: 2.204e-06  t[s]:  28410.17
+	FillingsUpdate:  mu: +0.980185926  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3335.372993981687159   dF: +6.016e-05   |Residual|: 4.326e-03   |deigs|: 5.312e-05  t[s]:  28509.66
+	FillingsUpdate:  mu: +0.980175681  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3335.373132528389306   dF: -1.385e-04   |Residual|: 1.003e-03   |deigs|: 3.300e-05  t[s]:  28609.29
+	FillingsUpdate:  mu: +0.980177263  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3335.373133932289875   dF: -1.404e-06   |Residual|: 5.673e-04   |deigs|: 5.786e-06  t[s]:  28709.48
+	FillingsUpdate:  mu: +0.980176557  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3335.373135394803739   dF: -1.463e-06   |Residual|: 2.086e-04   |deigs|: 4.418e-06  t[s]:  28810.58
+	FillingsUpdate:  mu: +0.980176701  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3335.373135519509560   dF: -1.247e-07   |Residual|: 1.020e-04   |deigs|: 2.039e-06  t[s]:  28912.55
+	FillingsUpdate:  mu: +0.980176643  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3335.373135541879492   dF: -2.237e-08   |Residual|: 3.631e-05   |deigs|: 1.106e-06  t[s]:  29013.42
+	FillingsUpdate:  mu: +0.980176652  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3335.373135547307356   dF: -5.428e-09   |Residual|: 1.790e-05   |deigs|: 2.607e-07  t[s]:  29114.86
+	FillingsUpdate:  mu: +0.980176633  nElectrons: 582.000000
+SCF: Cycle:  8   F: -3335.373135548345545   dF: -1.038e-09   |Residual|: 4.643e-06   |deigs|: 1.070e-07  t[s]:  29216.55
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.111617118760719   0.226275516796559   0.122049024856751 1
+ion Os   0.219136353130598   0.107115812516777   0.365691538329765 1
+ion Os   0.081438634005510   0.211183031453984   0.631912093823043 1
+ion Os   0.223437743923011   0.115077987782340   0.873575131340507 1
+ion Os   0.112198305284703   0.560005252582545   0.122707389094141 1
+ion Os   0.219288902462234   0.452914985662015   0.365745176671194 1
+ion Os   0.111334337269994   0.560954197913241   0.624160115875312 1
+ion Os   0.223366989787290   0.449204732295448   0.873672810092160 1
+ion Os   0.112257122212840   0.893157193635828   0.122678418480922 1
+ion Os   0.222591091165302   0.781734563929121   0.373335429391470 1
+ion Os   0.111399214988189   0.891207716485190   0.624141597779472 1
+ion Os   0.222327809208530   0.781581777142625   0.874718976812338 1
+ion Os   0.446038805018138   0.226271705055888   0.122149169396088 1
+ion Os   0.557460915098437   0.114712615070696   0.370606427164779 1
+ion Os   0.461215220879823   0.211403633046846   0.631755911271738 1
+ion Os   0.558050143701919   0.114399068038665   0.878372432099357 1
+ion Os   0.446080412888453   0.560835396186904   0.122165641581057 1
+ion Os   0.565064157076559   0.452955535506163   0.365907150597040 1
+ion Os   0.461518027795170   0.591662734805774   0.632114870189501 1
+ion Os   0.557307551084239   0.449150645828492   0.873780667972711 1
+ion Os   0.444503707506186   0.892776119847168   0.124173923200995 1
+ion Os   0.557519616924220   0.783675190190334   0.370571126995008 1
+ion Os   0.444871359756695   0.893082428650611   0.622132704306513 1
+ion Os   0.558193056037649   0.784843288760011   0.878536924337002 1
+ion Os   0.779516976814004   0.227611719275484   0.124153262188921 1
+ion Os   0.888695591888348   0.114814372621585   0.370629275964491 1
+ion Os   0.779391376125983   0.227388369929587   0.622181346296080 1
+ion Os   0.887890487792005   0.114289272582042   0.878460727430706 1
+ion Os   0.779032424961060   0.559901151841119   0.122821343447386 1
+ion Os   0.890444164772486   0.449577249979666   0.373307514682860 1
+ion Os   0.781176728009991   0.561048089412255   0.624350756351435 1
+ion Os   0.890722925330373   0.449878566086970   0.874756684568811 1
+ion Os   0.779591088886963   0.892862497454809   0.124235446438008 1
+ion Os   0.890585670124721   0.781617697515798   0.373361917742559 1
+ion Os   0.779683448782012   0.892888053649670   0.622030035938325 1
+ion Os   0.890745088380100   0.781581269964017   0.874906433804817 1
+ion O   0.334667432165545   0.338520560503773   0.553050603486741 1
+
+# Forces in Lattice coordinates:
+force Os  -0.000576338979986  -0.000081245378495   0.002568998364901 1
+force Os   0.005426481454123  -0.003452768704947   0.001051018133282 1
+force Os  -0.011594418258404   0.000686444955072   0.000211573521153 1
+force Os  -0.004920475734764   0.003592218929678   0.002726766145678 1
+force Os   0.002763833292677  -0.001673996232329  -0.000601614438428 1
+force Os  -0.000516147433478   0.001730400131052  -0.000251955519456 1
+force Os  -0.002171676934635   0.003303915527711   0.002846095880101 1
+force Os  -0.000667048263844  -0.001578383757605   0.000231470268695 1
+force Os   0.001870289764866  -0.000747244688790  -0.000604109380315 1
+force Os  -0.000479279804800  -0.001432171798873  -0.001659006584958 1
+force Os  -0.003262525393365   0.002380411465658   0.002710650518012 1
+force Os   0.001734239546878   0.000113854434694   0.001832569931910 1
+force Os   0.000454328059655  -0.000950992582747  -0.000931238279242 1
+force Os   0.002390938274866  -0.000667973801278  -0.001393109824353 1
+force Os   0.002900302253835  -0.005383165815763   0.000040646300801 1
+force Os  -0.000469715582378  -0.000944970990747  -0.000039139974807 1
+force Os   0.000793022724308  -0.001330901332949   0.000232545444044 1
+force Os   0.000894537817154   0.000397523469601  -0.002797782137478 1
+force Os   0.001359262497934  -0.008818447479186  -0.001268402464212 1
+force Os  -0.000517461860053  -0.000919108974089  -0.004671061525106 1
+force Os   0.001805052138848   0.000102490276018  -0.000822083866262 1
+force Os   0.000675691965279  -0.000320190221037   0.000827622600666 1
+force Os  -0.002263633642030   0.000765367385588  -0.002198421058476 1
+force Os  -0.001543514328852  -0.000871494232668   0.002832568161947 1
+force Os  -0.001663569556208   0.002734256700098   0.001239956273418 1
+force Os   0.001558897913483  -0.002404156558624  -0.002244770320131 1
+force Os   0.000962995640653   0.002706517365520  -0.001608723336246 1
+force Os  -0.003692695988553   0.003479336838449  -0.001819673178221 1
+force Os   0.000778152442183   0.001065862407432  -0.004856700964260 1
+force Os   0.002761912670516   0.001101709559792   0.001355922039428 1
+force Os  -0.001653458615642   0.000033797883746  -0.004287762040630 1
+force Os  -0.000649453796271   0.001285521477449   0.000017396059630 1
+force Os   0.001184379653103  -0.003595808129068  -0.001749150537658 1
+force Os   0.000167117057949   0.000230816777235  -0.001803019470557 1
+force Os  -0.002461909155766   0.004875038351213   0.002652378850705 1
+force Os  -0.000156269783330   0.001563909286326  -0.005348901201309 1
+force O   0.008419157962561  -0.003359672969905   0.007796198325489 1
+
+# Energy components:
+   Eewald =    -2949.0942496744351047
+       EH =      397.7984480111736616
+     Eloc =     -669.0034703916765011
+      Enl =     -838.5068078988680327
+      Exc =     -675.3729808753512316
+ Exc_core =      254.9049553662613619
+       KE =     1144.1123051981646768
+-------------------------------------
+     Etot =    -3335.1618002647310277
+       TS =        0.2113352836145903
+-------------------------------------
+        F =    -3335.3731355483455445
+
+IonicMinimize: Iter:  14  F: -3335.373135548345545  |grad|_K:  1.762e-04  alpha:  1.000e+00  linmin: -2.856e-01  t[s]:  29243.55
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.020 +0.039 +0.085 +0.001 +0.032 +0.040 -0.001 +0.002 +0.033 +0.026 -0.001 +0.023 +0.021 +0.010 +0.085 +0.022 +0.020 +0.039 +0.086 +0.001 +0.019 +0.010 +0.014 +0.022 +0.019 +0.010 +0.014 +0.022 +0.033 +0.026 -0.001 +0.023 +0.019 +0.026 +0.014 +0.023
+# oxidation-state O -0.093
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.980176633  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.980174752  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3335.373111413047809   dF: -5.220e-05   |Residual|: 2.470e-03   |deigs|: 9.575e-07  t[s]:  29414.70
+	FillingsUpdate:  mu: +0.980174662  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3335.373094713281716   dF: +1.670e-05   |Residual|: 2.860e-03   |deigs|: 2.488e-05  t[s]:  29515.70
+	FillingsUpdate:  mu: +0.980174502  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3335.373141584845598   dF: -4.687e-05   |Residual|: 7.199e-04   |deigs|: 2.031e-05  t[s]:  29617.37
+	FillingsUpdate:  mu: +0.980174622  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3335.373142108218417   dF: -5.234e-07   |Residual|: 4.129e-04   |deigs|: 2.947e-06  t[s]:  29717.89
+	FillingsUpdate:  mu: +0.980174460  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3335.373142867941169   dF: -7.597e-07   |Residual|: 1.381e-04   |deigs|: 2.161e-06  t[s]:  29819.33
+	FillingsUpdate:  mu: +0.980174573  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3335.373142909541002   dF: -4.160e-08   |Residual|: 5.921e-05   |deigs|: 8.699e-07  t[s]:  29920.85
+	FillingsUpdate:  mu: +0.980174537  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3335.373142919319434   dF: -9.778e-09   |Residual|: 2.388e-05   |deigs|: 5.412e-07  t[s]:  30023.23
+	FillingsUpdate:  mu: +0.980174559  nElectrons: 582.000000
+SCF: Cycle:  7   F: -3335.373142922129773   dF: -2.810e-09   |Residual|: 1.117e-05   |deigs|: 2.102e-07  t[s]:  30124.79
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.111622150465095   0.226312965512647   0.122114062673586 1
+ion Os   0.219331426244922   0.107267919977441   0.365858423869720 1
+ion Os   0.081075117346363   0.211018845613793   0.631841276898728 1
+ion Os   0.223341103635781   0.115110759224012   0.873643534190990 1
+ion Os   0.112291108679052   0.560049061492616   0.122707830300944 1
+ion Os   0.219339793655478   0.453061976403014   0.365769558942027 1
+ion Os   0.111287550235843   0.561068616222376   0.624196574354405 1
+ion Os   0.223299968032326   0.449145693544631   0.873618884007929 1
+ion Os   0.112332653312673   0.893263153927838   0.122735651603128 1
+ion Os   0.222592021186482   0.781779783763231   0.373323062946441 1
+ion Os   0.111331337420469   0.891244585195098   0.624226348788284 1
+ion Os   0.222345587556562   0.781628662667914   0.874788564594413 1
+ion Os   0.446040257968884   0.226247092870499   0.122172188940308 1
+ion Os   0.557572804345114   0.114781192400633   0.370592558705489 1
+ion Os   0.461293978911225   0.211224265842384   0.631909456593290 1
+ion Os   0.558060763626628   0.114299177396192   0.878510186749386 1
+ion Os   0.446063972367904   0.560829744475482   0.122147096210777 1
+ion Os   0.565129104818921   0.453035519737241   0.365831968141136 1
+ion Os   0.461352473479078   0.591239400856629   0.631849339097873 1
+ion Os   0.557238890206451   0.449100708283695   0.873669837812509 1
+ion Os   0.444566856777379   0.892788460566868   0.124148542390205 1
+ion Os   0.557573981726946   0.783725455648865   0.370548616562190 1
+ion Os   0.444800985210081   0.892918077038204   0.622151086558197 1
+ion Os   0.558057992836157   0.784660195500443   0.878443463967639 1
+ion Os   0.779547652848596   0.227719404982912   0.124160087319292 1
+ion Os   0.888700653219966   0.114831380611856   0.370553010366144 1
+ion Os   0.779600469385532   0.227615156189978   0.622143744028535 1
+ion Os   0.887834462781022   0.114378150881725   0.878402106315072 1
+ion Os   0.779084396319381   0.560020708367309   0.122729398371137 1
+ion Os   0.890556609918845   0.449751532362544   0.373311832720401 1
+ion Os   0.781116640140508   0.561076954549214   0.624242910404824 1
+ion Os   0.890725218125392   0.449988595988396   0.874790232041043 1
+ion Os   0.779544477347758   0.892845749186887   0.124159721433357 1
+ion Os   0.890602378384016   0.781711263710154   0.373317547195920 1
+ion Os   0.779588843139543   0.892962037642713   0.622106985840523 1
+ion Os   0.890729913508425   0.781668420551125   0.874797255833229 1
+ion O   0.334786404835203   0.337789330813440   0.553387053230931 1
+
+# Forces in Lattice coordinates:
+force Os  -0.000724283749149  -0.000345467096744   0.000833171074521 1
+force Os   0.000495238224637  -0.000941196910187  -0.003030485275872 1
+force Os   0.015121457054230   0.001320436256304  -0.002487923456559 1
+force Os  -0.002565129962690   0.001389632757091   0.000491247454767 1
+force Os  -0.000821135046384   0.000205471095485  -0.001184203029353 1
+force Os  -0.000760263563591   0.000081396773240  -0.000289201619231 1
+force Os   0.000871938455830  -0.000040192123675   0.000484689880461 1
+force Os  -0.000574819526309  -0.001034333960928   0.000874310033514 1
+force Os  -0.001490684605256   0.000463905323939  -0.001776616880639 1
+force Os   0.000444745124650  -0.000501780740068  -0.000389374541669 1
+force Os  -0.000299382639658   0.000425179655502  -0.000241872622667 1
+force Os   0.000892902878676  -0.000129528915441  -0.001511004668935 1
+force Os   0.000085957624341   0.001566922451684  -0.001807460646658 1
+force Os   0.000689394376885  -0.000398192306954   0.000506986714326 1
+force Os   0.018748485193195  -0.021087236273983   0.005849665990327 1
+force Os  -0.001286872757580   0.002327496922345  -0.004982024402553 1
+force Os   0.001442785769140  -0.002368934923356  -0.000649344467506 1
+force Os  -0.000633658805677  -0.000088999085808  -0.001713122483140 1
+force Os  -0.002964968647552   0.002882915129200   0.001307252865472 1
+force Os   0.001439554884765  -0.001189296978629   0.000997676025755 1
+force Os   0.000805870099599  -0.000158570826991   0.001679687411182 1
+force Os  -0.000185027891887  -0.000276094913643   0.001215850400554 1
+force Os  -0.001045398966485   0.000930195164224  -0.002492562978248 1
+force Os  -0.000528755689683  -0.000280161338202  -0.000364386463760 1
+force Os   0.000460909001421   0.001333067665235   0.000391275573983 1
+force Os   0.000710565901884  -0.000822762646913  -0.001513904275870 1
+force Os  -0.009206509556224   0.003890149055271  -0.002166966273147 1
+force Os  -0.002473040808420   0.000544408611725   0.004313064720685 1
+force Os   0.000541789657555   0.000252091211048  -0.002391735813328 1
+force Os   0.001604881863671  -0.000565850621997  -0.000763156787467 1
+force Os   0.001092295315625  -0.000851695612552   0.000068983863035 1
+force Os  -0.000428967679160   0.000004858465290  -0.000402158069764 1
+force Os   0.002433549346353  -0.001959510493148  -0.000480186764440 1
+force Os   0.000566076933418   0.001088302103443  -0.001672937188645 1
+force Os  -0.004414413116132  -0.001784538397317  -0.000372133667658 1
+force Os   0.000177732472066  -0.000783054380029  -0.000380975099186 1
+force O  -0.018601510319559   0.010707850288162   0.004215184068760 1
+
+# Energy components:
+   Eewald =    -2949.0890939442278977
+       EH =      397.8021107674430255
+     Eloc =     -669.0123530786429455
+      Enl =     -838.5072352704834202
+      Exc =     -675.3731455872002698
+ Exc_core =      254.9049552382690251
+       KE =     1144.1129215139956159
+-------------------------------------
+     Etot =    -3335.1618403608463268
+       TS =        0.2113025612832307
+-------------------------------------
+        F =    -3335.3731429221297731
+
+IonicMinimize: Iter:  15  F: -3335.373142922129773  |grad|_K:  2.419e-04  alpha:  1.000e+00  linmin:  2.095e-01  t[s]:  30151.97
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.020 +0.039 +0.085 +0.001 +0.033 +0.039 -0.001 +0.002 +0.033 +0.026 -0.001 +0.023 +0.021 +0.010 +0.086 +0.022 +0.020 +0.039 +0.086 +0.001 +0.020 +0.010 +0.014 +0.022 +0.019 +0.010 +0.014 +0.022 +0.033 +0.026 -0.001 +0.023 +0.019 +0.026 +0.014 +0.023
+# oxidation-state O -0.093
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.980174559  nElectrons: 582.000000
+	FillingsUpdate:  mu: +0.980174912  nElectrons: 582.000000
+SCF: Cycle:  0   F: -3335.373136517021067   dF: +5.609e-06   |Residual|: 1.133e-03   |deigs|: 9.169e-08  t[s]:  30322.53
+	FillingsUpdate:  mu: +0.980171922  nElectrons: 582.000000
+SCF: Cycle:  1   F: -3335.373130279540419   dF: +6.237e-06   |Residual|: 1.656e-03   |deigs|: 1.747e-05  t[s]:  30423.87
+	FillingsUpdate:  mu: +0.980174006  nElectrons: 582.000000
+SCF: Cycle:  2   F: -3335.373148754681097   dF: -1.848e-05   |Residual|: 2.203e-04   |deigs|: 1.208e-05  t[s]:  30524.71
+	FillingsUpdate:  mu: +0.980173520  nElectrons: 582.000000
+SCF: Cycle:  3   F: -3335.373148735826362   dF: +1.885e-08   |Residual|: 1.781e-04   |deigs|: 1.491e-06  t[s]:  30625.56
+	FillingsUpdate:  mu: +0.980173861  nElectrons: 582.000000
+SCF: Cycle:  4   F: -3335.373148913120531   dF: -1.773e-07   |Residual|: 5.303e-05   |deigs|: 1.086e-06  t[s]:  30725.52
+	FillingsUpdate:  mu: +0.980173775  nElectrons: 582.000000
+SCF: Cycle:  5   F: -3335.373148917918115   dF: -4.798e-09   |Residual|: 3.149e-05   |deigs|: 6.222e-07  t[s]:  30826.62
+	FillingsUpdate:  mu: +0.980173838  nElectrons: 582.000000
+SCF: Cycle:  6   F: -3335.373148919957657   dF: -2.040e-09   |Residual|: 1.391e-05   |deigs|: 2.985e-07  t[s]:  30927.31
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Os   0.111613094284831   0.226309398572606   0.122130610425648 1
+ion Os   0.219351165887897   0.107266308360593   0.365836120149981 1
+ion Os   0.081205984405298   0.211097443694303   0.631834154243778 1
+ion Os   0.223308073488709   0.115125660091379   0.873658330717571 1
+ion Os   0.112285485126753   0.560050298140401   0.122695140332013 1
+ion Os   0.219333481135506   0.453070797932461   0.365763649519251 1
+ion Os   0.111303306492777   0.561084838588549   0.624212831657683 1
+ion Os   0.223282185091955   0.449122918620803   0.873625027696639 1
+ion Os   0.112321954355843   0.893263925439813   0.122721349324763 1
+ion Os   0.222591384026965   0.781775414443000   0.373317549955849 1
+ion Os   0.111327182781130   0.891258156375537   0.624236946314288 1
+ion Os   0.222361739951020   0.781631098355008   0.874782469118534 1
+ion Os   0.446057955164349   0.226273813686134   0.122159469389364 1
+ion Os   0.557584545473884   0.114786836666910   0.370589718574061 1
+ion Os   0.461362537591909   0.211093016164461   0.631953957825069 1
+ion Os   0.558066007051303   0.114318113553215   0.878489105339629 1
+ion Os   0.446071123581099   0.560806612218145   0.122144215464520 1
+ion Os   0.565117151531996   0.453034740482093   0.365813755201643 1
+ion Os   0.461339321767133   0.591264357844600   0.631863998397288 1
+ion Os   0.557250179584130   0.449092162706650   0.873673714040163 1
+ion Os   0.444584382831450   0.892802246264417   0.124162369430029 1
+ion Os   0.557570239852273   0.783729208272107   0.370571726248880 1
+ion Os   0.444786214923396   0.892894856713869   0.622123213170198 1
+ion Os   0.558042325637315   0.784644330918394   0.878445974998058 1
+ion Os   0.779555086838255   0.227756934897372   0.124170069955511 1
+ion Os   0.888710338345677   0.114824229437092   0.370539318845143 1
+ion Os   0.779547272928368   0.227621224909375   0.622122387985359 1
+ion Os   0.887802252455785   0.114377738144136   0.878434231509768 1
+ion Os   0.779097174096725   0.560036984045399   0.122690270662511 1
+ion Os   0.890588814265377   0.449765265605057   0.373313676125099 1
+ion Os   0.781116961478213   0.561068518463434   0.624237950403536 1
+ion Os   0.890724182929958   0.449996043932082   0.874796963619273 1
+ion Os   0.779560383248053   0.892820514016359   0.124152485690943 1
+ion Os   0.890621014975992   0.781737858626841   0.373298144192861 1
+ion Os   0.779517266725261   0.892923896269933   0.622114948190179 1
+ion Os   0.890733664488943   0.781667395323395   0.874784018576036 1
+ion O   0.334668565204472   0.337766842224076   0.553440136708880 1
+
+# Forces in Lattice coordinates:
+force Os  -0.001040573016841   0.000153718063050  -0.000271658039632 1
+force Os  -0.000175809157563  -0.000004797850586  -0.001528449070580 1
+force Os  -0.000381868716546   0.000576635279659   0.001805852304281 1
+force Os  -0.000738575939808  -0.000215055366015  -0.000446630460567 1
+force Os  -0.000225578795690   0.000364012899467  -0.000901928697649 1
+force Os   0.000449492406909  -0.000846649405940   0.000457331715754 1
+force Os   0.000137013344108  -0.000267250962399   0.000142338300720 1
+force Os  -0.000435038033974  -0.000232089552345   0.001150545327114 1
+force Os  -0.000522788577285  -0.000239977972000  -0.001992813993362 1
+force Os  -0.000023945991772  -0.000342420208171  -0.000412815240707 1
+force Os  -0.000081228483582  -0.000005256059741  -0.000450023953104 1
+force Os   0.000068129096587   0.000328868590453  -0.000938353461495 1
+force Os   0.000275613179583   0.000433744766294  -0.001790865277256 1
+force Os   0.000537600691617  -0.000212171808737  -0.000049706702552 1
+force Os   0.000317947431236  -0.001599347946904   0.000141131442904 1
+force Os   0.000447299822992  -0.000292781028951  -0.001191037995029 1
+force Os   0.000208479340446  -0.000468037779796  -0.000811327951189 1
+force Os   0.000288195898382  -0.000081501412809  -0.000741949010012 1
+force Os  -0.001143697568676  -0.001743206631194   0.000563535608675 1
+force Os   0.000678144280518  -0.000403070545004  -0.000727608462108 1
+force Os   0.000827459652458  -0.000840123579699   0.000136484319381 1
+force Os   0.000723849727976  -0.001317678328009  -0.000560204364462 1
+force Os  -0.000033456965413  -0.000372166032951  -0.001414240652139 1
+force Os  -0.000053689323674   0.000120967851454   0.000474908062854 1
+force Os   0.001394639284456  -0.000384112055615  -0.000250340059479 1
+force Os   0.000148356657736  -0.000472474019513   0.000415742917109 1
+force Os  -0.000861122757040  -0.000230447633849  -0.001407192529319 1
+force Os  -0.000645541908223  -0.000068759916087   0.000621506778635 1
+force Os   0.000427043301191   0.000128325449959  -0.000508154618091 1
+force Os   0.000201712603745   0.000325614798839  -0.000549992638924 1
+force Os   0.000394937321586  -0.000245221138004  -0.000180977613462 1
+force Os   0.000221138975799  -0.000426196401117  -0.001451309865754 1
+force Os   0.000541292321362  -0.000194829899439  -0.000347654306708 1
+force Os  -0.000057231374497   0.000276910935313  -0.000021709781075 1
+force Os  -0.000401834936053  -0.000000139832618  -0.000469904099928 1
+force Os  -0.000556714580040  -0.000080254883550  -0.000920631841861 1
+force O  -0.001076030443014   0.002480481186193   0.004420568477895 1
+
+# Energy components:
+   Eewald =    -2949.0871184244069809
+       EH =      397.8042346696437903
+     Eloc =     -669.0164981461833804
+      Enl =     -838.5075245831656048
+      Exc =     -675.3732227324112500
+ Exc_core =      254.9049552614884533
+       KE =     1144.1133227201789850
+-------------------------------------
+     Etot =    -3335.1618512348559307
+       TS =        0.2112976851016493
+-------------------------------------
+        F =    -3335.3731489199576572
+
+IonicMinimize: Iter:  16  F: -3335.373148919957657  |grad|_K:  5.254e-05  alpha:  1.000e+00  linmin: -3.549e-01  t[s]:  30955.25
+IonicMinimize: Converged (|grad|_K<1.000000e-04).
+
+#--- Lowdin population analysis ---
+# oxidation-state Os +0.020 +0.039 +0.086 +0.001 +0.033 +0.039 -0.001 +0.002 +0.033 +0.026 -0.001 +0.023 +0.021 +0.010 +0.086 +0.022 +0.020 +0.039 +0.086 +0.001 +0.019 +0.010 +0.014 +0.022 +0.019 +0.010 +0.014 +0.022 +0.033 +0.026 -0.001 +0.023 +0.019 +0.026 +0.014 +0.023
+# oxidation-state O -0.093
+
+
+Dumping '/data/rc652/Os/oct/Os_oct.Ecomponents' ... done
+End date and time: Sun Jul 14 08:10:05 2024  (Duration: 0-8:36:13.47)
+Done!

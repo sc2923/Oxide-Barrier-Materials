@@ -1,0 +1,1681 @@
+--------------------------------------------------------------------------
+Initialization of PSM library failed.
+
+  Error: PSM is in the finalized state
+--------------------------------------------------------------------------
+
+*************** JDFTx 1.7.0 (git hash 3664913) ***************
+
+Start date and time: Mon Jul 15 12:45:48 2024
+Executable jdftx with command-line: -i Zn_ion.in
+Running on hosts (process indices):  node3103.physics.cornell.edu (0-15)
+Divided in process groups (process indices):  0 (0)  1 (1)  2 (2)  3 (3)  4 (4)  5 (5)  6 (6)  7 (7)  8 (8)  9 (9)  10 (10)  11 (11)  12 (12)  13 (13)  14 (14)  15 (15)
+Resource initialization completed at t[s]:      0.00
+Run totals: 16 processes, 32 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+coords-type Lattice
+core-overlap-check vector
+coulomb-interaction Periodic
+davidson-band-ratio 1.1
+dump End Ecomponents
+dump-name /data/rc652/Zn/ion/Zn_ion.$VAR
+elec-cutoff 20 100
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBEsol
+elec-smearing Fermi 0.01
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+electronic-scf  \
+	nIterations	50 \
+	energyDiffThreshold	1e-08 \
+	residualThreshold	1e-07 \
+	mixFraction	0.5 \
+	qMetric	0.8 \
+	history	10 \
+	nEigSteps	2 \
+	eigDiffThreshold	1e-08 \
+	mixedVariable	Density \
+	qKerker	0.8 \
+	qKappa	-1 \
+	verbose	no \
+	mixFractionMag	1.5
+exchange-regularization WignerSeitzTruncated
+fluid None
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42 \
+	tauNuc 343133 \
+	poleEl 15 7 1
+forces-output-coords Positions
+ion Zn   0.116610000000000   0.222230000000000   0.124910000000000 1
+ion Zn   0.217550000000000   0.098010000000000   0.369920000000000 1
+ion Zn   0.111430000000000   0.225450000000000   0.626430000000000 1
+ion Zn   0.234430000000000   0.115970000000000   0.869310000000000 1
+ion Zn   0.120990000000000   0.558910000000000   0.127560000000000 1
+ion Zn   0.223410000000000   0.455750000000000   0.384970000000000 1
+ion Zn   0.092170000000000   0.551240000000000   0.632150000000000 1
+ion Zn   0.210480000000000   0.455280000000000   0.900880000000000 1
+ion Zn   0.102200000000000   0.884360000000000   0.122040000000000 1
+ion Zn   0.227320000000000   0.783970000000000   0.382650000000000 1
+ion Zn   0.118320000000000   0.887450000000000   0.635400000000000 1
+ion Zn   0.231280000000000   0.788460000000000   0.882760000000000 1
+ion Zn   0.434320000000000   0.231840000000000   0.105380000000000 1
+ion Zn   0.550680000000000   0.110460000000000   0.359480000000000 1
+ion Zn   0.434050000000000   0.248110000000000   0.622110000000000 1
+ion Zn   0.541660000000000   0.127280000000000   0.875300000000000 1
+ion Zn   0.436920000000000   0.550340000000000   0.123580000000000 1
+ion Zn   0.556510000000000   0.434580000000000   0.390490000000000 1
+ion Zn   0.461260000000000   0.551110000000000   0.626180000000000 1
+ion Zn   0.550910000000000   0.451410000000000   0.872940000000000 1
+ion Zn   0.454440000000000   0.902470000000000   0.103710000000000 1
+ion Zn   0.573210000000000   0.778290000000000   0.364050000000000 1
+ion Zn   0.437830000000000   0.878400000000000   0.625140000000000 1
+ion Zn   0.566830000000000   0.780700000000000   0.869050000000000 1
+ion Zn   0.758190000000000   0.224510000000000   0.121250000000000 1
+ion Zn   0.905370000000000   0.096810000000000   0.366810000000000 1
+ion Zn   0.783050000000000   0.193620000000000   0.623780000000000 1
+ion Zn   0.889910000000000   0.105350000000000   0.897890000000000 1
+ion Zn   0.766170000000000   0.545530000000000   0.117660000000000 1
+ion Zn   0.896790000000000   0.446260000000000   0.371480000000000 1
+ion Zn   0.777180000000000   0.555840000000000   0.620750000000000 1
+ion Zn   0.887940000000000   0.454450000000000   0.872150000000000 1
+ion Zn   0.786220000000000   0.896230000000000   0.129160000000000 1
+ion Zn   0.869730000000000   0.793030000000000   0.376750000000000 1
+ion Zn   0.789530000000000   0.889760000000000   0.612850000000000 1
+ion Zn   0.893370000000000   0.772590000000000   0.892010000000000 1
+ion-species GBRV/$ID_pbesol.uspp
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          50 \
+	history              15 \
+	knormThreshold       0.0001 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.500000000000   0.500000000000   0.500000000000  1.00000000000000
+kpoint-folding 4 4 4 
+latt-move-scale 1 1 1
+latt-scale 1 1 1 
+lattice  \
+	   7.580356660815777    7.580356660815777   -0.000000000000000  \
+	 -13.129568758365000   13.129568758365000   -0.000000000000000  \
+	   0.000000000000000   -0.000000000000000   17.147384969974024 
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.01
+pcm-variant GLSSA13
+perturb-minimize  \
+	nIterations            0 \
+	algorithm              MINRES \
+	residualTol            0.0001 \
+	residualDiffThreshold  0.0001 \
+	CGBypass               no \
+	recomputeResidual      no
+spintype no-spin
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+
+
+
+---------- Setting up symmetries ----------
+
+Found 24 point-group symmetries of the bravais lattice
+Found 1 space-group symmetries with basis
+Applied RMS atom displacement 0 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[      7.58036      7.58036            0  ]
+[     -13.1296      13.1296            0  ]
+[            0            0      17.1474  ]
+unit cell volume = 3413.25
+G =
+[   0.414439  -0.239276          0  ]
+[   0.414439   0.239276          0  ]
+[          0          0   0.366422  ]
+Minimum fftbox size, Smin = [  72  72  80  ]
+Chosen fftbox size, S = [  72  72  80  ]
+
+---------- Initializing tighter grid for wavefunction operations ----------
+R = 
+[      7.58036      7.58036            0  ]
+[     -13.1296      13.1296            0  ]
+[            0            0      17.1474  ]
+unit cell volume = 3413.25
+G =
+[   0.414439  -0.239276          0  ]
+[   0.414439   0.239276          0  ]
+[          0          0   0.366422  ]
+Minimum fftbox size, Smin = [  64  64  72  ]
+Chosen fftbox size, S = [  64  64  72  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBEsol GGA exchange.
+Initalized PBEsol GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0
+
+Reading pseudopotential file '/home/rc652/build/pseudopotentials/GBRV/zn_pbesol.uspp':
+  Title: Zn.  Created by USPP 7.3.6 on 23-7-2013
+  Reference state energy: -230.565303.  20 valence electrons in orbitals:
+    |300>  occupation: 2  eigenvalue: -4.737806
+    |310>  occupation: 6  eigenvalue: -3.059602
+    |320>  occupation: 10  eigenvalue: -0.373701
+    |400>  occupation: 2  eigenvalue: -0.220431
+    |410>  occupation: 0  eigenvalue: -0.039521
+  lMax: 2  lLocal: 3  QijEcut: 5
+  6 projectors sampled on a log grid with 687 points:
+    l: 0  eig: -4.737806  rCut: 1.35
+    l: 0  eig: -0.220431  rCut: 1.35
+    l: 1  eig: -3.059602  rCut: 1.4
+    l: 1  eig: -0.039521  rCut: 1.4
+    l: 2  eig: -0.373701  rCut: 1.6
+    l: 2  eig: 1.000000  rCut: 1.6
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1668 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1668 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.80 bohrs.
+
+Initialized 1 species with 36 total atoms.
+
+Folded 1 k-points by 4x4x4 to 64 k-points.
+
+---------- Setting up k-points, bands, fillings ----------
+Adding inversion symmetry to k-mesh for non-inversion-symmetric unit cell.
+Reduced to 32 k-points under symmetry. 
+Computing the number of bands and number of electrons
+Calculating initial fillings.
+nElectrons: 720.000000   nBands: 468   nStates: 32
+
+----- Setting up reduced wavefunction bases (one per k-point) -----
+average nbasis = 14581.312 , ideal nbasis = 14581.661
+
+---------- Setting up ewald sum ----------
+Optimum gaussian width for ewald sums = 3.305590 bohr.
+Real space sum over 567 unit cells with max indices [  4  4  3  ]
+Reciprocal space sum over 5491 terms with max indices [  8  8  9  ]
+
+---------- Allocating electronic variables ----------
+Initializing wave functions:  linear combination of atomic orbitals
+Zn pseudo-atom occupations:   s ( 2 2 )  p ( 6 0 )  d ( 10 )
+	FillingsUpdate:  mu: +0.544911177  nElectrons: 720.000000
+LCAOMinimize: Iter:   0  F: -8302.0276368735831056  |grad|_K:  2.065e-04  alpha:  1.000e+00
+	FillingsUpdate:  mu: +0.550326856  nElectrons: 720.000000
+LCAOMinimize: Iter:   1  F: -8302.1065756220632466  |grad|_K:  4.561e-05  alpha:  5.816e-01  linmin:  1.512e-02  cgtest: -1.093e-01  t[s]:    123.12
+	FillingsUpdate:  mu: +0.550410907  nElectrons: 720.000000
+LCAOMinimize: Iter:   2  F: -8302.1077083866002795  |grad|_K:  1.393e-05  alpha:  1.606e-01  linmin:  1.386e-04  cgtest:  1.021e-01  t[s]:    165.60
+	FillingsUpdate:  mu: +0.550353055  nElectrons: 720.000000
+LCAOMinimize: Iter:   3  F: -8302.1079051405104110  |grad|_K:  4.831e-06  alpha:  2.882e-01  linmin:  2.805e-04  cgtest: -9.125e-03  t[s]:    208.36
+	FillingsUpdate:  mu: +0.550302947  nElectrons: 720.000000
+LCAOMinimize: Iter:   4  F: -8302.1079374569635547  |grad|_K:  3.138e-06  alpha:  3.936e-01  linmin:  5.074e-05  cgtest:  1.065e-03  t[s]:    250.88
+	FillingsUpdate:  mu: +0.550282285  nElectrons: 720.000000
+LCAOMinimize: Iter:   5  F: -8302.1079473520094325  |grad|_K:  1.450e-06  alpha:  2.855e-01  linmin:  6.460e-06  cgtest:  2.325e-04  t[s]:    293.49
+	FillingsUpdate:  mu: +0.550281815  nElectrons: 720.000000
+LCAOMinimize: Iter:   6  F: -8302.1079491116179270  |grad|_K:  6.326e-07  alpha:  2.379e-01  linmin: -4.255e-06  cgtest:  8.536e-05  t[s]:    335.74
+	FillingsUpdate:  mu: +0.550289771  nElectrons: 720.000000
+LCAOMinimize: Iter:   7  F: -8302.1079497879036353  |grad|_K:  2.106e-07  alpha:  4.800e-01  linmin: -2.024e-04  cgtest:  1.140e-03  t[s]:    378.14
+	FillingsUpdate:  mu: +0.550291163  nElectrons: 720.000000
+LCAOMinimize: Iter:   8  F: -8302.1079498313156364  |grad|_K:  1.261e-07  alpha:  2.782e-01  linmin:  8.348e-05  cgtest: -1.451e-03  t[s]:    420.40
+LCAOMinimize: Converged (|Delta F|<1.000000e-06 for 2 iters).
+
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   gga-PBEsol exchange-correlation functional:
+      J.P. Perdew et al., Phys. Rev. Lett. 100, 136406 (2008)
+
+   Pseudopotentials:
+      KF Garrity, JW Bennett, KM Rabe and D Vanderbilt, Comput. Mater. Sci. 81, 446 (2014)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+Initialization completed successfully at t[s]:    441.46
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.550291163  nElectrons: 720.000000
+	FillingsUpdate:  mu: +0.546586908  nElectrons: 720.000000
+SCF: Cycle:  0   F: -8302.295073984483679   dF: -1.871e-01   |Residual|: 1.113e-01   |deigs|: 2.830e-02  t[s]:    644.55
+	FillingsUpdate:  mu: +0.547487432  nElectrons: 720.000000
+SCF: Cycle:  1   F: -8302.300300030314247   dF: -5.226e-03   |Residual|: 4.145e-02   |deigs|: 4.373e-03  t[s]:    815.32
+	FillingsUpdate:  mu: +0.547161424  nElectrons: 720.000000
+SCF: Cycle:  2   F: -8302.301426777921733   dF: -1.127e-03   |Residual|: 2.268e-02   |deigs|: 1.680e-03  t[s]:    914.96
+	FillingsUpdate:  mu: +0.547242267  nElectrons: 720.000000
+SCF: Cycle:  3   F: -8302.301598955444206   dF: -1.722e-04   |Residual|: 4.029e-03   |deigs|: 3.476e-04  t[s]:   1016.24
+	FillingsUpdate:  mu: +0.547243967  nElectrons: 720.000000
+SCF: Cycle:  4   F: -8302.301605891696454   dF: -6.936e-06   |Residual|: 1.763e-03   |deigs|: 7.204e-05  t[s]:   1116.48
+	FillingsUpdate:  mu: +0.547247591  nElectrons: 720.000000
+SCF: Cycle:  5   F: -8302.301608242220027   dF: -2.351e-06   |Residual|: 4.668e-04   |deigs|: 4.447e-05  t[s]:   1217.79
+	FillingsUpdate:  mu: +0.547249914  nElectrons: 720.000000
+SCF: Cycle:  6   F: -8302.301608393290735   dF: -1.511e-07   |Residual|: 2.539e-04   |deigs|: 1.393e-05  t[s]:   1317.87
+	FillingsUpdate:  mu: +0.547251340  nElectrons: 720.000000
+SCF: Cycle:  7   F: -8302.301608426743769   dF: -3.345e-08   |Residual|: 1.145e-04   |deigs|: 6.816e-06  t[s]:   1417.87
+	FillingsUpdate:  mu: +0.547250880  nElectrons: 720.000000
+SCF: Cycle:  8   F: -8302.301608435091111   dF: -8.347e-09   |Residual|: 2.624e-05   |deigs|: 2.874e-06  t[s]:   1518.09
+	FillingsUpdate:  mu: +0.547250774  nElectrons: 720.000000
+SCF: Cycle:  9   F: -8302.301608436217066   dF: -1.126e-09   |Residual|: 1.448e-05   |deigs|: 9.610e-07  t[s]:   1617.82
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Zn   0.116610000000000   0.222230000000000   0.124910000000000 1
+ion Zn   0.217550000000000   0.098010000000000   0.369920000000000 1
+ion Zn   0.111430000000000   0.225450000000000   0.626430000000000 1
+ion Zn   0.234430000000000   0.115970000000000   0.869310000000000 1
+ion Zn   0.120990000000000   0.558910000000000   0.127560000000000 1
+ion Zn   0.223410000000000   0.455750000000000   0.384970000000000 1
+ion Zn   0.092170000000000   0.551240000000000   0.632150000000000 1
+ion Zn   0.210480000000000   0.455280000000000   0.900880000000000 1
+ion Zn   0.102200000000000   0.884360000000000   0.122040000000000 1
+ion Zn   0.227320000000000   0.783970000000000   0.382650000000000 1
+ion Zn   0.118320000000000   0.887450000000000   0.635400000000000 1
+ion Zn   0.231280000000000   0.788460000000000   0.882760000000000 1
+ion Zn   0.434320000000000   0.231840000000000   0.105380000000000 1
+ion Zn   0.550680000000000   0.110460000000000   0.359480000000000 1
+ion Zn   0.434050000000000   0.248110000000000   0.622110000000000 1
+ion Zn   0.541660000000000   0.127280000000000   0.875300000000000 1
+ion Zn   0.436920000000000   0.550340000000000   0.123580000000000 1
+ion Zn   0.556510000000000   0.434580000000000   0.390490000000000 1
+ion Zn   0.461260000000000   0.551110000000000   0.626180000000000 1
+ion Zn   0.550910000000000   0.451410000000000   0.872940000000000 1
+ion Zn   0.454440000000000   0.902470000000000   0.103710000000000 1
+ion Zn   0.573210000000000   0.778290000000000   0.364050000000000 1
+ion Zn   0.437830000000000   0.878400000000000   0.625140000000000 1
+ion Zn   0.566830000000000   0.780700000000000   0.869050000000000 1
+ion Zn   0.758190000000000   0.224510000000000   0.121250000000000 1
+ion Zn   0.905370000000000   0.096810000000000   0.366810000000000 1
+ion Zn   0.783050000000000   0.193620000000000   0.623780000000000 1
+ion Zn   0.889910000000000   0.105350000000000   0.897890000000000 1
+ion Zn   0.766170000000000   0.545530000000000   0.117660000000000 1
+ion Zn   0.896790000000000   0.446260000000000   0.371480000000000 1
+ion Zn   0.777180000000000   0.555840000000000   0.620750000000000 1
+ion Zn   0.887940000000000   0.454450000000000   0.872150000000000 1
+ion Zn   0.786220000000000   0.896230000000000   0.129160000000000 1
+ion Zn   0.869730000000000   0.793030000000000   0.376750000000000 1
+ion Zn   0.789530000000000   0.889760000000000   0.612850000000000 1
+ion Zn   0.893370000000000   0.772590000000000   0.892010000000000 1
+
+# Forces in Lattice coordinates:
+force Zn  -0.080084184074900   0.043299849918353   0.068411311136696 1
+force Zn   0.094411440957386   0.041837711804415   0.000729201389401 1
+force Zn  -0.026970004209030   0.031817345087370   0.061818882476808 1
+force Zn  -0.318146773725892   0.136054797877276  -0.058557134128939 1
+force Zn  -0.170985112295884   0.131515133549009   0.172925615327951 1
+force Zn   0.078872140235419  -0.071624926113888  -0.009089291908182 1
+force Zn   0.152621958478862  -0.096920678297457  -0.022893088015966 1
+force Zn   0.105729368938380  -0.135066938284262  -0.323000429331188 1
+force Zn   0.122940166755104  -0.072927123657529   0.134184493026975 1
+force Zn  -0.009163488892243  -0.032365174028567  -0.072105429907140 1
+force Zn  -0.065175636099054   0.065519822740140  -0.038538384871853 1
+force Zn  -0.009279928231407  -0.064963678299014  -0.089205891888358 1
+force Zn   0.059582682361184  -0.092052654989849   0.263069106237261 1
+force Zn   0.069240730723965  -0.055614000533671   0.123722297106646 1
+force Zn   0.285560391999336  -0.527303439980109   0.041560603527650 1
+force Zn   0.355218760666088  -0.218565904283649  -0.218648971969668 1
+force Zn   0.082251816728687   0.079055094637810   0.119509551105107 1
+force Zn  -0.006779268438082   0.046324849940545  -0.294009177002714 1
+force Zn  -0.375118067315706   0.474198131190125   0.033506662118691 1
+force Zn   0.006419864928750   0.062192849190041  -0.001334411789607 1
+force Zn  -0.002338518364919  -0.099717158451206   0.187161638804348 1
+force Zn  -0.483479433064895   0.180276932441341   0.001284443543334 1
+force Zn   0.068939196648450   0.013318733242979  -0.017224371145547 1
+force Zn  -0.048963134638389   0.044595628592974  -0.046060057723828 1
+force Zn   0.184402136155887  -0.037267491649201   0.042406113350923 1
+force Zn  -0.306441761186511   0.575957763369242   0.036961572179368 1
+force Zn  -0.236756950720169   0.244982829140220   0.037053756004978 1
+force Zn  -0.037944529209078   0.078832173527283  -0.198183831992061 1
+force Zn   0.025659930793940   0.061666651121120   0.166887193185310 1
+force Zn  -0.075404236574701   0.014434200873551  -0.024652748074395 1
+force Zn   0.139760350821870  -0.061248481392946   0.034025886934142 1
+force Zn   0.029231440132564  -0.139553800407765  -0.023551506890687 1
+force Zn  -0.108787142695668  -0.022229770461895  -0.124970231564266 1
+force Zn   0.632426864122346  -0.707511866046785  -0.056366452686646 1
+force Zn  -0.052641606149263  -0.013599982691455   0.277475390485041 1
+force Zn  -0.078849578552351   0.122693650243281  -0.184155307631610 1
+
+# Energy components:
+   Eewald =    -4531.1195549838739680
+       EH =     3308.7477580098843646
+     Eloc =    -7315.2988104960159035
+      Enl =      260.2175584044682068
+      Exc =     -751.5030795449938523
+       KE =      726.7316867552896156
+-------------------------------------
+     Etot =    -8302.2244418552418210
+       TS =        0.0771665809745349
+-------------------------------------
+        F =    -8302.3016084362170659
+
+IonicMinimize: Iter:   0  F: -8302.301608436217066  |grad|_K:  1.077e-02  t[s]:   1638.97
+
+#--- Lowdin population analysis ---
+# oxidation-state Zn -0.004 +0.001 +0.002 +0.002 +0.006 +0.019 -0.015 +0.019 +0.030 -0.005 +0.017 -0.019 -0.009 +0.010 -0.004 +0.002 +0.003 +0.001 -0.008 -0.004 +0.015 +0.013 +0.013 +0.016 -0.001 -0.004 +0.022 +0.017 +0.016 +0.009 +0.014 +0.002 -0.017 -0.011 -0.012 +0.002
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.547250774  nElectrons: 720.000000
+	FillingsUpdate:  mu: +0.546880345  nElectrons: 720.000000
+SCF: Cycle:  0   F: -8301.978224665070229   dF: -2.917e-02   |Residual|: 2.802e-01   |deigs|: 7.278e-04  t[s]:   1875.32
+	FillingsUpdate:  mu: +0.547365241  nElectrons: 720.000000
+SCF: Cycle:  1   F: -8302.277376898382499   dF: -2.992e-01   |Residual|: 1.292e-01   |deigs|: 4.800e-03  t[s]:   2047.76
+	FillingsUpdate:  mu: +0.547216623  nElectrons: 720.000000
+SCF: Cycle:  2   F: -8302.310784055493059   dF: -3.341e-02   |Residual|: 5.678e-02   |deigs|: 1.300e-03  t[s]:   2221.66
+	FillingsUpdate:  mu: +0.547268887  nElectrons: 720.000000
+SCF: Cycle:  3   F: -8302.313116874540356   dF: -2.333e-03   |Residual|: 1.180e-02   |deigs|: 8.838e-04  t[s]:   2377.06
+	FillingsUpdate:  mu: +0.547283497  nElectrons: 720.000000
+SCF: Cycle:  4   F: -8302.313251536956159   dF: -1.347e-04   |Residual|: 3.160e-03   |deigs|: 2.035e-04  t[s]:   2476.80
+	FillingsUpdate:  mu: +0.547276983  nElectrons: 720.000000
+SCF: Cycle:  5   F: -8302.313255429344281   dF: -3.892e-06   |Residual|: 1.400e-03   |deigs|: 5.372e-05  t[s]:   2577.66
+	FillingsUpdate:  mu: +0.547278379  nElectrons: 720.000000
+SCF: Cycle:  6   F: -8302.313256104018365   dF: -6.747e-07   |Residual|: 4.875e-04   |deigs|: 1.790e-05  t[s]:   2678.57
+	FillingsUpdate:  mu: +0.547278978  nElectrons: 720.000000
+SCF: Cycle:  7   F: -8302.313256243920478   dF: -1.399e-07   |Residual|: 1.547e-04   |deigs|: 8.487e-06  t[s]:   2779.30
+	FillingsUpdate:  mu: +0.547278715  nElectrons: 720.000000
+SCF: Cycle:  8   F: -8302.313256264757001   dF: -2.084e-08   |Residual|: 4.777e-05   |deigs|: 3.245e-06  t[s]:   2879.51
+	FillingsUpdate:  mu: +0.547278656  nElectrons: 720.000000
+SCF: Cycle:  9   F: -8302.313256266965254   dF: -2.208e-09   |Residual|: 2.390e-05   |deigs|: 5.657e-07  t[s]:   2979.95
+	FillingsUpdate:  mu: +0.547278716  nElectrons: 720.000000
+SCF: Cycle: 10   F: -8302.313256267641918   dF: -6.767e-10   |Residual|: 8.457e-06   |deigs|: 4.863e-07  t[s]:   3079.97
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Zn   0.116271028831083   0.222248894557678   0.125142651680998 1
+ion Zn   0.218219028899956   0.098526533587498   0.369922466112775 1
+ion Zn   0.111365836947793   0.225556341625169   0.626640230956486 1
+ion Zn   0.232979072610528   0.115836466232980   0.869110834413052 1
+ion Zn   0.120379583334564   0.559176971100751   0.128148102842133 1
+ion Zn   0.223659790190177   0.455563270716322   0.384939073603776 1
+ion Zn   0.092774239652887   0.551120441008549   0.632072127155703 1
+ion Zn   0.210701575521134   0.454803145384323   0.899781467794662 1
+ion Zn   0.102701649757263   0.884293535096693   0.122496345021879 1
+ion Zn   0.227172971688662   0.783755669246558   0.382404756916742 1
+ion Zn   0.118131961176904   0.887641033506235   0.635268917798604 1
+ion Zn   0.231037744965744   0.788056229116329   0.882456598570722 1
+ion Zn   0.434398642755887   0.231478821755797   0.106274679140567 1
+ion Zn   0.550920358180412   0.110338213650561   0.359900763292501 1
+ion Zn   0.434177093309053   0.245879395793964   0.622251332935007 1
+ion Zn   0.543086664864245   0.127042410422763   0.874556365116826 1
+ion Zn   0.437626439709987   0.551037161156932   0.123986435823458 1
+ion Zn   0.556605041170023   0.434829061779948   0.389490066492540 1
+ion Zn   0.460459362296983   0.552772775895623   0.626293941633427 1
+ion Zn   0.551127633518194   0.451789395106070   0.872935447803594 1
+ion Zn   0.454137210034947   0.901884759212203   0.104346519287267 1
+ion Zn   0.570928250931865   0.777933452930842   0.364054354480782 1
+ion Zn   0.438268546913899   0.878677214625845   0.625081406353985 1
+ion Zn   0.566675318963335   0.780816677246872   0.868893336732265 1
+ion Zn   0.759151617769754   0.224828664082556   0.121394208497838 1
+ion Zn   0.905262901975207   0.099262272923818   0.366935691716845 1
+ion Zn   0.782387154594314   0.194354422092908   0.623906005232283 1
+ion Zn   0.889918539744320   0.105697241073816   0.897215966668729 1
+ion Zn   0.766497718015236   0.545962148054795   0.118227566283251 1
+ion Zn   0.896394452790821   0.446125020363574   0.371396142585306 1
+ion Zn   0.777813096511138   0.555890068938688   0.620865707507151 1
+ion Zn   0.887704800562234   0.453725236701956   0.872069887885631 1
+ion Zn   0.785524457047974   0.895785507974105   0.128734964731571 1
+ion Zn   0.871346558828002   0.790760093909369   0.376558284878980 1
+ion Zn   0.789185185197293   0.889528417896578   0.613793674639348 1
+ion Zn   0.893268470738183   0.773073035231333   0.891383677413316 1
+
+# Forces in Lattice coordinates:
+force Zn  -0.075816826076960   0.043390006679067   0.061981543572799 1
+force Zn   0.077150908157462   0.046818901433717   0.002996233172810 1
+force Zn  -0.022748199151719   0.028801899701519   0.055214382860878 1
+force Zn  -0.278014457665800   0.121299406380828  -0.044266904454041 1
+force Zn  -0.152168918019076   0.114407410823876   0.148119772863515 1
+force Zn   0.075218659525257  -0.071438759053988  -0.009133291718742 1
+force Zn   0.149021025767082  -0.091645639346931  -0.021850558631652 1
+force Zn   0.101183010886356  -0.125687510485145  -0.293499992841106 1
+force Zn   0.112852622266391  -0.065128636481699   0.122021171688399 1
+force Zn  -0.011129627416801  -0.029756815851332  -0.066506148044491 1
+force Zn  -0.061369667007855   0.059896196776328  -0.040752087017669 1
+force Zn  -0.009653296198195  -0.058943334774533  -0.081857823441386 1
+force Zn   0.060472497738270  -0.091840935772348   0.236267492497131 1
+force Zn   0.068983505565886  -0.053907908442008   0.119941903931304 1
+force Zn   0.261137146305708  -0.455418642021993   0.031661887376607 1
+force Zn   0.314690310706461  -0.197667558946423  -0.197465451997249 1
+force Zn   0.071569145240912   0.073271713994419   0.106461394530373 1
+force Zn  -0.012807689989303   0.046788416386569  -0.260486795959249 1
+force Zn  -0.327201663507138   0.394226608739213   0.025490813694352 1
+force Zn   0.007660551274471   0.049125967658632  -0.002212408095804 1
+force Zn  -0.004724864644323  -0.089893196358286   0.174433928122028 1
+force Zn  -0.398175727707064   0.155404918960954   0.008103096229132 1
+force Zn   0.060114221463772   0.018533220423487  -0.017992785346765 1
+force Zn  -0.051165835712593   0.045879972395369  -0.038775140748125 1
+force Zn   0.174694124159596  -0.038098340204914   0.038822276453981 1
+force Zn  -0.271221888018750   0.475210922142303   0.040688457901926 1
+force Zn  -0.224178087458527   0.233215722565987   0.032559292155873 1
+force Zn  -0.038465414233817   0.077154419275076  -0.189487710458572 1
+force Zn   0.025524070629475   0.059094070821833   0.153341017039150 1
+force Zn  -0.070791197744069   0.013341355124078  -0.019413027645950 1
+force Zn   0.115713504818257  -0.055727671260313   0.031259954622572 1
+force Zn   0.026549379802759  -0.128025163455236  -0.019054755511245 1
+force Zn  -0.098920245083721  -0.022105321134054  -0.100806885889895 1
+force Zn   0.522419638294721  -0.579662140670085  -0.050988483016507 1
+force Zn  -0.045943712245399  -0.012175392210665   0.237999530238408 1
+force Zn  -0.070483570684279   0.111201583419115  -0.172536497851425 1
+
+# Energy components:
+   Eewald =    -4535.3876586212809343
+       EH =     3304.6613440592477673
+     Eloc =    -7306.9299475804600661
+      Enl =      260.2236185811496512
+      Exc =     -751.4892028584299624
+       KE =      726.6856042076908579
+-------------------------------------
+     Etot =    -8302.2362422120822885
+       TS =        0.0770140555602052
+-------------------------------------
+        F =    -8302.3132562676419184
+
+IonicMinimize: Iter:   1  F: -8302.313256267641918  |grad|_K:  9.303e-03  alpha:  1.000e+00  linmin: -9.983e-01  t[s]:   3100.92
+
+#--- Lowdin population analysis ---
+# oxidation-state Zn -0.004 +0.000 +0.002 +0.002 +0.007 +0.018 -0.014 +0.019 +0.028 -0.005 +0.016 -0.017 -0.008 +0.010 -0.003 +0.002 +0.002 +0.001 -0.007 -0.003 +0.015 +0.013 +0.012 +0.015 -0.001 -0.003 +0.021 +0.016 +0.015 +0.007 +0.013 +0.002 -0.016 -0.008 -0.010 +0.002
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.547278716  nElectrons: 720.000000
+	FillingsUpdate:  mu: +0.542602824  nElectrons: 720.000000
+SCF: Cycle:  0   F: -8299.428782696781127   dF: +1.101e-01   |Residual|: 8.324e-01   |deigs|: 5.475e-03  t[s]:   3335.28
+	FillingsUpdate:  mu: +0.547880696  nElectrons: 720.000000
+SCF: Cycle:  1   F: -8302.047701551251521   dF: -2.619e+00   |Residual|: 3.921e-01   |deigs|: 2.450e-02  t[s]:   3510.54
+	FillingsUpdate:  mu: +0.546941693  nElectrons: 720.000000
+SCF: Cycle:  2   F: -8302.299625423549514   dF: -2.519e-01   |Residual|: 1.829e-01   |deigs|: 6.389e-03  t[s]:   3685.93
+	FillingsUpdate:  mu: +0.547327512  nElectrons: 720.000000
+SCF: Cycle:  3   F: -8302.336598759335175   dF: -3.697e-02   |Residual|: 3.408e-02   |deigs|: 3.195e-03  t[s]:   3859.55
+	FillingsUpdate:  mu: +0.547435603  nElectrons: 720.000000
+SCF: Cycle:  4   F: -8302.337627692124443   dF: -1.029e-03   |Residual|: 1.391e-02   |deigs|: 7.439e-04  t[s]:   3961.46
+	FillingsUpdate:  mu: +0.547367345  nElectrons: 720.000000
+SCF: Cycle:  5   F: -8302.337722328276868   dF: -9.464e-05   |Residual|: 4.235e-03   |deigs|: 3.402e-04  t[s]:   4061.54
+	FillingsUpdate:  mu: +0.547379700  nElectrons: 720.000000
+SCF: Cycle:  6   F: -8302.337727807880583   dF: -5.480e-06   |Residual|: 1.621e-03   |deigs|: 7.573e-05  t[s]:   4161.83
+	FillingsUpdate:  mu: +0.547377124  nElectrons: 720.000000
+SCF: Cycle:  7   F: -8302.337729094171664   dF: -1.286e-06   |Residual|: 6.427e-04   |deigs|: 3.982e-05  t[s]:   4262.64
+	FillingsUpdate:  mu: +0.547377562  nElectrons: 720.000000
+SCF: Cycle:  8   F: -8302.337729374325136   dF: -2.802e-07   |Residual|: 1.447e-04   |deigs|: 1.396e-05  t[s]:   4364.22
+	FillingsUpdate:  mu: +0.547377592  nElectrons: 720.000000
+SCF: Cycle:  9   F: -8302.337729394583221   dF: -2.026e-08   |Residual|: 7.406e-05   |deigs|: 2.020e-06  t[s]:   4464.26
+	FillingsUpdate:  mu: +0.547377904  nElectrons: 720.000000
+SCF: Cycle: 10   F: -8302.337729399601812   dF: -5.019e-09   |Residual|: 2.872e-05   |deigs|: 2.107e-06  t[s]:   4564.52
+	FillingsUpdate:  mu: +0.547377811  nElectrons: 720.000000
+SCF: Cycle: 11   F: -8302.337729400904209   dF: -1.302e-09   |Residual|: 8.537e-06   |deigs|: 7.299e-07  t[s]:   4663.60
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Zn   0.115006248453556   0.222565797576309   0.125929700442847 1
+ion Zn   0.220090519798766   0.100746152655221   0.370067346984784 1
+ion Zn   0.111316071394993   0.225998204586795   0.627304892936767 1
+ion Zn   0.228992895878775   0.115699216762192   0.868951174639221 1
+ion Zn   0.118351256153868   0.559743628847219   0.129637115782945 1
+ion Zn   0.224553785651149   0.454465596219625   0.384781582686989 1
+ion Zn   0.095700683407549   0.550869689908305   0.631743424319675 1
+ion Zn   0.211824378288428   0.453127850196223   0.896013639462422 1
+ion Zn   0.104593030376727   0.884236472723395   0.124066612738013 1
+ion Zn   0.226371480541282   0.782846131057483   0.381505665286677 1
+ion Zn   0.117290742977649   0.888225265885485   0.634483363273461 1
+ion Zn   0.230089396690175   0.786619407757631   0.881368991713024 1
+ion Zn   0.434891589697250   0.229737959379231   0.109180397590235 1
+ion Zn   0.552182310482896   0.109886832227024   0.361783943823137 1
+ion Zn   0.435963528868647   0.240681947862947   0.622378439900043 1
+ion Zn   0.547218903116195   0.125917522487773   0.872076792372416 1
+ion Zn   0.439804487733757   0.553413634094368   0.125255228523331 1
+ion Zn   0.556501576337750   0.435820430500540   0.386450979550140 1
+ion Zn   0.457246598285789   0.555495878513342   0.626394290189945 1
+ion Zn   0.551687738010423   0.452444288485206   0.872861049121213 1
+ion Zn   0.452874945856368   0.899819563855298   0.106785016804540 1
+ion Zn   0.566792720439331   0.777926088793256   0.364475223288857 1
+ion Zn   0.439841330347820   0.880144285712346   0.624743094856527 1
+ion Zn   0.565745794344962   0.781418868644326   0.868536055627599 1
+ion Zn   0.762950826539149   0.225855145811775   0.121905497592799 1
+ion Zn   0.903213676661163   0.103225449631780   0.367782469008796 1
+ion Zn   0.779740277597489   0.197481332205108   0.624272910587827 1
+ion Zn   0.889825542769178   0.107240902806087   0.894353300665812 1
+ion Zn   0.767995105307744   0.547860387784156   0.120273213126543 1
+ion Zn   0.894822110308562   0.445571304463741   0.371283289796552 1
+ion Zn   0.778853951792693   0.555491284095889   0.621282323247434 1
+ion Zn   0.886836240077879   0.451117612737072   0.871932262013680 1
+ion Zn   0.783037023488802   0.894067502931027   0.128023611114392 1
+ion Zn   0.874830254831752   0.786681805593305   0.375913994574903 1
+ion Zn   0.788200588297773   0.888847042656473   0.616202281014081 1
+ion Zn   0.893022389193709   0.774759514552045   0.888930825342375 1
+
+# Forces in Lattice coordinates:
+force Zn  -0.059882202224241   0.038638198904964   0.043357793549040 1
+force Zn   0.040085319434920   0.050638981112759   0.010022271487315 1
+force Zn  -0.015322397413795   0.016490807934385   0.034788935041972 1
+force Zn  -0.173692284842076   0.079036649723755  -0.012537460823360 1
+force Zn  -0.098972493688583   0.066863040296912   0.083414123999425 1
+force Zn   0.056792320145427  -0.064120459595665  -0.014306055030495 1
+force Zn   0.122493659550553  -0.066464291639041  -0.020640679508919 1
+force Zn   0.085575220386658  -0.095180727184467  -0.208708476454348 1
+force Zn   0.077452797676357  -0.038656641492748   0.082752209709145 1
+force Zn  -0.013655748723141  -0.021471404906555  -0.047733550758909 1
+force Zn  -0.046828721732123   0.042100034499199  -0.044339697033227 1
+force Zn  -0.011416853176036  -0.040999884484012  -0.060765066549128 1
+force Zn   0.058566336558583  -0.079633147076579   0.163643242408980 1
+force Zn   0.059268567516190  -0.042898090486788   0.102542091402497 1
+force Zn   0.199205881831013  -0.312224696221318   0.013250666472289 1
+force Zn   0.207671075569842  -0.143988774233556  -0.129594756592101 1
+force Zn   0.044114526968968   0.048918997728712   0.067838867065249 1
+force Zn  -0.020617083558852   0.044056656994396  -0.183435410050949 1
+force Zn  -0.222599301876036   0.239831651225257   0.011822967254743 1
+force Zn   0.012108139778706   0.018885662905516   0.004675508477447 1
+force Zn  -0.010201064364731  -0.058333959890081   0.134652743939604 1
+force Zn  -0.259791194811991   0.109583492934002   0.025765621968077 1
+force Zn   0.034953991740085   0.027341718285859  -0.021033157234363 1
+force Zn  -0.050047921350455   0.042088647390126  -0.020295866815719 1
+force Zn   0.137361474967068  -0.038324939445826   0.028673238413903 1
+force Zn  -0.198985414061799   0.314072434788000   0.045603250082284 1
+force Zn  -0.170937836701053   0.186603773448489   0.015739819999020 1
+force Zn  -0.035808103534869   0.062363254450489  -0.152770515796128 1
+force Zn   0.022466912047987   0.046742982765924   0.108230675099566 1
+force Zn  -0.052353900401046   0.008972889947011  -0.001846885691602 1
+force Zn   0.070364907121594  -0.040054087877825   0.022531073004478 1
+force Zn   0.019774252483922  -0.088239747725663  -0.007494751272692 1
+force Zn  -0.066460817688005  -0.016412949417580  -0.073033297532762 1
+force Zn   0.346041259756490  -0.374295449478428  -0.031772840753375 1
+force Zn  -0.038182080619592   0.000753000600593   0.162993363063222 1
+force Zn  -0.048437371114731   0.077229454830934  -0.131696712501324 1
+
+# Energy components:
+   Eewald =    -4545.2570829578944540
+       EH =     3295.2101934336878912
+     Eloc =    -7287.5775570977984898
+      Enl =      260.2414620047312610
+      Exc =     -751.4588185244720080
+       KE =      726.5807238180964305
+-------------------------------------
+     Etot =    -8302.2610793236490281
+       TS =        0.0766500772548613
+-------------------------------------
+        F =    -8302.3377294009042089
+
+IonicMinimize: Iter:   2  F: -8302.337729400904209  |grad|_K:  6.367e-03  alpha:  3.693e-01  linmin: -9.828e-01  t[s]:   4684.66
+
+#--- Lowdin population analysis ---
+# oxidation-state Zn -0.003 +0.000 +0.002 +0.002 +0.007 +0.014 -0.011 +0.017 +0.023 -0.003 +0.012 -0.012 -0.005 +0.009 +0.000 +0.003 +0.002 +0.002 -0.004 -0.003 +0.013 +0.010 +0.009 +0.011 +0.001 -0.002 +0.018 +0.013 +0.011 +0.006 +0.011 +0.002 -0.012 -0.003 -0.006 +0.003
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.547377811  nElectrons: 720.000000
+	FillingsUpdate:  mu: +0.542006846  nElectrons: 720.000000
+SCF: Cycle:  0   F: -8299.133581322328610   dF: +1.867e-01   |Residual|: 8.685e-01   |deigs|: 5.838e-03  t[s]:   4918.34
+	FillingsUpdate:  mu: +0.548056120  nElectrons: 720.000000
+SCF: Cycle:  1   F: -8302.060669338510706   dF: -2.927e+00   |Residual|: 4.198e-01   |deigs|: 2.943e-02  t[s]:   5091.61
+	FillingsUpdate:  mu: +0.547027467  nElectrons: 720.000000
+SCF: Cycle:  2   F: -8302.307077917064817   dF: -2.464e-01   |Residual|: 1.945e-01   |deigs|: 6.661e-03  t[s]:   5265.03
+	FillingsUpdate:  mu: +0.547431742  nElectrons: 720.000000
+SCF: Cycle:  3   F: -8302.353228563213634   dF: -4.615e-02   |Residual|: 3.543e-02   |deigs|: 3.869e-03  t[s]:   5437.35
+	FillingsUpdate:  mu: +0.547549079  nElectrons: 720.000000
+SCF: Cycle:  4   F: -8302.354375996090312   dF: -1.147e-03   |Residual|: 1.476e-02   |deigs|: 7.991e-04  t[s]:   5538.42
+	FillingsUpdate:  mu: +0.547473453  nElectrons: 720.000000
+SCF: Cycle:  5   F: -8302.354500528643257   dF: -1.245e-04   |Residual|: 4.423e-03   |deigs|: 3.729e-04  t[s]:   5638.67
+	FillingsUpdate:  mu: +0.547486680  nElectrons: 720.000000
+SCF: Cycle:  6   F: -8302.354506842391856   dF: -6.314e-06   |Residual|: 1.716e-03   |deigs|: 8.735e-05  t[s]:   5738.69
+	FillingsUpdate:  mu: +0.547483635  nElectrons: 720.000000
+SCF: Cycle:  7   F: -8302.354508532687760   dF: -1.690e-06   |Residual|: 6.821e-04   |deigs|: 4.095e-05  t[s]:   5838.53
+	FillingsUpdate:  mu: +0.547484184  nElectrons: 720.000000
+SCF: Cycle:  8   F: -8302.354508836369860   dF: -3.037e-07   |Residual|: 1.634e-04   |deigs|: 1.391e-05  t[s]:   5938.93
+	FillingsUpdate:  mu: +0.547484309  nElectrons: 720.000000
+SCF: Cycle:  9   F: -8302.354508860767965   dF: -2.440e-08   |Residual|: 8.110e-05   |deigs|: 2.728e-06  t[s]:   6039.54
+	FillingsUpdate:  mu: +0.547484641  nElectrons: 720.000000
+SCF: Cycle: 10   F: -8302.354508866694232   dF: -5.926e-09   |Residual|: 3.091e-05   |deigs|: 2.233e-06  t[s]:   6140.98
+	FillingsUpdate:  mu: +0.547484536  nElectrons: 720.000000
+SCF: Cycle: 11   F: -8302.354508868142148   dF: -1.448e-09   |Residual|: 9.379e-06   |deigs|: 7.451e-07  t[s]:   6240.91
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Zn   0.113558419764680   0.223179917872325   0.126727164658740 1
+ion Zn   0.221707356683766   0.103668123930918   0.370508272282601 1
+ion Zn   0.111159612797685   0.226208717069444   0.627833348402186 1
+ion Zn   0.226031638625608   0.115825646752707   0.869446790284224 1
+ion Zn   0.116350534030187   0.559728732323138   0.130416714861103 1
+ion Zn   0.225257930293620   0.452604742198183   0.384316741897946 1
+ion Zn   0.099695562330065   0.551050212421732   0.631207782921497 1
+ion Zn   0.213662831824546   0.451447825786015   0.892068281498646 1
+ion Zn   0.106615206364691   0.884570219208420   0.125551453257512 1
+ion Zn   0.225183119852560   0.781707705447075   0.380556057420792 1
+ion Zn   0.116210208391388   0.888708015614258   0.633108869741077 1
+ion Zn   0.228839598580984   0.785031661826054   0.880136812870856 1
+ion Zn   0.435936901691661   0.227555652005669   0.112076788443073 1
+ion Zn   0.553966785525650   0.109456111936715   0.364365367214467 1
+ion Zn   0.438916700325495   0.236081768785874   0.622203535592104 1
+ion Zn   0.550469106123371   0.124017162886888   0.869895832056181 1
+ion Zn   0.441561150295368   0.555462084715934   0.126293544970467 1
+ion Zn   0.556050590122899   0.437174834012488   0.383276769771175 1
+ion Zn   0.453272711796049   0.556440323963752   0.626297334629833 1
+ion Zn   0.552212279433546   0.452378344575481   0.873038958018145 1
+ion Zn   0.451316795605800   0.897812294694996   0.109715758891476 1
+ion Zn   0.563408762025887   0.778446167232845   0.365639514048525 1
+ion Zn   0.441429052830021   0.882288046363670   0.624085889250891 1
+ion Zn   0.564235553790603   0.782193932263567   0.868419922656006 1
+ion Zn   0.767354074404446   0.226626780066508   0.122480147295901 1
+ion Zn   0.900124254040729   0.106279975945072   0.369259662694835 1
+ion Zn   0.776951748901434   0.201666926172802   0.624375093442262 1
+ion Zn   0.889431045994070   0.109020569604143   0.890733335857323 1
+ion Zn   0.769951994437109   0.550243902106212   0.122367204136701 1
+ion Zn   0.893057419738285   0.444903732622112   0.371608555443531 1
+ion Zn   0.779309223009677   0.554735827770356   0.621727189304322 1
+ion Zn   0.886090903236551   0.448625167427412   0.872004824672975 1
+ion Zn   0.780686436234881   0.892383562617726   0.127105410524101 1
+ion Zn   0.878371848094924   0.783509161443665   0.375414031218766 1
+ion Zn   0.787083371276990   0.888563125403762   0.618610891744053 1
+ion Zn   0.892799271524774   0.776453024932083   0.886056148025707 1
+
+# Forces in Lattice coordinates:
+force Zn  -0.039829810578975   0.025606122354198   0.026623815112821 1
+force Zn   0.015669080462625   0.043308637502370   0.014813667041844 1
+force Zn  -0.006441924585003   0.000838322460464   0.017893556341755 1
+force Zn  -0.099900890987327   0.044385310838036   0.003203336045619 1
+force Zn  -0.058791760994980   0.034127534935845   0.038477683138169 1
+force Zn   0.034507927574635  -0.049310442634010  -0.021548610644633 1
+force Zn   0.084501372562974  -0.037785062016267  -0.018083540358045 1
+force Zn   0.067191836252810  -0.066139914001855  -0.141519242708881 1
+force Zn   0.044516947480323  -0.013800773707722   0.046966576588339 1
+force Zn  -0.012760117746508  -0.013738719948652  -0.031869610548072 1
+force Zn  -0.033390130806075   0.028560725302623  -0.041331407070086 1
+force Zn  -0.013377026094848  -0.025976575857997  -0.042008814816378 1
+force Zn   0.050559152641575  -0.058788432669503   0.109372514427548 1
+force Zn   0.038484052099486  -0.024916486731565   0.076992002367918 1
+force Zn   0.137387237894688  -0.208324862237941   0.003550567270089 1
+force Zn   0.128489880512774  -0.102458963958634  -0.066566395362432 1
+force Zn   0.026417396044041   0.024922445920704   0.036853756570302 1
+force Zn  -0.019733966655600   0.037461325372036  -0.123223852660018 1
+force Zn  -0.139880618342311   0.141559881652300   0.007684112221430 1
+force Zn   0.015578099363946   0.001996375287512   0.008920166916273 1
+force Zn  -0.012449363859361  -0.033099692842876   0.098218761205192 1
+force Zn  -0.160429639209294   0.069763182271643   0.034316970809176 1
+force Zn   0.015928556017277   0.026201080192482  -0.020216549893967 1
+force Zn  -0.041436269082593   0.029483585177941  -0.006281635026841 1
+force Zn   0.095299543836119  -0.033379051752187   0.019220917696446 1
+force Zn  -0.135401043366639   0.198448347538090   0.041425365417838 1
+force Zn  -0.111042203783351   0.137890257059418   0.001501820694047 1
+force Zn  -0.027081178717054   0.043053961630640  -0.114488193170011 1
+force Zn   0.017969519423111   0.030317726584659   0.065218485081566 1
+force Zn  -0.033240736541487   0.006098230293220   0.011060281628552 1
+force Zn   0.040492880893191  -0.022537142983099   0.016795684546417 1
+force Zn   0.015938218002679  -0.051091208814566   0.000697854818938 1
+force Zn  -0.037744063976531  -0.008953653684587  -0.050525344770703 1
+force Zn   0.220356622438284  -0.230456794203568  -0.014365979793897 1
+force Zn  -0.034100530092731   0.008363725387293   0.105710587798413 1
+force Zn  -0.032133082533084   0.048282126383905  -0.093263905699335 1
+
+# Energy components:
+   Eewald =    -4552.3383191271332180
+       EH =     3288.4333539398303401
+     Eloc =    -7273.6965392500442249
+      Enl =      260.2573187282110325
+      Exc =     -751.4374240303393435
+       KE =      726.5034667131905053
+-------------------------------------
+     Etot =    -8302.2781430262839422
+       TS =        0.0763658418588966
+-------------------------------------
+        F =    -8302.3545088681421475
+
+IonicMinimize: Iter:   3  F: -8302.354508868142148  |grad|_K:  4.131e-03  alpha:  4.013e-01  linmin: -9.602e-01  t[s]:   6261.79
+
+#--- Lowdin population analysis ---
+# oxidation-state Zn -0.000 +0.001 +0.002 +0.002 +0.007 +0.010 -0.008 +0.014 +0.017 -0.001 +0.009 -0.007 -0.002 +0.008 +0.002 +0.002 +0.002 +0.003 -0.001 -0.001 +0.011 +0.008 +0.006 +0.008 +0.002 -0.001 +0.014 +0.010 +0.007 +0.005 +0.010 +0.003 -0.008 -0.000 -0.002 +0.003
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.547484536  nElectrons: 720.000000
+	FillingsUpdate:  mu: +0.542567494  nElectrons: 720.000000
+SCF: Cycle:  0   F: -8299.609439469864810   dF: -8.684e-02   |Residual|: 8.291e-01   |deigs|: 5.331e-03  t[s]:   6495.55
+	FillingsUpdate:  mu: +0.548169822  nElectrons: 720.000000
+SCF: Cycle:  1   F: -8302.119756598152890   dF: -2.510e+00   |Residual|: 4.076e-01   |deigs|: 2.895e-02  t[s]:   6668.62
+	FillingsUpdate:  mu: +0.547138381  nElectrons: 720.000000
+SCF: Cycle:  2   F: -8302.320514390492463   dF: -2.008e-01   |Residual|: 1.880e-01   |deigs|: 6.377e-03  t[s]:   6843.08
+	FillingsUpdate:  mu: +0.547526679  nElectrons: 720.000000
+SCF: Cycle:  3   F: -8302.363311742741644   dF: -4.280e-02   |Residual|: 3.282e-02   |deigs|: 3.976e-03  t[s]:   7014.82
+	FillingsUpdate:  mu: +0.547642149  nElectrons: 720.000000
+SCF: Cycle:  4   F: -8302.364475216949359   dF: -1.163e-03   |Residual|: 1.405e-02   |deigs|: 7.883e-04  t[s]:   7114.75
+	FillingsUpdate:  mu: +0.547567186  nElectrons: 720.000000
+SCF: Cycle:  5   F: -8302.364597406871326   dF: -1.222e-04   |Residual|: 4.149e-03   |deigs|: 3.637e-04  t[s]:   7214.86
+	FillingsUpdate:  mu: +0.547579263  nElectrons: 720.000000
+SCF: Cycle:  6   F: -8302.364602770943748   dF: -5.364e-06   |Residual|: 1.644e-03   |deigs|: 7.786e-05  t[s]:   7315.47
+	FillingsUpdate:  mu: +0.547576018  nElectrons: 720.000000
+SCF: Cycle:  7   F: -8302.364604645597865   dF: -1.875e-06   |Residual|: 5.808e-04   |deigs|: 3.382e-05  t[s]:   7416.56
+	FillingsUpdate:  mu: +0.547576374  nElectrons: 720.000000
+SCF: Cycle:  8   F: -8302.364604867949311   dF: -2.224e-07   |Residual|: 1.560e-04   |deigs|: 1.065e-05  t[s]:   7516.33
+	FillingsUpdate:  mu: +0.547576598  nElectrons: 720.000000
+SCF: Cycle:  9   F: -8302.364604891390627   dF: -2.344e-08   |Residual|: 6.812e-05   |deigs|: 2.558e-06  t[s]:   7616.58
+	FillingsUpdate:  mu: +0.547576870  nElectrons: 720.000000
+SCF: Cycle: 10   F: -8302.364604896054516   dF: -4.664e-09   |Residual|: 2.715e-05   |deigs|: 1.708e-06  t[s]:   7716.83
+	FillingsUpdate:  mu: +0.547576729  nElectrons: 720.000000
+SCF: Cycle: 11   F: -8302.364604897440586   dF: -1.386e-09   |Residual|: 8.628e-06   |deigs|: 7.963e-07  t[s]:   7816.03
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Zn   0.112198414639283   0.223701054447253   0.127373687658805 1
+ion Zn   0.222771882563837   0.106714985982446   0.371314660904499 1
+ion Zn   0.110883158885330   0.225682444964235   0.628082499994139 1
+ion Zn   0.224020834279162   0.115850823009333   0.870404981219178 1
+ion Zn   0.114593409780166   0.559198280778507   0.130396844720756 1
+ion Zn   0.225353351722389   0.450206028368663   0.383274130719381 1
+ion Zn   0.103876283500166   0.551875366028742   0.630493280187794 1
+ion Zn   0.216105901239544   0.450052211054187   0.888168040202311 1
+ion Zn   0.108424150866294   0.885587541377679   0.126554713256433 1
+ion Zn   0.223811721823510   0.780544282096351   0.379652462748519 1
+ion Zn   0.115045547689364   0.889137579250515   0.631266158689132 1
+ion Zn   0.227225048874346   0.783389524176835   0.878893465580789 1
+ion Zn   0.437638356408832   0.225566137178112   0.114895611069181 1
+ion Zn   0.555651098795095   0.109328687109758   0.367179455975586 1
+ion Zn   0.441884274417298   0.231505614211525   0.621829097052265 1
+ion Zn   0.552586006044362   0.121276566963958   0.868805619016622 1
+ion Zn   0.442706636364583   0.556640822035000   0.126888485090001 1
+ion Zn   0.555527352337154   0.438881977314429   0.380144847296625 1
+ion Zn   0.449526381724460   0.556609554378434   0.626247427116606 1
+ion Zn   0.552940240258486   0.451848470620851   0.873496669972145 1
+ion Zn   0.449627325363425   0.896149907147863   0.112898672896818 1
+ion Zn   0.560652955438629   0.779029731787537   0.367539107948082 1
+ion Zn   0.442641288025315   0.884605289143842   0.623176112510229 1
+ion Zn   0.562227565270140   0.782663184298488   0.868644836138666 1
+ion Zn   0.771450207098672   0.226865989349703   0.123029668154098 1
+ion Zn   0.896716493570944   0.108715584632303   0.371148108150633 1
+ion Zn   0.775197147363790   0.206855851589286   0.624034030623773 1
+ion Zn   0.888874734509316   0.110655250903646   0.886728108030008 1
+ion Zn   0.771973930973491   0.552496046054401   0.123998251400229 1
+ion Zn   0.891560118828435   0.444369322265970   0.372503988172914 1
+ion Zn   0.779547553580598   0.554198072634850   0.622243231078911 1
+ion Zn   0.885964279561730   0.447050658634495   0.872337313141686 1
+ion Zn   0.779103763357046   0.891257338916358   0.126061207758767 1
+ion Zn   0.881935808997187   0.781189405043274   0.375276287155212 1
+ion Zn   0.785576054634126   0.888554443323019   0.620866136657107 1
+ion Zn   0.892440721213498   0.777795972928152   0.883082801712103 1
+
+# Forces in Lattice coordinates:
+force Zn  -0.020525123908126   0.011365940578866   0.011849293077491 1
+force Zn   0.003099714915421   0.029176980756977   0.015514726867225 1
+force Zn   0.001217975694635  -0.008746306347154   0.005839762959826 1
+force Zn  -0.050065180259272   0.018757901237908   0.009266600045388 1
+force Zn  -0.032475465846507   0.016971329796920   0.012238701862370 1
+force Zn   0.015310395430427  -0.030213736653320  -0.024304509121808 1
+force Zn   0.048156266322030  -0.015725697379835  -0.015314386293355 1
+force Zn   0.046589074507727  -0.042187096728075  -0.090807143898267 1
+force Zn   0.020597306880282   0.001550231978722   0.020415513987102 1
+force Zn  -0.007787144549984  -0.008954453371447  -0.022818351065905 1
+force Zn  -0.022821750122996   0.019046284382409  -0.032517073167021 1
+force Zn  -0.013292953783950  -0.014387538619602  -0.026377165636727 1
+force Zn   0.037835196072413  -0.037011251103069   0.070317422858736 1
+force Zn   0.013932507961570  -0.006325517016725   0.047076890181246 1
+force Zn   0.078106914282589  -0.121229894068373   0.001087296721946 1
+force Zn   0.073068199297353  -0.066425881218391  -0.020902978706584 1
+force Zn   0.015056051372595   0.011266872993075   0.016520748509905 1
+force Zn  -0.013409649012146   0.028669126706105  -0.073589264962683 1
+force Zn  -0.073467193528757   0.073655641008662   0.005080867163475 1
+force Zn   0.017266923477711  -0.008547939510396   0.006430374610861 1
+force Zn  -0.009943950805191  -0.020367993627700   0.069063100889888 1
+force Zn  -0.088780398239817   0.035741337130514   0.030641499516523 1
+force Zn   0.006591297850484   0.017682161117869  -0.013417108917930 1
+force Zn  -0.028762055139398   0.015110264534220   0.004722521141220 1
+force Zn   0.057582972676932  -0.025319154745887   0.011537893479804 1
+force Zn  -0.080616628155412   0.112092965393489   0.030790521534584 1
+force Zn  -0.057261922266388   0.091337597429540  -0.002824242839885 1
+force Zn  -0.015523837583879   0.024922750530036  -0.079938011823330 1
+force Zn   0.014464409070091   0.015975930498204   0.032717291438213 1
+force Zn  -0.018961173188652   0.006144242329464   0.013838425770537 1
+force Zn   0.016428289345825  -0.005477794879742   0.013155060106257 1
+force Zn   0.013194761545234  -0.025901226818323   0.006061174896388 1
+force Zn  -0.019210807770393  -0.003428292160178  -0.029166138603059 1
+force Zn   0.127514521571269  -0.128794734158665  -0.003632387598078 1
+force Zn  -0.030749584317501   0.010834759481588   0.062559062618067 1
+force Zn  -0.022249333909231   0.028691689018545  -0.060999949336434 1
+
+# Energy components:
+   Eewald =    -4556.5410606125442428
+       EH =     3284.4196535210644470
+     Eloc =    -7265.4658759596140953
+      Enl =      260.2692580704035663
+      Exc =     -751.4245907613658346
+       KE =      726.4541901695174602
+-------------------------------------
+     Etot =    -8302.2884255725384719
+       TS =        0.0761793249029240
+-------------------------------------
+        F =    -8302.3646048974405858
+
+IonicMinimize: Iter:   4  F: -8302.364604897440586  |grad|_K:  2.439e-03  alpha:  4.417e-01  linmin: -9.491e-01  t[s]:   7836.98
+
+#--- Lowdin population analysis ---
+# oxidation-state Zn +0.002 +0.002 +0.003 +0.003 +0.006 +0.006 -0.004 +0.010 +0.011 +0.002 +0.006 -0.003 +0.000 +0.006 +0.003 +0.002 +0.003 +0.003 +0.001 +0.000 +0.009 +0.006 +0.004 +0.005 +0.002 +0.000 +0.010 +0.007 +0.005 +0.005 +0.008 +0.004 -0.004 +0.002 +0.002 +0.003
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.547576729  nElectrons: 720.000000
+	FillingsUpdate:  mu: +0.542964362  nElectrons: 720.000000
+SCF: Cycle:  0   F: -8300.108746999878349   dF: -6.675e-01   |Residual|: 8.230e-01   |deigs|: 5.271e-03  t[s]:   8072.70
+	FillingsUpdate:  mu: +0.548327735  nElectrons: 720.000000
+SCF: Cycle:  1   F: -8302.155419399827224   dF: -2.047e+00   |Residual|: 4.062e-01   |deigs|: 2.762e-02  t[s]:   8245.46
+	FillingsUpdate:  mu: +0.547172500  nElectrons: 720.000000
+SCF: Cycle:  2   F: -8302.330122379422392   dF: -1.747e-01   |Residual|: 1.874e-01   |deigs|: 6.653e-03  t[s]:   8418.89
+	FillingsUpdate:  mu: +0.547599394  nElectrons: 720.000000
+SCF: Cycle:  3   F: -8302.368661255528423   dF: -3.854e-02   |Residual|: 3.048e-02   |deigs|: 4.050e-03  t[s]:   8591.57
+	FillingsUpdate:  mu: +0.547716911  nElectrons: 720.000000
+SCF: Cycle:  4   F: -8302.370009135142027   dF: -1.348e-03   |Residual|: 1.414e-02   |deigs|: 8.128e-04  t[s]:   8691.46
+	FillingsUpdate:  mu: +0.547639719  nElectrons: 720.000000
+SCF: Cycle:  5   F: -8302.370137708405309   dF: -1.286e-04   |Residual|: 3.946e-03   |deigs|: 3.685e-04  t[s]:   8791.96
+	FillingsUpdate:  mu: +0.547650371  nElectrons: 720.000000
+SCF: Cycle:  6   F: -8302.370142160858450   dF: -4.452e-06   |Residual|: 1.650e-03   |deigs|: 6.104e-05  t[s]:   8892.06
+	FillingsUpdate:  mu: +0.547646968  nElectrons: 720.000000
+SCF: Cycle:  7   F: -8302.370144171618449   dF: -2.011e-06   |Residual|: 5.232e-04   |deigs|: 2.540e-05  t[s]:   8992.58
+	FillingsUpdate:  mu: +0.547646980  nElectrons: 720.000000
+SCF: Cycle:  8   F: -8302.370144347363748   dF: -1.757e-07   |Residual|: 1.591e-04   |deigs|: 7.225e-06  t[s]:   9092.97
+	FillingsUpdate:  mu: +0.547647302  nElectrons: 720.000000
+SCF: Cycle:  9   F: -8302.370144370524940   dF: -2.316e-08   |Residual|: 7.022e-05   |deigs|: 2.907e-06  t[s]:   9193.06
+	FillingsUpdate:  mu: +0.547647496  nElectrons: 720.000000
+SCF: Cycle: 10   F: -8302.370144375230666   dF: -4.706e-09   |Residual|: 2.474e-05   |deigs|: 1.356e-06  t[s]:   9293.26
+	FillingsUpdate:  mu: +0.547647359  nElectrons: 720.000000
+SCF: Cycle: 11   F: -8302.370144376402095   dF: -1.171e-09   |Residual|: 9.323e-06   |deigs|: 7.379e-07  t[s]:   9390.81
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Zn   0.111054722406856   0.223875659391180   0.127714261312498 1
+ion Zn   0.223332038522165   0.109597944559781   0.372529828925338 1
+ion Zn   0.110676316727179   0.224392115381249   0.628004824336790 1
+ion Zn   0.222525410045643   0.115455293392610   0.871745214335608 1
+ion Zn   0.112966958884324   0.558543553481273   0.129754898333985 1
+ion Zn   0.224789570923968   0.447586635297519   0.381484006030430 1
+ion Zn   0.107910995899810   0.553295835300599   0.629497503886671 1
+ion Zn   0.218992899958315   0.448736782576636   0.883901262180474 1
+ion Zn   0.110042765023980   0.887337065988721   0.127012713488283 1
+ion Zn   0.222481785363632   0.779340088144428   0.378491245215275 1
+ion Zn   0.113713447016029   0.889647290614978   0.629005448660926 1
+ion Zn   0.225113395576815   0.781614695044041   0.877601497860393 1
+ion Zn   0.440025154225570   0.223935222495730   0.118044065532555 1
+ion Zn   0.556607188373151   0.109693271377894   0.369885049173333 1
+ion Zn   0.444256227797295   0.226929758882839   0.621462968368111 1
+ion Zn   0.554097491343667   0.117871992322664   0.869022709584541 1
+ion Zn   0.443616791111092   0.557394357040749   0.127129922934496 1
+ion Zn   0.555287175329500   0.441173172400073   0.377063760800185 1
+ion Zn   0.446551215810573   0.556513466075855   0.626273824800393 1
+ion Zn   0.554046909996512   0.450756918084541   0.873982006257015 1
+ion Zn   0.447676687591788   0.894256691245589   0.116696771211129 1
+ion Zn   0.558040872910725   0.779132316436401   0.369984001690634 1
+ion Zn   0.443608331455272   0.886818238917444   0.622251953540522 1
+ion Zn   0.559726757241585   0.782539401771139   0.869432057390790 1
+ion Zn   0.775119270427757   0.226530805540890   0.123565600804420 1
+ion Zn   0.893279407544945   0.110807272171060   0.373314323540780 1
+ion Zn   0.775169020221431   0.213409305383552   0.623493146624213 1
+ion Zn   0.888417414347447   0.112152866734691   0.882102507133618 1
+ion Zn   0.774209440000224   0.554592959797496   0.125152381869466 1
+ion Zn   0.890384030569330   0.444231245183705   0.373812946418104 1
+ion Zn   0.779467375633321   0.554259983304057   0.622970710849697 1
+ion Zn   0.886543085109393   0.446254064540222   0.873030865488508 1
+ion Zn   0.778032851040482   0.890578477150003   0.125084449725246 1
+ion Zn   0.885625942487096   0.779315754591015   0.375465328107668 1
+ion Zn   0.783179789475186   0.888557521079372   0.623109489958718 1
+ion Zn   0.891691263607941   0.778921978300004   0.879856453629188 1
+
+# Forces in Lattice coordinates:
+force Zn  -0.004437920649700   0.001019673208108  -0.001194957488529 1
+force Zn  -0.003195970472734   0.013401419269558   0.012311405345379 1
+force Zn   0.004877012221394  -0.008404592264113  -0.003911238194177 1
+force Zn  -0.012774276170807  -0.000347351471329   0.011803443650389 1
+force Zn  -0.012844591764594   0.005752466499173  -0.004337087616934 1
+force Zn   0.000774938060777  -0.010604394672965  -0.019819868146953 1
+force Zn   0.017107976268981  -0.000670883311543  -0.012655541240091 1
+force Zn   0.024491388210646  -0.021534848061401  -0.046462826890256 1
+force Zn   0.003344592367275   0.008530046924958   0.001150363500857 1
+force Zn   0.000024932685740  -0.005806916439639  -0.015643593368734 1
+force Zn  -0.011875341967586   0.008923348853327  -0.019894588920607 1
+force Zn  -0.009586552858360  -0.004863248362316  -0.013577162295929 1
+force Zn   0.021935633968676  -0.015545180810608   0.037046266760523 1
+force Zn  -0.004398055780989   0.006262591709447   0.017992519776451 1
+force Zn   0.025529873443575  -0.046367416955571   0.005369721721863 1
+force Zn   0.030454882657671  -0.031989267280544   0.006172650185571 1
+force Zn   0.006482692585275   0.002696500486973   0.000027186428071 1
+force Zn  -0.005435701385196   0.017730550948317  -0.030956084811593 1
+force Zn  -0.023744140942908   0.025369614779740  -0.000418280294297 1
+force Zn   0.015532782092468  -0.015157987096948   0.003434602091852 1
+force Zn  -0.004551336986617  -0.013113738438952   0.041436315868111 1
+force Zn  -0.033554763105960   0.010512670644253   0.020939844986110 1
+force Zn   0.002955828434621   0.007739694443360  -0.001919541614484 1
+force Zn  -0.014860281744651   0.002352708663268   0.014228706414104 1
+force Zn   0.025372632769401  -0.016513448302921   0.005140055617485 1
+force Zn  -0.033489249623320   0.042441546916802   0.016402881326912 1
+force Zn  -0.015597062307489   0.044752010586244   0.001650023723359 1
+force Zn  -0.004244329384944   0.009169265369181  -0.044987545550665 1
+force Zn   0.009979746625969   0.005898554931298   0.008285801051154 1
+force Zn  -0.008874187606885   0.006089682314142   0.008895176306329 1
+force Zn  -0.001207232404405   0.006945616108302   0.010390140694815 1
+force Zn   0.009322322708477  -0.009631411865139   0.008863986717686 1
+force Zn  -0.006328375735980  -0.000293575499909  -0.010320279815674 1
+force Zn   0.051540929219318  -0.049586838641531   0.000568333870287 1
+force Zn  -0.024562380567500   0.011300485102639   0.024833867114707 1
+force Zn  -0.014164897582128   0.013687329516092  -0.030928693487962 1
+
+# Energy components:
+   Eewald =    -4558.6887535381283669
+       EH =     3282.3769786861348621
+     Eloc =    -7261.2675261867907466
+      Enl =      260.2774058911090833
+      Exc =     -751.4177248170012717
+       KE =      726.4255457007830046
+-------------------------------------
+     Etot =    -8302.2940742638929805
+       TS =        0.0760701125094591
+-------------------------------------
+        F =    -8302.3701443764020951
+
+IonicMinimize: Iter:   5  F: -8302.370144376402095  |grad|_K:  1.099e-03  alpha:  5.856e-01  linmin: -9.525e-01  t[s]:   9411.98
+
+#--- Lowdin population analysis ---
+# oxidation-state Zn +0.003 +0.003 +0.003 +0.004 +0.005 +0.004 -0.000 +0.006 +0.006 +0.003 +0.004 +0.001 +0.002 +0.005 +0.004 +0.003 +0.003 +0.003 +0.003 +0.002 +0.006 +0.005 +0.003 +0.004 +0.003 +0.001 +0.006 +0.005 +0.003 +0.004 +0.006 +0.004 +0.000 +0.003 +0.004 +0.003
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.547647359  nElectrons: 720.000000
+	FillingsUpdate:  mu: +0.543677447  nElectrons: 720.000000
+SCF: Cycle:  0   F: -8301.007453495054506   dF: -1.577e+00   |Residual|: 7.918e-01   |deigs|: 4.879e-03  t[s]:   9646.61
+	FillingsUpdate:  mu: +0.548454781  nElectrons: 720.000000
+SCF: Cycle:  1   F: -8302.215381562606126   dF: -1.208e+00   |Residual|: 3.892e-01   |deigs|: 2.302e-02  t[s]:   9819.61
+	FillingsUpdate:  mu: +0.547177985  nElectrons: 720.000000
+SCF: Cycle:  2   F: -8302.343096312331909   dF: -1.277e-01   |Residual|: 1.816e-01   |deigs|: 6.935e-03  t[s]:   9993.43
+	FillingsUpdate:  mu: +0.547643698  nElectrons: 720.000000
+SCF: Cycle:  3   F: -8302.370746107168088   dF: -2.765e-02   |Residual|: 2.577e-02   |deigs|: 3.724e-03  t[s]:  10165.15
+	FillingsUpdate:  mu: +0.547753163  nElectrons: 720.000000
+SCF: Cycle:  4   F: -8302.372068884524197   dF: -1.323e-03   |Residual|: 1.346e-02   |deigs|: 7.171e-04  t[s]:  10265.53
+	FillingsUpdate:  mu: +0.547681800  nElectrons: 720.000000
+SCF: Cycle:  5   F: -8302.372195380818084   dF: -1.265e-04   |Residual|: 3.505e-03   |deigs|: 3.436e-04  t[s]:  10366.19
+	FillingsUpdate:  mu: +0.547690038  nElectrons: 720.000000
+SCF: Cycle:  6   F: -8302.372199109804569   dF: -3.729e-06   |Residual|: 1.553e-03   |deigs|: 4.223e-05  t[s]:  10466.25
+	FillingsUpdate:  mu: +0.547687077  nElectrons: 720.000000
+SCF: Cycle:  7   F: -8302.372200843130486   dF: -1.733e-06   |Residual|: 5.153e-04   |deigs|: 1.901e-05  t[s]:  10566.85
+	FillingsUpdate:  mu: +0.547686533  nElectrons: 720.000000
+SCF: Cycle:  8   F: -8302.372200996456741   dF: -1.533e-07   |Residual|: 1.447e-04   |deigs|: 3.558e-06  t[s]:  10667.64
+	FillingsUpdate:  mu: +0.547686772  nElectrons: 720.000000
+SCF: Cycle:  9   F: -8302.372201014493839   dF: -1.804e-08   |Residual|: 6.875e-05   |deigs|: 1.531e-06  t[s]:  10768.04
+	FillingsUpdate:  mu: +0.547686916  nElectrons: 720.000000
+SCF: Cycle: 10   F: -8302.372201018533815   dF: -4.040e-09   |Residual|: 2.123e-05   |deigs|: 8.818e-07  t[s]:  10868.76
+	FillingsUpdate:  mu: +0.547686836  nElectrons: 720.000000
+SCF: Cycle: 11   F: -8302.372201019497879   dF: -9.641e-10   |Residual|: 7.951e-06   |deigs|: 4.273e-07  t[s]:  10965.43
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Zn   0.110475537410800   0.223720534649922   0.127383368084791 1
+ion Zn   0.223256477097142   0.111826864657309   0.374111949792675 1
+ion Zn   0.110872567938793   0.222963884811111   0.627318530252605 1
+ion Zn   0.221667675891125   0.114348465741193   0.873602860336937 1
+ion Zn   0.111512683049515   0.557931673015227   0.128406534265470 1
+ion Zn   0.223582651767735   0.445335368625410   0.379034381240740 1
+ion Zn   0.111257596577518   0.555175505883644   0.628012513770075 1
+ion Zn   0.221884063114548   0.447291431843567   0.879296560461951 1
+ion Zn   0.111224286517254   0.889647638056019   0.126717162520777 1
+ion Zn   0.221815553238108   0.778249685060254   0.376838708970002 1
+ion Zn   0.112265864344389   0.890061875147132   0.626511762812571 1
+ion Zn   0.222752270124731   0.779942222726069   0.876216576565612 1
+ion Zn   0.443039675312771   0.223088533589270   0.121616473664053 1
+ion Zn   0.556371659843692   0.110637280291006   0.371953547633978 1
+ion Zn   0.445256377744128   0.222847792632059   0.621759623530116 1
+ion Zn   0.555320151403826   0.114354153370751   0.870562717212972 1
+ion Zn   0.444400896300332   0.557858231476874   0.126696912256792 1
+ion Zn   0.555687043089332   0.444122413341881   0.374329764034013 1
+ion Zn   0.444745603963449   0.556547177949846   0.626040509055780 1
+ion Zn   0.555437865466595   0.448627572062480   0.874438386161404 1
+ion Zn   0.445554483164936   0.891691896159098   0.121237270490836 1
+ion Zn   0.555597666946040   0.778636364863593   0.372780080882760 1
+ion Zn   0.444583229152223   0.888729157064975   0.621920079198842 1
+ion Zn   0.556827069478716   0.781487877978691   0.871337901081097 1
+ion Zn   0.777996982589062   0.225392145465559   0.124065729957875 1
+ion Zn   0.890156670185241   0.112328439178471   0.375433248845926 1
+ion Zn   0.777065384866850   0.220745385212286   0.623432174218734 1
+ion Zn   0.888364104031626   0.113418533539256   0.877010508296650 1
+ion Zn   0.776727244683321   0.556603537859799   0.125655595878270 1
+ion Zn   0.889478723523584   0.444640717731887   0.375139754754371 1
+ion Zn   0.778938741552090   0.555272673689350   0.624109688398438 1
+ion Zn   0.887724487987122   0.445955448504562   0.874238031619569 1
+ion Zn   0.777383334537678   0.890262075292996   0.124407926414357 1
+ion Zn   0.889040934453403   0.777824577082419   0.375771754694040 1
+ion Zn   0.779663543479440   0.888660265672826   0.624998188131059 1
+ion Zn   0.890330899172883   0.779822599773209   0.876543224513862 1
+
+# Forces in Lattice coordinates:
+force Zn   0.004996226213225  -0.002545191820678  -0.008285708424916 1
+force Zn  -0.004843660763262   0.001182030528625   0.004904535151573 1
+force Zn   0.004298222790840  -0.001865263956427  -0.008576839059711 1
+force Zn   0.009768224550270  -0.009950970767087   0.009546321725915 1
+force Zn   0.001805678169600  -0.003531677303243  -0.012727524375564 1
+force Zn  -0.006202133042614   0.003183205864305  -0.012279876706906 1
+force Zn  -0.004596754081478   0.007505876558117  -0.008240507810015 1
+force Zn   0.003770020210498  -0.004431446114013  -0.010103325811122 1
+force Zn  -0.004499593577314   0.006607411197144  -0.008835147124922 1
+force Zn   0.004265562522550  -0.001152222000006  -0.007156558391435 1
+force Zn  -0.001608617657650  -0.001202646131183  -0.005229016993010 1
+force Zn  -0.002314280222343   0.001171938599749  -0.003860456261182 1
+force Zn   0.005543611879577   0.000729783699260   0.008470994209988 1
+force Zn  -0.008065074175947   0.009130983986329   0.001113417775536 1
+force Zn  -0.008245581629350   0.008784755491989   0.010871527209643 1
+force Zn  -0.000895239749770  -0.003629739891002   0.016031598235789 1
+force Zn   0.000825301284559  -0.004496499427240  -0.010578971431635 1
+force Zn  -0.000604489483172   0.004999614010360   0.003046083227407 1
+force Zn   0.007424610763853  -0.007301195103456  -0.005254969649784 1
+force Zn   0.007337212032464  -0.012880114266017   0.000915391951732 1
+force Zn  -0.000725066973649  -0.003324584532266   0.012171685492810 1
+force Zn   0.006512056265245  -0.003029597228970   0.008464199402196 1
+force Zn  -0.001236934589713   0.003215111703539   0.009599143153011 1
+force Zn  -0.001173291685683  -0.006579419164832   0.017907538338648 1
+force Zn   0.001109933054296  -0.006973716777315   0.000804342273426 1
+force Zn  -0.000007914240756  -0.006561625408342   0.000649474133844 1
+force Zn   0.004241599487925   0.005227169252948   0.005673816473982 1
+force Zn   0.004810366888204  -0.003758165955724  -0.009673141760080 1
+force Zn   0.003666492727268  -0.000219747265592  -0.006934788261194 1
+force Zn  -0.001679607492009   0.002290888135276   0.001119771642811 1
+force Zn  -0.009837601585209   0.009402019768399   0.005892034997948 1
+force Zn   0.004876971930188   0.000520266818038   0.007688725238820 1
+force Zn   0.003061481454872   0.000552852655621   0.003764854455764 1
+force Zn  -0.006506629249586   0.009266081518932  -0.001131634023301 1
+force Zn  -0.009859280216181   0.008310533692758  -0.005186271472784 1
+force Zn  -0.005462971700372   0.001609733643391  -0.004733340114586 1
+
+# Energy components:
+   Eewald =    -4559.3400050774689589
+       EH =     3281.7647822441263088
+     Eloc =    -7260.0010554994605627
+      Enl =      260.2814241778613678
+      Exc =     -751.4153433361859697
+       KE =      726.4140203032792442
+-------------------------------------
+     Etot =    -8302.2961771878490254
+       TS =        0.0760238316490393
+-------------------------------------
+        F =    -8302.3722010194978793
+
+IonicMinimize: Iter:   6  F: -8302.372201019497879  |grad|_K:  3.863e-04  alpha:  9.549e-01  linmin: -4.310e-01  t[s]:  10986.48
+
+#--- Lowdin population analysis ---
+# oxidation-state Zn +0.004 +0.003 +0.003 +0.004 +0.004 +0.003 +0.003 +0.004 +0.003 +0.004 +0.003 +0.004 +0.004 +0.004 +0.004 +0.004 +0.003 +0.004 +0.004 +0.004 +0.004 +0.004 +0.003 +0.003 +0.003 +0.003 +0.003 +0.004 +0.003 +0.003 +0.004 +0.004 +0.004 +0.004 +0.004 +0.003
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.547686836  nElectrons: 720.000000
+	FillingsUpdate:  mu: +0.547238324  nElectrons: 720.000000
+SCF: Cycle:  0   F: -8302.335287034127759   dF: -3.754e-01   |Residual|: 2.487e-01   |deigs|: 6.014e-04  t[s]:  11220.92
+	FillingsUpdate:  mu: +0.547815676  nElectrons: 720.000000
+SCF: Cycle:  1   F: -8302.364981783612166   dF: -2.969e-02   |Residual|: 1.223e-01   |deigs|: 2.648e-03  t[s]:  11390.31
+	FillingsUpdate:  mu: +0.547525960  nElectrons: 720.000000
+SCF: Cycle:  2   F: -8302.371625072531970   dF: -6.643e-03   |Residual|: 3.895e-02   |deigs|: 1.508e-03  t[s]:  11560.20
+	FillingsUpdate:  mu: +0.547693531  nElectrons: 720.000000
+SCF: Cycle:  3   F: -8302.372460798522297   dF: -8.357e-04   |Residual|: 6.156e-03   |deigs|: 1.041e-03  t[s]:  11660.06
+	FillingsUpdate:  mu: +0.547696874  nElectrons: 720.000000
+SCF: Cycle:  4   F: -8302.372494857650963   dF: -3.406e-05   |Residual|: 2.869e-03   |deigs|: 3.088e-05  t[s]:  11760.76
+	FillingsUpdate:  mu: +0.547693593  nElectrons: 720.000000
+SCF: Cycle:  5   F: -8302.372498985914717   dF: -4.128e-06   |Residual|: 9.434e-04   |deigs|: 2.259e-05  t[s]:  11861.39
+	FillingsUpdate:  mu: +0.547693653  nElectrons: 720.000000
+SCF: Cycle:  6   F: -8302.372499422206602   dF: -4.363e-07   |Residual|: 3.650e-04   |deigs|: 4.192e-06  t[s]:  11961.21
+	FillingsUpdate:  mu: +0.547693762  nElectrons: 720.000000
+SCF: Cycle:  7   F: -8302.372499517608958   dF: -9.540e-08   |Residual|: 1.433e-04   |deigs|: 2.405e-06  t[s]:  12061.85
+	FillingsUpdate:  mu: +0.547693427  nElectrons: 720.000000
+SCF: Cycle:  8   F: -8302.372499532742950   dF: -1.513e-08   |Residual|: 4.067e-05   |deigs|: 1.670e-06  t[s]:  12161.66
+	FillingsUpdate:  mu: +0.547693422  nElectrons: 720.000000
+SCF: Cycle:  9   F: -8302.372499535586030   dF: -2.843e-09   |Residual|: 2.428e-05   |deigs|: 2.166e-07  t[s]:  12261.66
+	FillingsUpdate:  mu: +0.547693427  nElectrons: 720.000000
+SCF: Cycle: 10   F: -8302.372499536399118   dF: -8.131e-10   |Residual|: 1.001e-05   |deigs|: 1.324e-07  t[s]:  12358.12
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Zn   0.110870749075271   0.223730508173527   0.126688149482556 1
+ion Zn   0.222857290375851   0.112053633500498   0.374694916434386 1
+ion Zn   0.111396310288606   0.222954989847832   0.626553650626813 1
+ion Zn   0.221768828619446   0.113412374807355   0.874571822523648 1
+ion Zn   0.111141587697107   0.557553194857275   0.127345426126869 1
+ion Zn   0.222867157995509   0.445068255559877   0.377679841495186 1
+ion Zn   0.111683839120437   0.556107264312914   0.627090413633697 1
+ion Zn   0.222464772944954   0.446562962622510   0.877519422120960 1
+ion Zn   0.111352705931152   0.890490206520000   0.126070899099237 1
+ion Zn   0.222273399273434   0.778225594897928   0.375939364715931 1
+ion Zn   0.111712618420963   0.889845011274306   0.625762534751179 1
+ion Zn   0.222192676535834   0.779638655814392   0.875611898210246 1
+ion Zn   0.444254134724064   0.223399677753245   0.123064682778329 1
+ion Zn   0.555944260140842   0.111466572018842   0.372437407832799 1
+ion Zn   0.444841438898010   0.222364150686045   0.622855637596088 1
+ion Zn   0.555570640663764   0.113309549357434   0.871850404208811 1
+ion Zn   0.444525224667529   0.557528788857312   0.125842812466202 1
+ion Zn   0.556033210496080   0.445201180723625   0.373976589319994 1
+ion Zn   0.444818446343026   0.556608974447261   0.625568841989040 1
+ion Zn   0.555767390591264   0.447139390244756   0.874564451305216 1
+ion Zn   0.444873407775689   0.890667739292245   0.123003632304941 1
+ion Zn   0.555297650090044   0.778528980563522   0.373808055269483 1
+ion Zn   0.444908074476273   0.889445657294749   0.622764998768219 1
+ion Zn   0.555813101241613   0.780325241382250   0.873098646530110 1
+ion Zn   0.778283498734196   0.224416776687972   0.124245629787452 1
+ion Zn   0.889289037760556   0.112378453896854   0.375725104132877 1
+ion Zn   0.777960396310125   0.222804173638382   0.624006934099930 1
+ion Zn   0.888822093506416   0.113457251632877   0.875410002690174 1
+ion Zn   0.777640934472600   0.557221405214020   0.125299193907979 1
+ion Zn   0.889135215295887   0.444825341307640   0.375317752025178 1
+ion Zn   0.778324544054279   0.556054356409897   0.624796645932330 1
+ion Zn   0.888529227764216   0.446083305256009   0.875018495089332 1
+ion Zn   0.777565732969265   0.890370647453270   0.124529403463046 1
+ion Zn   0.889673074217122   0.777760304076513   0.375600468805146 1
+ion Zn   0.778360555719762   0.889126804296317   0.625051218385829 1
+ion Zn   0.889446772808814   0.779922625320549   0.875564652090785 1
+
+# Forces in Lattice coordinates:
+force Zn   0.002668204059147  -0.000854849033352  -0.005627005764016 1
+force Zn  -0.003403137311303   0.000567745832952   0.002387373710215 1
+force Zn   0.000574407813899   0.000598671965973  -0.006139801462102 1
+force Zn   0.008382672345199  -0.006432880714446   0.004646203908684 1
+force Zn   0.003548148824575  -0.003992790779216  -0.010305194565336 1
+force Zn  -0.003082112809277   0.002474915451896  -0.008996043016411 1
+force Zn  -0.004092577092259   0.004018667150397  -0.005620768830024 1
+force Zn  -0.000307991588733  -0.000260384777039  -0.004765863715892 1
+force Zn  -0.001428859253834   0.001077097410975  -0.006144827639422 1
+force Zn   0.000370266013167   0.001880702649760  -0.003243577077825 1
+force Zn  -0.001033276961109  -0.000272905947713  -0.002576574615573 1
+force Zn   0.001074008439815  -0.000467244158856  -0.000609721989631 1
+force Zn   0.001037947307801   0.001556434996592   0.002225584204677 1
+force Zn  -0.003680239013401   0.004772749533062   0.005257333683567 1
+force Zn  -0.005694887696469   0.010612711848096   0.006307568123118 1
+force Zn  -0.002288647952325  -0.000913972376092   0.013367861553462 1
+force Zn   0.000261061634661  -0.003847806017524  -0.005959801360310 1
+force Zn  -0.001828414172236   0.001550194558267   0.006772136762263 1
+force Zn   0.004672120503708  -0.006517271323419  -0.003098587831304 1
+force Zn   0.002381792843229  -0.006434030485898   0.000539027310842 1
+force Zn  -0.001104651375323   0.000516506506931   0.003248040816263 1
+force Zn   0.009828299888505  -0.003044123702960   0.003803251193159 1
+force Zn  -0.002333403146589   0.002735819551395   0.008011063282992 1
+force Zn   0.001466339759656  -0.004239306574092   0.009959024062290 1
+force Zn  -0.001369907156318  -0.002900285973325  -0.000303165459286 1
+force Zn   0.004095235498057  -0.010223598648402  -0.002857480341440 1
+force Zn   0.001777761814754   0.000161260698238   0.002600910262105 1
+force Zn   0.002770319251667  -0.004462244984776  -0.000613236573653 1
+force Zn   0.001636747132572  -0.001553467114577  -0.004958621184393 1
+force Zn  -0.000331211417474   0.001762732544858   0.000755092532638 1
+force Zn  -0.004442764891989   0.003050510532935   0.001805929172393 1
+force Zn   0.002446143446634   0.001051479465069   0.003155295706000 1
+force Zn   0.003178419927062   0.000012486197604   0.004861603589707 1
+force Zn  -0.012233027251134   0.014996839048588  -0.001815791155617 1
+force Zn  -0.002303085772605   0.005109380687589  -0.005614142459627 1
+force Zn  -0.001172207264695  -0.001824411623884  -0.000374451428847 1
+
+# Energy components:
+   Eewald =    -4559.4187572678256402
+       EH =     3281.6914767207135810
+     Eloc =    -7259.8485532650993264
+      Enl =      260.2820560519616038
+      Exc =     -751.4150152486399747
+       KE =      726.4123070499806545
+-------------------------------------
+     Etot =    -8302.2964859589083062
+       TS =        0.0760135774910839
+-------------------------------------
+        F =    -8302.3724995363991184
+
+IonicMinimize: Iter:   7  F: -8302.372499536399118  |grad|_K:  2.738e-04  alpha:  1.000e+00  linmin: -5.027e-01  t[s]:  12379.17
+
+#--- Lowdin population analysis ---
+# oxidation-state Zn +0.004 +0.004 +0.003 +0.004 +0.004 +0.003 +0.004 +0.003 +0.003 +0.004 +0.003 +0.004 +0.004 +0.004 +0.004 +0.004 +0.003 +0.004 +0.003 +0.004 +0.003 +0.004 +0.003 +0.003 +0.003 +0.004 +0.003 +0.003 +0.003 +0.003 +0.004 +0.003 +0.004 +0.004 +0.004 +0.004
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.547693427  nElectrons: 720.000000
+	FillingsUpdate:  mu: +0.546983562  nElectrons: 720.000000
+SCF: Cycle:  0   F: -8302.282419830535218   dF: -5.334e-01   |Residual|: 3.126e-01   |deigs|: 9.501e-04  t[s]:  12614.63
+	FillingsUpdate:  mu: +0.547878839  nElectrons: 720.000000
+SCF: Cycle:  1   F: -8302.357983749594496   dF: -7.556e-02   |Residual|: 1.542e-01   |deigs|: 4.539e-03  t[s]:  12787.15
+	FillingsUpdate:  mu: +0.547485918  nElectrons: 720.000000
+SCF: Cycle:  2   F: -8302.370475984200311   dF: -1.249e-02   |Residual|: 6.106e-02   |deigs|: 2.144e-03  t[s]:  12961.43
+	FillingsUpdate:  mu: +0.547689419  nElectrons: 720.000000
+SCF: Cycle:  3   F: -8302.372519778917194   dF: -2.044e-03   |Residual|: 7.718e-03   |deigs|: 1.486e-03  t[s]:  13134.42
+	FillingsUpdate:  mu: +0.547713975  nElectrons: 720.000000
+SCF: Cycle:  4   F: -8302.372632715874715   dF: -1.129e-04   |Residual|: 3.963e-03   |deigs|: 1.407e-04  t[s]:  13234.95
+	FillingsUpdate:  mu: +0.547693918  nElectrons: 720.000000
+SCF: Cycle:  5   F: -8302.372639202792925   dF: -6.487e-06   |Residual|: 1.326e-03   |deigs|: 9.576e-05  t[s]:  13335.75
+	FillingsUpdate:  mu: +0.547696208  nElectrons: 720.000000
+SCF: Cycle:  6   F: -8302.372639871950014   dF: -6.692e-07   |Residual|: 5.272e-04   |deigs|: 1.157e-05  t[s]:  13435.48
+	FillingsUpdate:  mu: +0.547695785  nElectrons: 720.000000
+SCF: Cycle:  7   F: -8302.372640027131638   dF: -1.552e-07   |Residual|: 1.862e-04   |deigs|: 2.862e-06  t[s]:  13536.28
+	FillingsUpdate:  mu: +0.547695609  nElectrons: 720.000000
+SCF: Cycle:  8   F: -8302.372640044712170   dF: -1.758e-08   |Residual|: 5.373e-05   |deigs|: 1.101e-06  t[s]:  13636.06
+	FillingsUpdate:  mu: +0.547695539  nElectrons: 720.000000
+SCF: Cycle:  9   F: -8302.372640047053210   dF: -2.341e-09   |Residual|: 2.808e-05   |deigs|: 4.061e-07  t[s]:  13736.71
+	FillingsUpdate:  mu: +0.547695575  nElectrons: 720.000000
+SCF: Cycle: 10   F: -8302.372640047742607   dF: -6.894e-10   |Residual|: 5.356e-06   |deigs|: 2.229e-07  t[s]:  13836.94
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Zn   0.111297311957275   0.223949570609245   0.125620191359931 1
+ion Zn   0.222351608624531   0.112296236467957   0.375321052350245 1
+ion Zn   0.111496303599690   0.223332034840495   0.625292272060511 1
+ion Zn   0.222296644638830   0.112401504547696   0.875423751395229 1
+ion Zn   0.111132948406979   0.556893240847817   0.125418019686645 1
+ion Zn   0.222439935747712   0.445154353097002   0.375313336152378 1
+ion Zn   0.111578181897674   0.556727587203762   0.625585392144835 1
+ion Zn   0.222603456524300   0.445917836874363   0.874967554069383 1
+ion Zn   0.111623022765436   0.890463286312110   0.125110506173439 1
+ion Zn   0.222441119202126   0.778872273850388   0.374897002749557 1
+ion Zn   0.110972913198621   0.889857693128365   0.624886779139027 1
+ion Zn   0.222274726517786   0.779080551419646   0.875163318763841 1
+ion Zn   0.445057233850322   0.223750267621133   0.124634680901175 1
+ion Zn   0.555747939076863   0.112506316576575   0.374552932680148 1
+ion Zn   0.445054246842331   0.222932786853276   0.624419984670123 1
+ion Zn   0.556088330059073   0.112019373402391   0.874436620711058 1
+ion Zn   0.444639041276576   0.556753211023321   0.124971608071268 1
+ion Zn   0.555525494846928   0.445684960617777   0.374484078857576 1
+ion Zn   0.444254183589237   0.556814068887437   0.625023964171859 1
+ion Zn   0.555657535932274   0.445471995582163   0.874726414299405 1
+ion Zn   0.444125494534893   0.890077412001099   0.124488808649012 1
+ion Zn   0.556105055451490   0.778907495420909   0.374781203160938 1
+ion Zn   0.444935571511006   0.890454556722394   0.624604485603130 1
+ion Zn   0.555427676886248   0.779124145530357   0.875212528539475 1
+ion Zn   0.778290635716721   0.223342550659496   0.124314921868613 1
+ion Zn   0.888780328565323   0.111915757480614   0.375148770749663 1
+ion Zn   0.777889443152397   0.224192164675669   0.624638707648184 1
+ion Zn   0.888867404620091   0.112458465818787   0.874521577416962 1
+ion Zn   0.778346168827816   0.557325320840045   0.124789630491832 1
+ion Zn   0.888975520957095   0.445429221089281   0.375519528344662 1
+ion Zn   0.777982481475836   0.556318956192627   0.625284868725441 1
+ion Zn   0.889495936186348   0.446217419510344   0.875612664475872 1
+ion Zn   0.778123218005471   0.890532398746541   0.125209728375050 1
+ion Zn   0.889659985551699   0.778884895419407   0.374945344952368 1
+ion Zn   0.778210465403890   0.890610531927621   0.624890292128772 1
+ion Zn   0.888512434599111   0.779379558201895   0.874717478462394 1
+
+# Forces in Lattice coordinates:
+force Zn   0.003051228649342  -0.004073368075726  -0.004896721973024 1
+force Zn   0.001335650625485  -0.000999954951142  -0.001995876723182 1
+force Zn  -0.000246332233090   0.000441625445950  -0.000082009774423 1
+force Zn   0.001509103194660  -0.000680196408967  -0.002356498661044 1
+force Zn   0.002107856037428  -0.001831208695209   0.000488987774665 1
+force Zn  -0.004219339109921   0.006124124461782  -0.000567762198557 1
+force Zn  -0.001777442000059   0.002833635746400  -0.003591772776877 1
+force Zn   0.000004808725075  -0.002453292083970   0.002977063687282 1
+force Zn  -0.003624584687107   0.002784684838624  -0.001949460923783 1
+force Zn   0.003321991930846  -0.002421033506395   0.001744020623445 1
+force Zn   0.003018945752809  -0.001079335160720   0.002917220241153 1
+force Zn  -0.002184004769457   0.002687771482768  -0.003369622738965 1
+force Zn  -0.000639653800463  -0.000217227569089   0.000613563705779 1
+force Zn   0.001351389822794  -0.002661878085654  -0.003999176361319 1
+force Zn  -0.009236533587882   0.008278035832760   0.005107554388816 1
+force Zn  -0.005998586956912   0.006558211903335   0.001888880005893 1
+force Zn  -0.000513888099108   0.001708260383617  -0.001309468873636 1
+force Zn   0.003791829356143  -0.000446628153955   0.003437625786778 1
+force Zn   0.007747493185244  -0.003320454563834  -0.001078649037304 1
+force Zn  -0.000082130360728   0.000073472835499  -0.000773245145549 1
+force Zn   0.004952279410679  -0.001626262279399   0.005237159075958 1
+force Zn  -0.003748161137985   0.002180582494985   0.001636456290700 1
+force Zn  -0.000517358676031  -0.003551926887014   0.000344770777841 1
+force Zn   0.003140757690821  -0.003529139080248  -0.001932974383204 1
+force Zn  -0.004456681564125   0.003267319463973   0.005564966778318 1
+force Zn  -0.000443966297475   0.002762708193922  -0.000795442876142 1
+force Zn   0.007540507830737  -0.007643694125455   0.002257559532520 1
+force Zn   0.003705186853850  -0.000254390253001   0.002235641841894 1
+force Zn  -0.000908488112739  -0.001673769230774   0.001984197578587 1
+force Zn   0.000756861256130   0.000473270234563  -0.004915665057081 1
+force Zn  -0.005990008544045   0.008217577943765  -0.001890349534250 1
+force Zn  -0.001823106929289  -0.000780599562531  -0.002738389453147 1
+force Zn   0.000762842869390  -0.002393063140439  -0.002050331118899 1
+force Zn  -0.004527021559521   0.000628251429127   0.000598110737151 1
+force Zn  -0.001441737590986  -0.004038002002514  -0.000393514859408 1
+force Zn   0.004250455706151  -0.003014661163084   0.001710266939273 1
+
+# Energy components:
+   Eewald =    -4559.4543821790830407
+       EH =     3281.6582455857792411
+     Eloc =    -7259.7795133584495488
+      Enl =      260.2823940566872807
+      Exc =     -751.4148883896637017
+       KE =      726.4115085417495266
+-------------------------------------
+     Etot =    -8302.2966357429813797
+       TS =        0.0760043047620546
+-------------------------------------
+        F =    -8302.3726400477426068
+
+IonicMinimize: Iter:   8  F: -8302.372640047742607  |grad|_K:  1.953e-04  alpha:  1.000e+00  linmin:  1.249e-01  t[s]:  13857.91
+
+#--- Lowdin population analysis ---
+# oxidation-state Zn +0.004 +0.004 +0.004 +0.004 +0.003 +0.003 +0.004 +0.003 +0.003 +0.004 +0.003 +0.004 +0.004 +0.004 +0.003 +0.004 +0.004 +0.004 +0.004 +0.004 +0.003 +0.003 +0.004 +0.003 +0.004 +0.004 +0.003 +0.003 +0.004 +0.004 +0.003 +0.004 +0.004 +0.003 +0.004 +0.003
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.547695575  nElectrons: 720.000000
+	FillingsUpdate:  mu: +0.547529923  nElectrons: 720.000000
+SCF: Cycle:  0   F: -8302.318932882808440   dF: -5.012e-02   |Residual|: 1.374e-01   |deigs|: 1.761e-04  t[s]:  14091.94
+	FillingsUpdate:  mu: +0.547716357  nElectrons: 720.000000
+SCF: Cycle:  1   F: -8302.366143712333724   dF: -4.721e-02   |Residual|: 6.538e-02   |deigs|: 2.705e-03  t[s]:  14261.78
+	FillingsUpdate:  mu: +0.547664704  nElectrons: 720.000000
+SCF: Cycle:  2   F: -8302.372236186676673   dF: -6.092e-03   |Residual|: 2.604e-02   |deigs|: 5.741e-04  t[s]:  14430.60
+	FillingsUpdate:  mu: +0.547694717  nElectrons: 720.000000
+SCF: Cycle:  3   F: -8302.372615287738881   dF: -3.791e-04   |Residual|: 5.326e-03   |deigs|: 5.900e-04  t[s]:  14530.52
+	FillingsUpdate:  mu: +0.547698875  nElectrons: 720.000000
+SCF: Cycle:  4   F: -8302.372656883757372   dF: -4.160e-05   |Residual|: 1.272e-03   |deigs|: 2.891e-05  t[s]:  14630.43
+	FillingsUpdate:  mu: +0.547695126  nElectrons: 720.000000
+SCF: Cycle:  5   F: -8302.372657637806697   dF: -7.540e-07   |Residual|: 6.463e-04   |deigs|: 1.803e-05  t[s]:  14730.67
+	FillingsUpdate:  mu: +0.547696208  nElectrons: 720.000000
+SCF: Cycle:  6   F: -8302.372657825602801   dF: -1.878e-07   |Residual|: 3.011e-04   |deigs|: 5.850e-06  t[s]:  14831.55
+	FillingsUpdate:  mu: +0.547696011  nElectrons: 720.000000
+SCF: Cycle:  7   F: -8302.372657874020661   dF: -4.842e-08   |Residual|: 6.950e-05   |deigs|: 1.447e-06  t[s]:  14932.48
+	FillingsUpdate:  mu: +0.547695887  nElectrons: 720.000000
+SCF: Cycle:  8   F: -8302.372657879295730   dF: -5.275e-09   |Residual|: 2.935e-05   |deigs|: 8.549e-07  t[s]:  15032.72
+	FillingsUpdate:  mu: +0.547695837  nElectrons: 720.000000
+SCF: Cycle:  9   F: -8302.372657880245242   dF: -9.495e-10   |Residual|: 1.251e-05   |deigs|: 2.963e-07  t[s]:  15132.67
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Zn   0.111497345895387   0.223560789685877   0.124941580316547 1
+ion Zn   0.222477404365269   0.112361873720793   0.375211428230070 1
+ion Zn   0.111457878587404   0.223491600887828   0.625075510654774 1
+ion Zn   0.222516427456393   0.112266861362096   0.875291675144189 1
+ion Zn   0.111316541303153   0.556630634311339   0.125143904416858 1
+ion Zn   0.222224552976903   0.445869660670954   0.374807900535629 1
+ion Zn   0.111566345452540   0.557136459154105   0.624920370149604 1
+ion Zn   0.222410068529389   0.445336629518245   0.874721775619610 1
+ion Zn   0.111336727740040   0.890552196216146   0.124787929102646 1
+ion Zn   0.222780882298398   0.778857951549919   0.374893044418811 1
+ion Zn   0.111265337071636   0.889971750562777   0.625022069114894 1
+ion Zn   0.222163135983517   0.779214536925390   0.874719031090359 1
+ion Zn   0.445020866423283   0.223636999691769   0.125024731503531 1
+ion Zn   0.555809545288237   0.112298342530613   0.374671666914067 1
+ion Zn   0.444315643466742   0.223614289648982   0.625227063715951 1
+ion Zn   0.555808159718480   0.112398795023706   0.875051053785335 1
+ion Zn   0.444773136061992   0.556923801054581   0.124742517636109 1
+ion Zn   0.555997428828192   0.445990228326340   0.374901562413964 1
+ion Zn   0.445081445652806   0.557007073796547   0.624823730981761 1
+ion Zn   0.555603912647787   0.445231520133403   0.874676925612410 1
+ion Zn   0.444714744386029   0.890131319966661   0.125310250401166 1
+ion Zn   0.555724492672872   0.779080169472947   0.375117355492625 1
+ion Zn   0.444545344452445   0.890004082097547   0.624981165270453 1
+ion Zn   0.555641587488444   0.778620519607883   0.875333937618245 1
+ion Zn   0.777892076861556   0.223395754147869   0.124921482943556 1
+ion Zn   0.888822039546974   0.112378575396843   0.374937760063315 1
+ion Zn   0.778349941154214   0.223736785202588   0.624976820871770 1
+ion Zn   0.889467691091358   0.112556004816442   0.874597925080041 1
+ion Zn   0.778165570384624   0.556976228548521   0.124980514336367 1
+ion Zn   0.889091805569468   0.445681461742441   0.375035708562364 1
+ion Zn   0.777644823240310   0.557221332495601   0.625146718046932 1
+ion Zn   0.889221927835083   0.445848181627577   0.875387043179935 1
+ion Zn   0.778085153806863   0.890141480303579   0.125111483876470 1
+ion Zn   0.888953289073258   0.778743791740361   0.374848368878518 1
+ion Zn   0.777651480734186   0.890050870359807   0.624883248551019 1
+ion Zn   0.888865245954768   0.779131447701926   0.874704745470105 1
+
+# Forces in Lattice coordinates:
+force Zn  -0.000956561579497   0.000380958814526   0.001520926353429 1
+force Zn  -0.000908199519690   0.000459148946440  -0.000601261329271 1
+force Zn  -0.001266891324552   0.000693482890190  -0.003027145162272 1
+force Zn  -0.000809748287182   0.000203197831884  -0.001105293569205 1
+force Zn  -0.000617381272518   0.002811899189281  -0.003404431841658 1
+force Zn   0.004198016354283  -0.005053737109232   0.001244142200512 1
+force Zn  -0.001533990906241  -0.002210480735527   0.001402892601514 1
+force Zn  -0.001999460579342   0.005028184102258   0.001186594729227 1
+force Zn   0.002916686315678  -0.004304306905505   0.002397421067361 1
+force Zn  -0.006073514575193   0.005474203849281  -0.000554586527839 1
+force Zn  -0.001262933602898   0.002089736136486  -0.002947587804172 1
+force Zn   0.004641357807159  -0.004474211986373   0.003777515304905 1
+force Zn  -0.002557901893444   0.001448905818191   0.001279386493254 1
+force Zn  -0.002538594329407   0.003440147228891   0.005205401688476 1
+force Zn   0.005815661952255  -0.005194723315335  -0.003835639716754 1
+force Zn   0.002707932862925  -0.003661730747733  -0.002005430582013 1
+force Zn   0.000209018451360  -0.001436847687603   0.001002046357188 1
+force Zn  -0.001879879326714  -0.002136691372507  -0.000566848700962 1
+force Zn  -0.005295859655389   0.001299489838241   0.000067462000810 1
+force Zn   0.000470908064348   0.002539453169398   0.003478259779925 1
+force Zn  -0.001620439708701  -0.000171358306168  -0.004866207724351 1
+force Zn   0.001713071047131  -0.001545929761630  -0.000741971865934 1
+force Zn   0.000726579432376   0.003353019305574   0.002004463883573 1
+force Zn  -0.002773723496271   0.004630614816516  -0.001132118103621 1
+force Zn   0.002393090697502  -0.001181473295893  -0.001203924895201 1
+force Zn   0.004252411106424  -0.002355115677157   0.000147860528180 1
+force Zn  -0.004503109350852   0.002440586856746   0.000146922292259 1
+force Zn  -0.003850966568061  -0.000034535439790   0.002970716729644 1
+force Zn  -0.000120828541823  -0.000057260562590  -0.000967235001880 1
+force Zn  -0.001346242193032   0.000968227453139   0.002093823071215 1
+force Zn   0.007275486505469  -0.007548392542212  -0.001386181247647 1
+force Zn   0.000278517768831  -0.000276030275351  -0.003145067951452 1
+force Zn  -0.000501623720870   0.001330495287063  -0.001832384266049 1
+force Zn   0.002237669824382   0.002348599178931   0.000683092571842 1
+force Zn   0.001716114448108   0.002195855131143   0.000392599455883 1
+force Zn   0.000821403277833  -0.001173454305718   0.002445043170346 1
+
+# Energy components:
+   Eewald =    -4559.4591789350524778
+       EH =     3281.6541265797700362
+     Eloc =    -7259.7706145655201908
+      Enl =      260.2825205983858154
+      Exc =     -751.4149041526950441
+       KE =      726.4113964246452042
+-------------------------------------
+     Etot =    -8302.2966540504658042
+       TS =        0.0760038297794562
+-------------------------------------
+        F =    -8302.3726578802452423
+
+IonicMinimize: Iter:   9  F: -8302.372657880245242  |grad|_K:  1.662e-04  alpha:  1.000e+00  linmin:  6.691e-01  t[s]:  15153.63
+
+#--- Lowdin population analysis ---
+# oxidation-state Zn +0.003 +0.004 +0.004 +0.003 +0.004 +0.004 +0.004 +0.004 +0.004 +0.003 +0.004 +0.004 +0.004 +0.003 +0.004 +0.004 +0.004 +0.004 +0.003 +0.003 +0.004 +0.003 +0.004 +0.004 +0.003 +0.004 +0.004 +0.004 +0.004 +0.004 +0.003 +0.004 +0.003 +0.004 +0.003 +0.004
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.547695837  nElectrons: 720.000000
+	FillingsUpdate:  mu: +0.547696056  nElectrons: 720.000000
+SCF: Cycle:  0   F: -8302.372605714823294   dF: +3.839e-05   |Residual|: 3.009e-03   |deigs|: 7.166e-07  t[s]:  15320.96
+	FillingsUpdate:  mu: +0.547696048  nElectrons: 720.000000
+SCF: Cycle:  1   F: -8302.372670771203047   dF: -6.506e-05   |Residual|: 1.376e-03   |deigs|: 6.250e-05  t[s]:  15421.73
+	FillingsUpdate:  mu: +0.547696126  nElectrons: 720.000000
+SCF: Cycle:  2   F: -8302.372679149308169   dF: -8.378e-06   |Residual|: 7.425e-04   |deigs|: 3.331e-06  t[s]:  15522.05
+	FillingsUpdate:  mu: +0.547696140  nElectrons: 720.000000
+SCF: Cycle:  3   F: -8302.372679730835443   dF: -5.815e-07   |Residual|: 2.280e-04   |deigs|: 5.085e-06  t[s]:  15622.54
+	FillingsUpdate:  mu: +0.547695935  nElectrons: 720.000000
+SCF: Cycle:  4   F: -8302.372679737076396   dF: -6.241e-09   |Residual|: 1.441e-04   |deigs|: 1.064e-06  t[s]:  15722.72
+	FillingsUpdate:  mu: +0.547696049  nElectrons: 720.000000
+SCF: Cycle:  5   F: -8302.372679749583767   dF: -1.251e-08   |Residual|: 3.192e-05   |deigs|: 6.265e-07  t[s]:  15822.99
+	FillingsUpdate:  mu: +0.547696083  nElectrons: 720.000000
+SCF: Cycle:  6   F: -8302.372679750187672   dF: -6.039e-10   |Residual|: 1.350e-05   |deigs|: 1.909e-07  t[s]:  15922.51
+	FillingsUpdate:  mu: +0.547696074  nElectrons: 720.000000
+SCF: Cycle:  7   F: -8302.372679750315001   dF: -1.273e-10   |Residual|: 5.034e-06   |deigs|: 6.128e-08  t[s]:  16019.59
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Zn   0.111406092542085   0.223593505856845   0.125164671685505 1
+ion Zn   0.222453724181362   0.112295044413434   0.375141164496254 1
+ion Zn   0.111394487575198   0.223457803037094   0.625110332252722 1
+ion Zn   0.222440391524165   0.112367890014755   0.875182655766709 1
+ion Zn   0.111366516513697   0.556855032137174   0.125226507466629 1
+ion Zn   0.222391967128788   0.445642988199289   0.375117970857990 1
+ion Zn   0.111372150731213   0.556843188996565   0.625187811793184 1
+ion Zn   0.222407366844062   0.445711488198019   0.875054371347996 1
+ion Zn   0.111375416928609   0.890349347938444   0.124974789441711 1
+ion Zn   0.222547264161083   0.778964924385751   0.374980818428690 1
+ion Zn   0.111288867735163   0.890031334265532   0.625011301194557 1
+ion Zn   0.222340634494776   0.779145870418979   0.874960847979870 1
+ion Zn   0.444819787856456   0.223653389598964   0.124830017884339 1
+ion Zn   0.555767932292690   0.112353249141931   0.374641523464503 1
+ion Zn   0.444560439079187   0.223437676267346   0.624868396297106 1
+ion Zn   0.555825813778186   0.112367188113282   0.874715748703177 1
+ion Zn   0.444699796327974   0.556868743606360   0.124877823274415 1
+ion Zn   0.555797006377370   0.445696680123322   0.374845036905203 1
+ion Zn   0.444791545272337   0.556886234156218   0.624901880705308 1
+ion Zn   0.555687763220625   0.445566387958568   0.874773155445078 1
+ion Zn   0.444629257022122   0.890164502557974   0.124854347441264 1
+ion Zn   0.555828848264260   0.778997528703418   0.374931934946619 1
+ion Zn   0.444699860433553   0.890154412853273   0.624862703542847 1
+ion Zn   0.555668047794126   0.778968669972649   0.875094383480511 1
+ion Zn   0.777984848664794   0.223482091252954   0.124780947389990 1
+ion Zn   0.889075708697303   0.112292493927657   0.374974142664301 1
+ion Zn   0.778099831509587   0.223592904279653   0.624879983680661 1
+ion Zn   0.889166080640801   0.112476549097207   0.874835381382224 1
+ion Zn   0.778085717500858   0.556966123733978   0.124945709942183 1
+ion Zn   0.889067457178322   0.445622385788395   0.375140543088508 1
+ion Zn   0.777914179244952   0.556847766737569   0.625064679742668 1
+ion Zn   0.889184750630014   0.445900187302377   0.875256346275180 1
+ion Zn   0.778080321528329   0.890254349105244   0.125036445089103 1
+ion Zn   0.889167859315303   0.778913747718008   0.374928792887235 1
+ion Zn   0.777954357079662   0.890189924780741   0.624874591914515 1
+ion Zn   0.888917909930985   0.779138395361031   0.874902241141244 1
+
+# Forces in Lattice coordinates:
+force Zn  -0.000255545439892  -0.000049226706046  -0.000629241286884 1
+force Zn  -0.000203701319346   0.000358669702287  -0.000751611403344 1
+force Zn  -0.000316659792735   0.000301102435651  -0.000454607636323 1
+force Zn  -0.000384306760642   0.000344058652551  -0.001042522147168 1
+force Zn  -0.000302642190247   0.000308176526646  -0.000970122450038 1
+force Zn   0.000487944998369  -0.000180294922987  -0.000310861765062 1
+force Zn  -0.000025165267458  -0.000238029933895  -0.000619551082033 1
+force Zn   0.000016232196196   0.000321908082090  -0.000179295461404 1
+force Zn   0.000668942523676  -0.001117084959635   0.000282997736399 1
+force Zn  -0.000859574638117   0.000759554179789  -0.000049608202464 1
+force Zn  -0.000266502874063   0.000634298823637  -0.000281927439214 1
+force Zn   0.000792242340850  -0.000800349529650   0.000378523368883 1
+force Zn  -0.000355639983169  -0.000351970074636   0.000683385371829 1
+force Zn   0.000055048472777   0.000121031263288   0.001601714710388 1
+force Zn   0.001092721343065  -0.000697207528372   0.000048258614737 1
+force Zn  -0.000095500473093   0.000096578046740   0.000472187072434 1
+force Zn   0.000096043237600  -0.000188883473802   0.000571974184032 1
+force Zn  -0.000227527040375   0.000025904539159   0.000190070541760 1
+force Zn  -0.001051979504435   0.000245163116418   0.000347352638892 1
+force Zn  -0.000043475191950   0.000814035295773   0.000907071007631 1
+force Zn   0.000042153951714   0.000052745165811   0.000192007956057 1
+force Zn  -0.000369682387149   0.000262683929488   0.000002057711404 1
+force Zn  -0.000004744052380   0.000311092120503   0.000382431809733 1
+force Zn   0.000034103910641   0.000494384304267  -0.000968600007967 1
+force Zn   0.000451215199407  -0.000044130780844   0.000914507486671 1
+force Zn   0.000052882429298   0.000376509391633  -0.000205883724378 1
+force Zn  -0.000765675981814   0.000179127176157   0.000252035047028 1
+force Zn  -0.000310001750245  -0.000156085049994   0.000858751869093 1
+force Zn   0.000119152312632  -0.000415469662834   0.000256464917497 1
+force Zn  -0.000029868584155   0.000225728008759  -0.000521716131788 1
+force Zn   0.001103930425534  -0.000965670733921  -0.000552960490021 1
+force Zn  -0.000062508191683  -0.000567261440673  -0.001439761132993 1
+force Zn  -0.000303383992700   0.000064508499202  -0.000663716503146 1
+force Zn  -0.000188330429351   0.000614595458487   0.000312606000645 1
+force Zn   0.000425297032089  -0.000170883102864   0.000610479462231 1
+force Zn   0.000891865180969  -0.000582290419615   0.000367577201565 1
+
+# Energy components:
+   Eewald =    -4559.4690816532920508
+       EH =     3281.6443173801771991
+     Eloc =    -7259.7508328127350978
+      Enl =      260.2824525127366542
+      Exc =     -751.4148402511062841
+       KE =      726.4113087374151974
+-------------------------------------
+     Etot =    -8302.2966760868039273
+       TS =        0.0760036635110397
+-------------------------------------
+        F =    -8302.3726797503150010
+
+IonicMinimize: Iter:  10  F: -8302.372679750315001  |grad|_K:  3.232e-05  alpha:  1.000e+00  linmin: -3.755e-01  t[s]:  16040.62
+IonicMinimize: Converged (|grad|_K<1.000000e-04).
+
+#--- Lowdin population analysis ---
+# oxidation-state Zn +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004 +0.004
+
+
+Dumping '/data/rc652/Zn/ion/Zn_ion.Ecomponents' ... done
+End date and time: Mon Jul 15 17:13:26 2024  (Duration: 0-4:27:37.58)
+Done!

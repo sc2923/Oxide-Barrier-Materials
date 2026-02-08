@@ -1,0 +1,2319 @@
+--------------------------------------------------------------------------
+[[36772,1],5]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node3213
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+
+*************** JDFTx 1.7.0  ***************
+
+Start date and time: Tue Apr 23 10:32:43 2024
+Executable jdftx with command-line: -i Hf16.in
+Running on hosts (process indices):  node3213.physics.cornell.edu (0-9)
+Divided in process groups (process indices):  0 (0)  1 (1)  2 (2)  3 (3)  4 (4)  5 (5)  6 (6)  7 (7)  8 (8)  9 (9)
+Resource initialization completed at t[s]:      0.00
+Run totals: 10 processes, 40 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+coords-type Lattice
+core-overlap-check vector
+coulomb-interaction Periodic
+davidson-band-ratio 1.1
+dump End Ecomponents
+dump-name Hf16.$VAR
+elec-cutoff 20 100
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBE
+elec-smearing Fermi 0.004
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+electronic-scf  \
+	nIterations	50 \
+	energyDiffThreshold	1e-06 \
+	residualThreshold	1e-07 \
+	mixFraction	0.5 \
+	qMetric	0.8 \
+	history	10 \
+	nEigSteps	2 \
+	eigDiffThreshold	1e-08 \
+	mixedVariable	Density \
+	qKerker	0.8 \
+	qKappa	-1 \
+	verbose	no \
+	mixFractionMag	1.5
+exchange-regularization WignerSeitzTruncated
+fluid None
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42 \
+	tauNuc 343133 \
+	poleEl 15 7 1
+forces-output-coords Positions
+ion Hf   0.000000000000000   0.000000000000000   0.000000000000000 1
+ion Hf   0.333000000000000   0.167000000000000   0.250000000000000 1
+ion Hf  -0.250000000000000   0.433000000000000   0.000000000000000 1
+ion Hf   0.083000000000000   0.600000000000000   0.250000000000000 1
+ion Hf   0.500000000000000   0.000000000000000   0.000000000000000 1
+ion Hf   0.833000000000000   0.167000000000000   0.250000000000000 1
+ion Hf   0.250000000000000   0.433000000000000   0.000000000000000 1
+ion Hf   0.583000000000000   0.600000000000000   0.250000000000000 1
+ion Hf   0.000000000000000   0.000000000000000   0.500000000000000 1
+ion Hf   0.333000000000000   0.167000000000000   0.750000000000000 1
+ion Hf  -0.250000000000000   0.433000000000000   0.500000000000000 1
+ion Hf   0.083000000000000   0.600000000000000   0.750000000000000 1
+ion Hf   0.500000000000000   0.000000000000000   0.500000000000000 1
+ion Hf   0.833000000000000   0.167000000000000   0.750000000000000 1
+ion Hf   0.250000000000000   0.433000000000000   0.500000000000000 1
+ion Hf   0.583000000000000   0.600000000000000   0.750000000000000 1
+ion-species GBRV/$ID_pbe.uspp
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          50 \
+	history              15 \
+	knormThreshold       0.0001 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.000000000000   0.000000000000   0.000000000000  1.00000000000000
+kpoint-folding 4 4 4 
+latt-move-scale 1 1 1
+latt-scale 2 2 2 
+lattice Hexagonal 6.02823 9.54312
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.004
+pcm-variant GLSSA13
+spintype no-spin
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+
+
+
+---------- Setting up symmetries ----------
+
+Found 24 point-group symmetries of the bravais lattice
+Found 16 space-group symmetries with basis
+Applied RMS atom displacement 7.39443e-17 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[      12.0565     -6.02823            0  ]
+[            0      10.4412            0  ]
+[            0            0      19.0862  ]
+unit cell volume = 2402.65
+G =
+[   0.521147   0.300884         -0  ]
+[          0   0.601769          0  ]
+[          0         -0     0.3292  ]
+Minimum fftbox size, Smin = [  56  56  88  ]
+Chosen fftbox size, S = [  56  56  90  ]
+
+---------- Initializing tighter grid for wavefunction operations ----------
+R = 
+[      12.0565     -6.02823            0  ]
+[            0      10.4412            0  ]
+[            0            0      19.0862  ]
+unit cell volume = 2402.65
+G =
+[   0.521147   0.300884         -0  ]
+[          0   0.601769          0  ]
+[          0         -0     0.3292  ]
+Minimum fftbox size, Smin = [  52  52  80  ]
+Chosen fftbox size, S = [  54  54  80  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBE GGA exchange.
+Initalized PBE GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0
+
+Reading pseudopotential file '/home/cam559/JDFTx/build/pseudopotentials/GBRV/hf_pbe.uspp':
+  Title: Hf.  Created by USPP 7.3.6 on 14-9-2013
+  Reference state energy: -78.399178.  12 valence electrons in orbitals:
+    |500>  occupation: 2  eigenvalue: -3.016121
+    |510>  occupation: 6  eigenvalue: -1.860466
+    |600>  occupation: 0  eigenvalue: -0.643057
+    |610>  occupation: 0  eigenvalue: -0.441591
+    |520>  occupation: 2  eigenvalue: -0.613878
+  lMax: 3  lLocal: 3  QijEcut: 5
+  8 projectors sampled on a log grid with 679 points:
+    l: 0  eig: -3.016122  rCut: 1.5
+    l: 0  eig: -0.643058  rCut: 1.5
+    l: 0  eig: 1.000000  rCut: 1.5
+    l: 1  eig: -1.860465  rCut: 1.6
+    l: 1  eig: -0.441594  rCut: 1.6
+    l: 2  eig: -0.613878  rCut: 1.75
+    l: 2  eig: 1.000000  rCut: 1.75
+    l: 3  eig: 1.000000  rCut: 2.3
+  Partial core density with radius 1
+  Transforming core density to a uniform radial grid of dG=0.02 with 1642 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1642 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1642 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 2.30 bohrs.
+
+Initialized 1 species with 16 total atoms.
+
+Folded 1 k-points by 4x4x4 to 64 k-points.
+
+---------- Setting up k-points, bands, fillings ----------
+Reduced to 30 k-points under symmetry. 
+Computing the number of bands and number of electrons
+Calculating initial fillings.
+nElectrons: 192.000000   nBands: 208   nStates: 30
+
+----- Setting up reduced wavefunction bases (one per k-point) -----
+average nbasis = 10264.078 , ideal nbasis = 10264.289
+
+---------- Setting up ewald sum ----------
+Optimum gaussian width for ewald sums = 3.366046 bohr.
+Real space sum over 847 unit cells with max indices [  5  5  3  ]
+Reciprocal space sum over 4725 terms with max indices [  7  7  10  ]
+
+---------- Allocating electronic variables ----------
+Initializing wave functions:  linear combination of atomic orbitals
+Hf pseudo-atom occupations:   s ( 2 2 )  p ( 6 0 )  d ( 2 )
+	FillingsUpdate:  mu: +0.530579149  nElectrons: 192.000000
+LCAOMinimize: Iter:   0  F: -795.8607415481462795  |grad|_K:  4.772e-04  alpha:  1.000e+00
+	FillingsUpdate:  mu: +0.536436570  nElectrons: 192.000000
+LCAOMinimize: Iter:   1  F: -795.9335736435883746  |grad|_K:  2.288e-04  alpha:  4.404e-01  linmin: -2.687e-02  cgtest:  1.487e-01  t[s]:     38.32
+	FillingsUpdate:  mu: +0.538779844  nElectrons: 192.000000
+LCAOMinimize: Iter:   2  F: -795.9438583856639298  |grad|_K:  9.393e-05  alpha:  2.806e-01  linmin: -1.052e-03  cgtest: -1.071e-01  t[s]:     52.12
+	FillingsUpdate:  mu: +0.539380128  nElectrons: 192.000000
+LCAOMinimize: Iter:   3  F: -795.9463948331551819  |grad|_K:  1.398e-05  alpha:  4.384e-01  linmin:  3.153e-03  cgtest:  1.034e-01  t[s]:     66.05
+	FillingsUpdate:  mu: +0.539231439  nElectrons: 192.000000
+LCAOMinimize: Iter:   4  F: -795.9464763866992598  |grad|_K:  2.884e-06  alpha:  6.373e-01  linmin: -2.234e-03  cgtest:  1.049e-02  t[s]:     79.99
+	FillingsUpdate:  mu: +0.539248546  nElectrons: 192.000000
+LCAOMinimize: Iter:   5  F: -795.9464780211353627  |grad|_K:  1.573e-06  alpha:  2.995e-01  linmin:  1.214e-05  cgtest: -1.617e-03  t[s]:     94.03
+	FillingsUpdate:  mu: +0.539255418  nElectrons: 192.000000
+LCAOMinimize: Iter:   6  F: -795.9464786454675505  |grad|_K:  5.725e-07  alpha:  3.852e-01  linmin: -8.031e-05  cgtest:  1.586e-03  t[s]:    108.30
+	FillingsUpdate:  mu: +0.539254848  nElectrons: 192.000000
+LCAOMinimize: Iter:   7  F: -795.9464787655539340  |grad|_K:  8.427e-08  alpha:  5.589e-01  linmin: -1.062e-03  cgtest:  2.461e-03  t[s]:    122.26
+LCAOMinimize: Converged (|Delta F|<1.000000e-06 for 2 iters).
+
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   gga-PBE exchange-correlation functional:
+      J.P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996)
+
+   Pseudopotentials:
+      KF Garrity, JW Bennett, KM Rabe and D Vanderbilt, Comput. Mater. Sci. 81, 446 (2014)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+Initialization completed successfully at t[s]:    126.43
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.539254848  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.533953600  nElectrons: 192.000000
+SCF: Cycle:  0   F: -796.163508604108074   dF: -2.170e-01   |Residual|: 1.133e-01   |deigs|: 5.617e-02  t[s]:    175.15
+	FillingsUpdate:  mu: +0.531489707  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.175594346426124   dF: -1.209e-02   |Residual|: 5.516e-02   |deigs|: 6.339e-03  t[s]:    215.51
+	FillingsUpdate:  mu: +0.529579948  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.177894843341733   dF: -2.300e-03   |Residual|: 1.431e-02   |deigs|: 4.349e-03  t[s]:    258.17
+	FillingsUpdate:  mu: +0.529567918  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.177915501901566   dF: -2.066e-05   |Residual|: 4.673e-03   |deigs|: 2.632e-04  t[s]:    285.87
+	FillingsUpdate:  mu: +0.529531553  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.177931897777171   dF: -1.640e-05   |Residual|: 1.080e-03   |deigs|: 9.548e-05  t[s]:    313.64
+	FillingsUpdate:  mu: +0.529507729  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.177932536735511   dF: -6.390e-07   |Residual|: 3.356e-04   |deigs|: 6.769e-05  t[s]:    342.23
+	FillingsUpdate:  mu: +0.529519875  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.177932624172968   dF: -8.744e-08   |Residual|: 1.184e-04   |deigs|: 6.212e-05  t[s]:    371.05
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf   0.000000000000000   0.000000000000000   0.000000000000000 1
+ion Hf   0.333000000000000   0.167000000000000   0.250000000000000 1
+ion Hf  -0.250000000000000   0.433000000000000   0.000000000000000 1
+ion Hf   0.083000000000000   0.600000000000000   0.250000000000000 1
+ion Hf   0.500000000000000   0.000000000000000   0.000000000000000 1
+ion Hf   0.833000000000000   0.167000000000000   0.250000000000000 1
+ion Hf   0.250000000000000   0.433000000000000   0.000000000000000 1
+ion Hf   0.583000000000000   0.600000000000000   0.250000000000000 1
+ion Hf   0.000000000000000   0.000000000000000   0.500000000000000 1
+ion Hf   0.333000000000000   0.167000000000000   0.750000000000000 1
+ion Hf  -0.250000000000000   0.433000000000000   0.500000000000000 1
+ion Hf   0.083000000000000   0.600000000000000   0.750000000000000 1
+ion Hf   0.500000000000000   0.000000000000000   0.500000000000000 1
+ion Hf   0.833000000000000   0.167000000000000   0.750000000000000 1
+ion Hf   0.250000000000000   0.433000000000000   0.500000000000000 1
+ion Hf   0.583000000000000   0.600000000000000   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.164506273928540  -1.086065331185149  -0.000000000000000 1
+force Hf  -0.125881183207088  -0.580039373732098  -0.000000000000000 1
+force Hf   0.125881183207087   0.580039373732083  -0.000000000000000 1
+force Hf   0.164506273928540   1.086065331185142  -0.000000000000000 1
+force Hf  -0.164506273928540  -1.086065331185135   0.000000000000000 1
+force Hf  -0.125881183207088  -0.580039373732090  -0.000000000000000 1
+force Hf   0.125881183207087   0.580039373732091  -0.000000000000000 1
+force Hf   0.164506273928540   1.086065331185149  -0.000000000000000 1
+force Hf  -0.164506273928540  -1.086065331185149  -0.000000000000000 1
+force Hf  -0.125881183207087  -0.580039373732105   0.000000000000000 1
+force Hf   0.125881183207087   0.580039373732097  -0.000000000000000 1
+force Hf   0.164506273928539   1.086065331185135  -0.000000000000000 1
+force Hf  -0.164506273928539  -1.086065331185142   0.000000000000000 1
+force Hf  -0.125881183207087  -0.580039373732097  -0.000000000000000 1
+force Hf   0.125881183207088   0.580039373732090  -0.000000000000000 1
+force Hf   0.164506273928539   1.086065331185149   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -610.6910400965457484
+       EH =      123.6944265579764703
+     Eloc =     -231.3438679486983744
+      Enl =     -230.1566309800664953
+      Exc =     -606.3871028736419930
+ Exc_core =      475.0937867775689938
+       KE =      283.6455542170338617
+-------------------------------------
+     Etot =     -796.1448743463731716
+       TS =        0.0330582777998456
+-------------------------------------
+        F =     -796.1779326241729677
+
+IonicMinimize: Iter:   0  F: -796.177932624172968  |grad|_K:  5.261e-02  t[s]:    376.99
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.059 -0.028 -0.028 +0.059 +0.059 -0.028 -0.028 +0.059 +0.059 -0.028 -0.028 +0.059 +0.059 -0.028 -0.028 +0.059
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.529519875  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.542811605  nElectrons: 192.000000
+SCF: Cycle:  0   F: -784.871343629844773   dF: +9.406e+00   |Residual|: 1.270e+00   |deigs|: 1.912e-02  t[s]:    436.19
+	FillingsUpdate:  mu: +0.531330516  nElectrons: 192.000000
+SCF: Cycle:  1   F: -795.924182842318146   dF: -1.105e+01   |Residual|: 3.631e-01   |deigs|: 1.990e-02  t[s]:    480.24
+	FillingsUpdate:  mu: +0.530752585  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.249189596793485   dF: -3.250e-01   |Residual|: 9.433e-02   |deigs|: 6.377e-03  t[s]:    524.73
+	FillingsUpdate:  mu: +0.530331485  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.280674921095169   dF: -3.149e-02   |Residual|: 3.342e-02   |deigs|: 2.007e-03  t[s]:    569.24
+	FillingsUpdate:  mu: +0.530571482  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.281292510939124   dF: -6.176e-04   |Residual|: 8.665e-03   |deigs|: 5.707e-04  t[s]:    597.97
+	FillingsUpdate:  mu: +0.530556454  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.281362238906468   dF: -6.973e-05   |Residual|: 2.384e-03   |deigs|: 1.053e-04  t[s]:    626.70
+	FillingsUpdate:  mu: +0.530533422  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.281364412714311   dF: -2.174e-06   |Residual|: 4.075e-04   |deigs|: 5.362e-05  t[s]:    656.20
+	FillingsUpdate:  mu: +0.530534529  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.281364564932232   dF: -1.522e-07   |Residual|: 1.143e-04   |deigs|: 3.485e-06  t[s]:    685.68
+	FillingsUpdate:  mu: +0.530534619  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.281364602693429   dF: -3.776e-08   |Residual|: 3.563e-05   |deigs|: 2.166e-06  t[s]:    715.80
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.005757498110035  -0.009507026393263   0.000000000000000 1
+ion Hf   0.329615665457185   0.161767841417017   0.250000000000000 1
+ion Hf  -0.246615665457185   0.438232158582983   0.000000000000000 1
+ion Hf   0.088757498110034   0.609507026393263   0.250000000000000 1
+ion Hf   0.494242501889965  -0.009507026393263   0.000000000000000 1
+ion Hf   0.829615665457185   0.161767841417017   0.250000000000000 1
+ion Hf   0.253384334542815   0.438232158582983   0.000000000000000 1
+ion Hf   0.588757498110035   0.609507026393263   0.250000000000000 1
+ion Hf  -0.005757498110035  -0.009507026393263   0.500000000000000 1
+ion Hf   0.329615665457185   0.161767841417017   0.750000000000000 1
+ion Hf  -0.246615665457185   0.438232158582983   0.500000000000000 1
+ion Hf   0.088757498110034   0.609507026393263   0.750000000000000 1
+ion Hf   0.494242501889965  -0.009507026393263   0.500000000000000 1
+ion Hf   0.829615665457185   0.161767841417017   0.750000000000000 1
+ion Hf   0.253384334542815   0.438232158582983   0.500000000000000 1
+ion Hf   0.588757498110035   0.609507026393263   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.133218160425139  -0.843705154309685   0.000000000000000 1
+force Hf  -0.093716702584151  -0.398481901446368  -0.000000000000000 1
+force Hf   0.093716702584151   0.398481901446372  -0.000000000000000 1
+force Hf   0.133218160425139   0.843705154309685   0.000000000000000 1
+force Hf  -0.133218160425139  -0.843705154309678  -0.000000000000000 1
+force Hf  -0.093716702584151  -0.398481901446375   0.000000000000000 1
+force Hf   0.093716702584151   0.398481901446372   0.000000000000000 1
+force Hf   0.133218160425139   0.843705154309685  -0.000000000000000 1
+force Hf  -0.133218160425139  -0.843705154309678  -0.000000000000000 1
+force Hf  -0.093716702584152  -0.398481901446372   0.000000000000000 1
+force Hf   0.093716702584151   0.398481901446375   0.000000000000000 1
+force Hf   0.133218160425139   0.843705154309685  -0.000000000000000 1
+force Hf  -0.133218160425139  -0.843705154309685  -0.000000000000000 1
+force Hf  -0.093716702584151  -0.398481901446365  -0.000000000000000 1
+force Hf   0.093716702584151   0.398481901446375   0.000000000000000 1
+force Hf   0.133218160425139   0.843705154309692   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -615.4665377281596648
+       EH =      119.2421608180834340
+     Eloc =     -221.9938815414880651
+      Enl =     -230.1241339457970128
+      Exc =     -606.2419097275391096
+ Exc_core =      475.0927781749815608
+       KE =      283.2437745667288596
+-------------------------------------
+     Etot =     -796.2477493831897846
+       TS =        0.0336152195036931
+-------------------------------------
+        F =     -796.2813646026934293
+
+IonicMinimize: Iter:   1  F: -796.281364602693429  |grad|_K:  4.001e-02  alpha:  8.871e-01  linmin: -9.988e-01  t[s]:    721.75
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.051 -0.020 -0.020 +0.051 +0.051 -0.020 -0.020 +0.051 +0.051 -0.020 -0.020 +0.051 +0.051 -0.020 -0.020 +0.051
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.530534619  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.539598322  nElectrons: 192.000000
+SCF: Cycle:  0   F: -787.355889627243187   dF: +7.368e+00   |Residual|: 1.140e+00   |deigs|: 1.493e-02  t[s]:    782.82
+	FillingsUpdate:  mu: +0.531722481  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.047400330360347   dF: -8.692e+00   |Residual|: 3.437e-01   |deigs|: 1.660e-02  t[s]:    827.45
+	FillingsUpdate:  mu: +0.531562093  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.316810656194320   dF: -2.694e-01   |Residual|: 9.767e-02   |deigs|: 6.885e-03  t[s]:    873.19
+	FillingsUpdate:  mu: +0.531069015  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.352338001058001   dF: -3.553e-02   |Residual|: 3.216e-02   |deigs|: 2.095e-03  t[s]:    918.22
+	FillingsUpdate:  mu: +0.531183174  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.352965874110396   dF: -6.279e-04   |Residual|: 8.498e-03   |deigs|: 3.547e-04  t[s]:    947.35
+	FillingsUpdate:  mu: +0.531165001  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.353010090538760   dF: -4.422e-05   |Residual|: 2.261e-03   |deigs|: 9.224e-05  t[s]:    976.44
+	FillingsUpdate:  mu: +0.531152959  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.353011842969067   dF: -1.752e-06   |Residual|: 3.829e-04   |deigs|: 3.124e-05  t[s]:   1005.36
+	FillingsUpdate:  mu: +0.531154224  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.353011967445241   dF: -1.245e-07   |Residual|: 1.106e-04   |deigs|: 2.246e-06  t[s]:   1034.93
+	FillingsUpdate:  mu: +0.531154159  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.353012001964998   dF: -3.452e-08   |Residual|: 3.182e-05   |deigs|: 1.444e-06  t[s]:   1064.55
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.011646668247501  -0.018992552155580   0.000000000000000 1
+ion Hf   0.327429277171940   0.158677455577743   0.250000000000000 1
+ion Hf  -0.244429277171940   0.441322544422257   0.000000000000000 1
+ion Hf   0.094646668247501   0.618992552155580   0.250000000000000 1
+ion Hf   0.488353331752499  -0.018992552155580   0.000000000000000 1
+ion Hf   0.827429277171939   0.158677455577743   0.250000000000000 1
+ion Hf   0.255570722828060   0.441322544422257   0.000000000000000 1
+ion Hf   0.594646668247501   0.618992552155580   0.250000000000000 1
+ion Hf  -0.011646668247501  -0.018992552155580   0.500000000000000 1
+ion Hf   0.327429277171940   0.158677455577743   0.750000000000000 1
+ion Hf  -0.244429277171940   0.441322544422257   0.500000000000000 1
+ion Hf   0.094646668247501   0.618992552155580   0.750000000000000 1
+ion Hf   0.488353331752499  -0.018992552155580   0.500000000000000 1
+ion Hf   0.827429277171939   0.158677455577743   0.750000000000000 1
+ion Hf   0.255570722828060   0.441322544422257   0.500000000000000 1
+ion Hf   0.594646668247501   0.618992552155580   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.107535934277982  -0.651941852867172   0.000000000000000 1
+force Hf  -0.073355521001334  -0.247932329720282   0.000000000000000 1
+force Hf   0.073355521001333   0.247932329720282   0.000000000000000 1
+force Hf   0.107535934277981   0.651941852867168   0.000000000000000 1
+force Hf  -0.107535934277982  -0.651941852867164   0.000000000000000 1
+force Hf  -0.073355521001334  -0.247932329720282  -0.000000000000000 1
+force Hf   0.073355521001333   0.247932329720282  -0.000000000000000 1
+force Hf   0.107535934277981   0.651941852867161  -0.000000000000000 1
+force Hf  -0.107535934277981  -0.651941852867164  -0.000000000000000 1
+force Hf  -0.073355521001333  -0.247932329720278  -0.000000000000000 1
+force Hf   0.073355521001333   0.247932329720278   0.000000000000000 1
+force Hf   0.107535934277981   0.651941852867164   0.000000000000000 1
+force Hf  -0.107535934277981  -0.651941852867168  -0.000000000000000 1
+force Hf  -0.073355521001333  -0.247932329720278   0.000000000000000 1
+force Hf   0.073355521001333   0.247932329720282   0.000000000000000 1
+force Hf   0.107535934277981   0.651941852867157  -0.000000000000000 1
+
+# Energy components:
+   Eewald =     -618.6505674496384017
+       EH =      116.2741628127595135
+     Eloc =     -215.7533834856234307
+      Enl =     -230.0993225517939607
+      Exc =     -606.1450745984304831
+ Exc_core =      475.0921750068202414
+       KE =      282.9634076933768938
+-------------------------------------
+     Etot =     -796.3186025725294712
+       TS =        0.0344094294355177
+-------------------------------------
+        F =     -796.3530120019649985
+
+IonicMinimize: Iter:   2  F: -796.353012001964998  |grad|_K:  3.008e-02  alpha:  2.783e-01  linmin: -9.976e-01  t[s]:   1070.34
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.043 -0.012 -0.012 +0.043 +0.043 -0.012 -0.012 +0.043 +0.043 -0.012 -0.012 +0.043 +0.043 -0.012 -0.012 +0.043
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.531154159  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.537139693  nElectrons: 192.000000
+SCF: Cycle:  0   F: -789.737849689625932   dF: +5.277e+00   |Residual|: 1.029e+00   |deigs|: 1.173e-02  t[s]:   1131.39
+	FillingsUpdate:  mu: +0.532070467  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.124754566816932   dF: -6.387e+00   |Residual|: 3.329e-01   |deigs|: 1.327e-02  t[s]:   1177.66
+	FillingsUpdate:  mu: +0.532104827  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.363996486245242   dF: -2.392e-01   |Residual|: 1.019e-01   |deigs|: 7.073e-03  t[s]:   1222.83
+	FillingsUpdate:  mu: +0.531624317  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.402330730205790   dF: -3.833e-02   |Residual|: 3.059e-02   |deigs|: 2.138e-03  t[s]:   1268.09
+	FillingsUpdate:  mu: +0.531657029  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.402968379182198   dF: -6.376e-04   |Residual|: 8.001e-03   |deigs|: 2.130e-04  t[s]:   1297.38
+	FillingsUpdate:  mu: +0.531635720  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.402996860828580   dF: -2.848e-05   |Residual|: 2.186e-03   |deigs|: 7.408e-05  t[s]:   1326.59
+	FillingsUpdate:  mu: +0.531629586  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.402998450385098   dF: -1.590e-06   |Residual|: 3.832e-04   |deigs|: 2.063e-05  t[s]:   1355.83
+	FillingsUpdate:  mu: +0.531631152  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.402998568319390   dF: -1.179e-07   |Residual|: 1.021e-04   |deigs|: 3.066e-06  t[s]:   1385.25
+	FillingsUpdate:  mu: +0.531631048  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.402998601755030   dF: -3.344e-08   |Residual|: 3.086e-05   |deigs|: 1.948e-06  t[s]:   1413.97
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.017638098188982  -0.028459180839254   0.000000000000000 1
+ion Hf   0.326328200127997   0.157826855503658   0.250000000000000 1
+ion Hf  -0.243328200127997   0.442173144496342   0.000000000000000 1
+ion Hf   0.100638098188982   0.628459180839254   0.250000000000000 1
+ion Hf   0.482361901811018  -0.028459180839254  -0.000000000000000 1
+ion Hf   0.826328200127996   0.157826855503658   0.250000000000000 1
+ion Hf   0.256671799872004   0.442173144496342   0.000000000000000 1
+ion Hf   0.600638098188982   0.628459180839254   0.250000000000000 1
+ion Hf  -0.017638098188982  -0.028459180839254   0.500000000000000 1
+ion Hf   0.326328200127997   0.157826855503658   0.750000000000000 1
+ion Hf  -0.243328200127997   0.442173144496342   0.500000000000000 1
+ion Hf   0.100638098188982   0.628459180839254   0.750000000000000 1
+ion Hf   0.482361901811018  -0.028459180839254   0.500000000000000 1
+ion Hf   0.826328200127996   0.157826855503658   0.750000000000000 1
+ion Hf   0.256671799872004   0.442173144496342   0.500000000000000 1
+ion Hf   0.600638098188982   0.628459180839254   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.088186573759883  -0.496836904491722  -0.000000000000000 1
+force Hf  -0.060624159932349  -0.134572035687863   0.000000000000000 1
+force Hf   0.060624159932349   0.134572035687869   0.000000000000000 1
+force Hf   0.088186573759883   0.496836904491725  -0.000000000000000 1
+force Hf  -0.088186573759883  -0.496836904491722  -0.000000000000000 1
+force Hf  -0.060624159932349  -0.134572035687863  -0.000000000000000 1
+force Hf   0.060624159932349   0.134572035687869  -0.000000000000000 1
+force Hf   0.088186573759883   0.496836904491725   0.000000000000000 1
+force Hf  -0.088186573759883  -0.496836904491722  -0.000000000000000 1
+force Hf  -0.060624159932349  -0.134572035687865  -0.000000000000000 1
+force Hf   0.060624159932349   0.134572035687867  -0.000000000000000 1
+force Hf   0.088186573759883   0.496836904491725  -0.000000000000000 1
+force Hf  -0.088186573759883  -0.496836904491725   0.000000000000000 1
+force Hf  -0.060624159932349  -0.134572035687863   0.000000000000000 1
+force Hf   0.060624159932349   0.134572035687865   0.000000000000000 1
+force Hf   0.088186573759883   0.496836904491725  -0.000000000000000 1
+
+# Energy components:
+   Eewald =     -620.6727212051582683
+       EH =      114.3845557106460120
+     Eloc =     -211.7760998156800838
+      Enl =     -230.0827317886828212
+      Exc =     -606.0810678545412884
+ Exc_core =      475.0917784007367004
+       KE =      282.7683219361679221
+-------------------------------------
+     Etot =     -796.3679646165116992
+       TS =        0.0350339852433417
+-------------------------------------
+        F =     -796.4029986017550300
+
+IonicMinimize: Iter:   3  F: -796.402998601755030  |grad|_K:  2.241e-02  alpha:  2.737e-01  linmin: -9.792e-01  t[s]:   1420.00
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.036 -0.004 -0.004 +0.036 +0.036 -0.004 -0.004 +0.036 +0.036 -0.004 -0.004 +0.036 +0.036 -0.004 -0.004 +0.036
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.531631048  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.535386283  nElectrons: 192.000000
+SCF: Cycle:  0   F: -791.573869650044571   dF: +3.562e+00   |Residual|: 9.605e-01   |deigs|: 9.857e-03  t[s]:   1481.47
+	FillingsUpdate:  mu: +0.532364505  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.165733810619258   dF: -4.592e+00   |Residual|: 3.317e-01   |deigs|: 1.025e-02  t[s]:   1527.14
+	FillingsUpdate:  mu: +0.532484692  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.395593689464590   dF: -2.299e-01   |Residual|: 1.078e-01   |deigs|: 6.882e-03  t[s]:   1571.34
+	FillingsUpdate:  mu: +0.532092574  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.438247229110402   dF: -4.265e-02   |Residual|: 2.936e-02   |deigs|: 2.263e-03  t[s]:   1617.70
+	FillingsUpdate:  mu: +0.532082174  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.438853745635811   dF: -6.065e-04   |Residual|: 7.491e-03   |deigs|: 1.346e-04  t[s]:   1647.79
+	FillingsUpdate:  mu: +0.532060067  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.438874575969521   dF: -2.083e-05   |Residual|: 2.000e-03   |deigs|: 5.294e-05  t[s]:   1677.17
+	FillingsUpdate:  mu: +0.532056462  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.438875967180934   dF: -1.391e-06   |Residual|: 3.969e-04   |deigs|: 1.616e-05  t[s]:   1707.00
+	FillingsUpdate:  mu: +0.532058084  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.438876087553581   dF: -1.204e-07   |Residual|: 8.611e-05   |deigs|: 2.861e-06  t[s]:   1737.42
+	FillingsUpdate:  mu: +0.532058014  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.438876120122359   dF: -3.257e-08   |Residual|: 3.089e-05   |deigs|: 4.834e-07  t[s]:   1767.20
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.023777267942831  -0.037894972977026   0.000000000000000 1
+ion Hf   0.326028357001123   0.158896928382899   0.250000000000000 1
+ion Hf  -0.243028357001123   0.441103071617101   0.000000000000000 1
+ion Hf   0.106777267942831   0.637894972977026   0.250000000000000 1
+ion Hf   0.476222732057169  -0.037894972977026  -0.000000000000000 1
+ion Hf   0.826028357001123   0.158896928382899   0.250000000000000 1
+ion Hf   0.256971642998877   0.441103071617101   0.000000000000000 1
+ion Hf   0.606777267942831   0.637894972977026   0.250000000000000 1
+ion Hf  -0.023777267942831  -0.037894972977026   0.500000000000000 1
+ion Hf   0.326028357001123   0.158896928382899   0.750000000000000 1
+ion Hf  -0.243028357001123   0.441103071617101   0.500000000000000 1
+ion Hf   0.106777267942831   0.637894972977026   0.750000000000000 1
+ion Hf   0.476222732057169  -0.037894972977026   0.500000000000000 1
+ion Hf   0.826028357001123   0.158896928382899   0.750000000000000 1
+ion Hf   0.256971642998877   0.441103071617101   0.500000000000000 1
+ion Hf   0.606777267942831   0.637894972977026   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.067041341305326  -0.371835152673504  -0.000000000000000 1
+force Hf  -0.052379321864785  -0.058836867884298   0.000000000000000 1
+force Hf   0.052379321864785   0.058836867884294  -0.000000000000000 1
+force Hf   0.067041341305326   0.371835152673504   0.000000000000000 1
+force Hf  -0.067041341305326  -0.371835152673502  -0.000000000000000 1
+force Hf  -0.052379321864785  -0.058836867884294   0.000000000000000 1
+force Hf   0.052379321864785   0.058836867884296   0.000000000000000 1
+force Hf   0.067041341305326   0.371835152673505  -0.000000000000000 1
+force Hf  -0.067041341305327  -0.371835152673505  -0.000000000000000 1
+force Hf  -0.052379321864785  -0.058836867884298  -0.000000000000000 1
+force Hf   0.052379321864785   0.058836867884296   0.000000000000000 1
+force Hf   0.067041341305326   0.371835152673502   0.000000000000000 1
+force Hf  -0.067041341305326  -0.371835152673502  -0.000000000000000 1
+force Hf  -0.052379321864785  -0.058836867884296  -0.000000000000000 1
+force Hf   0.052379321864785   0.058836867884292  -0.000000000000000 1
+force Hf   0.067041341305326   0.371835152673505  -0.000000000000000 1
+
+# Energy components:
+   Eewald =     -621.9296143569499691
+       EH =      113.2028432987962532
+     Eloc =     -209.2869312432727895
+      Enl =     -230.0725285879666160
+      Exc =     -606.0379044721329365
+ Exc_core =      475.0914708867917398
+       KE =      282.6292723088314460
+-------------------------------------
+     Etot =     -796.4033921659028010
+       TS =        0.0354839542195760
+-------------------------------------
+        F =     -796.4388761201223588
+
+IonicMinimize: Iter:   4  F: -796.438876120122359  |grad|_K:  1.645e-02  alpha:  2.706e-01  linmin: -9.506e-01  t[s]:   1773.01
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.030 +0.002 +0.002 +0.030 +0.030 +0.002 +0.002 +0.030 +0.030 +0.002 +0.002 +0.030 +0.030 +0.002 +0.002 +0.030
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.532058014  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.534248529  nElectrons: 192.000000
+SCF: Cycle:  0   F: -792.825096313826634   dF: +2.320e+00   |Residual|: 9.315e-01   |deigs|: 8.979e-03  t[s]:   1834.10
+	FillingsUpdate:  mu: +0.532556510  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.185560401941416   dF: -3.360e+00   |Residual|: 3.358e-01   |deigs|: 7.852e-03  t[s]:   1878.20
+	FillingsUpdate:  mu: +0.532719634  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.412758627897006   dF: -2.272e-01   |Residual|: 1.147e-01   |deigs|: 6.369e-03  t[s]:   1922.97
+	FillingsUpdate:  mu: +0.532464866  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.464064567463311   dF: -5.131e-02   |Residual|: 2.882e-02   |deigs|: 2.536e-03  t[s]:   1968.82
+	FillingsUpdate:  mu: +0.532429245  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.464582969008234   dF: -5.184e-04   |Residual|: 7.052e-03   |deigs|: 1.148e-04  t[s]:   1999.19
+	FillingsUpdate:  mu: +0.532408036  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.464600742560378   dF: -1.777e-05   |Residual|: 1.698e-03   |deigs|: 3.548e-05  t[s]:   2028.57
+	FillingsUpdate:  mu: +0.532406308  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.464601813479135   dF: -1.071e-06   |Residual|: 4.180e-04   |deigs|: 1.207e-05  t[s]:   2058.59
+	FillingsUpdate:  mu: +0.532407842  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.464601936437930   dF: -1.230e-07   |Residual|: 7.187e-05   |deigs|: 3.342e-06  t[s]:   2089.83
+	FillingsUpdate:  mu: +0.532407789  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.464601968735906   dF: -3.230e-08   |Residual|: 3.192e-05   |deigs|: 6.360e-07  t[s]:   2119.88
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.029908301213088  -0.047332574994291   0.000000000000000 1
+ion Hf   0.326183139099740   0.161462796741173   0.250000000000000 1
+ion Hf  -0.243183139099740   0.438537203258827   0.000000000000000 1
+ion Hf   0.112908301213088   0.647332574994291   0.250000000000000 1
+ion Hf   0.470091698786912  -0.047332574994291   0.000000000000000 1
+ion Hf   0.826183139099740   0.161462796741173   0.250000000000000 1
+ion Hf   0.256816860900260   0.438537203258827   0.000000000000000 1
+ion Hf   0.612908301213088   0.647332574994291   0.250000000000000 1
+ion Hf  -0.029908301213088  -0.047332574994291   0.500000000000000 1
+ion Hf   0.326183139099740   0.161462796741173   0.750000000000000 1
+ion Hf  -0.243183139099740   0.438537203258827   0.500000000000000 1
+ion Hf   0.112908301213088   0.647332574994291   0.750000000000000 1
+ion Hf   0.470091698786912  -0.047332574994291   0.500000000000000 1
+ion Hf   0.826183139099740   0.161462796741173   0.750000000000000 1
+ion Hf   0.256816860900260   0.438537203258827   0.500000000000000 1
+ion Hf   0.612908301213088   0.647332574994291   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.052011163222159  -0.256506572878155  -0.000000000000000 1
+force Hf  -0.042996543437043  -0.015750519103788  -0.000000000000000 1
+force Hf   0.042996543437043   0.015750519103789   0.000000000000000 1
+force Hf   0.052011163222159   0.256506572878155  -0.000000000000000 1
+force Hf  -0.052011163222159  -0.256506572878155   0.000000000000000 1
+force Hf  -0.042996543437044  -0.015750519103789   0.000000000000000 1
+force Hf   0.042996543437043   0.015750519103790  -0.000000000000000 1
+force Hf   0.052011163222159   0.256506572878151   0.000000000000000 1
+force Hf  -0.052011163222159  -0.256506572878153   0.000000000000000 1
+force Hf  -0.042996543437043  -0.015750519103789   0.000000000000000 1
+force Hf   0.042996543437043   0.015750519103790  -0.000000000000000 1
+force Hf   0.052011163222159   0.256506572878151   0.000000000000000 1
+force Hf  -0.052011163222159  -0.256506572878157  -0.000000000000000 1
+force Hf  -0.042996543437043  -0.015750519103787   0.000000000000000 1
+force Hf   0.042996543437043   0.015750519103790  -0.000000000000000 1
+force Hf   0.052011163222159   0.256506572878151  -0.000000000000000 1
+
+# Energy components:
+   Eewald =     -622.6987323970527086
+       EH =      112.4721309455802896
+     Eloc =     -207.7477678765340841
+      Enl =     -230.0663156141341972
+      Exc =     -606.0083528372622368
+ Exc_core =      475.0913557464626251
+       KE =      282.5288395149610778
+-------------------------------------
+     Etot =     -796.4288425179794331
+       TS =        0.0357594507564621
+-------------------------------------
+        F =     -796.4646019687359058
+
+IonicMinimize: Iter:   5  F: -796.464601968735906  |grad|_K:  1.137e-02  alpha:  2.876e-01  linmin: -9.256e-01  t[s]:   2125.71
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.025 +0.007 +0.007 +0.025 +0.025 +0.007 +0.007 +0.025 +0.025 +0.007 +0.007 +0.025 +0.025 +0.007 +0.007 +0.025
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.532407789  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.533529577  nElectrons: 192.000000
+SCF: Cycle:  0   F: -793.638434195857030   dF: +1.467e+00   |Residual|: 9.246e-01   |deigs|: 8.676e-03  t[s]:   2188.48
+	FillingsUpdate:  mu: +0.532630454  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.192727203199524   dF: -2.554e+00   |Residual|: 3.413e-01   |deigs|: 6.165e-03  t[s]:   2232.88
+	FillingsUpdate:  mu: +0.532860367  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.415995694980552   dF: -2.233e-01   |Residual|: 1.216e-01   |deigs|: 5.747e-03  t[s]:   2277.19
+	FillingsUpdate:  mu: +0.532744434  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.481481378398371   dF: -6.549e-02   |Residual|: 2.897e-02   |deigs|: 2.909e-03  t[s]:   2322.88
+	FillingsUpdate:  mu: +0.532690638  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.481894952660809   dF: -4.136e-04   |Residual|: 6.642e-03   |deigs|: 1.364e-04  t[s]:   2353.31
+	FillingsUpdate:  mu: +0.532671574  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.481911960796310   dF: -1.701e-05   |Residual|: 1.456e-03   |deigs|: 2.995e-05  t[s]:   2382.75
+	FillingsUpdate:  mu: +0.532671415  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.481912756117367   dF: -7.953e-07   |Residual|: 4.351e-04   |deigs|: 6.690e-06  t[s]:   2412.06
+	FillingsUpdate:  mu: +0.532672806  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.481912878720095   dF: -1.226e-07   |Residual|: 6.386e-05   |deigs|: 3.477e-06  t[s]:   2442.31
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.036280546392302  -0.056710750342877   0.000000000000000 1
+ion Hf   0.326495189108982   0.165044719579200   0.250000000000000 1
+ion Hf  -0.243495189108982   0.434955280420800   0.000000000000000 1
+ion Hf   0.119280546392302   0.656710750342877   0.250000000000000 1
+ion Hf   0.463719453607698  -0.056710750342877   0.000000000000000 1
+ion Hf   0.826495189108982   0.165044719579200   0.250000000000000 1
+ion Hf   0.256504810891018   0.434955280420800   0.000000000000000 1
+ion Hf   0.619280546392302   0.656710750342877   0.250000000000000 1
+ion Hf  -0.036280546392302  -0.056710750342877   0.500000000000000 1
+ion Hf   0.326495189108982   0.165044719579200   0.750000000000000 1
+ion Hf  -0.243495189108982   0.434955280420800   0.500000000000000 1
+ion Hf   0.119280546392302   0.656710750342877   0.750000000000000 1
+ion Hf   0.463719453607698  -0.056710750342877   0.500000000000000 1
+ion Hf   0.826495189108982   0.165044719579200   0.750000000000000 1
+ion Hf   0.256504810891018   0.434955280420800   0.500000000000000 1
+ion Hf   0.619280546392302   0.656710750342877   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.037818798677727  -0.150959249840250   0.000000000000000 1
+force Hf  -0.033458388197484   0.004224356305186   0.000000000000000 1
+force Hf   0.033458388197484  -0.004224356305185  -0.000000000000000 1
+force Hf   0.037818798677727   0.150959249840251   0.000000000000000 1
+force Hf  -0.037818798677727  -0.150959249840250  -0.000000000000000 1
+force Hf  -0.033458388197484   0.004224356305185  -0.000000000000000 1
+force Hf   0.033458388197484  -0.004224356305185   0.000000000000000 1
+force Hf   0.037818798677727   0.150959249840251  -0.000000000000000 1
+force Hf  -0.037818798677727  -0.150959249840249   0.000000000000000 1
+force Hf  -0.033458388197484   0.004224356305185  -0.000000000000000 1
+force Hf   0.033458388197484  -0.004224356305184  -0.000000000000000 1
+force Hf   0.037818798677727   0.150959249840251  -0.000000000000000 1
+force Hf  -0.037818798677727  -0.150959249840250  -0.000000000000000 1
+force Hf  -0.033458388197484   0.004224356305185  -0.000000000000000 1
+force Hf   0.033458388197484  -0.004224356305186   0.000000000000000 1
+force Hf   0.037818798677727   0.150959249840250  -0.000000000000000 1
+
+# Energy components:
+   Eewald =     -623.1469426167047914
+       EH =      112.0397689032897972
+     Eloc =     -206.8384136666273037
+      Enl =     -230.0626475398210005
+      Exc =     -605.9888074477373721
+ Exc_core =      475.0912696157460005
+       KE =      282.4594947097799604
+-------------------------------------
+     Etot =     -796.4462780420748231
+       TS =        0.0356348366452508
+-------------------------------------
+        F =     -796.4819128787200953
+
+IonicMinimize: Iter:   6  F: -796.481912878720095  |grad|_K:  6.876e-03  alpha:  3.788e-01  linmin: -9.113e-01  t[s]:   2448.16
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.020 +0.011 +0.011 +0.020 +0.020 +0.011 +0.011 +0.020 +0.020 +0.011 +0.011 +0.020 +0.020 +0.011 +0.011 +0.020
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.532672806  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.532948470  nElectrons: 192.000000
+SCF: Cycle:  0   F: -794.144052843761074   dF: +8.992e-01   |Residual|: 9.300e-01   |deigs|: 8.680e-03  t[s]:   2509.89
+	FillingsUpdate:  mu: +0.532577898  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.184260541294066   dF: -2.040e+00   |Residual|: 3.481e-01   |deigs|: 5.199e-03  t[s]:   2554.78
+	FillingsUpdate:  mu: +0.532945123  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.402633175273309   dF: -2.184e-01   |Residual|: 1.300e-01   |deigs|: 5.179e-03  t[s]:   2600.13
+	FillingsUpdate:  mu: +0.532957066  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.490324045776333   dF: -8.769e-02   |Residual|: 2.968e-02   |deigs|: 3.368e-03  t[s]:   2645.58
+	FillingsUpdate:  mu: +0.532887936  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.490645228462654   dF: -3.212e-04   |Residual|: 6.383e-03   |deigs|: 1.714e-04  t[s]:   2674.64
+	FillingsUpdate:  mu: +0.532871767  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.490662451657272   dF: -1.722e-05   |Residual|: 1.375e-03   |deigs|: 3.356e-05  t[s]:   2703.60
+	FillingsUpdate:  mu: +0.532872206  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.490663398235824   dF: -9.466e-07   |Residual|: 4.457e-04   |deigs|: 3.302e-06  t[s]:   2733.37
+	FillingsUpdate:  mu: +0.532873474  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.490663526340654   dF: -1.281e-07   |Residual|: 6.480e-05   |deigs|: 3.728e-06  t[s]:   2762.94
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.043093548053027  -0.065946737009590   0.000000000000000 1
+ion Hf   0.326489171627216   0.169203557819864   0.250000000000000 1
+ion Hf  -0.243489171627216   0.430796442180136   0.000000000000000 1
+ion Hf   0.126093548053027   0.665946737009590   0.250000000000000 1
+ion Hf   0.456906451946973  -0.065946737009590   0.000000000000000 1
+ion Hf   0.826489171627216   0.169203557819864   0.250000000000000 1
+ion Hf   0.256510828372784   0.430796442180136   0.000000000000000 1
+ion Hf   0.626093548053027   0.665946737009590   0.250000000000000 1
+ion Hf  -0.043093548053027  -0.065946737009590   0.500000000000000 1
+ion Hf   0.326489171627216   0.169203557819864   0.750000000000000 1
+ion Hf  -0.243489171627216   0.430796442180136   0.500000000000000 1
+ion Hf   0.126093548053027   0.665946737009590   0.750000000000000 1
+ion Hf   0.456906451946973  -0.065946737009590   0.500000000000000 1
+ion Hf   0.826489171627216   0.169203557819864   0.750000000000000 1
+ion Hf   0.256510828372784   0.430796442180136   0.500000000000000 1
+ion Hf   0.626093548053027   0.665946737009590   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.016843724175522  -0.045326927898137  -0.000000000000000 1
+force Hf  -0.021617016945444  -0.000409299808421   0.000000000000000 1
+force Hf   0.021617016945444   0.000409299808421   0.000000000000000 1
+force Hf   0.016843724175523   0.045326927898137  -0.000000000000000 1
+force Hf  -0.016843724175522  -0.045326927898137   0.000000000000000 1
+force Hf  -0.021617016945444  -0.000409299808421  -0.000000000000000 1
+force Hf   0.021617016945444   0.000409299808421  -0.000000000000000 1
+force Hf   0.016843724175522   0.045326927898137  -0.000000000000000 1
+force Hf  -0.016843724175523  -0.045326927898137   0.000000000000000 1
+force Hf  -0.021617016945444  -0.000409299808422   0.000000000000000 1
+force Hf   0.021617016945444   0.000409299808421  -0.000000000000000 1
+force Hf   0.016843724175522   0.045326927898137  -0.000000000000000 1
+force Hf  -0.016843724175522  -0.045326927898137   0.000000000000000 1
+force Hf  -0.021617016945444  -0.000409299808422   0.000000000000000 1
+force Hf   0.021617016945444   0.000409299808421   0.000000000000000 1
+force Hf   0.016843724175522   0.045326927898137  -0.000000000000000 1
+
+# Energy components:
+   Eewald =     -623.3698367343361042
+       EH =      111.8198500829523425
+     Eloc =     -206.3780523652019667
+      Enl =     -230.0602006371842378
+      Exc =     -605.9775131247839681
+ Exc_core =      475.0912684351664552
+       KE =      282.4190765961204761
+-------------------------------------
+     Etot =     -796.4554077472669178
+       TS =        0.0352557790737516
+-------------------------------------
+        F =     -796.4906635263406542
+
+IonicMinimize: Iter:   7  F: -796.490663526340654  |grad|_K:  2.339e-03  alpha:  5.950e-01  linmin: -8.297e-01  t[s]:   2768.70
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.017 +0.015 +0.015 +0.017 +0.017 +0.015 +0.015 +0.017 +0.017 +0.015 +0.015 +0.017 +0.017 +0.015 +0.015 +0.017
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.532873474  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.533028813  nElectrons: 192.000000
+SCF: Cycle:  0   F: -795.921034481048196   dF: +2.223e-01   |Residual|: 4.566e-01   |deigs|: 2.085e-03  t[s]:   2831.56
+	FillingsUpdate:  mu: +0.532857724  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.413176920755745   dF: -4.921e-01   |Residual|: 1.722e-01   |deigs|: 2.316e-03  t[s]:   2875.53
+	FillingsUpdate:  mu: +0.532943663  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.467438745138338   dF: -5.426e-02   |Residual|: 6.600e-02   |deigs|: 2.383e-03  t[s]:   2920.99
+	FillingsUpdate:  mu: +0.532951791  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.491731736719089   dF: -2.429e-02   |Residual|: 1.486e-02   |deigs|: 1.462e-03  t[s]:   2965.10
+	FillingsUpdate:  mu: +0.532936171  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.491818644722116   dF: -8.691e-05   |Residual|: 3.152e-03   |deigs|: 5.860e-05  t[s]:   2993.34
+	FillingsUpdate:  mu: +0.532931460  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.491823588873444   dF: -4.944e-06   |Residual|: 6.397e-04   |deigs|: 1.574e-05  t[s]:   3022.59
+	FillingsUpdate:  mu: +0.532931748  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.491823892358752   dF: -3.035e-07   |Residual|: 2.092e-04   |deigs|: 1.996e-06  t[s]:   3051.81
+	FillingsUpdate:  mu: +0.532931914  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.491823925284166   dF: -3.293e-08   |Residual|: 3.462e-05   |deigs|: 1.227e-06  t[s]:   3081.49
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.046627165781098  -0.070076577746810   0.000000000000000 1
+ion Hf   0.325256059307226   0.170683768785941   0.250000000000000 1
+ion Hf  -0.242256059307226   0.429316231214059   0.000000000000000 1
+ion Hf   0.129627165781098   0.670076577746810   0.250000000000000 1
+ion Hf   0.453372834218902  -0.070076577746810   0.000000000000000 1
+ion Hf   0.825256059307226   0.170683768785941   0.250000000000000 1
+ion Hf   0.257743940692774   0.429316231214059   0.000000000000000 1
+ion Hf   0.629627165781098   0.670076577746810   0.250000000000000 1
+ion Hf  -0.046627165781098  -0.070076577746810   0.500000000000000 1
+ion Hf   0.325256059307226   0.170683768785941   0.750000000000000 1
+ion Hf  -0.242256059307226   0.429316231214059   0.500000000000000 1
+ion Hf   0.129627165781098   0.670076577746810   0.750000000000000 1
+ion Hf   0.453372834218902  -0.070076577746810   0.500000000000000 1
+ion Hf   0.825256059307226   0.170683768785941   0.750000000000000 1
+ion Hf   0.257743940692774   0.429316231214059   0.500000000000000 1
+ion Hf   0.629627165781098   0.670076577746810   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.009891573564073   0.006452336378443  -0.000000000000000 1
+force Hf  -0.017883890888927  -0.001087142312476   0.000000000000000 1
+force Hf   0.017883890888927   0.001087142312476  -0.000000000000000 1
+force Hf   0.009891573564073  -0.006452336378443   0.000000000000000 1
+force Hf  -0.009891573564073   0.006452336378443   0.000000000000000 1
+force Hf  -0.017883890888927  -0.001087142312476  -0.000000000000000 1
+force Hf   0.017883890888926   0.001087142312476   0.000000000000000 1
+force Hf   0.009891573564072  -0.006452336378443   0.000000000000000 1
+force Hf  -0.009891573564073   0.006452336378443   0.000000000000000 1
+force Hf  -0.017883890888927  -0.001087142312476  -0.000000000000000 1
+force Hf   0.017883890888926   0.001087142312476  -0.000000000000000 1
+force Hf   0.009891573564073  -0.006452336378443  -0.000000000000000 1
+force Hf  -0.009891573564073   0.006452336378443  -0.000000000000000 1
+force Hf  -0.017883890888927  -0.001087142312476   0.000000000000000 1
+force Hf   0.017883890888926   0.001087142312476   0.000000000000000 1
+force Hf   0.009891573564073  -0.006452336378443  -0.000000000000000 1
+
+# Energy components:
+   Eewald =     -623.4219709632557169
+       EH =      111.7671698048951470
+     Eloc =     -206.2684382853710190
+      Enl =     -230.0595451250790688
+      Exc =     -605.9743269595458059
+ Exc_core =      475.0912975673887786
+       KE =      282.4090797523595029
+-------------------------------------
+     Etot =     -796.4567342086079407
+       TS =        0.0350897166762679
+-------------------------------------
+        F =     -796.4918239252841659
+
+IonicMinimize: Iter:   8  F: -796.491823925284166  |grad|_K:  7.976e-04  alpha:  1.000e+00  linmin: -2.697e-01  t[s]:   3087.42
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.015 +0.016 +0.016 +0.015 +0.015 +0.016 +0.016 +0.015 +0.015 +0.016 +0.016 +0.015 +0.015 +0.016 +0.016 +0.015
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.532931914  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.532937188  nElectrons: 192.000000
+SCF: Cycle:  0   F: -796.492072146784039   dF: -3.226e-04   |Residual|: 3.184e-03   |deigs|: 3.631e-05  t[s]:   3145.78
+	FillingsUpdate:  mu: +0.532935019  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.492104696508250   dF: -3.255e-05   |Residual|: 1.769e-03   |deigs|: 3.910e-05  t[s]:   3174.55
+	FillingsUpdate:  mu: +0.532934577  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.492110397735019   dF: -5.701e-06   |Residual|: 9.470e-04   |deigs|: 2.489e-05  t[s]:   3203.17
+	FillingsUpdate:  mu: +0.532934396  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.492111325607993   dF: -9.279e-07   |Residual|: 1.711e-04   |deigs|: 5.305e-06  t[s]:   3232.22
+	FillingsUpdate:  mu: +0.532934789  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.492111351796325   dF: -2.619e-08   |Residual|: 3.645e-05   |deigs|: 8.609e-07  t[s]:   3262.65
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+IonicMinimize: 	Wolfe criterion not satisfied: alpha: 1  (E-E0)/|gdotd0|: -0.969719  gdotd/gdotd0: 0.96727 (taking cubic step)
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.532934789  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.533046955  nElectrons: 192.000000
+SCF: Cycle:  0   F: -796.334539092005684   dF: -4.515e-02   |Residual|: 3.365e-01   |deigs|: 1.155e-03  t[s]:   3329.05
+	FillingsUpdate:  mu: +0.532914436  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.471907422968911   dF: -1.374e-01   |Residual|: 1.196e-01   |deigs|: 1.375e-03  t[s]:   3373.99
+	FillingsUpdate:  mu: +0.532905885  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.482400908106683   dF: -1.049e-02   |Residual|: 3.854e-02   |deigs|: 7.165e-04  t[s]:   3419.61
+	FillingsUpdate:  mu: +0.532927422  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.492641563711686   dF: -1.024e-02   |Residual|: 1.130e-02   |deigs|: 9.171e-04  t[s]:   3460.75
+	FillingsUpdate:  mu: +0.532933785  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.492673677026460   dF: -3.211e-05   |Residual|: 1.789e-03   |deigs|: 4.345e-05  t[s]:   3489.42
+	FillingsUpdate:  mu: +0.532930802  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.492677755836894   dF: -4.079e-06   |Residual|: 5.580e-04   |deigs|: 1.476e-05  t[s]:   3518.91
+	FillingsUpdate:  mu: +0.532930464  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.492677992555514   dF: -2.367e-07   |Residual|: 1.600e-04   |deigs|: 2.604e-06  t[s]:   3548.50
+	FillingsUpdate:  mu: +0.532930307  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.492678021203687   dF: -2.865e-08   |Residual|: 3.546e-05   |deigs|: 8.723e-07  t[s]:   3578.46
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+IonicMinimize: 	Wolfe criterion not satisfied: alpha: 3  (E-E0)/|gdotd0|: -2.88155  gdotd/gdotd0: 0.936567 (taking cubic step)
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.532930307  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.532805460  nElectrons: 192.000000
+SCF: Cycle:  0   F: -795.863843881774073   dF: -1.828e-01   |Residual|: 6.723e-01   |deigs|: 4.628e-03  t[s]:   3646.34
+	FillingsUpdate:  mu: +0.532705986  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.405220377197338   dF: -5.414e-01   |Residual|: 2.408e-01   |deigs|: 3.358e-03  t[s]:   3690.50
+	FillingsUpdate:  mu: +0.532795084  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.443682851401604   dF: -3.846e-02   |Residual|: 8.314e-02   |deigs|: 1.512e-03  t[s]:   3735.93
+	FillingsUpdate:  mu: +0.532896539  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.493485583958545   dF: -4.980e-02   |Residual|: 2.318e-02   |deigs|: 2.322e-03  t[s]:   3780.57
+	FillingsUpdate:  mu: +0.532884596  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.493598900042116   dF: -1.133e-04   |Residual|: 3.610e-03   |deigs|: 1.192e-04  t[s]:   3809.41
+	FillingsUpdate:  mu: +0.532880385  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.493615810554957   dF: -1.691e-05   |Residual|: 1.100e-03   |deigs|: 4.714e-05  t[s]:   3838.22
+	FillingsUpdate:  mu: +0.532879460  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.493616634807836   dF: -8.243e-07   |Residual|: 3.287e-04   |deigs|: 1.079e-05  t[s]:   3867.53
+	FillingsUpdate:  mu: +0.532879101  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.493616707267734   dF: -7.246e-08   |Residual|: 5.380e-05   |deigs|: 3.990e-06  t[s]:   3896.10
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.053744112560557  -0.072225392392990   0.000000000000000 1
+ion Hf   0.314038286961020   0.168658909691562   0.250000000000000 1
+ion Hf  -0.231038286961020   0.431341090308438   0.000000000000000 1
+ion Hf   0.136744112560557   0.672225392392990   0.250000000000000 1
+ion Hf   0.446255887439443  -0.072225392392990  -0.000000000000000 1
+ion Hf   0.814038286961020   0.168658909691562   0.250000000000000 1
+ion Hf   0.268961713038980   0.431341090308438   0.000000000000000 1
+ion Hf   0.636744112560557   0.672225392392990   0.250000000000000 1
+ion Hf  -0.053744112560557  -0.072225392392990   0.500000000000000 1
+ion Hf   0.314038286961020   0.168658909691562   0.750000000000000 1
+ion Hf  -0.231038286961020   0.431341090308438   0.500000000000000 1
+ion Hf   0.136744112560557   0.672225392392990   0.750000000000000 1
+ion Hf   0.446255887439443  -0.072225392392990   0.500000000000000 1
+ion Hf   0.814038286961020   0.168658909691562   0.750000000000000 1
+ion Hf   0.268961713038980   0.431341090308438   0.500000000000000 1
+ion Hf   0.636744112560557   0.672225392392990   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.025637117510860   0.079271263218894  -0.000000000000000 1
+force Hf  -0.018329630772428   0.010596905559319   0.000000000000000 1
+force Hf   0.018329630772428  -0.010596905559320  -0.000000000000000 1
+force Hf   0.025637117510860  -0.079271263218894   0.000000000000000 1
+force Hf  -0.025637117510860   0.079271263218894  -0.000000000000000 1
+force Hf  -0.018329630772428   0.010596905559320   0.000000000000000 1
+force Hf   0.018329630772428  -0.010596905559320  -0.000000000000000 1
+force Hf   0.025637117510860  -0.079271263218894   0.000000000000000 1
+force Hf  -0.025637117510860   0.079271263218893  -0.000000000000000 1
+force Hf  -0.018329630772428   0.010596905559319  -0.000000000000000 1
+force Hf   0.018329630772428  -0.010596905559319   0.000000000000000 1
+force Hf   0.025637117510860  -0.079271263218894  -0.000000000000000 1
+force Hf  -0.025637117510860   0.079271263218894  -0.000000000000000 1
+force Hf  -0.018329630772428   0.010596905559320   0.000000000000000 1
+force Hf   0.018329630772428  -0.010596905559319   0.000000000000000 1
+force Hf   0.025637117510860  -0.079271263218894  -0.000000000000000 1
+
+# Energy components:
+   Eewald =     -623.5265048273117827
+       EH =      111.6829079184989268
+     Eloc =     -206.0750542673490315
+      Enl =     -230.0601424822251602
+      Exc =     -605.9683044172857080
+ Exc_core =      475.0911946597892666
+       KE =      282.3967258388157688
+-------------------------------------
+     Etot =     -796.4591775770676350
+       TS =        0.0344391302000651
+-------------------------------------
+        F =     -796.4936167072677335
+
+IonicMinimize: Iter:   9  F: -796.493616707267734  |grad|_K:  2.809e-03  alpha:  7.000e+00  linmin: -1.950e-01  t[s]:   3901.94
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.015 +0.016 +0.016 +0.015 +0.015 +0.016 +0.016 +0.015 +0.015 +0.016 +0.016 +0.015 +0.015 +0.016 +0.016 +0.015
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.532879101  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.532499288  nElectrons: 192.000000
+SCF: Cycle:  0   F: -795.403071017121192   dF: -4.671e-01   |Residual|: 9.279e-01   |deigs|: 8.876e-03  t[s]:   3963.26
+	FillingsUpdate:  mu: +0.532431959  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.330198502282087   dF: -9.271e-01   |Residual|: 3.334e-01   |deigs|: 5.381e-03  t[s]:   4008.33
+	FillingsUpdate:  mu: +0.532602744  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.386444859330709   dF: -5.625e-02   |Residual|: 1.199e-01   |deigs|: 2.122e-03  t[s]:   4053.28
+	FillingsUpdate:  mu: +0.532818550  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.495038468984717   dF: -1.086e-01   |Residual|: 3.273e-02   |deigs|: 3.618e-03  t[s]:   4098.53
+	FillingsUpdate:  mu: +0.532777766  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.495217667350062   dF: -1.792e-04   |Residual|: 5.178e-03   |deigs|: 2.240e-04  t[s]:   4127.55
+	FillingsUpdate:  mu: +0.532774676  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.495254060571369   dF: -3.639e-05   |Residual|: 1.484e-03   |deigs|: 7.079e-05  t[s]:   4156.56
+	FillingsUpdate:  mu: +0.532772972  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.495255862367571   dF: -1.802e-06   |Residual|: 4.751e-04   |deigs|: 1.443e-05  t[s]:   4186.43
+	FillingsUpdate:  mu: +0.532772446  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.495256004313205   dF: -1.419e-07   |Residual|: 7.890e-05   |deigs|: 5.730e-06  t[s]:   4215.82
+	FillingsUpdate:  mu: +0.532772678  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.495256037277386   dF: -3.296e-08   |Residual|: 3.046e-05   |deigs|: 3.083e-06  t[s]:   4245.88
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+IonicMinimize: 	Wolfe criterion not satisfied: alpha: 0.0483577  (E-E0)/|gdotd0|: -0.049288  gdotd/gdotd0: 1.08806 (taking cubic step)
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.532772678  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.531665042  nElectrons: 192.000000
+SCF: Cycle:  0   F: -792.214411257455140   dF: -1.932e+00   |Residual|: 1.849e+00   |deigs|: 3.513e-02  t[s]:   4314.22
+	FillingsUpdate:  mu: +0.531702512  nElectrons: 192.000000
+SCF: Cycle:  1   F: -795.795622219174220   dF: -3.581e+00   |Residual|: 6.739e-01   |deigs|: 1.531e-02  t[s]:   4358.69
+	FillingsUpdate:  mu: +0.532563593  nElectrons: 192.000000
+SCF: Cycle:  2   F: -795.918582240708929   dF: -1.230e-01   |Residual|: 2.709e-01   |deigs|: 5.426e-03  t[s]:   4404.32
+	FillingsUpdate:  mu: +0.533259307  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.497960339064207   dF: -5.794e-01   |Residual|: 6.849e-02   |deigs|: 9.459e-03  t[s]:   4449.31
+	FillingsUpdate:  mu: +0.533004204  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.498844300592737   dF: -8.840e-04   |Residual|: 1.291e-02   |deigs|: 6.349e-04  t[s]:   4491.34
+	FillingsUpdate:  mu: +0.532994314  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.499001724141749   dF: -1.574e-04   |Residual|: 2.873e-03   |deigs|: 1.283e-04  t[s]:   4521.23
+	FillingsUpdate:  mu: +0.532995280  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.499006633679073   dF: -4.910e-06   |Residual|: 1.080e-03   |deigs|: 1.309e-05  t[s]:   4550.80
+	FillingsUpdate:  mu: +0.532994930  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.499007158394534   dF: -5.247e-07   |Residual|: 1.963e-04   |deigs|: 3.899e-06  t[s]:   4580.78
+	FillingsUpdate:  mu: +0.532995197  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.499007279100397   dF: -1.207e-07   |Residual|: 5.544e-05   |deigs|: 1.943e-06  t[s]:   4610.60
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+IonicMinimize: 	Wolfe criterion not satisfied: alpha: 0.145073  (E-E0)/|gdotd0|: -0.162073  gdotd/gdotd0: 1.68303 (taking cubic step)
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.532995197  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.520142014  nElectrons: 192.000000
+SCF: Cycle:  0   F: -781.967492715483900   dF: -1.001e+01   |Residual|: 3.605e+00   |deigs|: 1.359e-01  t[s]:   4679.77
+	FillingsUpdate:  mu: +0.529978198  nElectrons: 192.000000
+SCF: Cycle:  1   F: -794.626052849143889   dF: -1.266e+01   |Residual|: 1.336e+00   |deigs|: 4.948e-02  t[s]:   4724.93
+	FillingsUpdate:  mu: +0.534766071  nElectrons: 192.000000
+SCF: Cycle:  2   F: -795.655833529094480   dF: -1.030e+00   |Residual|: 3.712e-01   |deigs|: 1.959e-02  t[s]:   4770.54
+	FillingsUpdate:  mu: +0.536705257  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.501295660376513   dF: -8.455e-01   |Residual|: 1.466e-01   |deigs|: 1.185e-02  t[s]:   4816.55
+	FillingsUpdate:  mu: +0.535768268  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.516157730092459   dF: -1.486e-02   |Residual|: 3.514e-02   |deigs|: 1.699e-03  t[s]:   4863.41
+	FillingsUpdate:  mu: +0.535808099  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.518657051315358   dF: -2.499e-03   |Residual|: 6.610e-03   |deigs|: 2.883e-04  t[s]:   4906.41
+	FillingsUpdate:  mu: +0.535807169  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.518686920671257   dF: -2.987e-05   |Residual|: 2.436e-03   |deigs|: 1.136e-04  t[s]:   4935.32
+	FillingsUpdate:  mu: +0.535802559  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.518690543258685   dF: -3.623e-06   |Residual|: 5.831e-04   |deigs|: 4.553e-05  t[s]:   4964.66
+	FillingsUpdate:  mu: +0.535802521  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.518692566621894   dF: -2.023e-06   |Residual|: 1.069e-04   |deigs|: 1.278e-05  t[s]:   4994.50
+	FillingsUpdate:  mu: +0.535802937  nElectrons: 192.000000
+SCF: Cycle:  9   F: -796.518692637209369   dF: -7.059e-08   |Residual|: 3.619e-05   |deigs|: 2.234e-06  t[s]:   5024.94
+	FillingsUpdate:  mu: +0.535802984  nElectrons: 192.000000
+SCF: Cycle: 10   F: -796.518692660374882   dF: -2.317e-08   |Residual|: 2.208e-05   |deigs|: 1.619e-06  t[s]:   5055.16
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+IonicMinimize: 	Wolfe criterion not satisfied: alpha: 0.338504  (E-E0)/|gdotd0|: -0.753932  gdotd/gdotd0: 4.18712 (taking cubic step)
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.535802984  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.420230982  nElectrons: 192.000000
+SCF: Cycle:  0   F: -753.844133765480819   dF: -4.889e+01   |Residual|: 6.623e+00   |deigs|: 5.107e-01  t[s]:   5126.16
+	FillingsUpdate:  mu: +0.512666493  nElectrons: 192.000000
+SCF: Cycle:  1   F: -787.808948986805603   dF: -3.396e+01   |Residual|: 2.710e+00   |deigs|: 1.725e-01  t[s]:   5171.29
+	FillingsUpdate:  mu: +0.540034692  nElectrons: 192.000000
+SCF: Cycle:  2   F: -795.085057116433404   dF: -7.276e+00   |Residual|: 6.524e-01   |deigs|: 8.127e-02  t[s]:   5216.39
+	FillingsUpdate:  mu: +0.540444702  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.411622941753649   dF: -1.327e+00   |Residual|: 3.184e-01   |deigs|: 2.014e-02  t[s]:   5262.17
+	FillingsUpdate:  mu: +0.538546261  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.499206727326737   dF: -8.758e-02   |Residual|: 1.167e-01   |deigs|: 2.613e-03  t[s]:   5307.50
+	FillingsUpdate:  mu: +0.538308977  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.534946654079704   dF: -3.574e-02   |Residual|: 2.113e-02   |deigs|: 1.949e-03  t[s]:   5354.79
+	FillingsUpdate:  mu: +0.538194157  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.535401172304319   dF: -4.545e-04   |Residual|: 5.636e-03   |deigs|: 6.022e-04  t[s]:   5385.71
+	FillingsUpdate:  mu: +0.538129165  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.535413860585436   dF: -1.269e-05   |Residual|: 1.532e-03   |deigs|: 1.647e-04  t[s]:   5416.78
+	FillingsUpdate:  mu: +0.538149390  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.535416102228965   dF: -2.242e-06   |Residual|: 3.668e-04   |deigs|: 4.754e-05  t[s]:   5445.91
+	FillingsUpdate:  mu: +0.538152207  nElectrons: 192.000000
+SCF: Cycle:  9   F: -796.535416979748561   dF: -8.775e-07   |Residual|: 1.132e-04   |deigs|: 1.485e-05  t[s]:   5476.04
+	FillingsUpdate:  mu: +0.538151598  nElectrons: 192.000000
+SCF: Cycle: 10   F: -796.535417117063162   dF: -1.373e-07   |Residual|: 5.705e-05   |deigs|: 3.074e-06  t[s]:   5505.77
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.133409130778494  -0.087604911543447   0.000000000000000 1
+ion Hf   0.177719276128337   0.139766011624820   0.250000000000000 1
+ion Hf  -0.094719276128337   0.460233988375181   0.000000000000000 1
+ion Hf   0.216409130778494   0.687604911543447   0.250000000000000 1
+ion Hf   0.366590869221507  -0.087604911543447  -0.000000000000000 1
+ion Hf   0.677719276128337   0.139766011624820   0.250000000000000 1
+ion Hf   0.405280723871663   0.460233988375181   0.000000000000000 1
+ion Hf   0.716409130778494   0.687604911543447   0.250000000000000 1
+ion Hf  -0.133409130778494  -0.087604911543447   0.500000000000000 1
+ion Hf   0.177719276128337   0.139766011624820   0.750000000000000 1
+ion Hf  -0.094719276128337   0.460233988375181   0.500000000000000 1
+ion Hf   0.216409130778494   0.687604911543447   0.750000000000000 1
+ion Hf   0.366590869221507  -0.087604911543447   0.500000000000000 1
+ion Hf   0.677719276128337   0.139766011624820   0.750000000000000 1
+ion Hf   0.405280723871663   0.460233988375181   0.500000000000000 1
+ion Hf   0.716409130778494   0.687604911543447   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.020297612388278   0.338345646781987  -0.000000000000000 1
+force Hf   0.066031423641802   0.150234707158593   0.000000000000000 1
+force Hf  -0.066031423641802  -0.150234707158597  -0.000000000000000 1
+force Hf   0.020297612388279  -0.338345646781994  -0.000000000000000 1
+force Hf  -0.020297612388278   0.338345646781984  -0.000000000000000 1
+force Hf   0.066031423641802   0.150234707158593   0.000000000000000 1
+force Hf  -0.066031423641801  -0.150234707158597   0.000000000000000 1
+force Hf   0.020297612388278  -0.338345646781994  -0.000000000000000 1
+force Hf  -0.020297612388278   0.338345646781994   0.000000000000000 1
+force Hf   0.066031423641801   0.150234707158593  -0.000000000000000 1
+force Hf  -0.066031423641801  -0.150234707158601   0.000000000000000 1
+force Hf   0.020297612388279  -0.338345646781991   0.000000000000000 1
+force Hf  -0.020297612388278   0.338345646781994   0.000000000000000 1
+force Hf   0.066031423641802   0.150234707158604  -0.000000000000000 1
+force Hf  -0.066031423641802  -0.150234707158594  -0.000000000000000 1
+force Hf   0.020297612388279  -0.338345646781987   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -620.6407439460897422
+       EH =      114.7211593389581594
+     Eloc =     -212.0449262737625702
+      Enl =     -230.1411994103881398
+      Exc =     -606.0171909042660445
+ Exc_core =      475.0906387524651109
+       KE =      282.5220933590335335
+-------------------------------------
+     Etot =     -796.5101690840497213
+       TS =        0.0252480330134216
+-------------------------------------
+        F =     -796.5354171170631616
+
+IonicMinimize: Iter:  10  F: -796.535417117063162  |grad|_K:  1.488e-02  alpha:  7.254e-01  linmin:  2.668e-01  t[s]:   5511.70
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf -0.023 +0.059 +0.059 -0.023 -0.023 +0.059 +0.059 -0.023 -0.023 +0.059 +0.059 -0.023 -0.023 +0.059 +0.059 -0.023
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.538151598  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.538689926  nElectrons: 192.000000
+SCF: Cycle:  0   F: -795.097740321734705   dF: -1.235e-01   |Residual|: 9.417e-01   |deigs|: 8.944e-03  t[s]:   5574.16
+	FillingsUpdate:  mu: +0.539121966  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.323265974004812   dF: -1.226e+00   |Residual|: 3.463e-01   |deigs|: 6.368e-03  t[s]:   5619.29
+	FillingsUpdate:  mu: +0.537858927  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.451657960371790   dF: -1.284e-01   |Residual|: 1.252e-01   |deigs|: 3.783e-03  t[s]:   5664.82
+	FillingsUpdate:  mu: +0.538588291  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.542052231005414   dF: -9.039e-02   |Residual|: 3.145e-02   |deigs|: 4.610e-03  t[s]:   5709.79
+	FillingsUpdate:  mu: +0.538598899  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.542221548471275   dF: -1.693e-04   |Residual|: 5.053e-03   |deigs|: 1.838e-04  t[s]:   5739.47
+	FillingsUpdate:  mu: +0.538569611  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.542257209214881   dF: -3.566e-05   |Residual|: 1.472e-03   |deigs|: 1.149e-04  t[s]:   5769.32
+	FillingsUpdate:  mu: +0.538571441  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.542259474359867   dF: -2.265e-06   |Residual|: 4.516e-04   |deigs|: 1.309e-05  t[s]:   5799.30
+	FillingsUpdate:  mu: +0.538572120  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.542259620467462   dF: -1.461e-07   |Residual|: 7.546e-05   |deigs|: 3.901e-06  t[s]:   5829.92
+	FillingsUpdate:  mu: +0.538572280  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.542259653284532   dF: -3.282e-08   |Residual|: 3.238e-05   |deigs|: 7.875e-07  t[s]:   5860.64
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.128102605311518  -0.086499677041364   0.000000000000000 1
+ion Hf   0.186829737108592   0.141762868728707   0.250000000000000 1
+ion Hf  -0.103829737108592   0.458237131271293   0.000000000000000 1
+ion Hf   0.211102605311518   0.686499677041364   0.250000000000000 1
+ion Hf   0.371897394688482  -0.086499677041364  -0.000000000000000 1
+ion Hf   0.686829737108592   0.141762868728707   0.250000000000000 1
+ion Hf   0.396170262891408   0.458237131271293   0.000000000000000 1
+ion Hf   0.711102605311518   0.686499677041364   0.250000000000000 1
+ion Hf  -0.128102605311518  -0.086499677041364   0.500000000000000 1
+ion Hf   0.186829737108592   0.141762868728707   0.750000000000000 1
+ion Hf  -0.103829737108592   0.458237131271293   0.500000000000000 1
+ion Hf   0.211102605311518   0.686499677041364   0.750000000000000 1
+ion Hf   0.371897394688482  -0.086499677041364   0.500000000000000 1
+ion Hf   0.686829737108592   0.141762868728707   0.750000000000000 1
+ion Hf   0.396170262891408   0.458237131271293   0.500000000000000 1
+ion Hf   0.711102605311518   0.686499677041364   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.061910102939086   0.343591996746670   0.000000000000000 1
+force Hf   0.029699743402104   0.129909914719899  -0.000000000000000 1
+force Hf  -0.029699743402103  -0.129909914719895   0.000000000000000 1
+force Hf   0.061910102939086  -0.343591996746673   0.000000000000000 1
+force Hf  -0.061910102939086   0.343591996746673   0.000000000000000 1
+force Hf   0.029699743402103   0.129909914719902  -0.000000000000000 1
+force Hf  -0.029699743402103  -0.129909914719892   0.000000000000000 1
+force Hf   0.061910102939086  -0.343591996746673  -0.000000000000000 1
+force Hf  -0.061910102939086   0.343591996746670   0.000000000000000 1
+force Hf   0.029699743402103   0.129909914719899   0.000000000000000 1
+force Hf  -0.029699743402104  -0.129909914719895   0.000000000000000 1
+force Hf   0.061910102939086  -0.343591996746670   0.000000000000000 1
+force Hf  -0.061910102939086   0.343591996746670   0.000000000000000 1
+force Hf   0.029699743402104   0.129909914719899   0.000000000000000 1
+force Hf  -0.029699743402104  -0.129909914719899  -0.000000000000000 1
+force Hf   0.061910102939086  -0.343591996746677   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -621.3007937469965327
+       EH =      114.0847929375359087
+     Eloc =     -210.7222654848521586
+      Enl =     -230.1332141897076440
+      Exc =     -605.9973118762346758
+ Exc_core =      475.0905873098347456
+       KE =      282.4616986785001700
+-------------------------------------
+     Etot =     -796.5165063719200589
+       TS =        0.0257532813645254
+-------------------------------------
+        F =     -796.5422596532845319
+
+IonicMinimize: Iter:  11  F: -796.542259653284532  |grad|_K:  1.367e-02  alpha:  8.046e-02  linmin: -1.498e-01  t[s]:   5866.59
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf -0.020 +0.055 +0.055 -0.020 -0.020 +0.055 +0.055 -0.020 -0.020 +0.055 +0.055 -0.020 -0.020 +0.055 +0.055 -0.020
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.538572280  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.541895943  nElectrons: 192.000000
+SCF: Cycle:  0   F: -792.553744708550653   dF: +2.679e+00   |Residual|: 9.488e-01   |deigs|: 9.235e-03  t[s]:   5928.58
+	FillingsUpdate:  mu: +0.539692938  nElectrons: 192.000000
+SCF: Cycle:  1   F: -795.987699397424080   dF: -3.434e+00   |Residual|: 3.960e-01   |deigs|: 7.199e-03  t[s]:   5973.67
+	FillingsUpdate:  mu: +0.539028289  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.456259818295848   dF: -4.686e-01   |Residual|: 1.436e-01   |deigs|: 7.963e-03  t[s]:   6018.79
+	FillingsUpdate:  mu: +0.539196048  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.553435918381069   dF: -9.718e-02   |Residual|: 3.042e-02   |deigs|: 3.664e-03  t[s]:   6064.75
+	FillingsUpdate:  mu: +0.539128285  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.553804468541216   dF: -3.686e-04   |Residual|: 7.673e-03   |deigs|: 2.989e-04  t[s]:   6093.71
+	FillingsUpdate:  mu: +0.539089998  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.553824499572443   dF: -2.003e-05   |Residual|: 1.627e-03   |deigs|: 9.190e-05  t[s]:   6122.61
+	FillingsUpdate:  mu: +0.539092519  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.553827161876484   dF: -2.662e-06   |Residual|: 4.395e-04   |deigs|: 8.974e-06  t[s]:   6152.57
+	FillingsUpdate:  mu: +0.539095109  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.553827320678693   dF: -1.588e-07   |Residual|: 9.333e-05   |deigs|: 8.146e-06  t[s]:   6182.80
+	FillingsUpdate:  mu: +0.539095093  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.553827362519996   dF: -4.184e-08   |Residual|: 3.493e-05   |deigs|: 7.630e-07  t[s]:   6213.00
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.127399142824781  -0.084171826586850   0.000000000000000 1
+ion Hf   0.196399902756318   0.146871364515073   0.250000000000000 1
+ion Hf  -0.113399902756318   0.453128635484927   0.000000000000000 1
+ion Hf   0.210399142824781   0.684171826586850   0.250000000000000 1
+ion Hf   0.372600857175219  -0.084171826586850  -0.000000000000000 1
+ion Hf   0.696399902756318   0.146871364515073   0.250000000000000 1
+ion Hf   0.386600097243682   0.453128635484927   0.000000000000000 1
+ion Hf   0.710399142824781   0.684171826586850   0.250000000000000 1
+ion Hf  -0.127399142824781  -0.084171826586850   0.500000000000000 1
+ion Hf   0.196399902756318   0.146871364515073   0.750000000000000 1
+ion Hf  -0.113399902756318   0.453128635484927   0.500000000000000 1
+ion Hf   0.210399142824781   0.684171826586850   0.750000000000000 1
+ion Hf   0.372600857175219  -0.084171826586850   0.500000000000000 1
+ion Hf   0.696399902756318   0.146871364515073   0.750000000000000 1
+ion Hf   0.386600097243682   0.453128635484927   0.500000000000000 1
+ion Hf   0.710399142824781   0.684171826586850   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.075563329080564   0.329677099961778  -0.000000000000000 1
+force Hf   0.011449957124682   0.076360611190140  -0.000000000000000 1
+force Hf  -0.011449957124682  -0.076360611190139   0.000000000000000 1
+force Hf   0.075563329080564  -0.329677099961782   0.000000000000000 1
+force Hf  -0.075563329080564   0.329677099961782  -0.000000000000000 1
+force Hf   0.011449957124682   0.076360611190138   0.000000000000000 1
+force Hf  -0.011449957124682  -0.076360611190144   0.000000000000000 1
+force Hf   0.075563329080564  -0.329677099961774  -0.000000000000000 1
+force Hf  -0.075563329080564   0.329677099961782   0.000000000000000 1
+force Hf   0.011449957124682   0.076360611190144  -0.000000000000000 1
+force Hf  -0.011449957124682  -0.076360611190138   0.000000000000000 1
+force Hf   0.075563329080564  -0.329677099961782   0.000000000000000 1
+force Hf  -0.075563329080564   0.329677099961778  -0.000000000000000 1
+force Hf   0.011449957124682   0.076360611190147  -0.000000000000000 1
+force Hf  -0.011449957124682  -0.076360611190142  -0.000000000000000 1
+force Hf   0.075563329080564  -0.329677099961782  -0.000000000000000 1
+
+# Energy components:
+   Eewald =     -622.4868762650439749
+       EH =      112.8946555776345804
+     Eloc =     -208.2954339158396806
+      Enl =     -230.1135809225149558
+      Exc =     -605.9616443838176565
+ Exc_core =      475.0904475546013828
+       KE =      282.3448828906048220
+-------------------------------------
+     Etot =     -796.5275494643756247
+       TS =        0.0262778981443676
+-------------------------------------
+        F =     -796.5538273625199963
+
+IonicMinimize: Iter:  12  F: -796.553827362519996  |grad|_K:  1.213e-02  alpha:  8.062e-01  linmin: -3.963e-01  t[s]:   6218.76
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf -0.013 +0.049 +0.049 -0.013 -0.013 +0.049 +0.049 -0.013 -0.013 +0.049 +0.049 -0.013 -0.013 +0.049 +0.049 -0.013
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.539095093  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.542906608  nElectrons: 192.000000
+SCF: Cycle:  0   F: -791.493175818635677   dF: +3.413e+00   |Residual|: 1.063e+00   |deigs|: 1.141e-02  t[s]:   6281.08
+	FillingsUpdate:  mu: +0.540154507  nElectrons: 192.000000
+SCF: Cycle:  1   F: -795.911067080641146   dF: -4.418e+00   |Residual|: 4.344e-01   |deigs|: 7.329e-03  t[s]:   6325.94
+	FillingsUpdate:  mu: +0.540127239  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.437612490789434   dF: -5.265e-01   |Residual|: 1.606e-01   |deigs|: 9.312e-03  t[s]:   6371.14
+	FillingsUpdate:  mu: +0.540076308  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.567628547403615   dF: -1.300e-01   |Residual|: 3.427e-02   |deigs|: 4.304e-03  t[s]:   6416.18
+	FillingsUpdate:  mu: +0.539948987  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.568107967543142   dF: -4.794e-04   |Residual|: 8.986e-03   |deigs|: 3.895e-04  t[s]:   6450.10
+	FillingsUpdate:  mu: +0.539904391  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.568130905279077   dF: -2.294e-05   |Residual|: 1.887e-03   |deigs|: 9.900e-05  t[s]:   6479.98
+	FillingsUpdate:  mu: +0.539907516  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.568134155179678   dF: -3.250e-06   |Residual|: 4.597e-04   |deigs|: 1.164e-05  t[s]:   6509.57
+	FillingsUpdate:  mu: +0.539910154  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.568134350726268   dF: -1.955e-07   |Residual|: 1.075e-04   |deigs|: 8.293e-06  t[s]:   6539.23
+	FillingsUpdate:  mu: +0.539910165  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.568134399789187   dF: -4.906e-08   |Residual|: 3.412e-05   |deigs|: 9.440e-07  t[s]:   6569.10
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.127601499121854  -0.079551566245151   0.000000000000000 1
+ion Hf   0.205971042274581   0.151355910887319   0.250000000000000 1
+ion Hf  -0.122971042274581   0.448644089112681   0.000000000000000 1
+ion Hf   0.210601499121854   0.679551566245151   0.250000000000000 1
+ion Hf   0.372398500878146  -0.079551566245151  -0.000000000000000 1
+ion Hf   0.705971042274581   0.151355910887319   0.250000000000000 1
+ion Hf   0.377028957725419   0.448644089112681   0.000000000000000 1
+ion Hf   0.710601499121854   0.679551566245151   0.250000000000000 1
+ion Hf  -0.127601499121854  -0.079551566245151   0.500000000000000 1
+ion Hf   0.205971042274581   0.151355910887319   0.750000000000000 1
+ion Hf  -0.122971042274581   0.448644089112681   0.500000000000000 1
+ion Hf   0.210601499121854   0.679551566245151   0.750000000000000 1
+ion Hf   0.372398500878146  -0.079551566245151   0.500000000000000 1
+ion Hf   0.705971042274581   0.151355910887319   0.750000000000000 1
+ion Hf   0.377028957725419   0.448644089112681   0.500000000000000 1
+ion Hf   0.710601499121854   0.679551566245151   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.075382448929817   0.303240773319949  -0.000000000000000 1
+force Hf   0.006738978430042   0.027829772053432  -0.000000000000000 1
+force Hf  -0.006738978430042  -0.027829772053434  -0.000000000000000 1
+force Hf   0.075382448929817  -0.303240773319950   0.000000000000000 1
+force Hf  -0.075382448929817   0.303240773319949   0.000000000000000 1
+force Hf   0.006738978430042   0.027829772053434   0.000000000000000 1
+force Hf  -0.006738978430042  -0.027829772053436  -0.000000000000000 1
+force Hf   0.075382448929817  -0.303240773319952   0.000000000000000 1
+force Hf  -0.075382448929817   0.303240773319947  -0.000000000000000 1
+force Hf   0.006738978430042   0.027829772053432   0.000000000000000 1
+force Hf  -0.006738978430042  -0.027829772053434   0.000000000000000 1
+force Hf   0.075382448929817  -0.303240773319950   0.000000000000000 1
+force Hf  -0.075382448929817   0.303240773319947  -0.000000000000000 1
+force Hf   0.006738978430042   0.027829772053434  -0.000000000000000 1
+force Hf  -0.006738978430042  -0.027829772053434  -0.000000000000000 1
+force Hf   0.075382448929817  -0.303240773319950   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -623.6465382691635568
+       EH =      111.7304064274944579
+     Eloc =     -205.9174606670232492
+      Enl =     -230.0979541739631600
+      Exc =     -605.9252205372749813
+ Exc_core =      475.0902985696579321
+       KE =      282.2243323864212243
+-------------------------------------
+     Etot =     -796.5421362638513756
+       TS =        0.0259981359378374
+-------------------------------------
+        F =     -796.5681343997891872
+
+IonicMinimize: Iter:  13  F: -796.568134399789187  |grad|_K:  1.076e-02  alpha:  3.924e-01  linmin: -5.291e-01  t[s]:   6575.00
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf -0.006 +0.042 +0.042 -0.006 -0.006 +0.042 +0.042 -0.006 -0.006 +0.042 +0.042 -0.006 -0.006 +0.042 +0.042 -0.006
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.539910165  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.542829645  nElectrons: 192.000000
+SCF: Cycle:  0   F: -792.315670519361333   dF: +2.445e+00   |Residual|: 1.079e+00   |deigs|: 1.191e-02  t[s]:   6637.25
+	FillingsUpdate:  mu: +0.540776864  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.081283882318530   dF: -3.766e+00   |Residual|: 4.188e-01   |deigs|: 7.029e-03  t[s]:   6682.99
+	FillingsUpdate:  mu: +0.541097488  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.441830050189992   dF: -3.605e-01   |Residual|: 1.610e-01   |deigs|: 6.931e-03  t[s]:   6728.82
+	FillingsUpdate:  mu: +0.540946496  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.581262686352375   dF: -1.394e-01   |Residual|: 3.483e-02   |deigs|: 4.762e-03  t[s]:   6774.01
+	FillingsUpdate:  mu: +0.540824191  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.581765347444048   dF: -5.027e-04   |Residual|: 8.311e-03   |deigs|: 3.433e-04  t[s]:   6811.99
+	FillingsUpdate:  mu: +0.540792745  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.581785199864953   dF: -1.985e-05   |Residual|: 1.776e-03   |deigs|: 7.857e-05  t[s]:   6841.22
+	FillingsUpdate:  mu: +0.540795304  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.581787725631671   dF: -2.526e-06   |Residual|: 4.633e-04   |deigs|: 1.052e-05  t[s]:   6870.94
+	FillingsUpdate:  mu: +0.540797177  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.581787908533329   dF: -1.829e-07   |Residual|: 9.214e-05   |deigs|: 6.147e-06  t[s]:   6900.77
+	FillingsUpdate:  mu: +0.540797100  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.581787952661102   dF: -4.413e-08   |Residual|: 3.143e-05   |deigs|: 9.091e-07  t[s]:   6931.19
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.127358201019856  -0.073693151669284   0.000000000000000 1
+ion Hf   0.215295211069937   0.154123119023925   0.250000000000000 1
+ion Hf  -0.132295211069937   0.445876880976075   0.000000000000000 1
+ion Hf   0.210358201019856   0.673693151669284   0.250000000000000 1
+ion Hf   0.372641798980144  -0.073693151669284  -0.000000000000000 1
+ion Hf   0.715295211069937   0.154123119023925   0.250000000000000 1
+ion Hf   0.367704788930063   0.445876880976075   0.000000000000000 1
+ion Hf   0.710358201019856   0.673693151669284   0.250000000000000 1
+ion Hf  -0.127358201019856  -0.073693151669284   0.500000000000000 1
+ion Hf   0.215295211069937   0.154123119023925   0.750000000000000 1
+ion Hf  -0.132295211069937   0.445876880976075   0.500000000000000 1
+ion Hf   0.210358201019856   0.673693151669284   0.750000000000000 1
+ion Hf   0.372641798980144  -0.073693151669284   0.500000000000000 1
+ion Hf   0.715295211069937   0.154123119023925   0.750000000000000 1
+ion Hf   0.367704788930063   0.445876880976075   0.500000000000000 1
+ion Hf   0.710358201019856   0.673693151669284   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.072920523016702   0.268295738357432   0.000000000000000 1
+force Hf  -0.004192704067443  -0.009312951595080  -0.000000000000000 1
+force Hf   0.004192704067443   0.009312951595080  -0.000000000000000 1
+force Hf   0.072920523016702  -0.268295738357433   0.000000000000000 1
+force Hf  -0.072920523016702   0.268295738357433  -0.000000000000000 1
+force Hf  -0.004192704067443  -0.009312951595082   0.000000000000000 1
+force Hf   0.004192704067443   0.009312951595080   0.000000000000000 1
+force Hf   0.072920523016702  -0.268295738357432  -0.000000000000000 1
+force Hf  -0.072920523016702   0.268295738357433  -0.000000000000000 1
+force Hf  -0.004192704067443  -0.009312951595082  -0.000000000000000 1
+force Hf   0.004192704067443   0.009312951595079   0.000000000000000 1
+force Hf   0.072920523016702  -0.268295738357433  -0.000000000000000 1
+force Hf  -0.072920523016702   0.268295738357433   0.000000000000000 1
+force Hf  -0.004192704067443  -0.009312951595081   0.000000000000000 1
+force Hf   0.004192704067443   0.009312951595078   0.000000000000000 1
+force Hf   0.072920523016702  -0.268295738357432   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -624.4965305590947082
+       EH =      110.8866276911392248
+     Eloc =     -204.1810106369446203
+      Enl =     -230.0915131924953414
+      Exc =     -605.8977544572802572
+ Exc_core =      475.0901597175708275
+       KE =      282.1331170055608482
+-------------------------------------
+     Etot =     -796.5569044315440124
+       TS =        0.0248835211171168
+-------------------------------------
+        F =     -796.5817879526611023
+
+IonicMinimize: Iter:  14  F: -796.581787952661102  |grad|_K:  9.407e-03  alpha:  2.074e-01  linmin: -5.314e-01  t[s]:   6937.21
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.001 +0.035 +0.035 +0.001 +0.001 +0.035 +0.035 +0.001 +0.001 +0.035 +0.035 +0.001 +0.001 +0.035 +0.035 +0.001
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.540797100  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.542505357  nElectrons: 192.000000
+SCF: Cycle:  0   F: -792.002653402415717   dF: +2.345e+00   |Residual|: 1.182e+00   |deigs|: 1.442e-02  t[s]:   6999.13
+	FillingsUpdate:  mu: +0.541487334  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.123282654002765   dF: -4.121e+00   |Residual|: 4.419e-01   |deigs|: 8.088e-03  t[s]:   7043.79
+	FillingsUpdate:  mu: +0.542042227  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.443963617839017   dF: -3.207e-01   |Residual|: 1.670e-01   |deigs|: 6.675e-03  t[s]:   7089.46
+	FillingsUpdate:  mu: +0.541818499  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.594787789033717   dF: -1.508e-01   |Residual|: 3.812e-02   |deigs|: 5.156e-03  t[s]:   7135.23
+	FillingsUpdate:  mu: +0.541680827  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.595424387307617   dF: -6.366e-04   |Residual|: 9.062e-03   |deigs|: 3.475e-04  t[s]:   7175.49
+	FillingsUpdate:  mu: +0.541651858  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.595440986420272   dF: -1.660e-05   |Residual|: 1.805e-03   |deigs|: 6.575e-05  t[s]:   7205.37
+	FillingsUpdate:  mu: +0.541655542  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.595443489907666   dF: -2.503e-06   |Residual|: 5.013e-04   |deigs|: 1.371e-05  t[s]:   7235.69
+	FillingsUpdate:  mu: +0.541657016  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.595443689812782   dF: -1.999e-07   |Residual|: 9.460e-05   |deigs|: 4.612e-06  t[s]:   7266.46
+	FillingsUpdate:  mu: +0.541656905  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.595443735789104   dF: -4.598e-08   |Residual|: 3.263e-05   |deigs|: 9.251e-07  t[s]:   7296.69
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.126927874945973  -0.065898152079472   0.000000000000000 1
+ion Hf   0.224158564803825   0.155412126757955   0.250000000000000 1
+ion Hf  -0.141158564803825   0.444587873242045   0.000000000000000 1
+ion Hf   0.209927874945973   0.665898152079472   0.250000000000000 1
+ion Hf   0.373072125054027  -0.065898152079472  -0.000000000000000 1
+ion Hf   0.724158564803825   0.155412126757955   0.250000000000000 1
+ion Hf   0.358841435196175   0.444587873242045   0.000000000000000 1
+ion Hf   0.709927874945973   0.665898152079472   0.250000000000000 1
+ion Hf  -0.126927874945973  -0.065898152079472   0.500000000000000 1
+ion Hf   0.224158564803825   0.155412126757955   0.750000000000000 1
+ion Hf  -0.141158564803825   0.444587873242045   0.500000000000000 1
+ion Hf   0.209927874945973   0.665898152079472   0.750000000000000 1
+ion Hf   0.373072125054027  -0.065898152079472   0.500000000000000 1
+ion Hf   0.724158564803825   0.155412126757955   0.750000000000000 1
+ion Hf   0.358841435196175   0.444587873242045   0.500000000000000 1
+ion Hf   0.709927874945973   0.665898152079472   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.062550235250063   0.213451526259476   0.000000000000000 1
+force Hf  -0.023118758424351  -0.040715113606560  -0.000000000000000 1
+force Hf   0.023118758424351   0.040715113606560  -0.000000000000000 1
+force Hf   0.062550235250063  -0.213451526259477   0.000000000000000 1
+force Hf  -0.062550235250063   0.213451526259477  -0.000000000000000 1
+force Hf  -0.023118758424351  -0.040715113606560   0.000000000000000 1
+force Hf   0.023118758424351   0.040715113606559   0.000000000000000 1
+force Hf   0.062550235250063  -0.213451526259476  -0.000000000000000 1
+force Hf  -0.062550235250063   0.213451526259477   0.000000000000000 1
+force Hf  -0.023118758424351  -0.040715113606559  -0.000000000000000 1
+force Hf   0.023118758424351   0.040715113606560  -0.000000000000000 1
+force Hf   0.062550235250063  -0.213451526259476  -0.000000000000000 1
+force Hf  -0.062550235250063   0.213451526259477  -0.000000000000000 1
+force Hf  -0.023118758424351  -0.040715113606560   0.000000000000000 1
+force Hf   0.023118758424351   0.040715113606559   0.000000000000000 1
+force Hf   0.062550235250063  -0.213451526259476   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -625.1413673161098359
+       EH =      110.2659094949691934
+     Eloc =     -202.8820907282211294
+      Enl =     -230.0930284946224162
+      Exc =     -605.8770038457126930
+ Exc_core =      475.0900660126836783
+       KE =      282.0657602480112018
+-------------------------------------
+     Etot =     -796.5717546290022710
+       TS =        0.0236891067868369
+-------------------------------------
+        F =     -796.5954437357891038
+
+IonicMinimize: Iter:  15  F: -796.595443735789104  |grad|_K:  7.747e-03  alpha:  2.794e-01  linmin: -5.364e-01  t[s]:   7302.56
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.009 +0.028 +0.028 +0.009 +0.009 +0.028 +0.028 +0.009 +0.009 +0.028 +0.028 +0.009 +0.009 +0.028 +0.028 +0.009
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.541656905  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.542769206  nElectrons: 192.000000
+SCF: Cycle:  0   F: -793.281621282094193   dF: +1.596e+00   |Residual|: 1.030e+00   |deigs|: 1.145e-02  t[s]:   7364.44
+	FillingsUpdate:  mu: +0.542586393  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.317183213471480   dF: -3.036e+00   |Residual|: 3.735e-01   |deigs|: 7.337e-03  t[s]:   7409.28
+	FillingsUpdate:  mu: +0.542710680  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.510681161217462   dF: -1.935e-01   |Residual|: 1.326e-01   |deigs|: 5.637e-03  t[s]:   7454.89
+	FillingsUpdate:  mu: +0.542630690  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.606002132917865   dF: -9.532e-02   |Residual|: 3.272e-02   |deigs|: 3.900e-03  t[s]:   7500.94
+	FillingsUpdate:  mu: +0.542542089  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.606556445553679   dF: -5.543e-04   |Residual|: 7.157e-03   |deigs|: 2.379e-04  t[s]:   7532.14
+	FillingsUpdate:  mu: +0.542526820  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.606576844188226   dF: -2.040e-05   |Residual|: 1.483e-03   |deigs|: 3.811e-05  t[s]:   7562.35
+	FillingsUpdate:  mu: +0.542531038  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.606578356641535   dF: -1.512e-06   |Residual|: 4.231e-04   |deigs|: 1.365e-05  t[s]:   7592.42
+	FillingsUpdate:  mu: +0.542532099  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.606578512574174   dF: -1.559e-07   |Residual|: 8.228e-05   |deigs|: 2.624e-06  t[s]:   7622.85
+	FillingsUpdate:  mu: +0.542531914  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.606578552067504   dF: -3.949e-08   |Residual|: 3.127e-05   |deigs|: 7.699e-07  t[s]:   7652.98
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.126180604346599  -0.057255487887196   0.000000000000000 1
+ion Hf   0.229024618991298   0.154629578043570   0.250000000000000 1
+ion Hf  -0.146024618991298   0.445370421956430   0.000000000000000 1
+ion Hf   0.209180604346599   0.657255487887196   0.250000000000000 1
+ion Hf   0.373819395653401  -0.057255487887196  -0.000000000000000 1
+ion Hf   0.729024618991298   0.154629578043570   0.250000000000000 1
+ion Hf   0.353975381008702   0.445370421956430   0.000000000000000 1
+ion Hf   0.709180604346599   0.657255487887196   0.250000000000000 1
+ion Hf  -0.126180604346599  -0.057255487887196   0.500000000000000 1
+ion Hf   0.229024618991298   0.154629578043570   0.750000000000000 1
+ion Hf  -0.146024618991298   0.445370421956430   0.500000000000000 1
+ion Hf   0.209180604346599   0.657255487887196   0.750000000000000 1
+ion Hf   0.373819395653401  -0.057255487887196   0.500000000000000 1
+ion Hf   0.729024618991298   0.154629578043570   0.750000000000000 1
+ion Hf   0.353975381008702   0.445370421956430   0.500000000000000 1
+ion Hf   0.709180604346599   0.657255487887196   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.047395275360800   0.142209940372977  -0.000000000000000 1
+force Hf  -0.041403984698708  -0.063748935303813   0.000000000000000 1
+force Hf   0.041403984698708   0.063748935303813   0.000000000000000 1
+force Hf   0.047395275360800  -0.142209940372977   0.000000000000000 1
+force Hf  -0.047395275360801   0.142209940372977   0.000000000000000 1
+force Hf  -0.041403984698708  -0.063748935303813   0.000000000000000 1
+force Hf   0.041403984698708   0.063748935303813   0.000000000000000 1
+force Hf   0.047395275360800  -0.142209940372976   0.000000000000000 1
+force Hf  -0.047395275360801   0.142209940372976   0.000000000000000 1
+force Hf  -0.041403984698708  -0.063748935303813   0.000000000000000 1
+force Hf   0.041403984698708   0.063748935303813   0.000000000000000 1
+force Hf   0.047395275360800  -0.142209940372977  -0.000000000000000 1
+force Hf  -0.047395275360801   0.142209940372977   0.000000000000000 1
+force Hf  -0.041403984698708  -0.063748935303813  -0.000000000000000 1
+force Hf   0.041403984698708   0.063748935303813  -0.000000000000000 1
+force Hf   0.047395275360800  -0.142209940372976  -0.000000000000000 1
+
+# Energy components:
+   Eewald =     -625.4951648702026432
+       EH =      109.9431874825445732
+     Eloc =     -202.1840615217463153
+      Enl =     -230.1021286678358706
+      Exc =     -605.8652164215343419
+ Exc_core =      475.0899853648292606
+       KE =      282.0293111131659884
+-------------------------------------
+     Etot =     -796.5840875207793488
+       TS =        0.0224910312881548
+-------------------------------------
+        F =     -796.6065785520675036
+
+IonicMinimize: Iter:  16  F: -796.606578552067504  |grad|_K:  6.076e-03  alpha:  3.869e-01  linmin: -5.900e-01  t[s]:   7658.94
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.016 +0.022 +0.022 +0.016 +0.016 +0.022 +0.022 +0.016 +0.016 +0.022 +0.022 +0.016 +0.016 +0.022 +0.022 +0.016
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.542531914  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.543409790  nElectrons: 192.000000
+SCF: Cycle:  0   F: -794.765705791952200   dF: +5.147e-01   |Residual|: 8.836e-01   |deigs|: 8.841e-03  t[s]:   7721.43
+	FillingsUpdate:  mu: +0.543711063  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.464715378747997   dF: -1.699e+00   |Residual|: 3.116e-01   |deigs|: 5.958e-03  t[s]:   7766.08
+	FillingsUpdate:  mu: +0.543588119  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.570207717148492   dF: -1.055e-01   |Residual|: 9.348e-02   |deigs|: 3.834e-03  t[s]:   7810.93
+	FillingsUpdate:  mu: +0.543645316  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.615254424233171   dF: -4.505e-02   |Residual|: 2.791e-02   |deigs|: 2.444e-03  t[s]:   7857.10
+	FillingsUpdate:  mu: +0.543601192  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.615621498804330   dF: -3.671e-04   |Residual|: 4.918e-03   |deigs|: 1.535e-04  t[s]:   7885.76
+	FillingsUpdate:  mu: +0.543599584  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.615660167736905   dF: -3.867e-05   |Residual|: 1.291e-03   |deigs|: 3.506e-05  t[s]:   7915.17
+	FillingsUpdate:  mu: +0.543601470  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.615662059686770   dF: -1.892e-06   |Residual|: 3.582e-04   |deigs|: 1.359e-05  t[s]:   7945.10
+	FillingsUpdate:  mu: +0.543601936  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.615662171041777   dF: -1.114e-07   |Residual|: 6.540e-05   |deigs|: 1.392e-06  t[s]:   7974.66
+	FillingsUpdate:  mu: +0.543601826  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.615662196224548   dF: -2.518e-08   |Residual|: 2.478e-05   |deigs|: 5.227e-07  t[s]:   8004.69
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.125434906218509  -0.048613503465430   0.000000000000000 1
+ion Hf   0.228165316757192   0.151580139440231   0.250000000000000 1
+ion Hf  -0.145165316757192   0.448419860559769   0.000000000000000 1
+ion Hf   0.208434906218509   0.648613503465429   0.250000000000000 1
+ion Hf   0.374565093781491  -0.048613503465430  -0.000000000000000 1
+ion Hf   0.728165316757192   0.151580139440231   0.250000000000000 1
+ion Hf   0.354834683242808   0.448419860559769   0.000000000000000 1
+ion Hf   0.708434906218509   0.648613503465429   0.250000000000000 1
+ion Hf  -0.125434906218509  -0.048613503465430   0.500000000000000 1
+ion Hf   0.228165316757192   0.151580139440231   0.750000000000000 1
+ion Hf  -0.145165316757192   0.448419860559769   0.500000000000000 1
+ion Hf   0.208434906218509   0.648613503465429   0.750000000000000 1
+ion Hf   0.374565093781491  -0.048613503465430   0.500000000000000 1
+ion Hf   0.728165316757192   0.151580139440231   0.750000000000000 1
+ion Hf   0.354834683242808   0.448419860559769   0.500000000000000 1
+ion Hf   0.708434906218509   0.648613503465429   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.031433802619586   0.070771374793139  -0.000000000000000 1
+force Hf  -0.045272212775506  -0.074613813164334   0.000000000000000 1
+force Hf   0.045272212775506   0.074613813164334   0.000000000000000 1
+force Hf   0.031433802619586  -0.070771374793139  -0.000000000000000 1
+force Hf  -0.031433802619586   0.070771374793139   0.000000000000000 1
+force Hf  -0.045272212775506  -0.074613813164334   0.000000000000000 1
+force Hf   0.045272212775506   0.074613813164333   0.000000000000000 1
+force Hf   0.031433802619586  -0.070771374793139   0.000000000000000 1
+force Hf  -0.031433802619586   0.070771374793139   0.000000000000000 1
+force Hf  -0.045272212775506  -0.074613813164334   0.000000000000000 1
+force Hf   0.045272212775506   0.074613813164334   0.000000000000000 1
+force Hf   0.031433802619586  -0.070771374793139  -0.000000000000000 1
+force Hf  -0.031433802619586   0.070771374793139   0.000000000000000 1
+force Hf  -0.045272212775506  -0.074613813164334  -0.000000000000000 1
+force Hf   0.045272212775506   0.074613813164334   0.000000000000000 1
+force Hf   0.031433802619586  -0.070771374793139   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -625.6484498107433865
+       EH =      109.8139460622021488
+     Eloc =     -201.8847891326482795
+      Enl =     -230.1155983441585988
+      Exc =     -605.8585360023998874
+ Exc_core =      475.0900446969474160
+       KE =      282.0087962955008152
+-------------------------------------
+     Etot =     -796.5945862352998574
+       TS =        0.0210759609246966
+-------------------------------------
+        F =     -796.6156621962245481
+
+IonicMinimize: Iter:  17  F: -796.615662196224548  |grad|_K:  4.751e-03  alpha:  4.975e-01  linmin: -6.976e-01  t[s]:   8010.55
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.022 +0.016 +0.016 +0.022 +0.022 +0.016 +0.016 +0.022 +0.022 +0.016 +0.016 +0.022 +0.022 +0.016 +0.016 +0.022
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.543601826  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.543682320  nElectrons: 192.000000
+SCF: Cycle:  0   F: -795.495808397639053   dF: -6.488e-01   |Residual|: 9.835e-01   |deigs|: 1.019e-02  t[s]:   8072.15
+	FillingsUpdate:  mu: +0.544525698  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.502639630409817   dF: -1.007e+00   |Residual|: 3.438e-01   |deigs|: 4.726e-03  t[s]:   8116.48
+	FillingsUpdate:  mu: +0.544650665  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.609936729791229   dF: -1.073e-01   |Residual|: 6.359e-02   |deigs|: 2.258e-03  t[s]:   8160.79
+	FillingsUpdate:  mu: +0.544722195  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.623245062182264   dF: -1.331e-02   |Residual|: 3.052e-02   |deigs|: 1.135e-03  t[s]:   8205.41
+	FillingsUpdate:  mu: +0.544710153  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.623497749971420   dF: -2.527e-04   |Residual|: 4.464e-03   |deigs|: 1.802e-04  t[s]:   8235.69
+	FillingsUpdate:  mu: +0.544713149  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.623549915569129   dF: -5.217e-05   |Residual|: 1.562e-03   |deigs|: 4.819e-05  t[s]:   8266.52
+	FillingsUpdate:  mu: +0.544712153  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.623552653094634   dF: -2.738e-06   |Residual|: 3.470e-04   |deigs|: 1.833e-05  t[s]:   8297.69
+	FillingsUpdate:  mu: +0.544712109  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.623552824634658   dF: -1.715e-07   |Residual|: 8.905e-05   |deigs|: 4.019e-06  t[s]:   8328.36
+	FillingsUpdate:  mu: +0.544712174  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.623552851222712   dF: -2.659e-08   |Residual|: 2.472e-05   |deigs|: 1.583e-06  t[s]:   8360.24
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.124723986883337  -0.039986611387907   0.000000000000000 1
+ion Hf   0.221832975335238   0.145929430112074   0.250000000000000 1
+ion Hf  -0.138832975335238   0.454070569887926   0.000000000000000 1
+ion Hf   0.207723986883337   0.639986611387907   0.250000000000000 1
+ion Hf   0.375276013116663  -0.039986611387907  -0.000000000000000 1
+ion Hf   0.721832975335238   0.145929430112074   0.250000000000000 1
+ion Hf   0.361167024664762   0.454070569887926   0.000000000000000 1
+ion Hf   0.707723986883337   0.639986611387907   0.250000000000000 1
+ion Hf  -0.124723986883337  -0.039986611387907   0.500000000000000 1
+ion Hf   0.221832975335238   0.145929430112074   0.750000000000000 1
+ion Hf  -0.138832975335238   0.454070569887926   0.500000000000000 1
+ion Hf   0.207723986883337   0.639986611387907   0.750000000000000 1
+ion Hf   0.375276013116663  -0.039986611387907   0.500000000000000 1
+ion Hf   0.721832975335238   0.145929430112074   0.750000000000000 1
+ion Hf   0.361167024664762   0.454070569887926   0.500000000000000 1
+ion Hf   0.707723986883337   0.639986611387907   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.014572141934755   0.009748340462716  -0.000000000000000 1
+force Hf  -0.033639407031354  -0.069034448858223  -0.000000000000000 1
+force Hf   0.033639407031354   0.069034448858225   0.000000000000000 1
+force Hf   0.014572141934755  -0.009748340462716   0.000000000000000 1
+force Hf  -0.014572141934755   0.009748340462716  -0.000000000000000 1
+force Hf  -0.033639407031354  -0.069034448858223   0.000000000000000 1
+force Hf   0.033639407031354   0.069034448858225  -0.000000000000000 1
+force Hf   0.014572141934755  -0.009748340462717   0.000000000000000 1
+force Hf  -0.014572141934755   0.009748340462716   0.000000000000000 1
+force Hf  -0.033639407031354  -0.069034448858223  -0.000000000000000 1
+force Hf   0.033639407031354   0.069034448858224   0.000000000000000 1
+force Hf   0.014572141934755  -0.009748340462716   0.000000000000000 1
+force Hf  -0.014572141934755   0.009748340462716   0.000000000000000 1
+force Hf  -0.033639407031354  -0.069034448858223  -0.000000000000000 1
+force Hf   0.033639407031354   0.069034448858225  -0.000000000000000 1
+force Hf   0.014572141934755  -0.009748340462716   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -625.7307285465703899
+       EH =      109.7472340736400582
+     Eloc =     -201.7201750270890557
+      Enl =     -230.1293253164237171
+      Exc =     -605.8535677197486393
+ Exc_core =      475.0900293415540432
+       KE =      281.9924974195864138
+-------------------------------------
+     Etot =     -796.6040357750514431
+       TS =        0.0195170761712257
+-------------------------------------
+        F =     -796.6235528512227120
+
+IonicMinimize: Iter:  18  F: -796.623552851222712  |grad|_K:  3.580e-03  alpha:  6.074e-01  linmin: -6.246e-01  t[s]:   8366.12
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.026 +0.013 +0.013 +0.026 +0.026 +0.013 +0.013 +0.026 +0.026 +0.013 +0.013 +0.026 +0.026 +0.013 +0.013 +0.026
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.544712174  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.544170056  nElectrons: 192.000000
+SCF: Cycle:  0   F: -795.852970054741718   dF: -1.008e+00   |Residual|: 9.760e-01   |deigs|: 9.892e-03  t[s]:   8428.79
+	FillingsUpdate:  mu: +0.544937011  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.523964467642600   dF: -6.710e-01   |Residual|: 3.407e-01   |deigs|: 3.816e-03  t[s]:   8474.24
+	FillingsUpdate:  mu: +0.545291775  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.627756604233241   dF: -1.038e-01   |Residual|: 4.743e-02   |deigs|: 1.601e-03  t[s]:   8519.58
+	FillingsUpdate:  mu: +0.545307357  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.627783482214227   dF: -2.688e-05   |Residual|: 1.255e-02   |deigs|: 2.973e-04  t[s]:   8550.67
+	FillingsUpdate:  mu: +0.545316017  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.628034605291305   dF: -2.511e-04   |Residual|: 2.719e-03   |deigs|: 1.397e-04  t[s]:   8579.45
+	FillingsUpdate:  mu: +0.545312115  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.628043705367872   dF: -9.100e-06   |Residual|: 1.176e-03   |deigs|: 2.281e-05  t[s]:   8608.68
+	FillingsUpdate:  mu: +0.545309590  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.628044762490958   dF: -1.057e-06   |Residual|: 1.733e-04   |deigs|: 1.212e-05  t[s]:   8638.61
+	FillingsUpdate:  mu: +0.545310252  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.628044891474133   dF: -1.290e-07   |Residual|: 7.549e-05   |deigs|: 2.544e-06  t[s]:   8668.59
+	FillingsUpdate:  mu: +0.545310432  nElectrons: 192.000000
+SCF: Cycle:  8   F: -796.628044924621690   dF: -3.315e-08   |Residual|: 2.865e-05   |deigs|: 8.720e-07  t[s]:   8698.12
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.123582816937579  -0.033360733678176   0.000000000000000 1
+ion Hf   0.212974297940002   0.138347548798829   0.250000000000000 1
+ion Hf  -0.129974297940002   0.461652451201171   0.000000000000000 1
+ion Hf   0.206582816937579   0.633360733678176   0.250000000000000 1
+ion Hf   0.376417183062421  -0.033360733678176  -0.000000000000000 1
+ion Hf   0.712974297940002   0.138347548798829   0.250000000000000 1
+ion Hf   0.370025702059998   0.461652451201171   0.000000000000000 1
+ion Hf   0.706582816937579   0.633360733678176   0.250000000000000 1
+ion Hf  -0.123582816937579  -0.033360733678176   0.500000000000000 1
+ion Hf   0.212974297940002   0.138347548798829   0.750000000000000 1
+ion Hf  -0.129974297940002   0.461652451201171   0.500000000000000 1
+ion Hf   0.206582816937579   0.633360733678176   0.750000000000000 1
+ion Hf   0.376417183062421  -0.033360733678176   0.500000000000000 1
+ion Hf   0.712974297940002   0.138347548798829   0.750000000000000 1
+ion Hf   0.370025702059998   0.461652451201171   0.500000000000000 1
+ion Hf   0.706582816937579   0.633360733678176   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.007216073494854  -0.020073342658610  -0.000000000000000 1
+force Hf  -0.010982981564962  -0.040722211189317  -0.000000000000000 1
+force Hf   0.010982981564962   0.040722211189317  -0.000000000000000 1
+force Hf   0.007216073494854   0.020073342658611   0.000000000000000 1
+force Hf  -0.007216073494854  -0.020073342658610   0.000000000000000 1
+force Hf  -0.010982981564962  -0.040722211189317  -0.000000000000000 1
+force Hf   0.010982981564962   0.040722211189317  -0.000000000000000 1
+force Hf   0.007216073494854   0.020073342658610  -0.000000000000000 1
+force Hf  -0.007216073494854  -0.020073342658610   0.000000000000000 1
+force Hf  -0.010982981564962  -0.040722211189317   0.000000000000000 1
+force Hf   0.010982981564962   0.040722211189317   0.000000000000000 1
+force Hf   0.007216073494854   0.020073342658611   0.000000000000000 1
+force Hf  -0.007216073494854  -0.020073342658610   0.000000000000000 1
+force Hf  -0.010982981564962  -0.040722211189317  -0.000000000000000 1
+force Hf   0.010982981564962   0.040722211189317  -0.000000000000000 1
+force Hf   0.007216073494854   0.020073342658611  -0.000000000000000 1
+
+# Energy components:
+   Eewald =     -625.8171302170346735
+       EH =      109.6678248722658111
+     Eloc =     -201.5442712949408133
+      Enl =     -230.1355381057713032
+      Exc =     -605.8498082674250327
+ Exc_core =      475.0900118464464867
+       KE =      281.9793877600275209
+-------------------------------------
+     Etot =     -796.6095234064321176
+       TS =        0.0185215181895460
+-------------------------------------
+        F =     -796.6280449246216904
+
+IonicMinimize: Iter:  19  F: -796.628044924621690  |grad|_K:  2.079e-03  alpha:  7.837e-01  linmin: -4.181e-01  t[s]:   8703.86
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.025 +0.014 +0.014 +0.025 +0.025 +0.014 +0.014 +0.025 +0.025 +0.014 +0.014 +0.025 +0.025 +0.014 +0.014 +0.025
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.545310432  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.545036746  nElectrons: 192.000000
+SCF: Cycle:  0   F: -796.027829252678544   dF: +2.207e-01   |Residual|: 4.766e-01   |deigs|: 2.576e-03  t[s]:   8766.61
+	FillingsUpdate:  mu: +0.545376702  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.588334790241447   dF: -5.605e-01   |Residual|: 1.626e-01   |deigs|: 2.556e-03  t[s]:   8811.43
+	FillingsUpdate:  mu: +0.545385300  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.622540495892622   dF: -3.421e-02   |Residual|: 4.025e-02   |deigs|: 1.611e-03  t[s]:   8856.05
+	FillingsUpdate:  mu: +0.545389828  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.628884475919449   dF: -6.344e-03   |Residual|: 1.414e-02   |deigs|: 9.903e-04  t[s]:   8900.26
+	FillingsUpdate:  mu: +0.545381331  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.628954726067718   dF: -7.025e-05   |Residual|: 2.275e-03   |deigs|: 2.226e-04  t[s]:   8930.08
+	FillingsUpdate:  mu: +0.545380009  nElectrons: 192.000000
+SCF: Cycle:  5   F: -796.628961243961385   dF: -6.518e-06   |Residual|: 6.265e-04   |deigs|: 4.800e-05  t[s]:   8960.08
+	FillingsUpdate:  mu: +0.545380205  nElectrons: 192.000000
+SCF: Cycle:  6   F: -796.628961572522599   dF: -3.286e-07   |Residual|: 1.666e-04   |deigs|: 1.625e-05  t[s]:   8990.06
+	FillingsUpdate:  mu: +0.545380340  nElectrons: 192.000000
+SCF: Cycle:  7   F: -796.628961601983633   dF: -2.946e-08   |Residual|: 2.873e-05   |deigs|: 6.970e-06  t[s]:   9020.37
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.123961821088894  -0.031994436935711   0.000000000000000 1
+ion Hf   0.209024886617726   0.133692509094996   0.250000000000000 1
+ion Hf  -0.126024886617726   0.466307490905004   0.000000000000000 1
+ion Hf   0.206961821088894   0.631994436935711   0.250000000000000 1
+ion Hf   0.376038178911106  -0.031994436935711  -0.000000000000000 1
+ion Hf   0.709024886617726   0.133692509094996   0.250000000000000 1
+ion Hf   0.373975113382274   0.466307490905004   0.000000000000000 1
+ion Hf   0.706961821088894   0.631994436935711   0.250000000000000 1
+ion Hf  -0.123961821088894  -0.031994436935711   0.500000000000000 1
+ion Hf   0.209024886617726   0.133692509094996   0.750000000000000 1
+ion Hf  -0.126024886617726   0.466307490905004   0.500000000000000 1
+ion Hf   0.206961821088894   0.631994436935711   0.750000000000000 1
+ion Hf   0.376038178911106  -0.031994436935711   0.500000000000000 1
+ion Hf   0.709024886617726   0.133692509094996   0.750000000000000 1
+ion Hf   0.373975113382274   0.466307490905004   0.500000000000000 1
+ion Hf   0.706961821088894   0.631994436935711   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.003593804394310  -0.012337430292602   0.000000000000000 1
+force Hf  -0.001938937883120  -0.008456243893738   0.000000000000000 1
+force Hf   0.001938937883120   0.008456243893738   0.000000000000000 1
+force Hf   0.003593804394310   0.012337430292602   0.000000000000000 1
+force Hf  -0.003593804394310  -0.012337430292602  -0.000000000000000 1
+force Hf  -0.001938937883120  -0.008456243893738   0.000000000000000 1
+force Hf   0.001938937883120   0.008456243893738   0.000000000000000 1
+force Hf   0.003593804394310   0.012337430292602  -0.000000000000000 1
+force Hf  -0.003593804394310  -0.012337430292602   0.000000000000000 1
+force Hf  -0.001938937883120  -0.008456243893738   0.000000000000000 1
+force Hf   0.001938937883120   0.008456243893738   0.000000000000000 1
+force Hf   0.003593804394310   0.012337430292602   0.000000000000000 1
+force Hf  -0.003593804394310  -0.012337430292602  -0.000000000000000 1
+force Hf  -0.001938937883120  -0.008456243893738   0.000000000000000 1
+force Hf   0.001938937883120   0.008456243893739   0.000000000000000 1
+force Hf   0.003593804394310   0.012337430292602   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -625.8701587264813497
+       EH =      109.6161786939841676
+     Eloc =     -201.4371464773993523
+      Enl =     -230.1346684749459826
+      Exc =     -605.8482159159002549
+ Exc_core =      475.0900396743467127
+       KE =      281.9733652459981386
+-------------------------------------
+     Etot =     -796.6106059803978496
+       TS =        0.0183556215857871
+-------------------------------------
+        F =     -796.6289616019836330
+
+IonicMinimize: Iter:  20  F: -796.628961601983633  |grad|_K:  6.785e-04  alpha:  1.000e+00  linmin: -3.400e-01  t[s]:   9026.29
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.022 +0.018 +0.018 +0.022 +0.022 +0.018 +0.018 +0.022 +0.022 +0.018 +0.018 +0.022 +0.022 +0.018 +0.018 +0.022
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.545380340  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.545386682  nElectrons: 192.000000
+SCF: Cycle:  0   F: -796.628953052856104   dF: -2.794e-05   |Residual|: 3.508e-03   |deigs|: 1.693e-04  t[s]:   9080.59
+	FillingsUpdate:  mu: +0.545386015  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.629047491705137   dF: -9.444e-05   |Residual|: 1.404e-03   |deigs|: 6.614e-05  t[s]:   9109.66
+	FillingsUpdate:  mu: +0.545385806  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.629053445312366   dF: -5.954e-06   |Residual|: 5.400e-04   |deigs|: 1.479e-05  t[s]:   9138.75
+	FillingsUpdate:  mu: +0.545385536  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.629054096263985   dF: -6.510e-07   |Residual|: 1.578e-04   |deigs|: 3.770e-06  t[s]:   9168.24
+	FillingsUpdate:  mu: +0.545385519  nElectrons: 192.000000
+SCF: Cycle:  4   F: -796.629054105412706   dF: -9.149e-09   |Residual|: 2.819e-05   |deigs|: 4.822e-07  t[s]:   9198.25
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.124811707528825  -0.032825938738320   0.000000000000000 1
+ion Hf   0.208166269646714   0.133250836967988   0.250000000000000 1
+ion Hf  -0.125166269646715   0.466749163032012   0.000000000000000 1
+ion Hf   0.207811707528825   0.632825938738319   0.250000000000000 1
+ion Hf   0.375188292471175  -0.032825938738320  -0.000000000000000 1
+ion Hf   0.708166269646714   0.133250836967988   0.250000000000000 1
+ion Hf   0.374833730353286   0.466749163032012   0.000000000000000 1
+ion Hf   0.707811707528825   0.632825938738319   0.250000000000000 1
+ion Hf  -0.124811707528825  -0.032825938738320   0.500000000000000 1
+ion Hf   0.208166269646714   0.133250836967988   0.750000000000000 1
+ion Hf  -0.125166269646715   0.466749163032012   0.500000000000000 1
+ion Hf   0.207811707528825   0.632825938738319   0.750000000000000 1
+ion Hf   0.375188292471175  -0.032825938738320   0.500000000000000 1
+ion Hf   0.708166269646714   0.133250836967988   0.750000000000000 1
+ion Hf   0.374833730353286   0.466749163032012   0.500000000000000 1
+ion Hf   0.707811707528825   0.632825938738319   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.001977736355707  -0.004172913496413  -0.000000000000000 1
+force Hf   0.001516206654918  -0.001668202483254  -0.000000000000000 1
+force Hf  -0.001516206654918   0.001668202483254   0.000000000000000 1
+force Hf   0.001977736355707   0.004172913496413   0.000000000000000 1
+force Hf  -0.001977736355707  -0.004172913496413  -0.000000000000000 1
+force Hf   0.001516206654918  -0.001668202483254  -0.000000000000000 1
+force Hf  -0.001516206654918   0.001668202483254  -0.000000000000000 1
+force Hf   0.001977736355707   0.004172913496413   0.000000000000000 1
+force Hf  -0.001977736355707  -0.004172913496413  -0.000000000000000 1
+force Hf   0.001516206654918  -0.001668202483254   0.000000000000000 1
+force Hf  -0.001516206654918   0.001668202483254  -0.000000000000000 1
+force Hf   0.001977736355707   0.004172913496413  -0.000000000000000 1
+force Hf  -0.001977736355707  -0.004172913496413  -0.000000000000000 1
+force Hf   0.001516206654918  -0.001668202483254   0.000000000000000 1
+force Hf  -0.001516206654918   0.001668202483254   0.000000000000000 1
+force Hf   0.001977736355707   0.004172913496413   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -625.8763778569696115
+       EH =      109.6101041692526650
+     Eloc =     -201.4246222024739268
+      Enl =     -230.1344100971743103
+      Exc =     -605.8480321563475854
+ Exc_core =      475.0900405226184944
+       KE =      281.9725853387410552
+-------------------------------------
+     Etot =     -796.6107122823532336
+       TS =        0.0183418230594261
+-------------------------------------
+        F =     -796.6290541054127061
+
+IonicMinimize: Iter:  21  F: -796.629054105412706  |grad|_K:  2.216e-04  alpha:  1.000e+00  linmin: -6.241e-01  t[s]:   9204.09
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.020 +0.019 +0.019 +0.020 +0.020 +0.019 +0.019 +0.020 +0.020 +0.019 +0.019 +0.020 +0.020 +0.019 +0.019 +0.020
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.545385519  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.545386216  nElectrons: 192.000000
+SCF: Cycle:  0   F: -796.629054224776837   dF: -2.396e-05   |Residual|: 1.508e-03   |deigs|: 1.559e-06  t[s]:   9250.37
+	FillingsUpdate:  mu: +0.545386198  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.629069260086681   dF: -1.504e-05   |Residual|: 6.447e-04   |deigs|: 1.310e-05  t[s]:   9279.29
+	FillingsUpdate:  mu: +0.545386126  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.629070222770224   dF: -9.627e-07   |Residual|: 2.917e-04   |deigs|: 1.070e-05  t[s]:   9307.54
+	FillingsUpdate:  mu: +0.545386041  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.629070340419958   dF: -1.176e-07   |Residual|: 7.609e-05   |deigs|: 1.522e-06  t[s]:   9336.76
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.125311937902041  -0.033504670976063   0.000000000000000 1
+ion Hf   0.208333849133876   0.133425456047834   0.250000000000000 1
+ion Hf  -0.125333849133876   0.466574543952166   0.000000000000000 1
+ion Hf   0.208311937902041   0.633504670976063   0.250000000000000 1
+ion Hf   0.374688062097959  -0.033504670976063  -0.000000000000000 1
+ion Hf   0.708333849133876   0.133425456047834   0.250000000000000 1
+ion Hf   0.374666150866124   0.466574543952166   0.000000000000000 1
+ion Hf   0.708311937902041   0.633504670976063   0.250000000000000 1
+ion Hf  -0.125311937902041  -0.033504670976063   0.500000000000000 1
+ion Hf   0.208333849133876   0.133425456047834   0.750000000000000 1
+ion Hf  -0.125333849133876   0.466574543952166   0.500000000000000 1
+ion Hf   0.208311937902041   0.633504670976063   0.750000000000000 1
+ion Hf   0.374688062097959  -0.033504670976063   0.500000000000000 1
+ion Hf   0.708333849133876   0.133425456047834   0.750000000000000 1
+ion Hf   0.374666150866124   0.466574543952166   0.500000000000000 1
+ion Hf   0.708311937902041   0.633504670976063   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.000913672535838   0.002112097486422  -0.000000000000000 1
+force Hf   0.000763702007823   0.001317166573393  -0.000000000000000 1
+force Hf  -0.000763702007823  -0.001317166573393  -0.000000000000000 1
+force Hf   0.000913672535838  -0.002112097486422   0.000000000000000 1
+force Hf  -0.000913672535838   0.002112097486422   0.000000000000000 1
+force Hf   0.000763702007823   0.001317166573393  -0.000000000000000 1
+force Hf  -0.000763702007823  -0.001317166573393   0.000000000000000 1
+force Hf   0.000913672535838  -0.002112097486422   0.000000000000000 1
+force Hf  -0.000913672535838   0.002112097486422   0.000000000000000 1
+force Hf   0.000763702007823   0.001317166573393  -0.000000000000000 1
+force Hf  -0.000763702007823  -0.001317166573393  -0.000000000000000 1
+force Hf   0.000913672535838  -0.002112097486422  -0.000000000000000 1
+force Hf  -0.000913672535838   0.002112097486422   0.000000000000000 1
+force Hf   0.000763702007823   0.001317166573393   0.000000000000000 1
+force Hf  -0.000763702007823  -0.001317166573393   0.000000000000000 1
+force Hf   0.000913672535838  -0.002112097486422   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -625.8767954196930532
+       EH =      109.6096987636425837
+     Eloc =     -201.4237812093575997
+      Enl =     -230.1343991485730101
+      Exc =     -605.8480225811745186
+ Exc_core =      475.0900335158444250
+       KE =      281.9725363686204673
+-------------------------------------
+     Etot =     -796.6107297106907481
+       TS =        0.0183406297292010
+-------------------------------------
+        F =     -796.6290703404199576
+
+IonicMinimize: Iter:  22  F: -796.629070340419958  |grad|_K:  1.011e-04  alpha:  1.000e+00  linmin:  3.272e-01  t[s]:   9342.54
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.545386041  nElectrons: 192.000000
+	FillingsUpdate:  mu: +0.545385915  nElectrons: 192.000000
+SCF: Cycle:  0   F: -796.629069844061974   dF: -5.132e-07   |Residual|: 3.996e-04   |deigs|: 3.043e-07  t[s]:   9389.08
+	FillingsUpdate:  mu: +0.545385924  nElectrons: 192.000000
+SCF: Cycle:  1   F: -796.629071039515566   dF: -1.195e-06   |Residual|: 1.596e-04   |deigs|: 3.787e-06  t[s]:   9417.48
+	FillingsUpdate:  mu: +0.545385924  nElectrons: 192.000000
+SCF: Cycle:  2   F: -796.629071120196045   dF: -8.068e-08   |Residual|: 6.133e-05   |deigs|: 2.820e-06  t[s]:   9446.07
+	FillingsUpdate:  mu: +0.545385926  nElectrons: 192.000000
+SCF: Cycle:  3   F: -796.629071127470183   dF: -7.274e-09   |Residual|: 1.706e-05   |deigs|: 4.998e-07  t[s]:   9474.70
+SCF: Converged (|Delta E|<1.000000e-06 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Hf  -0.125329166553792  -0.033432044591457   0.000000000000000 1
+ion Hf   0.208445388562003   0.133513996990984   0.250000000000000 1
+ion Hf  -0.125445388562003   0.466486003009016   0.000000000000000 1
+ion Hf   0.208329166553792   0.633432044591457   0.250000000000000 1
+ion Hf   0.374670833446208  -0.033432044591457  -0.000000000000000 1
+ion Hf   0.708445388562002   0.133513996990984   0.250000000000000 1
+ion Hf   0.374554611437998   0.466486003009016   0.000000000000000 1
+ion Hf   0.708329166553792   0.633432044591457   0.250000000000000 1
+ion Hf  -0.125329166553792  -0.033432044591457   0.500000000000000 1
+ion Hf   0.208445388562003   0.133513996990984   0.750000000000000 1
+ion Hf  -0.125445388562003   0.466486003009016   0.500000000000000 1
+ion Hf   0.208329166553792   0.633432044591457   0.750000000000000 1
+ion Hf   0.374670833446208  -0.033432044591457   0.500000000000000 1
+ion Hf   0.708445388562002   0.133513996990984   0.750000000000000 1
+ion Hf   0.374554611437998   0.466486003009016   0.500000000000000 1
+ion Hf   0.708329166553792   0.633432044591457   0.750000000000000 1
+
+# Forces in Lattice coordinates:
+force Hf  -0.000706893047515  -0.000719453021131   0.000000000000000 1
+force Hf   0.000390780032471  -0.000652012359802   0.000000000000000 1
+force Hf  -0.000390780032471   0.000652012359802   0.000000000000000 1
+force Hf   0.000706893047515   0.000719453021131  -0.000000000000000 1
+force Hf  -0.000706893047515  -0.000719453021131   0.000000000000000 1
+force Hf   0.000390780032471  -0.000652012359802  -0.000000000000000 1
+force Hf  -0.000390780032471   0.000652012359802  -0.000000000000000 1
+force Hf   0.000706893047515   0.000719453021131  -0.000000000000000 1
+force Hf  -0.000706893047515  -0.000719453021131   0.000000000000000 1
+force Hf   0.000390780032471  -0.000652012359802  -0.000000000000000 1
+force Hf  -0.000390780032471   0.000652012359802   0.000000000000000 1
+force Hf   0.000706893047515   0.000719453021131  -0.000000000000000 1
+force Hf  -0.000706893047515  -0.000719453021131   0.000000000000000 1
+force Hf   0.000390780032471  -0.000652012359802  -0.000000000000000 1
+force Hf  -0.000390780032471   0.000652012359802   0.000000000000000 1
+force Hf   0.000706893047515   0.000719453021131   0.000000000000000 1
+
+# Energy components:
+   Eewald =     -625.8767822702100148
+       EH =      109.6097104628514103
+     Eloc =     -201.4238082489303849
+      Enl =     -230.1343951839542399
+      Exc =     -605.8480229355269557
+ Exc_core =      475.0900321535196440
+       KE =      281.9725357144309896
+-------------------------------------
+     Etot =     -796.6107303078197219
+       TS =        0.0183408196504958
+-------------------------------------
+        F =     -796.6290711274701835
+
+IonicMinimize: Iter:  23  F: -796.629071127470183  |grad|_K:  5.317e-05  alpha:  1.000e+00  linmin:  2.631e-01  t[s]:   9480.58
+IonicMinimize: Converged (|grad|_K<1.000000e-04).
+
+#--- Lowdin population analysis ---
+# oxidation-state Hf +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020 +0.020
+
+
+Dumping 'Hf16.Ecomponents' ... done
+End date and time: Tue Apr 23 13:10:46 2024  (Duration: 0-2:38:03.50)
+Done!

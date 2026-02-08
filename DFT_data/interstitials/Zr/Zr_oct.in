@@ -1,0 +1,41 @@
+lattice \
+12.215190  -6.107595  0.000000  \
+0.000000  10.578665  0.000000  \
+0.000000  0.000000  19.452841  
+
+dump-name Zr16O_oct.$VAR
+initial-state Zr16O_oct.$VAR
+elec-cutoff 20 100
+kpoint-folding 6 6 6
+elec-smearing Fermi 0.004
+
+coords-type cartesian
+ion Zr 0.000000 0.000000 0.000000 	 1
+ion Zr 0.000000 3.526222 4.863210 	 1
+ion Zr 0.000000 0.000000 9.726420 	 1
+ion Zr 0.000000 3.526222 14.589631 	 1
+ion Zr -3.053797 5.289332 0.000000 	 1
+ion Zr -3.053797 8.815554 4.863210 	 1
+ion Zr -3.053797 5.289332 9.726420 	 1
+ion Zr -3.053797 8.815554 14.589631 	 1
+ion Zr 6.107595 0.000000 0.000000 	 1
+ion Zr 6.107595 3.526222 4.863210 	 1
+ion Zr 6.107595 0.000000 9.726420 	 1
+ion Zr 6.107595 3.526222 14.589631 	 1
+ion Zr 3.053797 5.289332 0.000000 	 1
+ion Zr 3.053797 8.815554 4.863210 	 1
+ion Zr 3.053797 5.289332 9.726420 	 1
+ion Zr 3.053797 8.815554 14.589631 	 1
+ion O 4.090627 2.054762 4.882107 	 1
+
+ion-species GBRV/$ID_pbe.uspp
+
+coulomb-interaction periodic
+
+ionic-minimize \ 
+    nIterations 30 \ 
+    energyDiffThreshold 1e-6 \ 
+
+dump End State
+dump End Forces
+dump End Ecomponents

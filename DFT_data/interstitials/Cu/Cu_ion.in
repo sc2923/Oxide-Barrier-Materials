@@ -1,0 +1,22 @@
+include /data/rc652/Cu/lat/Cu_lat.lattice
+
+coords-type lattice
+
+
+
+kpoint-folding 4 4 4
+kpoint 0.5 0.5 0.5  1.
+
+ion-species GBRV/$ID_pbesol.uspp
+elec-ex-corr gga-PBEsol
+elec-cutoff 20 100
+elec-smearing Fermi 0.01
+electronic-SCF
+coulomb-interaction periodic
+
+ionic-minimize \ 
+    nIterations 30 \ 
+    energyDiffThreshold 1e-6 \ 
+
+dump-name /data/rc652/Cu/ion/Cu_ion.$VAR
+dump End Ecomponents

@@ -1,0 +1,2103 @@
+--------------------------------------------------------------------------
+[[62963,1],6]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: node3222
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+
+*************** JDFTx 1.7.0 (git hash 3664913) ***************
+
+Start date and time: Sat Jul 13 16:30:10 2024
+Executable jdftx with command-line: -i Cu_ion.in
+Running on hosts (process indices):  node3222.physics.cornell.edu (0-15)
+Divided in process groups (process indices):  0 (0)  1 (1)  2 (2)  3 (3)  4 (4)  5 (5)  6 (6)  7 (7)  8 (8)  9 (9)  10 (10)  11 (11)  12 (12)  13 (13)  14 (14)  15 (15)
+Resource initialization completed at t[s]:      0.00
+Run totals: 16 processes, 32 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+coords-type Lattice
+core-overlap-check vector
+coulomb-interaction Periodic
+davidson-band-ratio 1.1
+dump End Ecomponents
+dump-name /data/rc652/Cu/ion/Cu_ion.$VAR
+elec-cutoff 20 100
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBEsol
+elec-smearing Fermi 0.01
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+electronic-scf  \
+	nIterations	50 \
+	energyDiffThreshold	1e-08 \
+	residualThreshold	1e-07 \
+	mixFraction	0.5 \
+	qMetric	0.8 \
+	history	10 \
+	nEigSteps	2 \
+	eigDiffThreshold	1e-08 \
+	mixedVariable	Density \
+	qKerker	0.8 \
+	qKappa	-1 \
+	verbose	no \
+	mixFractionMag	1.5
+exchange-regularization WignerSeitzTruncated
+fluid None
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42 \
+	tauNuc 343133 \
+	poleEl 15 7 1
+forces-output-coords Positions
+ion Cu  -0.000000000000000  -0.000000000000000   0.000000000000000 0
+ion Cu  -0.009440000000000   0.007540000000000   0.326020000000000 1
+ion Cu  -0.004310000000000   0.001610000000000   0.670260000000000 1
+ion Cu  -0.003060000000000   0.329020000000000  -0.002650000000000 1
+ion Cu   0.002380000000000   0.326620000000000   0.322470000000000 1
+ion Cu  -0.020140000000000   0.333340000000000   0.687790000000000 1
+ion Cu  -0.002800000000000   0.686240000000000  -0.001750000000000 1
+ion Cu  -0.012250000000000   0.650420000000000   0.321760000000000 1
+ion Cu   0.014120000000000   0.668010000000000   0.660060000000000 1
+ion Cu   0.317230000000000  -0.001250000000000  -0.004750000000000 1
+ion Cu   0.346620000000000  -0.007040000000000   0.345840000000000 1
+ion Cu   0.320590000000000  -0.008180000000000   0.669610000000000 1
+ion Cu   0.327790000000000   0.316300000000000  -0.004960000000000 1
+ion Cu   0.318230000000000   0.310850000000000   0.333920000000000 1
+ion Cu   0.331190000000000   0.335210000000000   0.670250000000000 1
+ion Cu   0.330140000000000   0.633920000000000   0.014830000000000 1
+ion Cu   0.329850000000000   0.681670000000000   0.341230000000000 1
+ion Cu   0.313220000000000   0.664160000000000   0.666350000000000 1
+ion Cu   0.657510000000000   0.010440000000000  -0.018730000000000 1
+ion Cu   0.663920000000000   0.018660000000000   0.341890000000000 1
+ion Cu   0.659880000000000  -0.006100000000000   0.670360000000000 1
+ion Cu   0.664010000000000   0.327530000000000   0.001650000000000 1
+ion Cu   0.644490000000000   0.326170000000000   0.324620000000000 1
+ion Cu   0.663250000000000   0.335960000000000   0.648350000000000 1
+ion Cu   0.681820000000000   0.679950000000000  -0.007000000000000 1
+ion Cu   0.659420000000000   0.668940000000000   0.349420000000000 1
+ion Cu   0.661940000000000   0.658210000000000   0.644160000000000 1
+ion-species GBRV/$ID_pbesol.uspp
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          30 \
+	history              15 \
+	knormThreshold       0.0001 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.500000000000   0.500000000000   0.500000000000  1.00000000000000
+kpoint-folding 3 3 3 
+latt-move-scale 1 1 1
+latt-scale 1 1 1 
+lattice  \
+	  -0.000000000000000   10.115784120687186   10.115784120687186  \
+	  10.115784120687186    0.000000000000000   10.115784120687186  \
+	  10.115784120687186   10.115784120687186    0.000000000000000 
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.01
+pcm-variant GLSSA13
+perturb-minimize  \
+	nIterations            0 \
+	algorithm              MINRES \
+	residualTol            0.0001 \
+	residualDiffThreshold  0.0001 \
+	CGBypass               no \
+	recomputeResidual      no
+spintype no-spin
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+
+
+
+---------- Setting up symmetries ----------
+
+Found 48 point-group symmetries of the bravais lattice
+Found 1 space-group symmetries with basis
+Applied RMS atom displacement 0 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[            0      10.1158      10.1158  ]
+[      10.1158            0      10.1158  ]
+[      10.1158      10.1158            0  ]
+unit cell volume = 2070.28
+G =
+[  -0.310563   0.310563   0.310563  ]
+[   0.310563  -0.310563   0.310563  ]
+[   0.310563   0.310563  -0.310563  ]
+Minimum fftbox size, Smin = [  68  68  68  ]
+Chosen fftbox size, S = [  70  70  70  ]
+
+---------- Initializing tighter grid for wavefunction operations ----------
+R = 
+[            0      10.1158      10.1158  ]
+[      10.1158            0      10.1158  ]
+[      10.1158      10.1158            0  ]
+unit cell volume = 2070.28
+G =
+[  -0.310563   0.310563   0.310563  ]
+[   0.310563  -0.310563   0.310563  ]
+[   0.310563   0.310563  -0.310563  ]
+Minimum fftbox size, Smin = [  60  60  60  ]
+Chosen fftbox size, S = [  60  60  60  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBEsol GGA exchange.
+Initalized PBEsol GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0
+
+Reading pseudopotential file '/home/rc652/build/pseudopotentials/GBRV/cu_pbesol.uspp':
+  Title: Cu.  Created by USPP 7.3.6 on 3-2-2014
+  Reference state energy: -200.900738.  19 valence electrons in orbitals:
+    |300>  occupation: 2  eigenvalue: -5.009920
+    |310>  occupation: 6  eigenvalue: -3.440538
+    |320>  occupation: 8  eigenvalue: -0.926387
+    |400>  occupation: 2  eigenvalue: -0.568765
+    |410>  occupation: 0  eigenvalue: -0.325798
+  lMax: 2  lLocal: 3  QijEcut: 6
+  6 projectors sampled on a log grid with 613 points:
+    l: 0  eig: -5.009920  rCut: 1.4
+    l: 0  eig: -0.568765  rCut: 1.4
+    l: 1  eig: -3.440538  rCut: 1.55
+    l: 1  eig: -0.325798  rCut: 1.55
+    l: 2  eig: -0.926387  rCut: 1.5
+    l: 2  eig: 1.500000  rCut: 1.5
+  Partial core density with radius 0.8
+  Transforming core density to a uniform radial grid of dG=0.02 with 1808 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1808 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1808 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.55 bohrs.
+
+Initialized 1 species with 27 total atoms.
+
+Folded 1 k-points by 3x3x3 to 27 k-points.
+
+---------- Setting up k-points, bands, fillings ----------
+Adding inversion symmetry to k-mesh for non-inversion-symmetric unit cell.
+Reduced to 14 k-points under symmetry. 
+Computing the number of bands and number of electrons
+Calculating initial fillings.
+nElectrons: 513.000000   nBands: 351   nStates: 14
+
+----- Setting up reduced wavefunction bases (one per k-point) -----
+average nbasis = 8844.815 , ideal nbasis = 8844.385
+
+---------- Setting up ewald sum ----------
+Optimum gaussian width for ewald sums = 2.977427 bohr.
+Real space sum over 729 unit cells with max indices [  4  4  4  ]
+Reciprocal space sum over 6859 terms with max indices [  9  9  9  ]
+
+---------- Allocating electronic variables ----------
+Initializing wave functions:  linear combination of atomic orbitals
+Cu pseudo-atom occupations:   s ( 2 1 )  p ( 6 0 )  d ( 10 )
+	FillingsUpdate:  mu: +0.469048999  nElectrons: 513.000000
+LCAOMinimize: Iter:   0  F: -5368.5890413440201883  |grad|_K:  1.628e-02  alpha:  1.000e+00
+	FillingsUpdate:  mu: +1.344757896  nElectrons: 513.000000
+LCAOMinimize: Iter:   1  F: -5424.7977508786743783  |grad|_K:  4.650e-03  alpha:  5.451e-01  linmin:  2.514e-01  cgtest: -2.115e+00  t[s]:     31.37
+LCAOMinimize: 	Bad step direction: g.d > 0.
+LCAOMinimize: 	Undoing step.
+LCAOMinimize: 	Step failed: resetting search direction.
+	FillingsUpdate:  mu: +1.344757896  nElectrons: 513.000000
+LCAOMinimize: Iter:   2  F: -5424.7977508786743783  |grad|_K:  4.650e-03  alpha:  0.000e+00
+	FillingsUpdate:  mu: +1.201258103  nElectrons: 513.000000
+LCAOMinimize: Iter:   3  F: -5432.5144602964146543  |grad|_K:  4.451e-03  alpha:  1.777e-01  linmin: -2.256e-01  cgtest:  6.903e-01  t[s]:     55.03
+LCAOMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 5.331303e-01.
+	FillingsUpdate:  mu: +1.066354318  nElectrons: 513.000000
+LCAOMinimize: Iter:   4  F: -5437.2071385701292456  |grad|_K:  3.868e-03  alpha:  9.330e-02  linmin: -2.659e-01  cgtest:  7.928e-01  t[s]:     69.48
+LCAOMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 2.799013e-01.
+	FillingsUpdate:  mu: +0.841114789  nElectrons: 513.000000
+LCAOMinimize: Iter:   5  F: -5441.2964627335004479  |grad|_K:  4.364e-03  alpha:  3.226e-01  linmin:  1.201e-01  cgtest: -1.800e-01  t[s]:     83.99
+	FillingsUpdate:  mu: +0.819656240  nElectrons: 513.000000
+LCAOMinimize: Iter:   6  F: -5441.3355212939795820  |grad|_K:  4.128e-03  alpha:  8.771e-03  linmin: -1.483e-02  cgtest:  9.861e-01  t[s]:     95.25
+LCAOMinimize: Encountered beta<0, resetting CG.
+LCAOMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 2.631442e-02.
+	FillingsUpdate:  mu: +0.666515576  nElectrons: 513.000000
+LCAOMinimize: Iter:   7  F: -5442.1182717233614312  |grad|_K:  9.117e-04  alpha:  5.245e-02  linmin: -2.973e-02  cgtest:  6.410e-02  t[s]:    109.34
+	FillingsUpdate:  mu: +0.684625915  nElectrons: 513.000000
+LCAOMinimize: Iter:   8  F: -5442.1984024541679901  |grad|_K:  7.457e-04  alpha:  1.073e-01  linmin: -1.860e-02  cgtest:  4.788e-02  t[s]:    120.78
+	FillingsUpdate:  mu: +0.704872977  nElectrons: 513.000000
+LCAOMinimize: Iter:   9  F: -5442.2636964778994297  |grad|_K:  3.225e-04  alpha:  1.287e-01  linmin: -1.629e-02  cgtest: -6.607e-02  t[s]:    131.92
+	FillingsUpdate:  mu: +0.704872185  nElectrons: 513.000000
+LCAOMinimize: Iter:  10  F: -5442.2698905944234866  |grad|_K:  4.801e-05  alpha:  6.704e-02  linmin:  9.804e-03  cgtest: -1.836e-01  t[s]:    143.39
+	FillingsUpdate:  mu: +0.705274973  nElectrons: 513.000000
+LCAOMinimize: Iter:  11  F: -5442.2700534170635365  |grad|_K:  2.868e-05  alpha:  8.238e-02  linmin: -1.466e-03  cgtest:  2.278e-02  t[s]:    155.02
+	FillingsUpdate:  mu: +0.705848057  nElectrons: 513.000000
+LCAOMinimize: Iter:  12  F: -5442.2702050043226336  |grad|_K:  3.312e-05  alpha:  2.122e-01  linmin:  3.422e-04  cgtest: -1.442e-02  t[s]:    166.46
+	FillingsUpdate:  mu: +0.706051751  nElectrons: 513.000000
+LCAOMinimize: Iter:  13  F: -5442.2703028223731962  |grad|_K:  1.724e-05  alpha:  1.030e-01  linmin:  2.189e-06  cgtest:  9.439e-03  t[s]:    177.88
+	FillingsUpdate:  mu: +0.705916502  nElectrons: 513.000000
+LCAOMinimize: Iter:  14  F: -5442.2703298961432665  |grad|_K:  1.185e-05  alpha:  1.050e-01  linmin:  9.580e-05  cgtest: -1.662e-03  t[s]:    189.25
+	FillingsUpdate:  mu: +0.705611738  nElectrons: 513.000000
+LCAOMinimize: Iter:  15  F: -5442.2703474834361259  |grad|_K:  9.810e-06  alpha:  1.446e-01  linmin:  4.291e-04  cgtest: -1.118e-04  t[s]:    200.94
+	FillingsUpdate:  mu: +0.705427580  nElectrons: 513.000000
+LCAOMinimize: Iter:  16  F: -5442.2703552360317190  |grad|_K:  3.945e-06  alpha:  9.296e-02  linmin: -4.023e-05  cgtest:  4.122e-03  t[s]:    212.24
+	FillingsUpdate:  mu: +0.705407310  nElectrons: 513.000000
+LCAOMinimize: Iter:  17  F: -5442.2703565145211542  |grad|_K:  2.935e-06  alpha:  9.469e-02  linmin:  6.311e-05  cgtest: -5.099e-04  t[s]:    223.69
+	FillingsUpdate:  mu: +0.705413274  nElectrons: 513.000000
+LCAOMinimize: Iter:  18  F: -5442.2703579669641840  |grad|_K:  2.840e-06  alpha:  1.943e-01  linmin: -8.523e-05  cgtest:  9.939e-04  t[s]:    235.03
+	FillingsUpdate:  mu: +0.705429066  nElectrons: 513.000000
+LCAOMinimize: Iter:  19  F: -5442.2703586369589175  |grad|_K:  1.275e-06  alpha:  9.573e-02  linmin: -2.231e-05  cgtest: -1.494e-03  t[s]:    246.77
+	FillingsUpdate:  mu: +0.705439173  nElectrons: 513.000000
+LCAOMinimize: Iter:  20  F: -5442.2703587564865302  |grad|_K:  7.414e-07  alpha:  8.475e-02  linmin: -1.288e-04  cgtest:  6.692e-04  t[s]:    258.13
+LCAOMinimize: Converged (|Delta F|<1.000000e-06 for 2 iters).
+
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   gga-PBEsol exchange-correlation functional:
+      J.P. Perdew et al., Phys. Rev. Lett. 100, 136406 (2008)
+
+   Pseudopotentials:
+      KF Garrity, JW Bennett, KM Rabe and D Vanderbilt, Comput. Mater. Sci. 81, 446 (2014)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+Initialization completed successfully at t[s]:    261.74
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.705439173  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.694631978  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5439.155674579479637   dF: +3.115e+00   |Residual|: 3.267e+00   |deigs|: 4.411e-02  t[s]:    302.85
+	FillingsUpdate:  mu: +0.564639297  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5439.993182587335468   dF: -8.375e-01   |Residual|: 2.829e+00   |deigs|: 1.956e-01  t[s]:    336.38
+	FillingsUpdate:  mu: +0.612603329  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5446.123941774859304   dF: -6.131e+00   |Residual|: 1.681e-01   |deigs|: 1.024e-01  t[s]:    371.11
+	FillingsUpdate:  mu: +0.626989661  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5445.976617617126976   dF: +1.473e-01   |Residual|: 4.149e-01   |deigs|: 1.903e-02  t[s]:    405.07
+	FillingsUpdate:  mu: +0.620787844  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.099567893626954   dF: -1.230e-01   |Residual|: 1.950e-01   |deigs|: 8.073e-03  t[s]:    439.16
+	FillingsUpdate:  mu: +0.613889438  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.132019845522336   dF: -3.245e-02   |Residual|: 6.318e-02   |deigs|: 9.525e-03  t[s]:    473.00
+	FillingsUpdate:  mu: +0.614860669  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.134536043406115   dF: -2.516e-03   |Residual|: 4.138e-02   |deigs|: 1.351e-03  t[s]:    493.92
+	FillingsUpdate:  mu: +0.615569176  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.135875944896725   dF: -1.340e-03   |Residual|: 1.592e-02   |deigs|: 9.904e-04  t[s]:    514.93
+	FillingsUpdate:  mu: +0.616042614  nElectrons: 513.000000
+SCF: Cycle:  8   F: -5446.136039719191103   dF: -1.638e-04   |Residual|: 6.912e-03   |deigs|: 6.699e-04  t[s]:    536.01
+	FillingsUpdate:  mu: +0.615879815  nElectrons: 513.000000
+SCF: Cycle:  9   F: -5446.136075520214945   dF: -3.580e-05   |Residual|: 1.076e-03   |deigs|: 2.304e-04  t[s]:    556.80
+	FillingsUpdate:  mu: +0.615872369  nElectrons: 513.000000
+SCF: Cycle: 10   F: -5446.136076426271757   dF: -9.061e-07   |Residual|: 1.192e-03   |deigs|: 1.267e-05  t[s]:    578.30
+	FillingsUpdate:  mu: +0.615888504  nElectrons: 513.000000
+SCF: Cycle: 11   F: -5446.136077211251177   dF: -7.850e-07   |Residual|: 5.723e-04   |deigs|: 2.279e-05  t[s]:    599.29
+	FillingsUpdate:  mu: +0.615888159  nElectrons: 513.000000
+SCF: Cycle: 12   F: -5446.136077217144702   dF: -5.894e-09   |Residual|: 5.410e-04   |deigs|: 2.598e-06  t[s]:    619.53
+	FillingsUpdate:  mu: +0.615893049  nElectrons: 513.000000
+SCF: Cycle: 13   F: -5446.136077347703576   dF: -1.306e-07   |Residual|: 1.265e-04   |deigs|: 7.851e-06  t[s]:    640.42
+	FillingsUpdate:  mu: +0.615894205  nElectrons: 513.000000
+SCF: Cycle: 14   F: -5446.136077360094532   dF: -1.239e-08   |Residual|: 4.751e-05   |deigs|: 3.407e-06  t[s]:    661.21
+	FillingsUpdate:  mu: +0.615894930  nElectrons: 513.000000
+SCF: Cycle: 15   F: -5446.136077360692070   dF: -5.975e-10   |Residual|: 3.199e-05   |deigs|: 2.545e-06  t[s]:    682.19
+	FillingsUpdate:  mu: +0.615894686  nElectrons: 513.000000
+SCF: Cycle: 16   F: -5446.136077361309617   dF: -6.175e-10   |Residual|: 1.775e-05   |deigs|: 2.356e-06  t[s]:    702.57
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Cu   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Cu  -0.009440000000000   0.007540000000000   0.326020000000000 1
+ion Cu  -0.004310000000000   0.001610000000000   0.670260000000000 1
+ion Cu  -0.003060000000000   0.329020000000000  -0.002650000000000 1
+ion Cu   0.002380000000000   0.326620000000000   0.322470000000000 1
+ion Cu  -0.020140000000000   0.333340000000000   0.687790000000000 1
+ion Cu  -0.002800000000000   0.686240000000000  -0.001750000000000 1
+ion Cu  -0.012250000000000   0.650420000000000   0.321760000000000 1
+ion Cu   0.014120000000000   0.668010000000000   0.660060000000000 1
+ion Cu   0.317230000000000  -0.001250000000000  -0.004750000000000 1
+ion Cu   0.346620000000000  -0.007040000000000   0.345840000000000 1
+ion Cu   0.320590000000000  -0.008180000000000   0.669610000000000 1
+ion Cu   0.327790000000000   0.316300000000000  -0.004960000000000 1
+ion Cu   0.318230000000000   0.310850000000000   0.333920000000000 1
+ion Cu   0.331190000000000   0.335210000000000   0.670250000000000 1
+ion Cu   0.330140000000000   0.633920000000000   0.014830000000000 1
+ion Cu   0.329850000000000   0.681670000000000   0.341230000000000 1
+ion Cu   0.313220000000000   0.664160000000000   0.666350000000000 1
+ion Cu   0.657510000000000   0.010440000000000  -0.018730000000000 1
+ion Cu   0.663920000000000   0.018660000000000   0.341890000000000 1
+ion Cu   0.659880000000000  -0.006100000000000   0.670360000000000 1
+ion Cu   0.664010000000000   0.327530000000000   0.001650000000000 1
+ion Cu   0.644490000000000   0.326170000000000   0.324620000000000 1
+ion Cu   0.663250000000000   0.335960000000000   0.648350000000000 1
+ion Cu   0.681820000000000   0.679950000000000  -0.007000000000000 1
+ion Cu   0.659420000000000   0.668940000000000   0.349420000000000 1
+ion Cu   0.661940000000000   0.658210000000000   0.644160000000000 1
+
+# Forces in Lattice coordinates:
+force Cu  -0.126436070957826  -0.086760805715834  -0.003078176619046 0
+force Cu   0.149934398695855  -0.015856577856280   0.156834792718413 1
+force Cu  -0.101787382457440  -0.003533984420783  -0.153883389003902 1
+force Cu  -0.006001528225574   0.158773104727274   0.075859519686727 1
+force Cu  -0.173147713752680  -0.065758366017370  -0.015895198739267 1
+force Cu   0.061604797261587  -0.030857471106798  -0.249273360165237 1
+force Cu  -0.234391894103483  -0.333921919779961  -0.261423433693226 1
+force Cu   0.479326093833471   0.435445535686704   0.521292342797391 1
+force Cu  -0.480274695147127  -0.217445266603000  -0.207724884313189 1
+force Cu   0.182707856821041  -0.040825784282844   0.101938288044488 1
+force Cu  -0.324527592790897  -0.304837135851947  -0.390605390037110 1
+force Cu   0.203791968635711   0.120212199857502   0.219207771088529 1
+force Cu   0.124754786074000   0.197730728909889   0.150288687650349 1
+force Cu   0.244202476841317   0.457110321304757   0.307436640040553 1
+force Cu  -0.222468458581318  -0.278582558661954  -0.303612781720741 1
+force Cu   0.216502562259411   0.280827224943806   0.061954796996996 1
+force Cu  -0.194828135768400  -0.308125225580834  -0.414562246550644 1
+force Cu   0.433531056863975   0.244979223780023   0.374968117226416 1
+force Cu   0.146011947163308   0.112902383332263   0.270116932738311 1
+force Cu  -0.331732696883691  -0.668036198108844  -0.404922695021774 1
+force Cu  -0.005087221622410  -0.011390449816696  -0.051848835846514 1
+force Cu  -0.132101594925132  -0.024213461766038  -0.139035168823773 1
+force Cu   0.372137940178566   0.639715436649045   0.375859545117150 1
+force Cu   0.025998778966999  -0.056798082122667   0.069142503510895 1
+force Cu  -0.291470266092987  -0.325591847742499  -0.122217032195483 1
+force Cu  -0.322646330991684  -0.296114251264605  -0.637547189765868 1
+force Cu   0.306144990471324   0.420709734703759   0.670552392282847 1
+
+# Energy components:
+   Eewald =    -3295.7591564604531413
+       EH =     1950.0513953532179130
+     Eloc =    -5132.0459845006398609
+      Enl =      991.0231772466340772
+      Exc =     -518.6470626974668221
+ Exc_core =        1.2129314568653371
+       KE =      558.1085615728391076
+-------------------------------------
+     Etot =    -5446.0561380290037050
+       TS =        0.0799393323062649
+-------------------------------------
+        F =    -5446.1360773613096171
+
+IonicMinimize: Iter:   0  F: -5446.136077361309617  |grad|_K:  1.617e-02  t[s]:    707.55
+
+#--- Lowdin population analysis ---
+# oxidation-state Cu +0.066 +0.084 +0.078 +0.067 +0.085 +0.082 +0.064 +0.080 +0.080 +0.075 +0.071 +0.080 +0.075 +0.070 +0.078 +0.098 +0.090 +0.054 +0.082 +0.064 +0.072 +0.074 +0.076 +0.079 +0.096 +0.063 +0.084
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.615894686  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.617081476  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5445.386422733302425   dF: +1.614e-01   |Residual|: 4.932e-01   |deigs|: 1.660e-03  t[s]:    754.00
+	FillingsUpdate:  mu: +0.618423187  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5445.552578829808226   dF: -1.662e-01   |Residual|: 7.280e-01   |deigs|: 4.875e-03  t[s]:    787.79
+	FillingsUpdate:  mu: +0.615678053  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5446.060836419910629   dF: -5.083e-01   |Residual|: 2.240e-01   |deigs|: 1.016e-02  t[s]:    821.73
+	FillingsUpdate:  mu: +0.616571162  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5446.110734358962873   dF: -4.990e-02   |Residual|: 1.935e-01   |deigs|: 3.850e-03  t[s]:    854.64
+	FillingsUpdate:  mu: +0.615919490  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.153660253599810   dF: -4.293e-02   |Residual|: 3.427e-02   |deigs|: 2.932e-03  t[s]:    888.03
+	FillingsUpdate:  mu: +0.615377144  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.153700766920338   dF: -4.051e-05   |Residual|: 3.109e-02   |deigs|: 8.612e-04  t[s]:    908.65
+	FillingsUpdate:  mu: +0.615687445  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.154598108056234   dF: -8.973e-04   |Residual|: 9.077e-03   |deigs|: 4.906e-04  t[s]:    929.23
+	FillingsUpdate:  mu: +0.615807563  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.154658549551641   dF: -6.044e-05   |Residual|: 4.576e-03   |deigs|: 1.896e-04  t[s]:    950.19
+	FillingsUpdate:  mu: +0.615819231  nElectrons: 513.000000
+SCF: Cycle:  8   F: -5446.154669971200747   dF: -1.142e-05   |Residual|: 1.559e-03   |deigs|: 4.258e-05  t[s]:    970.82
+	FillingsUpdate:  mu: +0.615799448  nElectrons: 513.000000
+SCF: Cycle:  9   F: -5446.154668335304450   dF: +1.636e-06   |Residual|: 1.827e-03   |deigs|: 3.914e-05  t[s]:    991.59
+	FillingsUpdate:  mu: +0.615796778  nElectrons: 513.000000
+SCF: Cycle: 10   F: -5446.154672051415218   dF: -3.716e-06   |Residual|: 4.246e-04   |deigs|: 2.171e-05  t[s]:   1011.91
+	FillingsUpdate:  mu: +0.615800948  nElectrons: 513.000000
+SCF: Cycle: 11   F: -5446.154672233601559   dF: -1.822e-07   |Residual|: 1.635e-04   |deigs|: 8.127e-06  t[s]:   1032.82
+	FillingsUpdate:  mu: +0.615801207  nElectrons: 513.000000
+SCF: Cycle: 12   F: -5446.154672256182494   dF: -2.258e-08   |Residual|: 8.915e-05   |deigs|: 1.811e-06  t[s]:   1053.52
+	FillingsUpdate:  mu: +0.615801251  nElectrons: 513.000000
+SCF: Cycle: 13   F: -5446.154672261647647   dF: -5.465e-09   |Residual|: 4.806e-05   |deigs|: 1.295e-06  t[s]:   1074.11
+	FillingsUpdate:  mu: +0.615801179  nElectrons: 513.000000
+SCF: Cycle: 14   F: -5446.154672261161068   dF: +4.866e-10   |Residual|: 5.011e-05   |deigs|: 1.319e-06  t[s]:   1094.76
+	FillingsUpdate:  mu: +0.615801237  nElectrons: 513.000000
+SCF: Cycle: 15   F: -5446.154672263840439   dF: -2.679e-09   |Residual|: 6.175e-06   |deigs|: 1.056e-06  t[s]:   1115.21
+	FillingsUpdate:  mu: +0.615801221  nElectrons: 513.000000
+SCF: Cycle: 16   F: -5446.154672263851353   dF: -1.091e-11   |Residual|: 9.543e-06   |deigs|: 7.559e-07  t[s]:   1134.99
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Cu   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Cu  -0.008685510279321   0.006674315250420   0.326841923078407 1
+ion Cu  -0.004671443594131   0.002208727160790   0.669389453790248 1
+ion Cu  -0.003677217482095   0.330013024879753  -0.002467239204059 1
+ion Cu   0.001310437123383   0.326599887963211   0.322937170397456 1
+ion Cu  -0.019004093215248   0.333572329221075   0.685887883458643 1
+ion Cu  -0.003063440070043   0.685003913468860  -0.002277602880625 1
+ion Cu  -0.011074282492270   0.651166899477167   0.323345828157886 1
+ion Cu   0.011638657816070   0.668097130111822   0.660242121501309 1
+ion Cu   0.318419815805136  -0.002244642638212  -0.004349496110548 1
+ion Cu   0.345940476081394  -0.007527101047931   0.344514737921359 1
+ion Cu   0.321254415024301  -0.008332359268369   0.670425064294195 1
+ion Cu   0.327854118966753   0.317077268511949  -0.004646353728925 1
+ion Cu   0.318151968593368   0.312852587582960   0.334459917645809 1
+ion Cu   0.330981823525663   0.334453454523544   0.669248849363312 1
+ion Cu   0.330889360884828   0.635297966726090   0.014069059486520 1
+ion Cu   0.330187643643218   0.680900460029935   0.339420315700902 1
+ion Cu   0.314882884523808   0.663980282033395   0.667440584500747 1
+ion Cu   0.657644410767975   0.010250851119820  -0.017382786620918 1
+ion Cu   0.664109977267738   0.015563487506505   0.341364735890146 1
+ion Cu   0.659997214033559  -0.006044383585401   0.670020241192639 1
+ion Cu   0.663440620955675   0.328014946122360   0.001012863351179 1
+ion Cu   0.644736359174037   0.329031231452449   0.324902728157653 1
+ion Cu   0.663410394069161   0.335311270657593   0.648932011472662 1
+ion Cu   0.680777769669627   0.678574320186289  -0.006388221322934 1
+ion Cu   0.659336256578436   0.669115538471279   0.346258921836471 1
+ion Cu   0.661517766306935   0.658907337936568   0.647298898411144 1
+
+# Forces in Lattice coordinates:
+force Cu  -0.123911042356690  -0.085417965556415  -0.005316455735541 0
+force Cu   0.119925014139911  -0.019334270824924   0.131298271808333 1
+force Cu  -0.085117774343236  -0.009745492571562  -0.136215561752194 1
+force Cu  -0.006145094729269   0.132754124820440   0.060997821495424 1
+force Cu  -0.139276250970736  -0.036443411196753  -0.000020783880189 1
+force Cu   0.054277635667811  -0.033817052886714  -0.226252642573705 1
+force Cu  -0.194847317986984  -0.293214517221003  -0.209769365035944 1
+force Cu   0.406189687939065   0.381918497987488   0.447603919055631 1
+force Cu  -0.393495301108571  -0.181545649052659  -0.176610541130872 1
+force Cu   0.171183150222834  -0.021710405153338   0.100473372961352 1
+force Cu  -0.292368597596470  -0.241940258874088  -0.334056946850106 1
+force Cu   0.174588552928807   0.103463627600224   0.175947634408380 1
+force Cu   0.108523214197748   0.179454336727865   0.131212328451628 1
+force Cu   0.219305944385554   0.387934581648762   0.273034233012588 1
+force Cu  -0.198975309964462  -0.236786512259425  -0.261600525395822 1
+force Cu   0.189791462917007   0.264645774430463   0.055672479041869 1
+force Cu  -0.190012879055267  -0.288538058886997  -0.355844805508544 1
+force Cu   0.346407310108121   0.186473749415510   0.291501044761098 1
+force Cu   0.133654704732587   0.090589322039229   0.242353665840444 1
+force Cu  -0.266721104005653  -0.526768301718327  -0.339692817512631 1
+force Cu  -0.002845894502275  -0.005139596267265  -0.048897242366825 1
+force Cu  -0.106788843983933  -0.019403459148594  -0.109834800757174 1
+force Cu   0.310533153404519   0.491635668349161   0.297986400832162 1
+force Cu   0.027091773417409  -0.031804923900400   0.072325323071205 1
+force Cu  -0.279896661671617  -0.297916675632103  -0.124043180734301 1
+force Cu  -0.227404558323027  -0.231473502470925  -0.488444144403942 1
+force Cu   0.246175666968220   0.341981219581328   0.535981833695708 1
+
+# Energy components:
+   Eewald =    -3299.8702014781733851
+       EH =     1946.0401884483578669
+     Eloc =    -5123.8790828226929079
+      Enl =      991.0214931917214471
+      Exc =     -518.6192927454338815
+ Exc_core =        1.2129313001549695
+       KE =      558.0192985012747613
+-------------------------------------
+     Etot =    -5446.0746656047913348
+       TS =        0.0800066590597865
+-------------------------------------
+        F =    -5446.1546722638513529
+
+IonicMinimize: Iter:   1  F: -5446.154672263851353  |grad|_K:  1.341e-02  alpha:  1.000e+00  linmin: -9.932e-01  t[s]:   1139.90
+
+#--- Lowdin population analysis ---
+# oxidation-state Cu +0.067 +0.083 +0.077 +0.068 +0.084 +0.081 +0.066 +0.080 +0.080 +0.075 +0.072 +0.079 +0.075 +0.071 +0.078 +0.095 +0.088 +0.057 +0.082 +0.067 +0.072 +0.074 +0.077 +0.079 +0.093 +0.065 +0.084
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.615801221  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.618868529  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5441.606091148223641   dF: +1.721e+00   |Residual|: 1.271e+00   |deigs|: 7.723e-03  t[s]:   1186.62
+	FillingsUpdate:  mu: +0.635211924  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5441.164818969821681   dF: +4.413e-01   |Residual|: 2.084e+00   |deigs|: 2.509e-02  t[s]:   1220.73
+	FillingsUpdate:  mu: +0.613939928  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5445.510326459319913   dF: -4.346e+00   |Residual|: 6.807e-01   |deigs|: 3.549e-02  t[s]:   1254.13
+	FillingsUpdate:  mu: +0.617712013  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5445.650486347724836   dF: -1.402e-01   |Residual|: 6.614e-01   |deigs|: 1.433e-02  t[s]:   1287.58
+	FillingsUpdate:  mu: +0.617345926  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.147683521703584   dF: -4.972e-01   |Residual|: 2.024e-01   |deigs|: 7.588e-03  t[s]:   1321.01
+	FillingsUpdate:  mu: +0.615655649  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.171830213078465   dF: -2.415e-02   |Residual|: 1.223e-01   |deigs|: 2.643e-03  t[s]:   1354.06
+	FillingsUpdate:  mu: +0.614425585  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.181715192787124   dF: -9.885e-03   |Residual|: 5.581e-02   |deigs|: 2.067e-03  t[s]:   1387.86
+	FillingsUpdate:  mu: +0.615494358  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.183470018097069   dF: -1.755e-03   |Residual|: 2.707e-02   |deigs|: 1.510e-03  t[s]:   1408.11
+	FillingsUpdate:  mu: +0.615718068  nElectrons: 513.000000
+SCF: Cycle:  8   F: -5446.184271292224366   dF: -8.013e-04   |Residual|: 1.249e-02   |deigs|: 3.628e-04  t[s]:   1429.02
+	FillingsUpdate:  mu: +0.615663441  nElectrons: 513.000000
+SCF: Cycle:  9   F: -5446.184416818793579   dF: -1.455e-04   |Residual|: 5.123e-03   |deigs|: 1.086e-04  t[s]:   1449.78
+	FillingsUpdate:  mu: +0.615650223  nElectrons: 513.000000
+SCF: Cycle: 10   F: -5446.184424140106785   dF: -7.321e-06   |Residual|: 3.526e-03   |deigs|: 4.553e-05  t[s]:   1470.46
+	FillingsUpdate:  mu: +0.615649479  nElectrons: 513.000000
+SCF: Cycle: 11   F: -5446.184433980594804   dF: -9.840e-06   |Residual|: 1.880e-03   |deigs|: 2.402e-05  t[s]:   1490.84
+	FillingsUpdate:  mu: +0.615648027  nElectrons: 513.000000
+SCF: Cycle: 12   F: -5446.184438013617182   dF: -4.033e-06   |Residual|: 5.022e-04   |deigs|: 1.709e-05  t[s]:   1511.69
+	FillingsUpdate:  mu: +0.615648833  nElectrons: 513.000000
+SCF: Cycle: 13   F: -5446.184438050067911   dF: -3.645e-08   |Residual|: 4.172e-04   |deigs|: 6.079e-06  t[s]:   1531.70
+	FillingsUpdate:  mu: +0.615648536  nElectrons: 513.000000
+SCF: Cycle: 14   F: -5446.184438238767143   dF: -1.887e-07   |Residual|: 1.043e-04   |deigs|: 4.019e-06  t[s]:   1552.46
+	FillingsUpdate:  mu: +0.615649259  nElectrons: 513.000000
+SCF: Cycle: 15   F: -5446.184438240340569   dF: -1.573e-09   |Residual|: 8.072e-05   |deigs|: 1.648e-06  t[s]:   1572.93
+	FillingsUpdate:  mu: +0.615649117  nElectrons: 513.000000
+SCF: Cycle: 16   F: -5446.184438243171826   dF: -2.831e-09   |Residual|: 6.554e-05   |deigs|: 1.301e-06  t[s]:   1593.40
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Cu   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Cu  -0.007339996268539   0.004459704141107   0.328936762758634 1
+ion Cu  -0.005064784925159   0.003153740946440   0.667086394172153 1
+ion Cu  -0.005032929230500   0.332248821360551  -0.002239484222486 1
+ion Cu  -0.001407209193792   0.327549543535727   0.324368947499667 1
+ion Cu  -0.015635996822060   0.333830781036274   0.680488981323869 1
+ion Cu  -0.003399359576035   0.680939230138832  -0.002355005558814 1
+ion Cu  -0.008899860749043   0.653755790812319   0.327085808632349 1
+ion Cu   0.007015876146015   0.668167660498927   0.660173258627724 1
+ion Cu   0.321727152505558  -0.004290565023571  -0.003085474550509 1
+ion Cu   0.342628940309897  -0.006762984171406   0.341273363571773 1
+ion Cu   0.323143373941764  -0.008337376741010   0.671395821906078 1
+ion Cu   0.327802557508646   0.319631148251920  -0.004015799828851 1
+ion Cu   0.318621230531497   0.316793510329148   0.336353176616298 1
+ion Cu   0.329797753011284   0.333069311967431   0.666918765958808 1
+ion Cu   0.332304673861180   0.640339095753857   0.011701797111132 1
+ion Cu   0.329804747329116   0.677722595314706   0.336338667668178 1
+ion Cu   0.318254608791786   0.663135420826510   0.668938721240637 1
+ion Cu   0.658527447608842   0.008778666719811  -0.013354617079879 1
+ion Cu   0.664553866750076   0.011204215668946   0.338998016443836 1
+ion Cu   0.660394886275481  -0.005458611991594   0.668683721011912 1
+ion Cu   0.662314293694514   0.328856419805455   0.000037086179688 1
+ion Cu   0.646821117048779   0.332156420321714   0.325378061971559 1
+ion Cu   0.663375053987142   0.334645940400844   0.650792584837594 1
+ion Cu   0.676887009916536   0.675097827766560  -0.005169319810445 1
+ion Cu   0.660944112489388   0.668452369388598   0.341478472797641 1
+ion Cu   0.660744460296661   0.660548306099401   0.652595418224403 1
+
+# Forces in Lattice coordinates:
+force Cu  -0.110972698104820  -0.079957041596891  -0.015037467052204 0
+force Cu   0.076805018083662  -0.016063717237757   0.080565676751732 1
+force Cu  -0.053086896674191  -0.020339609962892  -0.086265162718858 1
+force Cu  -0.004010086558572   0.077414908472267   0.030713767404772 1
+force Cu  -0.073414891412453   0.006064335067056   0.021400389168189 1
+force Cu   0.030564916757898  -0.036445084980448  -0.162336817264585 1
+force Cu  -0.126888542805500  -0.206520515977260  -0.129218244659681 1
+force Cu   0.280943080690943   0.276959100440862   0.298968119819360 1
+force Cu  -0.253772101177146  -0.118171375106216  -0.109107359347547 1
+force Cu   0.134671141351392   0.014959656468648   0.087708152246799 1
+force Cu  -0.216072119557461  -0.158018100408196  -0.228982412941788 1
+force Cu   0.113271677911004   0.065077538184860   0.097370115307769 1
+force Cu   0.078868883750286   0.137276619309702   0.093206369918240 1
+force Cu   0.158634508773948   0.265087542234504   0.182447925000137 1
+force Cu  -0.131958517864193  -0.152560370167564  -0.163764003390997 1
+force Cu   0.125193076841831   0.203596844251408   0.037092631972753 1
+force Cu  -0.142506837208460  -0.221609095096900  -0.235218887814717 1
+force Cu   0.210616522520368   0.107049609106947   0.159204189802370 1
+force Cu   0.097346155977350   0.041611615375115   0.168124644450943 1
+force Cu  -0.190028902841073  -0.354933866263650  -0.245922166169086 1
+force Cu   0.006891376539294   0.010264190608303  -0.024970987069135 1
+force Cu  -0.063043592470972  -0.008204622161058  -0.073854808638754 1
+force Cu   0.229016744279266   0.310209497629426   0.203997257908314 1
+force Cu   0.015109317246253  -0.012419265428425   0.070967150533300 1
+force Cu  -0.222444803818008  -0.216935721572779  -0.107551933570377 1
+force Cu  -0.140289462485446  -0.145213199713504  -0.307601450201975 1
+force Cu   0.170684182095606   0.231871731147743   0.357962819965810 1
+
+# Energy components:
+   Eewald =    -3306.6585795211349250
+       EH =     1939.4151115986933291
+     Eloc =    -5110.3926524404359952
+      Enl =      991.0209886912978163
+      Exc =     -518.5736506935102170
+ Exc_core =        1.2129305502003986
+       KE =      557.8715623106913881
+-------------------------------------
+     Etot =    -5446.1042895041973679
+       TS =        0.0801487389747650
+-------------------------------------
+        F =    -5446.1844382431718259
+
+IonicMinimize: Iter:   2  F: -5446.184438243171826  |grad|_K:  9.027e-03  alpha:  3.761e-01  linmin: -9.762e-01  t[s]:   1598.39
+
+#--- Lowdin population analysis ---
+# oxidation-state Cu +0.071 +0.081 +0.077 +0.071 +0.081 +0.079 +0.070 +0.079 +0.079 +0.075 +0.074 +0.078 +0.076 +0.073 +0.078 +0.089 +0.084 +0.064 +0.081 +0.070 +0.074 +0.075 +0.076 +0.078 +0.088 +0.069 +0.082
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.615649117  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.616030276  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5442.373684513120679   dF: +1.016e+00   |Residual|: 1.250e+00   |deigs|: 7.342e-03  t[s]:   1644.51
+	FillingsUpdate:  mu: +0.635741773  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5441.297806690929065   dF: +1.076e+00   |Residual|: 2.034e+00   |deigs|: 2.660e-02  t[s]:   1677.65
+	FillingsUpdate:  mu: +0.614551411  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5445.529726341335845   dF: -4.232e+00   |Residual|: 6.858e-01   |deigs|: 3.326e-02  t[s]:   1711.89
+	FillingsUpdate:  mu: +0.616433104  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5445.755631607359646   dF: -2.259e-01   |Residual|: 6.057e-01   |deigs|: 1.560e-02  t[s]:   1745.15
+	FillingsUpdate:  mu: +0.616586859  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.169348358748721   dF: -4.137e-01   |Residual|: 1.854e-01   |deigs|: 6.421e-03  t[s]:   1779.39
+	FillingsUpdate:  mu: +0.615621404  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.190750713254602   dF: -2.140e-02   |Residual|: 1.169e-01   |deigs|: 1.814e-03  t[s]:   1812.98
+	FillingsUpdate:  mu: +0.614668531  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.200470171584129   dF: -9.719e-03   |Residual|: 5.151e-02   |deigs|: 1.781e-03  t[s]:   1847.37
+	FillingsUpdate:  mu: +0.615516153  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.202589116764102   dF: -2.119e-03   |Residual|: 2.439e-02   |deigs|: 1.218e-03  t[s]:   1867.54
+	FillingsUpdate:  mu: +0.615600728  nElectrons: 513.000000
+SCF: Cycle:  8   F: -5446.203352240637287   dF: -7.631e-04   |Residual|: 9.692e-03   |deigs|: 1.498e-04  t[s]:   1888.75
+	FillingsUpdate:  mu: +0.615549616  nElectrons: 513.000000
+SCF: Cycle:  9   F: -5446.203430714680508   dF: -7.847e-05   |Residual|: 4.932e-03   |deigs|: 8.985e-05  t[s]:   1909.45
+	FillingsUpdate:  mu: +0.615558381  nElectrons: 513.000000
+SCF: Cycle: 10   F: -5446.203440024073643   dF: -9.309e-06   |Residual|: 2.995e-03   |deigs|: 4.363e-05  t[s]:   1929.91
+	FillingsUpdate:  mu: +0.615558936  nElectrons: 513.000000
+SCF: Cycle: 11   F: -5446.203448062961797   dF: -8.039e-06   |Residual|: 1.499e-03   |deigs|: 2.041e-05  t[s]:   1950.31
+	FillingsUpdate:  mu: +0.615555234  nElectrons: 513.000000
+SCF: Cycle: 12   F: -5446.203450515009536   dF: -2.452e-06   |Residual|: 5.702e-04   |deigs|: 1.987e-05  t[s]:   1971.27
+	FillingsUpdate:  mu: +0.615553750  nElectrons: 513.000000
+SCF: Cycle: 13   F: -5446.203450820093167   dF: -3.051e-07   |Residual|: 2.276e-04   |deigs|: 6.907e-06  t[s]:   1992.22
+	FillingsUpdate:  mu: +0.615554423  nElectrons: 513.000000
+SCF: Cycle: 14   F: -5446.203450869516928   dF: -4.942e-08   |Residual|: 1.154e-04   |deigs|: 2.443e-06  t[s]:   2013.17
+	FillingsUpdate:  mu: +0.615554541  nElectrons: 513.000000
+SCF: Cycle: 15   F: -5446.203450880265336   dF: -1.075e-08   |Residual|: 4.830e-05   |deigs|: 8.798e-07  t[s]:   2033.79
+	FillingsUpdate:  mu: +0.615554588  nElectrons: 513.000000
+SCF: Cycle: 16   F: -5446.203450881015669   dF: -7.503e-10   |Residual|: 3.743e-05   |deigs|: 7.430e-07  t[s]:   2054.03
+	FillingsUpdate:  mu: +0.615554458  nElectrons: 513.000000
+SCF: Cycle: 17   F: -5446.203450882107063   dF: -1.091e-09   |Residual|: 1.553e-05   |deigs|: 6.673e-07  t[s]:   2074.17
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Cu   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Cu  -0.006051912861153   0.002452947273078   0.330526120534731 1
+ion Cu  -0.005017377982612   0.002963638521695   0.665517551944112 1
+ion Cu  -0.005816639975541   0.333795159008028  -0.002429219784674 1
+ion Cu  -0.003742985672451   0.329446432755940   0.325975198971605 1
+ion Cu  -0.012411628102380   0.333550134110417   0.675275789343094 1
+ion Cu  -0.003523518441553   0.676270088538600  -0.001643413398763 1
+ion Cu  -0.006685728262307   0.657307266062134   0.329841597143963 1
+ion Cu   0.002978917243643   0.668053714458581   0.660471563038407 1
+ion Cu   0.324976552517560  -0.005157397498398  -0.001682121363941 1
+ion Cu   0.338396252493187  -0.005399784502675   0.338284684650823 1
+ion Cu   0.325170649808243  -0.008121243455232   0.671203189821777 1
+ion Cu   0.327688150086305   0.322813950530169  -0.003581119981336 1
+ion Cu   0.319668214476209   0.320623727090906   0.337651260223486 1
+ion Cu   0.328462599175153   0.331864882817548   0.665347785437257 1
+ion Cu   0.332947014085140   0.646647511010662   0.009003920944759 1
+ion Cu   0.329105305649577   0.673286657115844   0.334536047681392 1
+ion Cu   0.321209046344470   0.662475404966104   0.668909024875273 1
+ion Cu   0.660106478157055   0.005942713762543  -0.009059449611191 1
+ion Cu   0.664665603017687   0.007402403060220   0.335982991956199 1
+ion Cu   0.660861381759840  -0.004414682495970   0.667509954391751 1
+ion Cu   0.661710474977603   0.329802160883298  -0.001229675986079 1
+ion Cu   0.650335127957600   0.333567240090363   0.326086197610450 1
+ion Cu   0.662486065601567   0.334106600480194   0.653838100093477 1
+ion Cu   0.672013299844533   0.672050348350055  -0.004480948629632 1
+ion Cu   0.662419348645242   0.667888998850830   0.337604996070717 1
+ion Cu   0.660350276003441   0.662154063395217   0.657449930307219 1
+
+# Forces in Lattice coordinates:
+force Cu  -0.093709853352458  -0.072527266373040  -0.026328516334461 0
+force Cu   0.044138994359206  -0.007112767603962   0.043597199144711 1
+force Cu  -0.031191191739782  -0.021049055953677  -0.044043727174125 1
+force Cu  -0.000382160212045   0.039814819225960   0.015042369710203 1
+force Cu  -0.031421825034420   0.018427046492081   0.028368398968550 1
+force Cu   0.008887328633778  -0.034115142170372  -0.106579542320738 1
+force Cu  -0.079787869469639  -0.133447436509929  -0.082848893259228 1
+force Cu   0.167576684915357   0.177402427248532   0.175963156725624 1
+force Cu  -0.154890527503261  -0.071403827668487  -0.052452246114390 1
+force Cu   0.090689489807856   0.030644786799190   0.062647314910973 1
+force Cu  -0.144068760951332  -0.100512537705498  -0.146041170296976 1
+force Cu   0.067167081427632   0.039894838665152   0.048201422864333 1
+force Cu   0.059304302029540   0.098521550275260   0.067611418494487 1
+force Cu   0.109775770781651   0.166141373216641   0.097502890626892 1
+force Cu  -0.070203635775857  -0.086012676131896  -0.083931491708064 1
+force Cu   0.062391048120306   0.128785125269630   0.009865687153069 1
+force Cu  -0.086315239268925  -0.144972840129729  -0.139315531248865 1
+force Cu   0.129011605421586   0.068174348341249   0.087087299436288 1
+force Cu   0.061518484075193   0.015257837882844   0.102284321507133 1
+force Cu  -0.126351474203758  -0.223480489663578  -0.157110423549931 1
+force Cu   0.008525537687201   0.016057256120596  -0.014661712663261 1
+force Cu  -0.034239963231903  -0.001060191789689  -0.041223189497294 1
+force Cu   0.157674722293735   0.182936874572828   0.135009071852988 1
+force Cu   0.010863638719472  -0.002371129885056   0.060673238405005 1
+force Cu  -0.144293509028081  -0.137951338428011  -0.073160261283103 1
+force Cu  -0.092829994193689  -0.089237820670999  -0.184663936708903 1
+force Cu   0.112175604133588   0.143275322052486   0.218452198785409 1
+
+# Energy components:
+   Eewald =    -3310.7003179347975674
+       EH =     1935.4763223405539065
+     Eloc =    -5102.3663001407539923
+      Enl =      991.0223583238632727
+      Exc =     -518.5451464499039957
+ Exc_core =        1.2129305781569564
+       KE =      557.7769711697667390
+-------------------------------------
+     Etot =    -5446.1231821131141260
+       TS =        0.0802687689927682
+-------------------------------------
+        F =    -5446.2034508821070631
+
+IonicMinimize: Iter:   3  F: -5446.203450882107063  |grad|_K:  5.594e-03  alpha:  4.096e-01  linmin: -9.487e-01  t[s]:   2079.35
+
+#--- Lowdin population analysis ---
+# oxidation-state Cu +0.073 +0.079 +0.077 +0.073 +0.079 +0.077 +0.074 +0.078 +0.078 +0.075 +0.076 +0.077 +0.077 +0.074 +0.077 +0.084 +0.081 +0.069 +0.080 +0.073 +0.075 +0.075 +0.077 +0.078 +0.083 +0.073 +0.080
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.615554458  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.610937976  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5443.299804281299657   dF: -2.588e-01   |Residual|: 1.253e+00   |deigs|: 7.679e-03  t[s]:   2125.99
+	FillingsUpdate:  mu: +0.636598120  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5441.941852564740657   dF: +1.358e+00   |Residual|: 1.881e+00   |deigs|: 2.849e-02  t[s]:   2160.86
+	FillingsUpdate:  mu: +0.615060203  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5445.659725363929283   dF: -3.718e+00   |Residual|: 6.362e-01   |deigs|: 2.706e-02  t[s]:   2194.20
+	FillingsUpdate:  mu: +0.618164423  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5445.100595018009699   dF: +5.591e-01   |Residual|: 8.825e-01   |deigs|: 1.385e-02  t[s]:   2227.39
+	FillingsUpdate:  mu: +0.614365372  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.125464072801151   dF: -1.025e+00   |Residual|: 2.630e-01   |deigs|: 1.001e-02  t[s]:   2260.49
+	FillingsUpdate:  mu: +0.615293467  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.205596456537023   dF: -8.013e-02   |Residual|: 7.217e-02   |deigs|: 5.131e-03  t[s]:   2296.49
+	FillingsUpdate:  mu: +0.616056033  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.211895533389907   dF: -6.299e-03   |Residual|: 6.012e-02   |deigs|: 1.626e-03  t[s]:   2329.28
+	FillingsUpdate:  mu: +0.615369624  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.211829216258593   dF: +6.632e-05   |Residual|: 4.688e-02   |deigs|: 1.019e-03  t[s]:   2349.67
+	FillingsUpdate:  mu: +0.615422714  nElectrons: 513.000000
+SCF: Cycle:  8   F: -5446.213741903166010   dF: -1.913e-03   |Residual|: 2.390e-02   |deigs|: 4.063e-04  t[s]:   2371.11
+	FillingsUpdate:  mu: +0.615540182  nElectrons: 513.000000
+SCF: Cycle:  9   F: -5446.214523110138543   dF: -7.812e-04   |Residual|: 5.185e-03   |deigs|: 3.382e-04  t[s]:   2391.76
+	FillingsUpdate:  mu: +0.615494152  nElectrons: 513.000000
+SCF: Cycle: 10   F: -5446.214554407252763   dF: -3.130e-05   |Residual|: 3.130e-03   |deigs|: 7.368e-05  t[s]:   2411.88
+	FillingsUpdate:  mu: +0.615505902  nElectrons: 513.000000
+SCF: Cycle: 11   F: -5446.214559758267569   dF: -5.351e-06   |Residual|: 2.082e-03   |deigs|: 2.447e-05  t[s]:   2432.71
+	FillingsUpdate:  mu: +0.615505559  nElectrons: 513.000000
+SCF: Cycle: 12   F: -5446.214564590140071   dF: -4.832e-06   |Residual|: 8.281e-04   |deigs|: 2.262e-05  t[s]:   2453.27
+	FillingsUpdate:  mu: +0.615504752  nElectrons: 513.000000
+SCF: Cycle: 13   F: -5446.214565344279436   dF: -7.541e-07   |Residual|: 3.022e-04   |deigs|: 7.585e-06  t[s]:   2473.47
+	FillingsUpdate:  mu: +0.615505441  nElectrons: 513.000000
+SCF: Cycle: 14   F: -5446.214565432670497   dF: -8.839e-08   |Residual|: 1.852e-04   |deigs|: 2.742e-06  t[s]:   2494.30
+	FillingsUpdate:  mu: +0.615505165  nElectrons: 513.000000
+SCF: Cycle: 15   F: -5446.214565458851212   dF: -2.618e-08   |Residual|: 9.562e-05   |deigs|: 1.570e-06  t[s]:   2515.76
+	FillingsUpdate:  mu: +0.615505469  nElectrons: 513.000000
+SCF: Cycle: 16   F: -5446.214565466666500   dF: -7.815e-09   |Residual|: 3.142e-05   |deigs|: 1.120e-06  t[s]:   2537.37
+	FillingsUpdate:  mu: +0.615505611  nElectrons: 513.000000
+SCF: Cycle: 17   F: -5446.214565466244494   dF: +4.220e-10   |Residual|: 3.801e-05   |deigs|: 7.682e-07  t[s]:   2557.86
+	FillingsUpdate:  mu: +0.615505380  nElectrons: 513.000000
+SCF: Cycle: 18   F: -5446.214565467821558   dF: -1.577e-09   |Residual|: 9.626e-06   |deigs|: 7.318e-07  t[s]:   2578.59
+	FillingsUpdate:  mu: +0.615505486  nElectrons: 513.000000
+SCF: Cycle: 19   F: -5446.214565467790635   dF: +3.092e-11   |Residual|: 7.697e-06   |deigs|: 5.264e-07  t[s]:   2596.50
+	FillingsUpdate:  mu: +0.615505460  nElectrons: 513.000000
+SCF: Cycle: 20   F: -5446.214565467925240   dF: -1.346e-10   |Residual|: 2.770e-06   |deigs|: 2.791e-07  t[s]:   2610.26
+	FillingsUpdate:  mu: +0.615505450  nElectrons: 513.000000
+SCF: Cycle: 21   F: -5446.214565467852481   dF: +7.276e-11   |Residual|: 1.047e-06   |deigs|: 1.776e-07  t[s]:   2623.08
+	FillingsUpdate:  mu: +0.615505448  nElectrons: 513.000000
+SCF: Cycle: 22   F: -5446.214565467928878   dF: -7.640e-11   |Residual|: 7.114e-07   |deigs|: 1.808e-07  t[s]:   2635.72
+	FillingsUpdate:  mu: +0.615505450  nElectrons: 513.000000
+SCF: Cycle: 23   F: -5446.214565467853390   dF: +7.549e-11   |Residual|: 4.897e-07   |deigs|: 1.812e-07  t[s]:   2648.45
+	FillingsUpdate:  mu: +0.615505450  nElectrons: 513.000000
+SCF: Cycle: 24   F: -5446.214565467857028   dF: -3.638e-12   |Residual|: 2.665e-07   |deigs|: 1.861e-07  t[s]:   2661.47
+	FillingsUpdate:  mu: +0.615505450  nElectrons: 513.000000
+SCF: Cycle: 25   F: -5446.214565467837019   dF: +2.001e-11   |Residual|: 1.194e-07   |deigs|: 1.965e-07  t[s]:   2674.17
+	FillingsUpdate:  mu: +0.615505450  nElectrons: 513.000000
+SCF: Cycle: 26   F: -5446.214565467872490   dF: -3.547e-11   |Residual|: 6.387e-08   |deigs|: 2.066e-07  t[s]:   2686.92
+	FillingsUpdate:  mu: +0.615505450  nElectrons: 513.000000
+SCF: Cycle: 27   F: -5446.214565467927059   dF: -5.457e-11   |Residual|: 3.976e-08   |deigs|: 2.043e-07  t[s]:   2699.65
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Cu   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Cu  -0.004935674918950   0.001017261256683   0.331558099223159 1
+ion Cu  -0.004894533432375   0.001663045342031   0.665053694594283 1
+ion Cu  -0.006046331186168   0.334673405914148  -0.002775735582776 1
+ion Cu  -0.005723586709344   0.331739527165408   0.328135470674416 1
+ion Cu  -0.009583298175462   0.332701005650154   0.670127628181087 1
+ion Cu  -0.003525276694934   0.671211942585363  -0.001114325905459 1
+ion Cu  -0.004928952558998   0.661914482233948   0.331815230432740 1
+ion Cu  -0.001599556069921   0.667555529099311   0.662169548410030 1
+ion Cu   0.327994000235280  -0.004518877994674  -0.000408134123504 1
+ion Cu   0.333465444696694  -0.003964613894611   0.335235450839764 1
+ion Cu   0.327323645541780  -0.007475515427922   0.670052619930472 1
+ion Cu   0.327858528208958   0.326638516031092  -0.002924374811190 1
+ion Cu   0.322265155964159   0.324918227252761   0.336961280878019 1
+ion Cu   0.327449336010095   0.330476359326749   0.664779359615581 1
+ion Cu   0.332506467088156   0.654079909802958   0.005415185853568 1
+ion Cu   0.328737389236980   0.667895821160082   0.333358703349701 1
+ion Cu   0.324467646682245   0.662441291807585   0.667890912697853 1
+ion Cu   0.662163659755946   0.002186071666928  -0.004633974975010 1
+ion Cu   0.664215983711275   0.003373668689193   0.332965724296092 1
+ion Cu   0.661399603742354  -0.002608039358979   0.665948963473282 1
+ion Cu   0.661238429316060   0.330870068874205  -0.002374201945619 1
+ion Cu   0.655320869538492   0.333626683636951   0.327453321087789 1
+ion Cu   0.661083982433599   0.333413620895587   0.658275086795902 1
+ion Cu   0.666901328600476   0.669004983537638  -0.004044431438390 1
+ion Cu   0.662992529501128   0.667452916411983   0.334176724988587 1
+ion Cu   0.660677326113093   0.663651423682496   0.662036435672307 1
+
+# Forces in Lattice coordinates:
+force Cu  -0.075942917580968  -0.061957458833744  -0.037565405662604 0
+force Cu   0.017705446510043  -0.002041508376180   0.017802154641070 1
+force Cu  -0.014165819153183  -0.014978586827415  -0.014208603221902 1
+force Cu   0.003085753846326   0.012271706396943   0.007312384991393 1
+force Cu  -0.000761365572811   0.015746331894745   0.025949980865651 1
+force Cu   0.003286142866655  -0.018667134809829  -0.050275002177047 1
+force Cu  -0.038835876771186  -0.062559564379078  -0.042159786459650 1
+force Cu   0.060306317335367   0.070573836482771   0.063994431377511 1
+force Cu  -0.062043689766164  -0.030590040508923  -0.011340633016617 1
+force Cu   0.042338150499256   0.023383911807593   0.027088907658837 1
+force Cu  -0.066475351759628  -0.043826364696898  -0.063818582291006 1
+force Cu   0.029776160292140   0.025528058369403   0.012890795966444 1
+force Cu   0.035034715860429   0.054396019567647   0.041276882654564 1
+force Cu   0.058457806876524   0.075461590257064   0.029271807660477 1
+force Cu  -0.020448888027928  -0.026782545861757  -0.022657809444507 1
+force Cu   0.007344184680463   0.054908337461836  -0.013360878021617 1
+force Cu  -0.029536052730453  -0.058365694219225  -0.052139176528117 1
+force Cu   0.060396250096028   0.036295173073459   0.034946583454619 1
+force Cu   0.023791230994469   0.000661124212622   0.037891786423613 1
+force Cu  -0.064148586209732  -0.104635525069677  -0.068388283567665 1
+force Cu   0.005511209678195   0.011280179764035  -0.005352094889266 1
+force Cu  -0.007976127493871   0.003164988287682  -0.008594248588453 1
+force Cu   0.081949003842468   0.082652421944339   0.071176082506397 1
+force Cu   0.010951540468446   0.002664854251019   0.039086535468687 1
+force Cu  -0.058049952694636  -0.057032704548214  -0.023340687481144 1
+force Cu  -0.054605989849470  -0.049980959282404  -0.086776408030401 1
+force Cu   0.052880239697347   0.062356758580205   0.091227041553658 1
+
+# Energy components:
+   Eewald =    -3312.7468416979140784
+       EH =     1933.4852685668856793
+     Eloc =    -5098.3021364978712882
+      Enl =      991.0230261255035202
+      Exc =     -518.5291002242651075
+ Exc_core =        1.2129333544412249
+       KE =      557.7226395032718074
+-------------------------------------
+     Etot =    -5446.1342108699473101
+       TS =        0.0803545979794632
+-------------------------------------
+        F =    -5446.2145654679270592
+
+IonicMinimize: Iter:   4  F: -5446.214565467927059  |grad|_K:  2.499e-03  alpha:  5.712e-01  linmin: -9.120e-01  t[s]:   2704.69
+
+#--- Lowdin population analysis ---
+# oxidation-state Cu +0.075 +0.077 +0.077 +0.075 +0.078 +0.077 +0.076 +0.077 +0.077 +0.075 +0.077 +0.077 +0.077 +0.076 +0.077 +0.080 +0.078 +0.074 +0.078 +0.075 +0.076 +0.076 +0.077 +0.077 +0.079 +0.076 +0.078
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.615505450  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.607387848  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5444.815863576949596   dF: -1.281e+00   |Residual|: 1.048e+00   |deigs|: 6.001e-03  t[s]:   2750.87
+	FillingsUpdate:  mu: +0.631828570  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5443.729109816023083   dF: +1.087e+00   |Residual|: 1.422e+00   |deigs|: 2.817e-02  t[s]:   2785.01
+	FillingsUpdate:  mu: +0.615833806  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5445.865485485857789   dF: -2.136e+00   |Residual|: 5.463e-01   |deigs|: 1.960e-02  t[s]:   2818.81
+	FillingsUpdate:  mu: +0.612974987  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5445.993896799742288   dF: -1.284e-01   |Residual|: 4.540e-01   |deigs|: 1.048e-02  t[s]:   2852.63
+	FillingsUpdate:  mu: +0.614237460  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.201065555027526   dF: -2.072e-01   |Residual|: 1.102e-01   |deigs|: 7.330e-03  t[s]:   2887.41
+	FillingsUpdate:  mu: +0.616109612  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.215060552919567   dF: -1.399e-02   |Residual|: 5.704e-02   |deigs|: 3.329e-03  t[s]:   2920.25
+	FillingsUpdate:  mu: +0.615618074  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.216734619029012   dF: -1.674e-03   |Residual|: 3.349e-02   |deigs|: 7.781e-04  t[s]:   2953.65
+	FillingsUpdate:  mu: +0.615378710  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.217818432797685   dF: -1.084e-03   |Residual|: 1.090e-02   |deigs|: 4.465e-04  t[s]:   2974.48
+	FillingsUpdate:  mu: +0.615531007  nElectrons: 513.000000
+SCF: Cycle:  8   F: -5446.217903402471165   dF: -8.497e-05   |Residual|: 3.564e-03   |deigs|: 2.173e-04  t[s]:   2994.80
+	FillingsUpdate:  mu: +0.615504832  nElectrons: 513.000000
+SCF: Cycle:  9   F: -5446.217905817467908   dF: -2.415e-06   |Residual|: 3.047e-03   |deigs|: 3.970e-05  t[s]:   3015.81
+	FillingsUpdate:  mu: +0.615486171  nElectrons: 513.000000
+SCF: Cycle: 10   F: -5446.217913922137086   dF: -8.105e-06   |Residual|: 1.350e-03   |deigs|: 2.718e-05  t[s]:   3036.42
+	FillingsUpdate:  mu: +0.615494021  nElectrons: 513.000000
+SCF: Cycle: 11   F: -5446.217915993681345   dF: -2.072e-06   |Residual|: 3.340e-04   |deigs|: 1.148e-05  t[s]:   3056.92
+	FillingsUpdate:  mu: +0.615495949  nElectrons: 513.000000
+SCF: Cycle: 12   F: -5446.217916044949561   dF: -5.127e-08   |Residual|: 2.873e-04   |deigs|: 3.038e-06  t[s]:   3077.13
+	FillingsUpdate:  mu: +0.615496270  nElectrons: 513.000000
+SCF: Cycle: 13   F: -5446.217916117493587   dF: -7.254e-08   |Residual|: 9.600e-05   |deigs|: 1.113e-06  t[s]:   3097.71
+	FillingsUpdate:  mu: +0.615496227  nElectrons: 513.000000
+SCF: Cycle: 14   F: -5446.217916121377129   dF: -3.884e-09   |Residual|: 7.261e-05   |deigs|: 7.100e-07  t[s]:   3118.19
+	FillingsUpdate:  mu: +0.615496266  nElectrons: 513.000000
+SCF: Cycle: 15   F: -5446.217916125806369   dF: -4.429e-09   |Residual|: 3.264e-05   |deigs|: 6.666e-07  t[s]:   3138.82
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Cu   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Cu  -0.004154284914129   0.000003189966023   0.332369829249255 1
+ion Cu  -0.004870234321856  -0.000338132570746   0.665541479003231 1
+ion Cu  -0.005656293427622   0.334616631533971  -0.002843958194890 1
+ion Cu  -0.006658263988283   0.333464390963088   0.330897118476748 1
+ion Cu  -0.006835837973953   0.331713638670142   0.665338836726094 1
+ion Cu  -0.003635001764755   0.666771463235121  -0.001168347348515 1
+ion Cu  -0.004247477789286   0.666002866116950   0.332759789415281 1
+ion Cu  -0.005381165214169   0.666440031392417   0.664875142959894 1
+ion Cu   0.330552082921951  -0.002851849898325   0.000055235841434 1
+ion Cu   0.328820212389744  -0.002621419011412   0.332737269525734 1
+ion Cu   0.329234834463154  -0.005458690885061   0.667656712220673 1
+ion Cu   0.328195980367156   0.330484465489518  -0.001662052145518 1
+ion Cu   0.326335980925205   0.329180925622758   0.334015037021939 1
+ion Cu   0.326845657569194   0.329646857540000   0.665156693373427 1
+ion Cu   0.330338867500363   0.661921789672472   0.000898456055922 1
+ion Cu   0.328948271372706   0.663289984726945   0.332801775972395 1
+ion Cu   0.327723913142896   0.663240486261599   0.666257157231300 1
+ion Cu   0.664030454401474  -0.001292475807506  -0.001363086929845 1
+ion Cu   0.662939614404949  -0.000789911788759   0.331192687506545 1
+ion Cu   0.661857423411307  -0.000661346140712   0.664486519465002 1
+ion Cu   0.661155094061030   0.331530683006367  -0.002542666661659 1
+ion Cu   0.660572644038664   0.333154973901128   0.329562926298332 1
+ion Cu   0.660071666140045   0.332433922264992   0.663260665408008 1
+ion Cu   0.662711525261884   0.666154125112697  -0.002780451895145 1
+ion Cu   0.662343719349890   0.666479117649825   0.331368666043500 1
+ion Cu   0.661638437547558   0.664945262395346   0.665350179190840 1
+
+# Forces in Lattice coordinates:
+force Cu  -0.065061729952313  -0.048825925969152  -0.046558288423973 0
+force Cu  -0.005098916423759  -0.004951303180958  -0.002000905081230 1
+force Cu   0.001529169595776  -0.003751651204196   0.004796376265084 1
+force Cu   0.004888399248310  -0.006191798034276   0.005675474036976 1
+force Cu   0.012088005706190   0.002600566652037   0.008419407317878 1
+force Cu   0.011195429384092   0.006436762847380   0.006009255292049 1
+force Cu  -0.006427453774769  -0.002602711602775  -0.005242044400804 1
+force Cu  -0.012295243837058  -0.011907530276192  -0.011726324127457 1
+force Cu   0.005029042743639  -0.001377849827330   0.004276831693503 1
+force Cu  -0.001650437687919   0.001588416175302  -0.007312353057609 1
+force Cu   0.004665375681146   0.003938097823378   0.005080680827137 1
+force Cu   0.001185655383851   0.013840237888485  -0.007528877716277 1
+force Cu   0.006237883429617   0.008313649645737   0.008572550355219 1
+force Cu   0.013368476897816   0.009350019648707  -0.004141046907904 1
+force Cu   0.012848138860369   0.015543643181159   0.012198420110219 1
+force Cu  -0.011542775564602   0.003879795782692  -0.011388962783798 1
+force Cu   0.005314100991970   0.012471540657958   0.004702916303058 1
+force Cu   0.008327357550375   0.009609269080353   0.001596344991563 1
+force Cu  -0.004547762765835  -0.002717570459429  -0.008604375435267 1
+force Cu  -0.004703958397146  -0.005708184210720   0.003338488276957 1
+force Cu   0.001233032464705  -0.001619716570953   0.002282509847769 1
+force Cu   0.013546186410349   0.006534025411834   0.012007085893931 1
+force Cu   0.008110111629627   0.002136086173037   0.012494289470379 1
+force Cu   0.009928448377485   0.004724045376418   0.013256643843470 1
+force Cu   0.004704453004383   0.003511671352465   0.011120143497095 1
+force Cu  -0.011792709706422  -0.011862678835152  -0.006404220442696 1
+force Cu  -0.001045820830770  -0.003006492928053  -0.004891160296649 1
+
+# Energy components:
+   Eewald =    -3313.2315671045366798
+       EH =     1933.0149028562182139
+     Eloc =    -5097.3390976208420398
+      Enl =      991.0230269753335506
+      Exc =     -518.5245619960574004
+ Exc_core =        1.2129351720213064
+       KE =      557.7068219659909118
+-------------------------------------
+     Etot =    -5446.1375397518713726
+       TS =        0.0803763739346111
+-------------------------------------
+        F =    -5446.2179161258063687
+
+IonicMinimize: Iter:   5  F: -5446.217916125806369  |grad|_K:  5.091e-04  alpha:  1.000e+00  linmin: -1.488e-01  t[s]:   3143.82
+
+#--- Lowdin population analysis ---
+# oxidation-state Cu +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.615496266  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.615022835  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5446.199197546316100   dF: -8.273e-02   |Residual|: 1.499e-01   |deigs|: 2.133e-04  t[s]:   3190.00
+	FillingsUpdate:  mu: +0.615906655  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5446.201809799033072   dF: -2.612e-03   |Residual|: 1.313e-01   |deigs|: 1.420e-03  t[s]:   3222.58
+	FillingsUpdate:  mu: +0.615469695  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5446.204798003422184   dF: -2.988e-03   |Residual|: 1.059e-01   |deigs|: 9.068e-04  t[s]:   3255.68
+	FillingsUpdate:  mu: +0.615128003  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5446.217814657919007   dF: -1.302e-02   |Residual|: 1.786e-02   |deigs|: 1.691e-03  t[s]:   3286.12
+	FillingsUpdate:  mu: +0.615570644  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.218046840336683   dF: -2.322e-04   |Residual|: 7.037e-03   |deigs|: 6.211e-04  t[s]:   3307.50
+	FillingsUpdate:  mu: +0.615527101  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.218063572377105   dF: -1.673e-05   |Residual|: 5.886e-03   |deigs|: 6.313e-05  t[s]:   3328.34
+	FillingsUpdate:  mu: +0.615496500  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.218103599229835   dF: -4.003e-05   |Residual|: 1.451e-03   |deigs|: 5.251e-05  t[s]:   3348.62
+	FillingsUpdate:  mu: +0.615495743  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.218104735372435   dF: -1.136e-06   |Residual|: 7.071e-04   |deigs|: 3.068e-06  t[s]:   3369.18
+	FillingsUpdate:  mu: +0.615496362  nElectrons: 513.000000
+SCF: Cycle:  8   F: -5446.218105110678152   dF: -3.753e-07   |Residual|: 3.798e-04   |deigs|: 2.650e-06  t[s]:   3389.69
+	FillingsUpdate:  mu: +0.615496909  nElectrons: 513.000000
+SCF: Cycle:  9   F: -5446.218105239918259   dF: -1.292e-07   |Residual|: 1.469e-04   |deigs|: 1.487e-06  t[s]:   3410.35
+	FillingsUpdate:  mu: +0.615496790  nElectrons: 513.000000
+SCF: Cycle: 10   F: -5446.218105253227804   dF: -1.331e-08   |Residual|: 9.837e-05   |deigs|: 7.481e-07  t[s]:   3430.99
+	FillingsUpdate:  mu: +0.615496660  nElectrons: 513.000000
+SCF: Cycle: 11   F: -5446.218105263708821   dF: -1.048e-08   |Residual|: 2.785e-05   |deigs|: 4.062e-07  t[s]:   3451.77
+	FillingsUpdate:  mu: +0.615496715  nElectrons: 513.000000
+SCF: Cycle: 12   F: -5446.218105263425969   dF: +2.829e-10   |Residual|: 3.064e-05   |deigs|: 2.287e-07  t[s]:   3472.97
+	FillingsUpdate:  mu: +0.615496718  nElectrons: 513.000000
+SCF: Cycle: 13   F: -5446.218105264558289   dF: -1.132e-09   |Residual|: 6.050e-06   |deigs|: 1.895e-07  t[s]:   3493.72
+	FillingsUpdate:  mu: +0.615496703  nElectrons: 513.000000
+SCF: Cycle: 14   F: -5446.218105264601945   dF: -4.366e-11   |Residual|: 5.807e-06   |deigs|: 1.325e-07  t[s]:   3511.36
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Cu   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Cu  -0.004342746371639  -0.000359691951553   0.332597700283855 1
+ion Cu  -0.004766405250436  -0.000929332375898   0.666001279022604 1
+ion Cu  -0.005209466514345   0.333767769539972  -0.002257788079020 1
+ion Cu  -0.005985067578772   0.333157582682508   0.331365512651316 1
+ion Cu  -0.005954765509617   0.331757694578656   0.665009262434609 1
+ion Cu  -0.004014652202956   0.666602012576230  -0.001376421816468 1
+ion Cu  -0.004555070777532   0.665859966142986   0.332575369382719 1
+ion Cu  -0.005282878733060   0.665984121673564   0.665242486670853 1
+ion Cu   0.330778900884515  -0.002437606975611  -0.000575147245013 1
+ion Cu   0.328710877767871  -0.002486975651606   0.332752031556557 1
+ion Cu   0.329277070955434  -0.003879733148470   0.666420750114212 1
+ion Cu   0.328260757032081   0.331023031491456  -0.001251718109736 1
+ion Cu   0.327579820075609   0.330060467469753   0.332887606771204 1
+ion Cu   0.327125884659781   0.330256115980218   0.665342189919879 1
+ion Cu   0.329469515847131   0.663453894249024  -0.000164627702517 1
+ion Cu   0.328896037238575   0.663893741878938   0.332555875216295 1
+ion Cu   0.328385362344315   0.663833052959023   0.665836361702674 1
+ion Cu   0.664052671216806  -0.001305999101603  -0.001697246591360 1
+ion Cu   0.662547017754515  -0.001587170648311   0.331689324078524 1
+ion Cu   0.661984237469942  -0.000847877413996   0.664628435432732 1
+ion Cu   0.661819395402243   0.331398217366831  -0.002090289710477 1
+ion Cu   0.661125031559159   0.332805515429919   0.330511229116585 1
+ion Cu   0.660405541679514   0.332091836178741   0.664289123618364 1
+ion Cu   0.662409062337708   0.665774101623305  -0.001906074519429 1
+ion Cu   0.661839976896197   0.665880223388155   0.331240147560648 1
+ion Cu   0.661787128762892   0.664948450193307   0.665325096805080 1
+
+# Forces in Lattice coordinates:
+force Cu  -0.067622066245707  -0.050023139222478  -0.048387561362514 0
+force Cu  -0.002292353530100  -0.003513882385289  -0.000631510992375 1
+force Cu   0.003060764550896   0.000535176724735   0.002419215018921 1
+force Cu   0.005658635654773   0.000322242910857   0.006523421765928 1
+force Cu   0.006682918459885  -0.000594839243339   0.004942138614906 1
+force Cu   0.007399208945843   0.005560917843574   0.007024987633998 1
+force Cu  -0.001281076078301  -0.000377907108205   0.000397697294302 1
+force Cu  -0.007091240840358  -0.008424709192106  -0.008562489502597 1
+force Cu   0.004408862235201  -0.000470640464999   0.002177766409740 1
+force Cu  -0.001493805816007   0.002568712921592  -0.002372041075448 1
+force Cu   0.004061989314398   0.005638994195317   0.001497263697422 1
+force Cu   0.001090037608113   0.008380420001364  -0.002188601325256 1
+force Cu   0.004651928578675   0.004319742790069   0.003028203166028 1
+force Cu   0.007967640362437   0.008291726057002  -0.000383964344652 1
+force Cu   0.013035209906639   0.014637216709925   0.009684618409413 1
+force Cu  -0.000538992176481   0.001902737803462  -0.003325018361992 1
+force Cu  -0.002356896640795   0.005099215202666   0.000335444146817 1
+force Cu   0.000472916786291   0.003555111807259   0.000125147439809 1
+force Cu  -0.002126959831818   0.000821305753756   0.000203467176474 1
+force Cu   0.002825494631471   0.002411297429594   0.001676107667860 1
+force Cu   0.001327362697321  -0.002530213163494   0.002255464960751 1
+force Cu   0.008427725881476   0.006268094260677   0.007993824043395 1
+force Cu   0.001607797853883  -0.004952994599242   0.004931006641328 1
+force Cu   0.009460828186879   0.004970369656230   0.007865782026935 1
+force Cu   0.000356595300426  -0.001420149580857  -0.000515820496425 1
+force Cu   0.002658963453967  -0.000352500456849   0.005428564171995 1
+force Cu  -0.000259241753372  -0.002627608248834  -0.002060961333041 1
+
+# Energy components:
+   Eewald =    -3313.2475715259952267
+       EH =     1932.9997817090986700
+     Eloc =    -5097.3076507814694196
+      Enl =      991.0231632469585747
+      Exc =     -518.5243797046043710
+ Exc_core =        1.2129352717137425
+       KE =      557.7059906536609333
+-------------------------------------
+     Etot =    -5446.1377311306368938
+       TS =        0.0803741339650416
+-------------------------------------
+        F =    -5446.2181052646019452
+
+IonicMinimize: Iter:   6  F: -5446.218105264601945  |grad|_K:  3.064e-04  alpha:  1.000e+00  linmin: -3.315e-01  t[s]:   3516.44
+
+#--- Lowdin population analysis ---
+# oxidation-state Cu +0.077 +0.076 +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.076 +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.076 +0.077
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.615496703  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.614383951  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5446.183989430692236   dF: -1.988e-01   |Residual|: 2.306e-01   |deigs|: 4.914e-04  t[s]:   3562.57
+	FillingsUpdate:  mu: +0.616570120  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5446.169288321513704   dF: +1.470e-02   |Residual|: 2.153e-01   |deigs|: 3.277e-03  t[s]:   3597.28
+	FillingsUpdate:  mu: +0.615450100  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5446.193920155874366   dF: -2.463e-02   |Residual|: 1.489e-01   |deigs|: 2.087e-03  t[s]:   3631.42
+	FillingsUpdate:  mu: +0.614647683  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5446.216973414565473   dF: -2.305e-02   |Residual|: 3.857e-02   |deigs|: 2.484e-03  t[s]:   3664.38
+	FillingsUpdate:  mu: +0.615553100  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.218124559650278   dF: -1.151e-03   |Residual|: 7.523e-03   |deigs|: 1.276e-03  t[s]:   3685.08
+	FillingsUpdate:  mu: +0.615534495  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.218136019413578   dF: -1.146e-05   |Residual|: 8.417e-03   |deigs|: 4.260e-05  t[s]:   3706.64
+	FillingsUpdate:  mu: +0.615502448  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.218215871967914   dF: -7.985e-05   |Residual|: 1.842e-03   |deigs|: 7.292e-05  t[s]:   3727.54
+	FillingsUpdate:  mu: +0.615496698  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.218217997188731   dF: -2.125e-06   |Residual|: 9.786e-04   |deigs|: 8.615e-06  t[s]:   3748.35
+	FillingsUpdate:  mu: +0.615496924  nElectrons: 513.000000
+SCF: Cycle:  8   F: -5446.218218911774784   dF: -9.146e-07   |Residual|: 4.697e-04   |deigs|: 3.101e-06  t[s]:   3769.34
+	FillingsUpdate:  mu: +0.615497542  nElectrons: 513.000000
+SCF: Cycle:  9   F: -5446.218219059131116   dF: -1.474e-07   |Residual|: 2.266e-04   |deigs|: 1.660e-06  t[s]:   3790.05
+	FillingsUpdate:  mu: +0.615497457  nElectrons: 513.000000
+SCF: Cycle: 10   F: -5446.218219104642230   dF: -4.551e-08   |Residual|: 1.272e-04   |deigs|: 7.354e-07  t[s]:   3810.81
+	FillingsUpdate:  mu: +0.615497166  nElectrons: 513.000000
+SCF: Cycle: 11   F: -5446.218219122860319   dF: -1.822e-08   |Residual|: 3.232e-05   |deigs|: 5.684e-07  t[s]:   3832.03
+	FillingsUpdate:  mu: +0.615497203  nElectrons: 513.000000
+SCF: Cycle: 12   F: -5446.218219122783921   dF: +7.640e-11   |Residual|: 3.388e-05   |deigs|: 1.935e-07  t[s]:   3852.87
+	FillingsUpdate:  mu: +0.615497198  nElectrons: 513.000000
+SCF: Cycle: 13   F: -5446.218219124053576   dF: -1.270e-09   |Residual|: 7.882e-06   |deigs|: 1.587e-07  t[s]:   3874.07
+	FillingsUpdate:  mu: +0.615497149  nElectrons: 513.000000
+SCF: Cycle: 14   F: -5446.218219124149073   dF: -9.550e-11   |Residual|: 6.947e-06   |deigs|: 1.315e-07  t[s]:   3894.35
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Cu   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Cu  -0.004446667688773  -0.001182831514079   0.333095895658392 1
+ion Cu  -0.004331598514821  -0.001319374969940   0.666264256758359 1
+ion Cu  -0.004427494434786   0.332879264503749  -0.001068834703908 1
+ion Cu  -0.004837122497321   0.332114003180503   0.332282161504393 1
+ion Cu  -0.004774284140814   0.331948530896402   0.665118152557422 1
+ion Cu  -0.004441234180975   0.666231441459671  -0.001302411010726 1
+ion Cu  -0.004737212751271   0.665329768737984   0.332040195182935 1
+ion Cu  -0.004900550243695   0.665258301341503   0.665633413299526 1
+ion Cu   0.330734576310599  -0.001578757006548  -0.001265138483121 1
+ion Cu   0.328841388104148  -0.001654523745620   0.332083816814853 1
+ion Cu   0.329223029298337  -0.001503918249984   0.664991261418145 1
+ion Cu   0.328795502512459   0.331773099612555  -0.001062916272779 1
+ion Cu   0.329171903691813   0.332014187896245   0.331308871570524 1
+ion Cu   0.328262297185462   0.331850085793124   0.665342883641489 1
+ion Cu   0.329312854440093   0.664958065638311  -0.001509519557780 1
+ion Cu   0.328009371013508   0.665097690274493   0.332057800224242 1
+ion Cu   0.328727280020847   0.664728348652404   0.665595217691931 1
+ion Cu   0.663569996725635  -0.001101081127472  -0.001331244340885 1
+ion Cu   0.662780818565057  -0.002200998904596   0.331663384886104 1
+ion Cu   0.662365510377177  -0.001674021613811   0.665173943336181 1
+ion Cu   0.662712572171037   0.331646347555230  -0.001397474750835 1
+ion Cu   0.661795802620722   0.331579981153301   0.332206434489286 1
+ion Cu   0.661653774988975   0.331691907220306   0.665451240333339 1
+ion Cu   0.662291892889542   0.665081893459399  -0.001607191585709 1
+ion Cu   0.661893363066095   0.665062744406352   0.331661469597378 1
+ion Cu   0.662075282674956   0.664676526916046   0.665681623488004 1
+
+# Forces in Lattice coordinates:
+force Cu  -0.068071868245708  -0.050713558147981  -0.050520793083031 0
+force Cu   0.001335115077117   0.000363986062143   0.001192164395953 1
+force Cu   0.001933291335274   0.000933659816129   0.003112828102845 1
+force Cu   0.002881172411863   0.002585451612371   0.001818099090016 1
+force Cu   0.001771978469404   0.001141120866831   0.000706385068595 1
+force Cu   0.006156008918684   0.003776256447296   0.005907753073265 1
+force Cu   0.003454413005481   0.004202378831318   0.004171822312755 1
+force Cu   0.001194596580557   0.000839551272253   0.001020966407517 1
+force Cu   0.003886579996925   0.003127840237952   0.001618736782258 1
+force Cu   0.001338714470958   0.002271871645334   0.000924666045430 1
+force Cu   0.005375023670569   0.003413487929026   0.005245723802650 1
+force Cu   0.003889694856880   0.000728520036811   0.000675815192410 1
+force Cu   0.003177044679590   0.002979499572050   0.000137003941110 1
+force Cu  -0.002782821928587  -0.004193099779549   0.003882154020476 1
+force Cu   0.002890140559412   0.000140789266552   0.001551043244151 1
+force Cu   0.001032145081575   0.001824619351717   0.000533073320909 1
+force Cu   0.009312719724045   0.005345743706186   0.004948214456505 1
+force Cu  -0.000778414391170   0.002654896335702  -0.003008734544727 1
+force Cu   0.002605783318611  -0.002547084885611  -0.000166546435485 1
+force Cu   0.004766815901853   0.007407043042545   0.005430623851692 1
+force Cu   0.003174438656481   0.003661446078268   0.004714226175880 1
+force Cu   0.002400833231559  -0.001777117385833   0.000011475104984 1
+force Cu   0.001803193020398   0.002110398905862  -0.000158703460080 1
+force Cu   0.002500331625805   0.001111842433664   0.000247648512941 1
+force Cu   0.006137786416560   0.007169654152345   0.009015931490314 1
+force Cu   0.000317456310139   0.000855118460574   0.003434454800155 1
+force Cu  -0.001474919190416   0.000684742582034  -0.006337687951596 1
+
+# Energy components:
+   Eewald =    -3313.2533879353991324
+       EH =     1932.9942215253315680
+     Eloc =    -5097.2960110034809986
+      Enl =      991.0231354535167156
+      Exc =     -518.5242565757846478
+ Exc_core =        1.2129354189958614
+       KE =      557.7055158708035378
+-------------------------------------
+     Etot =    -5446.1378472460173725
+       TS =        0.0803718781315643
+-------------------------------------
+        F =    -5446.2182191241490727
+
+IonicMinimize: Iter:   7  F: -5446.218219124149073  |grad|_K:  2.123e-04  alpha:  1.000e+00  linmin:  1.215e-02  t[s]:   3899.31
+
+#--- Lowdin population analysis ---
+# oxidation-state Cu +0.077 +0.076 +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.615497149  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.615519014  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5446.218190300820424   dF: -2.948e-04   |Residual|: 5.112e-03   |deigs|: 4.705e-06  t[s]:   3943.82
+	FillingsUpdate:  mu: +0.615474153  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5446.218126887769358   dF: +6.341e-05   |Residual|: 1.051e-02   |deigs|: 7.023e-05  t[s]:   3964.53
+	FillingsUpdate:  mu: +0.615488630  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5446.218247523147511   dF: -1.206e-04   |Residual|: 1.469e-03   |deigs|: 7.153e-05  t[s]:   3985.14
+	FillingsUpdate:  mu: +0.615515300  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5446.218247956855521   dF: -4.337e-07   |Residual|: 1.067e-03   |deigs|: 3.734e-05  t[s]:   4006.53
+	FillingsUpdate:  mu: +0.615495490  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.218248652505281   dF: -6.956e-07   |Residual|: 4.726e-04   |deigs|: 2.785e-05  t[s]:   4026.86
+	FillingsUpdate:  mu: +0.615495336  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.218248761641007   dF: -1.091e-07   |Residual|: 3.290e-04   |deigs|: 1.498e-06  t[s]:   4047.02
+	FillingsUpdate:  mu: +0.615497165  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.218248881605177   dF: -1.200e-07   |Residual|: 4.981e-05   |deigs|: 2.742e-06  t[s]:   4067.69
+	FillingsUpdate:  mu: +0.615497204  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.218248881141335   dF: +4.638e-10   |Residual|: 5.024e-05   |deigs|: 2.288e-07  t[s]:   4088.28
+	FillingsUpdate:  mu: +0.615497143  nElectrons: 513.000000
+SCF: Cycle:  8   F: -5446.218248883586057   dF: -2.445e-09   |Residual|: 1.847e-05   |deigs|: 1.926e-07  t[s]:   4109.17
+	FillingsUpdate:  mu: +0.615497108  nElectrons: 513.000000
+SCF: Cycle:  9   F: -5446.218248883787965   dF: -2.019e-10   |Residual|: 1.461e-05   |deigs|: 1.508e-07  t[s]:   4129.72
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Cu   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Cu  -0.004250503702945  -0.001559614571325   0.333405315066134 1
+ion Cu  -0.004128340195353  -0.001460120656324   0.666611088798227 1
+ion Cu  -0.004019857802747   0.332948001227209  -0.000731280874410 1
+ion Cu  -0.004416003224191   0.331849529508513   0.332525770788175 1
+ion Cu  -0.003895031929867   0.331980364056275   0.665508712754410 1
+ion Cu  -0.004439285134039   0.666327666698676  -0.001018068374372 1
+ion Cu  -0.004565116494351   0.665247058198224   0.332063065312987 1
+ion Cu  -0.004587157363212   0.665304273193096   0.665621203612128 1
+ion Cu   0.330826649051162  -0.001145802687548  -0.001435148481391 1
+ion Cu   0.329289440029581  -0.001463465443518   0.332157340615591 1
+ion Cu   0.329852678809946  -0.001060460619403   0.664585015498055 1
+ion Cu   0.329353103787740   0.332346094733960  -0.001360933812739 1
+ion Cu   0.329076229570444   0.331923662457351   0.332036020662669 1
+ion Cu   0.329008880070495   0.332008693323868   0.665342339626274 1
+ion Cu   0.329469173355281   0.665596656650479  -0.001962433036687 1
+ion Cu   0.328790546958189   0.665469271241250   0.331787410991383 1
+ion Cu   0.328775770845196   0.665635109599982   0.665018356828234 1
+ion Cu   0.664029902370161  -0.001634318302875  -0.001093935835755 1
+ion Cu   0.663007139984086  -0.001866206404672   0.331798028281037 1
+ion Cu   0.662553145194518  -0.001739083126182   0.665741148259321 1
+ion Cu   0.663403679686590   0.331334436324082  -0.001307741792977 1
+ion Cu   0.662171596748174   0.331731954680068   0.332424874469892 1
+ion Cu   0.662405968114826   0.331577425118158   0.665590603183429 1
+ion Cu   0.662352152986266   0.665162142901498  -0.000766449663435 1
+ion Cu   0.661755728060317   0.664816587518530   0.332089693620575 1
+ion Cu   0.662197162544890   0.665217854140337   0.664997112454952 1
+
+# Forces in Lattice coordinates:
+force Cu  -0.061717593058295  -0.046501379514079  -0.046161880394505 0
+force Cu   0.004255325119515   0.004403603968463   0.001644783550236 1
+force Cu   0.004133111103877   0.004325026819417   0.002032111308945 1
+force Cu   0.001467122922512   0.000714618004857  -0.000085864317806 1
+force Cu   0.003186569387225   0.002926974126013   0.001820373479679 1
+force Cu  -0.002954090901318  -0.000027366695710   0.000340465385837 1
+force Cu   0.006255477416745   0.001888912108145   0.003106845055890 1
+force Cu   0.004586208567410   0.002704644490407   0.002459855790964 1
+force Cu   0.002667280483034   0.002201120622788   0.003112540362552 1
+force Cu   0.001742455113959   0.002918198561655   0.004212347869895 1
+force Cu   0.001251275922453   0.003124035645678  -0.000129330069823 1
+force Cu   0.000472430121737  -0.001033720204421   0.004232177216818 1
+force Cu   0.002888873552022   0.001156410959533   0.002373537490298 1
+force Cu   0.002192010862656   0.001977810241484  -0.002949246608940 1
+force Cu   0.002162973644772   0.003010971918972   0.002856862433609 1
+force Cu   0.004748724796935  -0.000942151080463   0.004935582003116 1
+force Cu  -0.002994347672948  -0.002594433016604  -0.000190850065906 1
+force Cu   0.000324264946251  -0.002314035124323   0.002920536949341 1
+force Cu   0.001909871974007   0.004929578156838   0.003170779614947 1
+force Cu   0.004284842850287   0.004604160412870   0.002423540171446 1
+force Cu   0.003552713482532   0.002325847340755   0.001052238135312 1
+force Cu  -0.000034375791904   0.004962719349915   0.001463316222456 1
+force Cu  -0.000785005720098  -0.003527465138244  -0.002836839096705 1
+force Cu   0.001613264963478   0.003001674412625   0.002232445287327 1
+force Cu  -0.000205838841530  -0.002610284853411  -0.006904666866701 1
+force Cu   0.009552783455284   0.007346377366671   0.006748804836922 1
+force Cu   0.005494750975740   0.001060668554971   0.006184584585050 1
+
+# Energy components:
+   Eewald =    -3313.2584022070982428
+       EH =     1932.9893249353840474
+     Eloc =    -5097.2860243456007083
+      Enl =      991.0231223794971811
+      Exc =     -518.5242141567778162
+ Exc_core =        1.2129353616538769
+       KE =      557.7053811854680134
+-------------------------------------
+     Etot =    -5446.1378768474733079
+       TS =        0.0803720363143164
+-------------------------------------
+        F =    -5446.2182488837879646
+
+IonicMinimize: Iter:   8  F: -5446.218248883787965  |grad|_K:  2.130e-04  alpha:  1.000e+00  linmin:  5.759e-02  t[s]:   4134.67
+
+#--- Lowdin population analysis ---
+# oxidation-state Cu +0.077 +0.076 +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.076 +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.076 +0.077
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.615497108  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.615499548  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5446.218262179738304   dF: -3.373e-05   |Residual|: 1.752e-03   |deigs|: 5.482e-07  t[s]:   4168.67
+	FillingsUpdate:  mu: +0.615493810  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5446.218254653298573   dF: +7.526e-06   |Residual|: 3.811e-03   |deigs|: 1.777e-05  t[s]:   4188.89
+	FillingsUpdate:  mu: +0.615496037  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5446.218270538605793   dF: -1.589e-05   |Residual|: 5.545e-04   |deigs|: 1.986e-05  t[s]:   4209.29
+	FillingsUpdate:  mu: +0.615499215  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5446.218270553056755   dF: -1.445e-08   |Residual|: 4.139e-04   |deigs|: 4.537e-06  t[s]:   4229.83
+	FillingsUpdate:  mu: +0.615496996  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.218270663225667   dF: -1.102e-07   |Residual|: 2.389e-04   |deigs|: 3.342e-06  t[s]:   4250.17
+	FillingsUpdate:  mu: +0.615495952  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.218270725868933   dF: -6.264e-08   |Residual|: 6.515e-05   |deigs|: 1.614e-06  t[s]:   4270.47
+	FillingsUpdate:  mu: +0.615497094  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.218270729407777   dF: -3.539e-09   |Residual|: 2.184e-05   |deigs|: 1.608e-06  t[s]:   4291.43
+	FillingsUpdate:  mu: +0.615497089  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.218270729590586   dF: -1.828e-10   |Residual|: 1.928e-05   |deigs|: 1.158e-07  t[s]:   4311.70
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Cu   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Cu  -0.004059587671865  -0.001455145195217   0.333377758003406 1
+ion Cu  -0.003978875929450  -0.001328141799753   0.666639677302171 1
+ion Cu  -0.003877131491091   0.333005705946384  -0.000745843664120 1
+ion Cu  -0.004251382726973   0.331895398494065   0.332519151851507 1
+ion Cu  -0.003933296344428   0.332042749938698   0.665693079178676 1
+ion Cu  -0.004137255558775   0.666317298848754  -0.000951946357392 1
+ion Cu  -0.004337987436957   0.665245854453181   0.332096908233871 1
+ion Cu  -0.004472651625255   0.665364409989137   0.665695486459167 1
+ion Cu   0.330805484653550  -0.001034956974294  -0.001293833629795 1
+ion Cu   0.329438914146570  -0.001310564355962   0.332121446314351 1
+ion Cu   0.329957356639281  -0.001212731849740   0.664833517838985 1
+ion Cu   0.329566851535036   0.332395071206642  -0.001363982745273 1
+ion Cu   0.329143180609798   0.331956582687728   0.331989794763311 1
+ion Cu   0.329152372232791   0.332061862992264   0.665414765216863 1
+ion Cu   0.329718308551836   0.665397105558866  -0.001771463434489 1
+ion Cu   0.328903517273775   0.665449677954801   0.331834237334792 1
+ion Cu   0.328794696396215   0.665601280753556   0.665135122709706 1
+ion Cu   0.664100304007785  -0.001534310845967  -0.001036272544394 1
+ion Cu   0.663164174451870  -0.001643975237747   0.331836092497849 1
+ion Cu   0.662732706038358  -0.001678018029238   0.665801442741378 1
+ion Cu   0.663396490025927   0.331528717132038  -0.001323859169637 1
+ion Cu   0.662285193864038   0.331723451562862   0.332316063051738 1
+ion Cu   0.662528781731194   0.331666118942340   0.665608344697778 1
+ion Cu   0.662586438328886   0.665202110784491  -0.000933815895317 1
+ion Cu   0.662000361668606   0.664918451809181   0.332213587091489 1
+ion Cu   0.662403947292960   0.665175724463352   0.665080001153503 1
+
+# Forces in Lattice coordinates:
+force Cu  -0.059294498389677  -0.044724325622291  -0.043759297915088 0
+force Cu   0.003678378258070   0.003568174606739   0.001880855310718 1
+force Cu   0.003205366647046   0.002907357257221   0.001050794840940 1
+force Cu   0.001413169919888   0.000640401591082   0.000248681870015 1
+force Cu   0.002086101293207   0.002789432283312   0.001792268248090 1
+force Cu  -0.000886011177716  -0.000104999260670  -0.000617132518790 1
+force Cu   0.003421875693548   0.001134817043068   0.001809952764509 1
+force Cu   0.004057090182534   0.003565938125219   0.003168025583226 1
+force Cu   0.003131278840506   0.002515626549205   0.002573734490007 1
+force Cu   0.002223336496467   0.001443578703362   0.002909357872839 1
+force Cu   0.001469927689719   0.001462076093483   0.000898027316819 1
+force Cu   0.001240493997701   0.000492942381479   0.003353326036786 1
+force Cu   0.001153300647604  -0.000273737110180   0.001294323893952 1
+force Cu   0.003308062917903   0.002424204220082   0.000487384932413 1
+force Cu   0.000846438063446   0.001066783215443   0.000857969367521 1
+force Cu   0.004082959526421   0.001537728889065   0.004072704869983 1
+force Cu  -0.000475936926872  -0.000769826030274   0.001172428609792 1
+force Cu   0.002344390901582  -0.000528349357942   0.002734867604677 1
+force Cu   0.001977404067147   0.003676716244255   0.002860472238652 1
+force Cu   0.002662533856750   0.001837117411936   0.001615973724379 1
+force Cu   0.002592053750023   0.002220140870446   0.000546956377980 1
+force Cu   0.001217738759187   0.003489354434185   0.001889577738392 1
+force Cu   0.001493743962588   0.000133336211963   0.000390430831489 1
+force Cu   0.000842310838142   0.002028479385324   0.000725980772201 1
+force Cu   0.001201464200454   0.000134935624671  -0.002616249390977 1
+force Cu   0.006257920785852   0.004956691662167   0.003476453994355 1
+force Cu   0.004314739944412   0.002099479346277   0.004923516242932 1
+
+# Energy components:
+   Eewald =    -3313.2627308378073394
+       EH =     1932.9849770496073234
+     Eloc =    -5097.2772520975604493
+      Enl =      991.0230983606459176
+      Exc =     -518.5241693903839177
+ Exc_core =        1.2129353879579186
+       KE =      557.7052431193200164
+-------------------------------------
+     Etot =    -5446.1378984082202805
+       TS =        0.0803723213700486
+-------------------------------------
+        F =    -5446.2182707295905857
+
+IonicMinimize: Iter:   9  F: -5446.218270729590586  |grad|_K:  1.415e-04  alpha:  1.000e+00  linmin: -2.245e-01  t[s]:   4316.66
+
+#--- Lowdin population analysis ---
+# oxidation-state Cu +0.077 +0.076 +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.076 +0.077
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.615497089  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.614796640  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5446.199998875242272   dF: -1.259e-01   |Residual|: 1.706e-01   |deigs|: 2.961e-04  t[s]:   4363.87
+	FillingsUpdate:  mu: +0.616075086  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5446.205726142691674   dF: -5.727e-03   |Residual|: 1.280e-01   |deigs|: 1.869e-03  t[s]:   4397.04
+	FillingsUpdate:  mu: +0.615305334  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5446.196812291404967   dF: +8.914e-03   |Residual|: 1.334e-01   |deigs|: 1.577e-03  t[s]:   4430.57
+	FillingsUpdate:  mu: +0.614956845  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5446.217731886149522   dF: -2.092e-02   |Residual|: 2.516e-02   |deigs|: 2.207e-03  t[s]:   4461.71
+	FillingsUpdate:  mu: +0.615559473  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.218248763954762   dF: -5.169e-04   |Residual|: 7.924e-03   |deigs|: 8.476e-04  t[s]:   4482.42
+	FillingsUpdate:  mu: +0.615532402  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.218271834256484   dF: -2.307e-05   |Residual|: 6.272e-03   |deigs|: 4.146e-05  t[s]:   4502.80
+	FillingsUpdate:  mu: +0.615499770  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.218318894502772   dF: -4.706e-05   |Residual|: 1.650e-03   |deigs|: 5.721e-05  t[s]:   4523.92
+	FillingsUpdate:  mu: +0.615496212  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.218320735556517   dF: -1.841e-06   |Residual|: 7.013e-04   |deigs|: 5.855e-06  t[s]:   4544.07
+	FillingsUpdate:  mu: +0.615496383  nElectrons: 513.000000
+SCF: Cycle:  8   F: -5446.218321167650174   dF: -4.321e-07   |Residual|: 3.802e-04   |deigs|: 1.952e-06  t[s]:   4564.83
+	FillingsUpdate:  mu: +0.615496836  nElectrons: 513.000000
+SCF: Cycle:  9   F: -5446.218321288850348   dF: -1.212e-07   |Residual|: 1.525e-04   |deigs|: 1.184e-06  t[s]:   4586.01
+	FillingsUpdate:  mu: +0.615496880  nElectrons: 513.000000
+SCF: Cycle: 10   F: -5446.218321306391772   dF: -1.754e-08   |Residual|: 9.271e-05   |deigs|: 5.267e-07  t[s]:   4606.31
+	FillingsUpdate:  mu: +0.615496876  nElectrons: 513.000000
+SCF: Cycle: 11   F: -5446.218321315179310   dF: -8.788e-09   |Residual|: 2.769e-05   |deigs|: 2.608e-07  t[s]:   4627.12
+	FillingsUpdate:  mu: +0.615496845  nElectrons: 513.000000
+SCF: Cycle: 12   F: -5446.218321314742752   dF: +4.366e-10   |Residual|: 3.291e-05   |deigs|: 1.319e-07  t[s]:   4648.70
+	FillingsUpdate:  mu: +0.615496828  nElectrons: 513.000000
+SCF: Cycle: 13   F: -5446.218321316016954   dF: -1.274e-09   |Residual|: 4.506e-06   |deigs|: 9.535e-08  t[s]:   4669.41
+	FillingsUpdate:  mu: +0.615496831  nElectrons: 513.000000
+SCF: Cycle: 14   F: -5446.218321315973299   dF: +4.366e-11   |Residual|: 5.877e-06   |deigs|: 3.348e-08  t[s]:   4687.17
+	FillingsUpdate:  mu: +0.615496839  nElectrons: 513.000000
+SCF: Cycle: 15   F: -5446.218321316045149   dF: -7.185e-11   |Residual|: 2.416e-06   |deigs|: 2.412e-08  t[s]:   4702.36
+	FillingsUpdate:  mu: +0.615496824  nElectrons: 513.000000
+SCF: Cycle: 16   F: -5446.218321316066067   dF: -2.092e-11   |Residual|: 1.048e-06   |deigs|: 2.397e-08  t[s]:   4715.32
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Cu   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Cu  -0.003228487195952  -0.001187757567653   0.333439065178147 1
+ion Cu  -0.003204231359233  -0.000948298896847   0.666764825160119 1
+ion Cu  -0.003109049054534   0.333137589054630  -0.000624295199031 1
+ion Cu  -0.003563689086045   0.332117165332400   0.332728234438714 1
+ion Cu  -0.003467860567746   0.332233774350613   0.666179566793057 1
+ion Cu  -0.003157353292383   0.666249600845334  -0.000598003544901 1
+ion Cu  -0.003493469659348   0.665455667005244   0.332298433892315 1
+ion Cu  -0.003764613405079   0.665619372246188   0.665975513696021 1
+ion Cu   0.331023057185378  -0.000590749649913  -0.000858967415286 1
+ion Cu   0.330135217408113  -0.000824615157715   0.332141117456054 1
+ion Cu   0.330586802126415  -0.001326090005955   0.665472081670575 1
+ion Cu   0.330469734917866   0.332670513305031  -0.001352275530582 1
+ion Cu   0.329709728821846   0.332163171768645   0.332126482142964 1
+ion Cu   0.329949998660575   0.332336810749209   0.665598788712783 1
+ion Cu   0.330620564551823   0.665366555477444  -0.001370821574499 1
+ion Cu   0.329579137750841   0.665462914074005   0.332062163493768 1
+ion Cu   0.329240891652644   0.665763378828632   0.665307450881700 1
+ion Cu   0.664536651068227  -0.001356820175308  -0.000602277313070 1
+ion Cu   0.663852603624051  -0.001004152642693   0.332062665464676 1
+ion Cu   0.663497380166587  -0.001346036057586   0.666073975515837 1
+ion Cu   0.663789310068715   0.332096858451762  -0.001207225707419 1
+ion Cu   0.663046341614061   0.331745925011110   0.332281110438683 1
+ion Cu   0.663227648464011   0.332030708073368   0.665719405554261 1
+ion Cu   0.663416016586984   0.665464867530755  -0.001168406499417 1
+ion Cu   0.662956285954571   0.665257389164777   0.332638598275501 1
+ion Cu   0.663242826106962   0.665321081857771   0.665270158296457 1
+
+# Forces in Lattice coordinates:
+force Cu  -0.047387695672296  -0.035658809848127  -0.033439820535760 0
+force Cu   0.001924349571984   0.001728602564835   0.001359775990964 1
+force Cu   0.000032670953191  -0.000517864827265  -0.001091166455932 1
+force Cu   0.000074179609663  -0.000208816185850   0.000105818011370 1
+force Cu   0.001263240767664   0.002467674276244   0.001136419826718 1
+force Cu   0.002144481118945   0.000587992013864  -0.002300879259053 1
+force Cu  -0.001191657556878   0.000259639814490  -0.001228353394603 1
+force Cu   0.003324917907383   0.004194200522802   0.004129965620792 1
+force Cu   0.002526339037646   0.002097983728848   0.000970404291579 1
+force Cu   0.002239748832961  -0.002670740252653  -0.000555581968642 1
+force Cu   0.001909434641255  -0.001459689714015   0.003217829919884 1
+force Cu   0.002189175084531   0.002835720923936   0.001226159306778 1
+force Cu  -0.001701774141531  -0.001903285900999   0.000926973786579 1
+force Cu   0.004348344810765   0.002847149796136   0.004586062222082 1
+force Cu  -0.002039831849692  -0.002754147401783  -0.002218906850191 1
+force Cu   0.001015120220034   0.003614980184295   0.001559779242366 1
+force Cu   0.005036695169252   0.003853073588442   0.003510816091970 1
+force Cu   0.007799477567848   0.004008017240321   0.005125342225773 1
+force Cu   0.002105048872489   0.002336950159988   0.000467904906347 1
+force Cu  -0.000585255537817  -0.003635440699688   0.000207343614175 1
+force Cu   0.000665415634239   0.001055224497919  -0.000505611641583 1
+force Cu   0.003073662125856   0.000542254751373   0.002055454571243 1
+force Cu   0.005504590420422   0.007982826158522   0.005667307811100 1
+force Cu   0.000110377621841   0.000211576657048  -0.000465274028423 1
+force Cu   0.004365684467604   0.004944261180363   0.005963195958518 1
+force Cu  -0.001354087941852  -0.000618083992246  -0.004124167877940 1
+force Cu   0.002734612926501   0.003993289844260   0.003900584479280 1
+
+# Energy components:
+   Eewald =    -3313.2694554926811179
+       EH =     1932.9785847111318162
+     Eloc =    -5097.2640578415102937
+      Enl =      991.0231270372700010
+      Exc =     -518.5241154995283068
+ Exc_core =        1.2129354247928290
+       KE =      557.7050328925829490
+-------------------------------------
+     Etot =    -5446.1379487679423619
+       TS =        0.0803725481241126
+-------------------------------------
+        F =    -5446.2183213160660671
+
+IonicMinimize: Iter:  10  F: -5446.218321316066067  |grad|_K:  1.720e-04  alpha:  1.000e+00  linmin: -1.050e-01  t[s]:   4720.39
+
+#--- Lowdin population analysis ---
+# oxidation-state Cu +0.077 +0.076 +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.615496824  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.614044847  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5446.197386164506497   dF: -2.670e-01   |Residual|: 2.386e-01   |deigs|: 5.860e-04  t[s]:   4766.26
+	FillingsUpdate:  mu: +0.616678631  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5446.205413663782565   dF: -8.027e-03   |Residual|: 1.495e-01   |deigs|: 3.737e-03  t[s]:   4798.80
+	FillingsUpdate:  mu: +0.614517655  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5446.182402275294407   dF: +2.301e-02   |Residual|: 1.750e-01   |deigs|: 3.737e-03  t[s]:   4832.61
+	FillingsUpdate:  mu: +0.614624517  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5446.214829097582879   dF: -3.243e-02   |Residual|: 5.654e-02   |deigs|: 2.438e-03  t[s]:   4866.64
+	FillingsUpdate:  mu: +0.615564438  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.218291719347690   dF: -3.463e-03   |Residual|: 8.116e-03   |deigs|: 1.468e-03  t[s]:   4887.88
+	FillingsUpdate:  mu: +0.615539731  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.218321672091406   dF: -2.995e-05   |Residual|: 6.473e-03   |deigs|: 3.982e-05  t[s]:   4908.05
+	FillingsUpdate:  mu: +0.615502476  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.218367626165673   dF: -4.595e-05   |Residual|: 1.830e-03   |deigs|: 6.281e-05  t[s]:   4928.91
+	FillingsUpdate:  mu: +0.615495387  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.218370204255734   dF: -2.578e-06   |Residual|: 8.645e-04   |deigs|: 1.037e-05  t[s]:   4949.20
+	FillingsUpdate:  mu: +0.615496420  nElectrons: 513.000000
+SCF: Cycle:  8   F: -5446.218371006440975   dF: -8.022e-07   |Residual|: 4.168e-04   |deigs|: 3.204e-06  t[s]:   4969.68
+	FillingsUpdate:  mu: +0.615497503  nElectrons: 513.000000
+SCF: Cycle:  9   F: -5446.218371117755851   dF: -1.113e-07   |Residual|: 2.523e-04   |deigs|: 1.912e-06  t[s]:   4990.34
+	FillingsUpdate:  mu: +0.615497405  nElectrons: 513.000000
+SCF: Cycle: 10   F: -5446.218371172848492   dF: -5.509e-08   |Residual|: 1.402e-04   |deigs|: 7.218e-07  t[s]:   5011.08
+	FillingsUpdate:  mu: +0.615496559  nElectrons: 513.000000
+SCF: Cycle: 11   F: -5446.218371193028361   dF: -2.018e-08   |Residual|: 4.640e-05   |deigs|: 1.234e-06  t[s]:   5031.54
+	FillingsUpdate:  mu: +0.615496655  nElectrons: 513.000000
+SCF: Cycle: 12   F: -5446.218371194532665   dF: -1.504e-09   |Residual|: 2.962e-05   |deigs|: 2.084e-07  t[s]:   5052.22
+	FillingsUpdate:  mu: +0.615496890  nElectrons: 513.000000
+SCF: Cycle: 13   F: -5446.218371195600412   dF: -1.068e-09   |Residual|: 1.316e-05   |deigs|: 3.551e-07  t[s]:   5073.21
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Cu   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Cu  -0.002125601947330  -0.000848320176193   0.333526718293949 1
+ion Cu  -0.002168393137147  -0.000585706324564   0.666924099164271 1
+ion Cu  -0.002068571257811   0.333205386494560  -0.000370753334438 1
+ion Cu  -0.002460878659611   0.332490499061982   0.333017004209275 1
+ion Cu  -0.002541678974733   0.332598632932349   0.666535917297433 1
+ion Cu  -0.001972261260201   0.666252111304383  -0.000212488819846 1
+ion Cu  -0.002361086909089   0.665828429521054   0.332609673627387 1
+ion Cu  -0.002649732769887   0.665953977778309   0.666311311150579 1
+ion Cu   0.331612278330298  -0.000238499520407  -0.000418055705812 1
+ion Cu   0.331112122811486  -0.000357912661193   0.332458041301789 1
+ion Cu   0.331509926684995  -0.001098431370292   0.666022574649415 1
+ion Cu   0.331522705695541   0.333008375238486  -0.001083358678682 1
+ion Cu   0.330729863517400   0.332539730106689   0.332344638953218 1
+ion Cu   0.331020408889526   0.332686888665278   0.665861916412182 1
+ion Cu   0.331624241052469   0.665697583582389  -0.000976963138951 1
+ion Cu   0.330668369718110   0.665693639246770   0.332382986142336 1
+ion Cu   0.330257801490698   0.666064373677432   0.665613450347292 1
+ion Cu   0.665254896616864  -0.000981148349152  -0.000211777973814 1
+ion Cu   0.664810887221257  -0.000408102385804   0.332462147157245 1
+ion Cu   0.664569737613050  -0.000932161731177   0.666408527646150 1
+ion Cu   0.664633680524650   0.332686256517648  -0.000928111430187 1
+ion Cu   0.664242936967060   0.331998099711765   0.332424447404880 1
+ion Cu   0.664272746878752   0.332472545202716   0.666015921421349 1
+ion Cu   0.664515134724892   0.665880042594058  -0.001105688931437 1
+ion Cu   0.664197883108445   0.665689645700299   0.333026660576091 1
+ion Cu   0.664380277948852   0.665651879636020   0.665594035343209 1
+
+# Forces in Lattice coordinates:
+force Cu  -0.030649147955024  -0.022845067999428  -0.020429218943703 0
+force Cu   0.000915846634726   0.000642544619474   0.000706142595287 1
+force Cu  -0.001604226279664  -0.002121022905549  -0.002670611736778 1
+force Cu  -0.000227792964761  -0.000324790575060  -0.000116978753473 1
+force Cu  -0.000535378409229   0.000790049294856  -0.000152423273477 1
+force Cu   0.003648651572012   0.000535841822993  -0.002663427472715 1
+force Cu  -0.004331013659290  -0.000664793095468  -0.003466346555442 1
+force Cu   0.002542539965707   0.004015215735294   0.004088536296165 1
+force Cu   0.001719712177240   0.001320647527111  -0.000243235682910 1
+force Cu   0.001968283279335  -0.003908768889118  -0.002266256882321 1
+force Cu   0.001627325272562  -0.003684130431499   0.002699883348694 1
+force Cu   0.002170248173965   0.003689817788911   0.000083971695672 1
+force Cu  -0.003154195548375  -0.003407273325578  -0.000216415126273 1
+force Cu   0.004862536083389   0.003147946303390   0.006865192834425 1
+force Cu  -0.002236174916431  -0.003818336725770  -0.002636289727246 1
+force Cu  -0.000176037482485   0.003989404782104   0.000391442453069 1
+force Cu   0.007910066002157   0.006192347320577   0.004791737170653 1
+force Cu   0.009487073253376   0.005490757804935   0.005688688050965 1
+force Cu   0.000612915991513   0.000606521812747  -0.000997231753783 1
+force Cu  -0.003048755472781  -0.006972795005240  -0.001338395467288 1
+force Cu  -0.001020178693373   0.000286432136840  -0.001375934967895 1
+force Cu   0.002635846844437  -0.001536610968585   0.001340242132062 1
+force Cu   0.006815642009027   0.012082332941958   0.008740907134363 1
+force Cu  -0.000809358693511  -0.001157675670052  -0.001724357365517 1
+force Cu   0.005385627316431   0.006557612176140   0.010023120551965 1
+force Cu  -0.005559367647742  -0.003369770317229  -0.007811721836341 1
+force Cu   0.001639781104700   0.004955888900314   0.003185081849982 1
+
+# Energy components:
+   Eewald =    -3313.2748022522755491
+       EH =     1932.9730443053761064
+     Eloc =    -5097.2529245491659822
+      Enl =      991.0229846090921910
+      Exc =     -518.5240127758663675
+ Exc_core =        1.2129354092787936
+       KE =      557.7047765925944987
+-------------------------------------
+     Etot =    -5446.1379986609663320
+       TS =        0.0803725346343855
+-------------------------------------
+        F =    -5446.2183711956004117
+
+IonicMinimize: Iter:  11  F: -5446.218371195600412  |grad|_K:  2.399e-04  alpha:  1.000e+00  linmin: -1.075e-01  t[s]:   5078.23
+
+#--- Lowdin population analysis ---
+# oxidation-state Cu +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.615496890  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.611107689  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5446.125797577957201   dF: -8.085e-01   |Residual|: 4.517e-01   |deigs|: 1.834e-03  t[s]:   5124.96
+	FillingsUpdate:  mu: +0.619447713  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5446.118859404868999   dF: +6.938e-03   |Residual|: 3.467e-01   |deigs|: 1.173e-02  t[s]:   5157.83
+	FillingsUpdate:  mu: +0.614593515  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5446.128249264149417   dF: -9.390e-03   |Residual|: 2.871e-01   |deigs|: 7.125e-03  t[s]:   5191.25
+	FillingsUpdate:  mu: +0.613252750  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5446.194968800213246   dF: -6.672e-02   |Residual|: 1.494e-01   |deigs|: 3.512e-03  t[s]:   5226.28
+	FillingsUpdate:  mu: +0.615624418  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.218177543015372   dF: -2.321e-02   |Residual|: 1.646e-02   |deigs|: 3.976e-03  t[s]:   5259.90
+	FillingsUpdate:  mu: +0.615589590  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.218223913317161   dF: -4.637e-05   |Residual|: 1.255e-02   |deigs|: 8.783e-05  t[s]:   5280.29
+	FillingsUpdate:  mu: +0.615510157  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.218400344522706   dF: -1.764e-04   |Residual|: 5.455e-03   |deigs|: 1.448e-04  t[s]:   5300.54
+	FillingsUpdate:  mu: +0.615486543  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.218423188807719   dF: -2.284e-05   |Residual|: 1.437e-03   |deigs|: 4.167e-05  t[s]:   5321.02
+	FillingsUpdate:  mu: +0.615490424  nElectrons: 513.000000
+SCF: Cycle:  8   F: -5446.218424980840609   dF: -1.792e-06   |Residual|: 8.284e-04   |deigs|: 6.676e-06  t[s]:   5341.72
+	FillingsUpdate:  mu: +0.615498604  nElectrons: 513.000000
+SCF: Cycle:  9   F: -5446.218425748776099   dF: -7.679e-07   |Residual|: 2.351e-04   |deigs|: 1.175e-05  t[s]:   5362.28
+	FillingsUpdate:  mu: +0.615497482  nElectrons: 513.000000
+SCF: Cycle: 10   F: -5446.218425740638850   dF: +8.137e-09   |Residual|: 2.361e-04   |deigs|: 1.784e-06  t[s]:   5383.10
+	FillingsUpdate:  mu: +0.615496330  nElectrons: 513.000000
+SCF: Cycle: 11   F: -5446.218425799813303   dF: -5.917e-08   |Residual|: 4.181e-05   |deigs|: 1.727e-06  t[s]:   5404.48
+	FillingsUpdate:  mu: +0.615496632  nElectrons: 513.000000
+SCF: Cycle: 12   F: -5446.218425799905162   dF: -9.186e-11   |Residual|: 4.645e-05   |deigs|: 4.664e-07  t[s]:   5424.77
+	FillingsUpdate:  mu: +0.615496753  nElectrons: 513.000000
+SCF: Cycle: 13   F: -5446.218425802125239   dF: -2.220e-09   |Residual|: 1.478e-05   |deigs|: 2.191e-07  t[s]:   5444.67
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Cu   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Cu  -0.000164750488914   0.000002885726250   0.333332491975079 1
+ion Cu  -0.000277863210830   0.000089406312875   0.666683750089205 1
+ion Cu  -0.000131993231149   0.333272879422577  -0.000171150467749 1
+ion Cu  -0.000631119572176   0.333063520681932   0.333352810186989 1
+ion Cu  -0.000701415832392   0.333136941076419   0.666894721387516 1
+ion Cu  -0.000292809265246   0.666576509904378   0.000058011119244 1
+ion Cu  -0.000414330598155   0.666607170025320   0.333128635466136 1
+ion Cu  -0.000313882178872   0.666471007385168   0.666704618834725 1
+ion Cu   0.332903852270813   0.000179350088831   0.000116501241404 1
+ion Cu   0.333136623644242  -0.000076698454196   0.332999816964777 1
+ion Cu   0.332859034110856  -0.000339852465814   0.666831520459962 1
+ion Cu   0.333181731146563   0.332921189994088  -0.000430859767353 1
+ion Cu   0.332949236520093   0.333195997008037   0.332891125119614 1
+ion Cu   0.333003705552781   0.333184930408863   0.666629589933970 1
+ion Cu   0.333387335614918   0.666066959180410  -0.000024941444289 1
+ion Cu   0.332836969045206   0.666397617879508   0.333284593628274 1
+ion Cu   0.332546476086462   0.666189840007106   0.666577142286482 1
+ion Cu   0.665979438487119  -0.000002521289114   0.000307394917229 1
+ion Cu   0.666378727138720   0.000190020021115   0.333160923544483 1
+ion Cu   0.666203503211195  -0.000060666258729   0.666683496531130 1
+ion Cu   0.665997518179093   0.333562959635232  -0.000291932028497 1
+ion Cu   0.665969974438224   0.333051736212169   0.333228405407907 1
+ion Cu   0.665944187717325   0.333302179317319   0.666365094653642 1
+ion Cu   0.666479154877811   0.666595535532957  -0.000475212655152 1
+ion Cu   0.666255547022155   0.666719094593889   0.333435134365478 1
+ion Cu   0.666278506099287   0.666444293469862   0.666379229201901 1
+
+# Forces in Lattice coordinates:
+force Cu  -0.005296105059902  -0.003817856870082  -0.002099826400395 0
+force Cu  -0.003879906501894  -0.003571829651074  -0.000859048202308 1
+force Cu  -0.003875407690866  -0.003894256028155  -0.001107841791298 1
+force Cu  -0.004800473802734  -0.000744234198065  -0.000203551319938 1
+force Cu   0.003219526108247   0.004122711090544   0.001393624147432 1
+force Cu   0.002879993887812   0.001744394669875  -0.002656923770749 1
+force Cu  -0.001355216184829   0.000260836477103  -0.000672804090071 1
+force Cu   0.002046263221878   0.000901869362599   0.002792067600203 1
+force Cu  -0.003738110553358  -0.000416340496305  -0.003261365198069 1
+force Cu  -0.002692330840262  -0.008751868997250  -0.005661019509588 1
+force Cu   0.000071782558659   0.000223744117568   0.005656097351027 1
+force Cu   0.001790104710948   0.000708069602663  -0.001671219715925 1
+force Cu   0.000408699436187   0.006226546066769   0.006048995085150 1
+force Cu  -0.001915279592022  -0.000279698829347   0.004678404799117 1
+force Cu  -0.006869235829418  -0.006537944094006  -0.007306186184388 1
+force Cu  -0.003758546181295   0.003803092486313  -0.002103794893372 1
+force Cu   0.002329268899066   0.001643409827783  -0.000869073753348 1
+force Cu   0.007907039316226   0.009577878629911   0.005529323293108 1
+force Cu   0.005498436071864  -0.001159663031552  -0.003096752851722 1
+force Cu  -0.000940249077606  -0.002992313472128   0.000014744769138 1
+force Cu   0.000923971421075  -0.001783184817392  -0.000525734534075 1
+force Cu   0.004308188030140  -0.002551653943214   0.000871618734742 1
+force Cu   0.005199334382223   0.005892175549667   0.001353986804525 1
+force Cu   0.005173051104896   0.001277134302736   0.003014442081653 1
+force Cu   0.001600982102605   0.002773266274957   0.005994465255802 1
+force Cu  -0.004673510488453  -0.005535552456659  -0.006462788903406 1
+force Cu   0.000832071701152   0.003205263505374   0.001477894402745 1
+
+# Energy components:
+   Eewald =    -3313.2801554324710196
+       EH =     1932.9682441397483217
+     Eloc =    -5097.2427756980932827
+      Enl =      991.0231269969874575
+      Exc =     -518.5239879329130872
+ Exc_core =        1.2129353174947664
+       KE =      557.7045586777962853
+-------------------------------------
+     Etot =    -5446.1380539314504858
+       TS =        0.0803718706745359
+-------------------------------------
+        F =    -5446.2184258021252390
+
+IonicMinimize: Iter:  12  F: -5446.218425802125239  |grad|_K:  2.518e-04  alpha:  1.000e+00  linmin: -1.182e-03  t[s]:   5449.62
+
+#--- Lowdin population analysis ---
+# oxidation-state Cu +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.076 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.615496753  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.613636011  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5446.060676105005768   dF: -3.056e-01   |Residual|: 3.381e-01   |deigs|: 9.748e-04  t[s]:   5496.14
+	FillingsUpdate:  mu: +0.617620045  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5446.076811946364614   dF: -1.614e-02   |Residual|: 3.782e-01   |deigs|: 6.567e-03  t[s]:   5529.49
+	FillingsUpdate:  mu: +0.615549837  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5446.182300744057102   dF: -1.055e-01   |Residual|: 1.763e-01   |deigs|: 4.763e-03  t[s]:   5562.61
+	FillingsUpdate:  mu: +0.614306529  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5446.214024296658863   dF: -3.172e-02   |Residual|: 6.586e-02   |deigs|: 2.719e-03  t[s]:   5595.22
+	FillingsUpdate:  mu: +0.615587428  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.217395575119554   dF: -3.371e-03   |Residual|: 2.838e-02   |deigs|: 1.837e-03  t[s]:   5624.38
+	FillingsUpdate:  mu: +0.615680038  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.217956489490462   dF: -5.609e-04   |Residual|: 2.065e-02   |deigs|: 2.402e-04  t[s]:   5644.87
+	FillingsUpdate:  mu: +0.615484614  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.218404419019862   dF: -4.479e-04   |Residual|: 2.061e-03   |deigs|: 3.252e-04  t[s]:   5665.21
+	FillingsUpdate:  mu: +0.615500711  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.218404512171219   dF: -9.315e-08   |Residual|: 1.887e-03   |deigs|: 2.340e-05  t[s]:   5686.04
+	FillingsUpdate:  mu: +0.615503346  nElectrons: 513.000000
+SCF: Cycle:  8   F: -5446.218407978054529   dF: -3.466e-06   |Residual|: 7.250e-04   |deigs|: 5.983e-06  t[s]:   5707.48
+	FillingsUpdate:  mu: +0.615496669  nElectrons: 513.000000
+SCF: Cycle:  9   F: -5446.218408273303794   dF: -2.952e-07   |Residual|: 3.575e-04   |deigs|: 9.597e-06  t[s]:   5729.06
+	FillingsUpdate:  mu: +0.615496327  nElectrons: 513.000000
+SCF: Cycle: 10   F: -5446.218408384102077   dF: -1.108e-07   |Residual|: 1.810e-04   |deigs|: 1.464e-06  t[s]:   5749.92
+	FillingsUpdate:  mu: +0.615497007  nElectrons: 513.000000
+SCF: Cycle: 11   F: -5446.218408408629330   dF: -2.453e-08   |Residual|: 7.914e-05   |deigs|: 1.063e-06  t[s]:   5770.64
+	FillingsUpdate:  mu: +0.615496925  nElectrons: 513.000000
+SCF: Cycle: 12   F: -5446.218408413677025   dF: -5.048e-09   |Residual|: 4.634e-05   |deigs|: 3.836e-07  t[s]:   5791.72
+	FillingsUpdate:  mu: +0.615496711  nElectrons: 513.000000
+SCF: Cycle: 13   F: -5446.218408415376871   dF: -1.700e-09   |Residual|: 2.294e-05   |deigs|: 3.456e-07  t[s]:   5813.17
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+IonicMinimize: 	Wolfe criterion not satisfied: alpha: 1  (E-E0)/|gdotd0|: 0.203666  gdotd/gdotd0: -1.3616 (taking cubic step)
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.615496711  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.615553767  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5446.218365903059748   dF: -7.371e-04   |Residual|: 6.912e-03   |deigs|: 1.171e-05  t[s]:   5863.09
+	FillingsUpdate:  mu: +0.615435868  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5446.218303778471636   dF: +6.212e-05   |Residual|: 1.140e-02   |deigs|: 1.766e-04  t[s]:   5883.70
+	FillingsUpdate:  mu: +0.615480153  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5446.218438219003474   dF: -1.344e-04   |Residual|: 2.406e-03   |deigs|: 1.087e-04  t[s]:   5904.39
+	FillingsUpdate:  mu: +0.615532145  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5446.218440169983296   dF: -1.951e-06   |Residual|: 1.969e-03   |deigs|: 7.281e-05  t[s]:   5925.29
+	FillingsUpdate:  mu: +0.615495293  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.218442877698180   dF: -2.708e-06   |Residual|: 5.508e-04   |deigs|: 5.177e-05  t[s]:   5945.70
+	FillingsUpdate:  mu: +0.615495370  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.218443031395509   dF: -1.537e-07   |Residual|: 4.446e-04   |deigs|: 1.846e-06  t[s]:   5966.80
+	FillingsUpdate:  mu: +0.615496551  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.218443260715503   dF: -2.293e-07   |Residual|: 7.065e-05   |deigs|: 2.016e-06  t[s]:   5987.29
+	FillingsUpdate:  mu: +0.615496786  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.218443263448535   dF: -2.733e-09   |Residual|: 6.343e-05   |deigs|: 3.736e-07  t[s]:   6008.23
+	FillingsUpdate:  mu: +0.615496720  nElectrons: 513.000000
+SCF: Cycle:  8   F: -5446.218443267182010   dF: -3.733e-09   |Residual|: 2.895e-05   |deigs|: 1.692e-07  t[s]:   6029.00
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Cu   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Cu   0.000175602731135   0.000112901498383   0.333363890220532 1
+ion Cu   0.000113110392811   0.000142948540962   0.666755446071325 1
+ion Cu   0.000071688032108   0.333339974180550   0.000026779150705 1
+ion Cu   0.000087082181532   0.333383470661001   0.333374135261715 1
+ion Cu  -0.000135613377115   0.333431352065172   0.666820534008326 1
+ion Cu   0.000226613078177   0.666664119995465   0.000158536715280 1
+ion Cu   0.000229432406732   0.666675698453554   0.333305084642757 1
+ion Cu   0.000128781015551   0.666716416527523   0.666730589981093 1
+ion Cu   0.333260531631304  -0.000029679808432   0.000178751338682 1
+ion Cu   0.333481218421614   0.000108348098024   0.333439276463412 1
+ion Cu   0.333313524256503  -0.000137711333235   0.666940646749274 1
+ion Cu   0.333424629577717   0.333284467470787   0.000042726056617 1
+ion Cu   0.333345952255361   0.333413163383277   0.333181674798850 1
+ion Cu   0.333404578884458   0.333341894922547   0.666671245373808 1
+ion Cu   0.333623112821647   0.666428905004184   0.000150660980119 1
+ion Cu   0.333349875780327   0.666648611425243   0.333404116820658 1
+ion Cu   0.333217909760714   0.666568881870042   0.666887589976696 1
+ion Cu   0.666654725339627   0.000175026960106   0.000123105314857 1
+ion Cu   0.666863968301746   0.000352411726314   0.333366906110387 1
+ion Cu   0.666864803770938  -0.000040788571433   0.666752919290312 1
+ion Cu   0.666653069320181   0.333642593762232  -0.000094304049833 1
+ion Cu   0.666701110845407   0.333297902269357   0.333224829311909 1
+ion Cu   0.666742340501443   0.333448777291915   0.666608548907797 1
+ion Cu   0.666980295571859   0.666735292276301  -0.000265964783981 1
+ion Cu   0.666932827194158   0.666836855460519   0.333516840137658 1
+ion Cu   0.666846464406435   0.666663183236554   0.666672599821786 1
+
+# Forces in Lattice coordinates:
+force Cu   0.001887590100880   0.001809549546503   0.002469904076888 0
+force Cu  -0.000168363641359  -0.000668975306569   0.000295804161618 1
+force Cu  -0.001855763442703  -0.002080359413121  -0.001555710482622 1
+force Cu   0.000840231747421   0.000753585191801   0.000559571625426 1
+force Cu  -0.001221140360541  -0.000576287976099  -0.000595272105860 1
+force Cu   0.002650570884183   0.000279972026643  -0.000642520616839 1
+force Cu  -0.003039948184830  -0.001489935695664  -0.002219383311417 1
+force Cu  -0.000102567307772   0.001473642412876   0.001593927509433 1
+force Cu  -0.000015510012400  -0.000127754535425  -0.000579312439594 1
+force Cu   0.002117635259143   0.000361602393577  -0.000145100749466 1
+force Cu  -0.000652763421064  -0.002464100813182  -0.000553084656193 1
+force Cu   0.002164334640209   0.001835119343160  -0.000712079938572 1
+force Cu  -0.000975820233383  -0.000864855926292  -0.001162488870447 1
+force Cu   0.001574727075525   0.000465970329073   0.004145061387116 1
+force Cu  -0.000412029678636  -0.001542848880350  -0.000821261535640 1
+force Cu  -0.000991315928616   0.002234385689161  -0.001074259551885 1
+force Cu   0.004517129579445   0.002528581787852   0.001910252606310 1
+force Cu   0.003036788248390   0.001932230806660  -0.000427639873919 1
+force Cu  -0.000568544799838  -0.001909156581283  -0.001030537102210 1
+force Cu  -0.003178074166350  -0.004226675241682  -0.001828612637301 1
+force Cu  -0.000959984758918   0.001307273169491   0.000220013164655 1
+force Cu   0.000212714002145  -0.002683486336616  -0.000195835811104 1
+force Cu   0.003311442907774   0.005565734867495   0.004113063558000 1
+force Cu  -0.001342434835141  -0.001136948660953  -0.000749503004344 1
+force Cu   0.000977674253348   0.002849205603551   0.005689795960638 1
+force Cu  -0.005555107351887  -0.004003800716329  -0.004973409360866 1
+force Cu  -0.001079801918578   0.001364286413256  -0.000714226753801 1
+
+# Energy components:
+   Eewald =    -3313.2843916874403476
+       EH =     1932.9640644934106604
+     Eloc =    -5097.2343060217090169
+      Enl =      991.0231800237377229
+      Exc =     -518.5239571845577302
+ Exc_core =        1.2129353303669501
+       KE =      557.7044036754455192
+-------------------------------------
+     Etot =    -5446.1380713707458199
+       TS =        0.0803718964366337
+-------------------------------------
+        F =    -5446.2184432671820105
+
+IonicMinimize: Iter:  13  F: -5446.218443267182010  |grad|_K:  1.360e-04  alpha:  4.094e-01  linmin: -1.808e-02  t[s]:   6033.95
+
+#--- Lowdin population analysis ---
+# oxidation-state Cu +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077
+
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: +0.615496720  nElectrons: 513.000000
+	FillingsUpdate:  mu: +0.615497500  nElectrons: 513.000000
+SCF: Cycle:  0   F: -5446.218444666613323   dF: -1.275e-05   |Residual|: 1.255e-03   |deigs|: 1.867e-07  t[s]:   6068.05
+	FillingsUpdate:  mu: +0.615495552  nElectrons: 513.000000
+SCF: Cycle:  1   F: -5446.218440434116928   dF: +4.232e-06   |Residual|: 2.881e-03   |deigs|: 9.574e-06  t[s]:   6088.66
+	FillingsUpdate:  mu: +0.615496248  nElectrons: 513.000000
+SCF: Cycle:  2   F: -5446.218449493206208   dF: -9.059e-06   |Residual|: 3.750e-04   |deigs|: 1.444e-05  t[s]:   6109.49
+	FillingsUpdate:  mu: +0.615497489  nElectrons: 513.000000
+SCF: Cycle:  3   F: -5446.218449540728216   dF: -4.752e-08   |Residual|: 2.334e-04   |deigs|: 1.811e-06  t[s]:   6129.85
+	FillingsUpdate:  mu: +0.615496518  nElectrons: 513.000000
+SCF: Cycle:  4   F: -5446.218449562322348   dF: -2.159e-08   |Residual|: 1.714e-04   |deigs|: 1.443e-06  t[s]:   6150.51
+	FillingsUpdate:  mu: +0.615496108  nElectrons: 513.000000
+SCF: Cycle:  5   F: -5446.218449594163758   dF: -3.184e-08   |Residual|: 3.593e-05   |deigs|: 7.542e-07  t[s]:   6170.89
+	FillingsUpdate:  mu: +0.615496759  nElectrons: 513.000000
+SCF: Cycle:  6   F: -5446.218449595053244   dF: -8.895e-10   |Residual|: 1.982e-05   |deigs|: 9.171e-07  t[s]:   6191.23
+	FillingsUpdate:  mu: +0.615496731  nElectrons: 513.000000
+SCF: Cycle:  7   F: -5446.218449595284255   dF: -2.310e-10   |Residual|: 1.323e-05   |deigs|: 8.274e-08  t[s]:   6211.83
+SCF: Converged (|Delta E|<1.000000e-08 for 2 iters).
+
+Setting wave functions to eigenvectors of Hamiltonian
+
+# Ionic positions in lattice coordinates:
+ion Cu   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Cu   0.000149851544998   0.000054670076581   0.333378198135227 1
+ion Cu   0.000081404605123   0.000055168405063   0.666734732781237 1
+ion Cu   0.000102014017815   0.333340597705823   0.000052354710704 1
+ion Cu   0.000126928644830   0.333364745779768   0.333386807398067 1
+ion Cu   0.000051610297792   0.333423270997497   0.666713970167930 1
+ion Cu   0.000138290547396   0.666640918731127   0.000105027746644 1
+ion Cu   0.000188028018100   0.666710611773391   0.333331426626021 1
+ion Cu   0.000140271654687   0.666681380714688   0.666716774161074 1
+ion Cu   0.333372132278450  -0.000003321963745   0.000093184530815 1
+ion Cu   0.333449643031008   0.000078583373507   0.333409030842903 1
+ion Cu   0.333418007416576   0.000024295989193   0.666746540140255 1
+ion Cu   0.333417875916691   0.333349663145484   0.000057920786023 1
+ion Cu   0.333432352840037   0.333433349784088   0.333292763211303 1
+ion Cu   0.333465994064490   0.333351177065425   0.666705589950121 1
+ion Cu   0.333520571207285   0.666641642127985   0.000033280277670 1
+ion Cu   0.333471603408536   0.666692847164171   0.333387086625493 1
+ion Cu   0.333384977541356   0.666660764567690   0.666793352993231 1
+ion Cu   0.666679126317429   0.000094560155177   0.000092851265141 1
+ion Cu   0.666801010157647   0.000218724915124   0.333350252670107 1
+ion Cu   0.666811277918576   0.000015476337837   0.666754479342278 1
+ion Cu   0.666739502184206   0.333497231469624  -0.000025940365974 1
+ion Cu   0.666778880375198   0.333384105389038   0.333348096062507 1
+ion Cu   0.666767431846945   0.333407661652034   0.666725094512194 1
+ion Cu   0.666837673657106   0.666698638397318  -0.000008328158780 1
+ion Cu   0.666822989709024   0.666762127861392   0.333473506056613 1
+ion Cu   0.666811989433022   0.666747556568925   0.666678706311344 1
+
+# Forces in Lattice coordinates:
+force Cu   0.001929570839508   0.001625800629911   0.001653021987680 0
+force Cu  -0.000434229790148  -0.000524894016432  -0.000306383143557 1
+force Cu  -0.000126482401780  -0.000385890301010  -0.000240043879909 1
+force Cu  -0.000031064736541  -0.000224770949365  -0.000214337446394 1
+force Cu  -0.000431029074400  -0.000008460708453   0.000008017766471 1
+force Cu   0.000746478526505  -0.000210392664638  -0.000093473646072 1
+force Cu  -0.000854244681840  -0.000009335353994  -0.000607038440034 1
+force Cu  -0.000188393042687   0.000550209716887   0.000444324903795 1
+force Cu   0.000052260134234   0.000163732834543  -0.000067422140157 1
+force Cu   0.000421030076505   0.000169851415584  -0.000116628977347 1
+force Cu  -0.000161065351498  -0.000774713920763  -0.000108849225281 1
+force Cu   0.000273860074941   0.000364110373020  -0.000184104085048 1
+force Cu  -0.000042242516870  -0.000195713690132  -0.000189987213129 1
+force Cu   0.000470733394535   0.000071473849760   0.001235530587889 1
+force Cu  -0.000289420131350  -0.000385744418479  -0.000279462966377 1
+force Cu  -0.000474120288678   0.000795146940655  -0.000021836512565 1
+force Cu   0.000722230892058   0.000510078194382   0.000364708878820 1
+force Cu   0.000693037434992   0.000627391050437  -0.000339666336572 1
+force Cu   0.000181631899523  -0.000582522275608  -0.000124343857552 1
+force Cu  -0.000972814352084  -0.001713178123849  -0.000578138786106 1
+force Cu  -0.000461923227789   0.000213631148919  -0.000273730926225 1
+force Cu   0.000122447534265  -0.000874853370268   0.000149732583899 1
+force Cu   0.000779692205724   0.001222931063576   0.001029642849615 1
+force Cu  -0.000461225093993  -0.000482940927827  -0.000552567284180 1
+force Cu   0.000325113141334   0.000919218649087   0.001374752704504 1
+force Cu  -0.001466008648035  -0.001096697496345  -0.001716074798100 1
+force Cu  -0.000272721452651   0.000297965799471  -0.000200006407709 1
+
+# Energy components:
+   Eewald =    -3313.2860139842814533
+       EH =     1932.9622835010411563
+     Eloc =    -5097.2308147782759988
+      Enl =      991.0230248922000555
+      Exc =     -518.5239247780248206
+ Exc_core =        1.2129353246742864
+       KE =      557.7044321719681648
+-------------------------------------
+     Etot =    -5446.1380776506975963
+       TS =        0.0803719445863586
+-------------------------------------
+        F =    -5446.2184495952842553
+
+IonicMinimize: Iter:  14  F: -5446.218449595284255  |grad|_K:  3.964e-05  alpha:  1.000e+00  linmin: -6.933e-01  t[s]:   6217.01
+IonicMinimize: Converged (|grad|_K<1.000000e-04).
+
+#--- Lowdin population analysis ---
+# oxidation-state Cu +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077 +0.077
+
+
+Dumping '/data/rc652/Cu/ion/Cu_ion.Ecomponents' ... done
+End date and time: Sat Jul 13 18:13:50 2024  (Duration: 0-1:43:39.71)
+Done!

@@ -1,0 +1,488 @@
+--------------------------------------------------------------------------
+Initialization of PSM library failed.
+
+  Error: PSM is in the finalized state
+--------------------------------------------------------------------------
+
+*************** JDFTx 1.7.0  ***************
+
+Start date and time: Fri Oct 13 07:39:29 2023
+Executable jdftx with command-line: -i /home/cam559/Valla_project/Zr/Zr16O_oct.in
+Running on hosts (process indices):  node3103.physics.cornell.edu (0-31)
+Divided in process groups (process indices):  0 (0)  1 (1)  2 (2)  3 (3)  4 (4)  5 (5)  6 (6)  7 (7)  8 (8)  9 (9)  10 (10)  11 (11)  12 (12)  13 (13)  14 (14)  15 (15)  16 (16)  17 (17)  18 (18)  19 (19)  20 (20)  21 (21)  22 (22)  23 (23)  24 (24)  25 (25)  26 (26)  27 (27)  28 (28)  29 (29)  30 (30)  31 (31)
+Resource initialization completed at t[s]:      0.00
+Run totals: 32 processes, 32 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+coords-type Cartesian
+core-overlap-check vector
+coulomb-interaction Periodic
+davidson-band-ratio 1.1
+dump End Ecomponents
+dump-name Zr16O_oct.$VAR
+elec-cutoff 20 100
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBE
+elec-smearing Fermi 0.004
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+exchange-regularization WignerSeitzTruncated
+fluid None
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42 \
+	tauNuc 343133 \
+	poleEl 15 7 1
+forces-output-coords Positions
+initial-state Zr16O_oct.$VAR
+ion Zr   0.000000000000000   0.000000000000000   0.000000000000000 1
+ion Zr   0.000000000000000   3.526222000000000   4.863210000000000 1
+ion Zr   0.000000000000000   0.000000000000000   9.726420000000001 1
+ion Zr   0.000000000000000   3.526222000000000  14.589631000000001 1
+ion Zr  -3.053797000000000   5.289332000000001   0.000000000000000 1
+ion Zr  -3.053797000000000   8.815554000000002   4.863210000000000 1
+ion Zr  -3.053797000000000   5.289332000000001   9.726420000000001 1
+ion Zr  -3.053797000000000   8.815554000000002  14.589631000000001 1
+ion Zr   6.107595000000002   0.000000000000000   0.000000000000000 1
+ion Zr   6.107595000000002   3.526222000000000   4.863210000000000 1
+ion Zr   6.107595000000002   0.000000000000000   9.726420000000001 1
+ion Zr   6.107595000000002   3.526222000000000  14.589631000000001 1
+ion Zr   3.053797000000001   5.289332000000001   0.000000000000000 1
+ion Zr   3.053796999999999   8.815554000000002   4.863210000000000 1
+ion Zr   3.053797000000001   5.289332000000001   9.726420000000001 1
+ion Zr   3.053796999999999   8.815554000000002  14.589631000000001 1
+ion O   2.054762000000001   4.090627000000000   4.882107000000000 1
+ion-species GBRV/$ID_pbe.uspp
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0.0001 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.000000000000   0.000000000000   0.000000000000  1.00000000000000
+kpoint-folding 6 6 6 
+latt-move-scale 1 1 1
+latt-scale 1 1 1 
+lattice  \
+	  12.215190000000000   -6.107595000000000    0.000000000000000  \
+	   0.000000000000000   10.578665000000001    0.000000000000000  \
+	   0.000000000000000    0.000000000000000   19.452840999999999 
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          30 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.004
+pcm-variant GLSSA13
+spintype no-spin
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+
+
+
+---------- Setting up symmetries ----------
+
+Found 24 point-group symmetries of the bravais lattice
+Found 1 space-group symmetries with basis
+Applied RMS atom displacement 0 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[      12.2152     -6.10759            0  ]
+[            0      10.5787            0  ]
+[            0            0      19.4528  ]
+unit cell volume = 2513.7
+G =
+[   0.514375   0.296974         -0  ]
+[          0   0.593949          0  ]
+[          0         -0   0.322996  ]
+Minimum fftbox size, Smin = [  56  56  88  ]
+Chosen fftbox size, S = [  56  56  90  ]
+
+---------- Initializing tighter grid for wavefunction operations ----------
+R = 
+[      12.2152     -6.10759            0  ]
+[            0      10.5787            0  ]
+[            0            0      19.4528  ]
+unit cell volume = 2513.7
+G =
+[   0.514375   0.296974         -0  ]
+[          0   0.593949          0  ]
+[          0         -0   0.322996  ]
+Minimum fftbox size, Smin = [  52  52  80  ]
+Chosen fftbox size, S = [  54  54  80  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBE GGA exchange.
+Initalized PBE GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0
+
+Reading pseudopotential file '/home/cam559/JDFTx/build/pseudopotentials/GBRV/zr_pbe.uspp':
+  Title: Zr.  Created by USPP 7.3.6 on 14-9-2013
+  Reference state energy: -49.308156.  12 valence electrons in orbitals:
+    |400>  occupation: 2  eigenvalue: -2.002953
+    |410>  occupation: 6  eigenvalue: -1.192957
+    |420>  occupation: 2  eigenvalue: -0.132269
+    |500>  occupation: 2  eigenvalue: -0.163143
+    |510>  occupation: 0  eigenvalue: -0.053997
+  lMax: 2  lLocal: 3  QijEcut: 5
+  6 projectors sampled on a log grid with 625 points:
+    l: 0  eig: -2.002953  rCut: 1.8
+    l: 0  eig: -0.132269  rCut: 1.8
+    l: 1  eig: -1.192956  rCut: 2
+    l: 1  eig: 0.150000  rCut: 2
+    l: 2  eig: -0.163145  rCut: 2.2
+    l: 2  eig: 0.150000  rCut: 2.2
+  Partial core density with radius 1.2
+  Transforming core density to a uniform radial grid of dG=0.02 with 1619 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1619 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1619 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 2.20 bohrs.
+
+Reading pseudopotential file '/home/cam559/JDFTx/build/pseudopotentials/GBRV/o_pbe.uspp':
+  Title: O.  Created by USPP 7.3.6 on 3-2-2014
+  Reference state energy: -15.894388.  6 valence electrons in orbitals:
+    |200>  occupation: 2  eigenvalue: -0.878823
+    |210>  occupation: 4  eigenvalue: -0.332131
+  lMax: 2  lLocal: 2  QijEcut: 6
+  5 projectors sampled on a log grid with 511 points:
+    l: 0  eig: -0.878823  rCut: 1.25
+    l: 0  eig: 0.000000  rCut: 1.25
+    l: 1  eig: -0.332132  rCut: 1.25
+    l: 1  eig: 0.000000  rCut: 1.25
+    l: 2  eig: 1.000000  rCut: 1.25
+  Partial core density with radius 0.7
+  Transforming core density to a uniform radial grid of dG=0.02 with 1619 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1619 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1619 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.25 bohrs.
+
+Initialized 2 species with 17 total atoms.
+
+WARNING: Zr #1 and O #0 are closer than the vector-sum of their core radii.
+WARNING: O #0 and Zr #1 are closer than the vector-sum of their core radii.
+
+Atoms are too close, have overlapping pseudopotential cores.
+
+End date and time: Fri Oct 13 07:39:30 2023  (Duration: 0-0:00:00.32)
+Failed.
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[5658,1],11]
+  Exit code:    1
+--------------------------------------------------------------------------
+
+*************** JDFTx 1.7.0  ***************
+
+Start date and time: Fri Oct 13 12:21:09 2023
+Executable jdftx with command-line: -i /home/cam559/Valla_project/Zr/Zr16O_oct.in -o /home/cam559/Valla_project/Zr/Zr16O_oct.out
+Running on hosts (process indices):  node3103.physics.cornell.edu (0)
+Divided in process groups (process indices):  0 (0)
+Resource initialization completed at t[s]:      0.00
+Run totals: 1 processes, 16 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+coords-type Cartesian
+core-overlap-check vector
+coulomb-interaction Periodic
+davidson-band-ratio 1.1
+dump End Ecomponents
+dump-name Zr16O_oct.$VAR
+elec-cutoff 20 100
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBE
+elec-smearing Fermi 0.004
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+exchange-regularization WignerSeitzTruncated
+fluid None
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42 \
+	tauNuc 343133 \
+	poleEl 15 7 1
+forces-output-coords Positions
+initial-state Zr16O_oct.$VAR
+ion Zr   0.000000000000000   0.000000000000000   0.000000000000000 1
+ion Zr   0.000000000000000   3.526222000000000   4.863210000000000 1
+ion Zr   0.000000000000000   0.000000000000000   9.726420000000001 1
+ion Zr   0.000000000000000   3.526222000000000  14.589631000000001 1
+ion Zr  -3.053797000000000   5.289332000000001   0.000000000000000 1
+ion Zr  -3.053797000000000   8.815554000000002   4.863210000000000 1
+ion Zr  -3.053797000000000   5.289332000000001   9.726420000000001 1
+ion Zr  -3.053797000000000   8.815554000000002  14.589631000000001 1
+ion Zr   6.107595000000002   0.000000000000000   0.000000000000000 1
+ion Zr   6.107595000000002   3.526222000000000   4.863210000000000 1
+ion Zr   6.107595000000002   0.000000000000000   9.726420000000001 1
+ion Zr   6.107595000000002   3.526222000000000  14.589631000000001 1
+ion Zr   3.053797000000001   5.289332000000001   0.000000000000000 1
+ion Zr   3.053796999999999   8.815554000000002   4.863210000000000 1
+ion Zr   3.053797000000001   5.289332000000001   9.726420000000001 1
+ion Zr   3.053796999999999   8.815554000000002  14.589631000000001 1
+ion O   4.090627000000000   2.054762000000001   4.882107000000000 1
+ion-species GBRV/$ID_pbe.uspp
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0.0001 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.000000000000   0.000000000000   0.000000000000  1.00000000000000
+kpoint-folding 6 6 6 
+latt-move-scale 1 1 1
+latt-scale 1 1 1 
+lattice  \
+	  12.215190000000000   -6.107595000000000    0.000000000000000  \
+	   0.000000000000000   10.578665000000001    0.000000000000000  \
+	   0.000000000000000    0.000000000000000   19.452840999999999 
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          30 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.004
+pcm-variant GLSSA13
+spintype no-spin
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+
+
+
+---------- Setting up symmetries ----------
+
+Found 24 point-group symmetries of the bravais lattice
+Found 1 space-group symmetries with basis
+Applied RMS atom displacement 0 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[      12.2152     -6.10759            0  ]
+[            0      10.5787            0  ]
+[            0            0      19.4528  ]
+unit cell volume = 2513.7
+G =
+[   0.514375   0.296974         -0  ]
+[          0   0.593949          0  ]
+[          0         -0   0.322996  ]
+Minimum fftbox size, Smin = [  56  56  88  ]
+Chosen fftbox size, S = [  56  56  90  ]
+
+---------- Initializing tighter grid for wavefunction operations ----------
+R = 
+[      12.2152     -6.10759            0  ]
+[            0      10.5787            0  ]
+[            0            0      19.4528  ]
+unit cell volume = 2513.7
+G =
+[   0.514375   0.296974         -0  ]
+[          0   0.593949          0  ]
+[          0         -0   0.322996  ]
+Minimum fftbox size, Smin = [  52  52  80  ]
+Chosen fftbox size, S = [  54  54  80  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBE GGA exchange.
+Initalized PBE GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0
+
+Reading pseudopotential file '/home/cam559/JDFTx/build/pseudopotentials/GBRV/zr_pbe.uspp':
+  Title: Zr.  Created by USPP 7.3.6 on 14-9-2013
+  Reference state energy: -49.308156.  12 valence electrons in orbitals:
+    |400>  occupation: 2  eigenvalue: -2.002953
+    |410>  occupation: 6  eigenvalue: -1.192957
+    |420>  occupation: 2  eigenvalue: -0.132269
+    |500>  occupation: 2  eigenvalue: -0.163143
+    |510>  occupation: 0  eigenvalue: -0.053997
+  lMax: 2  lLocal: 3  QijEcut: 5
+  6 projectors sampled on a log grid with 625 points:
+    l: 0  eig: -2.002953  rCut: 1.8
+    l: 0  eig: -0.132269  rCut: 1.8
+    l: 1  eig: -1.192956  rCut: 2
+    l: 1  eig: 0.150000  rCut: 2
+    l: 2  eig: -0.163145  rCut: 2.2
+    l: 2  eig: 0.150000  rCut: 2.2
+  Partial core density with radius 1.2
+  Transforming core density to a uniform radial grid of dG=0.02 with 1619 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1619 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1619 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 2.20 bohrs.
+
+Reading pseudopotential file '/home/cam559/JDFTx/build/pseudopotentials/GBRV/o_pbe.uspp':
+  Title: O.  Created by USPP 7.3.6 on 3-2-2014
+  Reference state energy: -15.894388.  6 valence electrons in orbitals:
+    |200>  occupation: 2  eigenvalue: -0.878823
+    |210>  occupation: 4  eigenvalue: -0.332131
+  lMax: 2  lLocal: 2  QijEcut: 6
+  5 projectors sampled on a log grid with 511 points:
+    l: 0  eig: -0.878823  rCut: 1.25
+    l: 0  eig: 0.000000  rCut: 1.25
+    l: 1  eig: -0.332132  rCut: 1.25
+    l: 1  eig: 0.000000  rCut: 1.25
+    l: 2  eig: 1.000000  rCut: 1.25
+  Partial core density with radius 0.7
+  Transforming core density to a uniform radial grid of dG=0.02 with 1619 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1619 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1619 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.25 bohrs.
+
+Initialized 2 species with 17 total atoms.
+
+WARNING: Zr #9 and O #0 are closer than the vector-sum of their core radii.
+WARNING: O #0 and Zr #9 are closer than the vector-sum of their core radii.
+
+Atoms are too close, have overlapping pseudopotential cores.
+
+End date and time: Fri Oct 13 12:21:09 2023  (Duration: 0-0:00:00.39)
+Failed.

@@ -1,0 +1,38 @@
+lattice \
+8.617151  -4.308576  0.000000  \
+0.000000  7.462672  0.000000  \
+0.000000  0.000000  13.530439  
+
+dump-name Be16O_oct.$VAR
+elec-cutoff 20 100
+kpoint-folding 6 6 6
+elec-smearing Fermi 0.004
+
+coords-type cartesian
+ion Be 0.010000 0.000000 0.000000 	 1
+ion Be 0.000000 2.487557 3.382610 	 1
+ion Be 0.000000 0.001000 6.765220 	 1
+ion Be 0.000000 2.487557 10.147829 	 1
+ion Be -2.154288 3.731336 0.010000 	 1
+ion Be -2.154288 6.218893 3.382610 	 1
+ion Be -2.144288 3.731336 6.765220 	 1
+ion Be -2.154288 6.218893 10.147829 	 1
+ion Be 4.308576 0.000000 0.000000 	 1
+ion Be 4.308576 2.487557 3.382610 	 1
+ion Be 4.308576 0.000000 6.765220 	 1
+ion Be 4.308576 2.497557 10.147829 	 1
+ion Be 2.154288 3.731336 0.010000 	 1
+ion Be 2.154288 6.218893 3.382610 	 1
+ion Be 2.154288 3.731336 6.755220 	 1
+ion Be 2.154288 6.118893 10.147829 	 1
+ion O 2.1543 1.2438 1.6913 1
+
+ion-species GBRV/$ID_pbe.uspp
+
+coulomb-interaction periodic
+
+ionic-minimize \ 
+    nIterations 50 \ 
+    energyDiffThreshold 1e-6 \ 
+
+dump End Ecomponents

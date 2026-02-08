@@ -1,0 +1,38 @@
+lattice \
+11.149384  -5.574692  0.000000  \
+0.000000  9.655650  0.000000  \
+0.000000  0.000000  17.687837  
+
+dump-name Ti16.$VAR
+initial-state Ti16.$VAR
+elec-cutoff 20 100
+kpoint-folding 6 6 6
+elec-smearing Fermi 0.004
+
+coords-type cartesian
+ion Ti 0.000000 0.000000 0.000000 	 1
+ion Ti 0.000000 3.218550 4.421959 	 1
+ion Ti 0.000000 0.000000 8.843918 	 1
+ion Ti 0.000000 3.218550 13.265877 	 1
+ion Ti -2.787346 4.827825 0.000000 	 1
+ion Ti -2.787346 8.046375 4.421959 	 1
+ion Ti -2.787346 4.827825 8.843918 	 1
+ion Ti -2.787346 8.046375 13.265877 	 1
+ion Ti 5.574692 0.000000 0.000000 	 1
+ion Ti 5.574692 3.218550 4.421959 	 1
+ion Ti 5.574692 0.000000 8.843918 	 1
+ion Ti 5.574692 3.218550 13.265877 	 1
+ion Ti 2.787346 4.827825 0.000000 	 1
+ion Ti 2.787346 8.046375 4.421959 	 1
+ion Ti 2.787346 4.827825 8.843918 	 1
+ion Ti 2.787346 8.046375 13.265877 	 1
+
+ion-species GBRV/$ID_pbe.uspp
+
+coulomb-interaction periodic
+
+lattice-minimize \ 
+    nIterations 30 \ 
+    energyDiffThreshold 1e-6 \ 
+
+dump End Ecomponents

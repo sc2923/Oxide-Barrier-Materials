@@ -1,0 +1,40 @@
+lattice \
+12.472192  0.000000  0.000000  \
+0.000000  12.472192  0.000000  \
+0.000000  0.000000  12.472192  
+
+dump-name Nb16O_tet.$VAR
+initial-state Nb16O_tet.$VAR
+elec-cutoff 20 100
+kpoint-folding 6 6 6
+elec-smearing Fermi 0.004
+
+coords-type cartesian
+ion Nb 0.000000 0.000000 0.000000 	 1
+ion Nb 3.118048 3.118048 3.118048 	 1
+ion Nb 0.000000 0.000000 6.236096 	 1
+ion Nb 3.118048 3.118048 9.354144 	 1
+ion Nb 0.000000 6.236096 0.000000 	 1
+ion Nb 3.118048 9.354144 3.118048 	 1
+ion Nb 0.000000 6.236096 6.236096 	 1
+ion Nb 3.118048 9.354144 9.354144 	 1
+ion Nb 6.236096 0.000000 0.000000 	 1
+ion Nb 9.354144 3.118048 3.118048 	 1
+ion Nb 6.236096 0.000000 6.236096 	 1
+ion Nb 9.354144 3.118048 9.354144 	 1
+ion Nb 6.236096 6.236096 0.000000 	 1
+ion Nb 9.354144 9.354144 3.118048 	 1
+ion Nb 6.236096 6.236096 6.236096 	 1
+ion Nb 9.354144 9.354144 9.354144 	 1
+ion O 1.577921 3.136945 0.018897 	 1
+
+ion-species GBRV/$ID_pbe.uspp
+
+coulomb-interaction periodic
+
+lattice-minimize \ 
+    nIterations 30 \ 
+    energyDiffThreshold 1e-6 \ 
+
+
+dump End Ecomponents

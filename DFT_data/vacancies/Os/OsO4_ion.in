@@ -1,0 +1,61 @@
+include /data/rc652/OsO4/lat/OsO4_lat.lattice
+
+coords-type lattice
+
+ion	Os	0.34804	0.36319	0.23647	1
+ion	Os	0.11858	0.14705	0.74638	1
+ion	O	0.43299	0.03897	0.20433	1
+ion	O	0.03307	0.20687	0.29297	1
+ion	O	0.1025	0.4858	0.81524	1
+ion	O	0.46558	0.26828	0.6843	1
+ion	O	0.20492	0.39997	0.43415	1
+ion	O	0.30799	0.34092	0.07777	1
+ion	O	0.29882	0.09824	0.56781	1
+ion	O	0.16874	0.15258	0.93549	1
+ion	Os	0.34718	0.87532	0.24247	1
+ion	Os	0.13433	0.63732	0.74721	1
+ion	O	0.43629	0.53842	0.19288	1
+ion	O	0.03923	0.7177	0.32008	1
+ion	O	0.06127	0.97768	0.81329	1
+ion	O	0.46618	0.79189	0.69006	1
+ion	O	0.20114	0.89038	0.42852	1
+ion	O	0.32758	0.83066	0.08844	1
+ion	O	0.30209	0.60422	0.59474	1
+ion	O	0.17103	0.65422	0.93563	1
+ion	Os	0.88012	0.36839	0.2467	1
+ion	Os	0.64717	0.11851	0.74964	1
+ion	O	0.91992	0.00613	0.18981	1
+ion	O	0.53581	0.25034	0.31285	1
+ion	O	0.58641	0.47938	0.7959	1
+ion	O	0.94796	0.28253	0.68321	1
+ion	O	0.70653	0.40615	0.41936	1
+ion	O	0.82258	0.371	0.07799	1
+ion	O	0.78809	0.12942	0.58909	1
+ion	O	0.68041	0.16093	0.92311	1
+ion	Os	0.85819	0.86986	0.24682	1
+ion	Os	0.62531	0.61941	0.74592	1
+ion	O	0.9272	0.52768	0.18459	1
+ion	O	0.55403	0.71154	0.28903	1
+ion	O	0.58405	0.97671	0.81345	1
+ion	O	0.94454	0.77554	0.6753	1
+ion	O	0.70019	0.91323	0.43402	1
+ion	O	0.80879	0.85691	0.06655	1
+ion	O	0.8045	0.5894	0.57541	1
+ion	O	0.67999	0.64922	0.92324	1
+
+kpoint-folding 4 4 4
+kpoint 0.5 0.5 0.5  1.
+
+ion-species GBRV/$ID_pbesol.uspp
+elec-ex-corr gga-PBEsol
+elec-cutoff 20 100
+elec-smearing Fermi 0.01
+electronic-SCF
+coulomb-interaction periodic
+
+ionic-minimize \ 
+    nIterations 50 \ 
+    energyDiffThreshold 1e-6 \ 
+
+dump-name /data/rc652/OsO4/ion/OsO4_ion.$VAR
+dump End Ecomponents
