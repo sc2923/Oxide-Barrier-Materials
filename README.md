@@ -76,6 +76,7 @@ This repository also includes two Jupyter notebooks that demonstrate analysis wo
   - matplotlib
   - scikit-learn
   - tqdm
+- To get this to work, you must import your Materials Project id (which can be obtained here: https://next-gen.materialsproject.org/api) into the first line of the second cell
 - Imports metals from the Materials Project database and calculates the lattice mismatch percent from niobium
 - Imports the most stable oxide for  each metal, and plots the oxide formation energy vs the lattice mismatch percent
 - Plots these values for the metals along with their logistic predictions
