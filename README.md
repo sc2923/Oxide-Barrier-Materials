@@ -61,6 +61,7 @@ This repository also includes two Jupyter notebooks that demonstrate analysis wo
   - scikit-learn
   - colour
   - scipy
+  - ipympl
 - Plots diffusion barrier energies
 - Plots progression of DFT and experimental data acquisition
 - Performs logistic regression model at each iteration of data acquisition
