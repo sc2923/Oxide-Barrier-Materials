@@ -6,6 +6,21 @@ This repository contains the first-principles density functional theory (DFT) da
 
 The preprint is available at https://arxiv.org/abs/2510.02544. The data provided here support the defect-energetics descriptors used in the theory–experiment–machine-learning workflow presented in the manuscript.
 
+All first-principles calculations were performed using the **JDFTx** software package:
+
+> **JDFTx — Joint Density Functional Theory**
+>  
+> https://jdftx.org
+
+JDFTx is an open-source plane-wave DFT code designed for high-performance electronic-structure calculations, including defect energetics and surface/interface systems.
+
+Key computational parameters (exchange–correlation functional, k-point sampling, energy cutoffs, supercell sizes, etc.) are documented within the individual input and output files.
+
+This repository contains **only the theoretical DFT data**.  
+The corresponding **experimental characterization data (including XPS measurements)** are archived separately on Zenodo (https://zenodo.org/records/17665093) and are cited in the manuscript.
+
+Together, the GitHub and Zenodo repositories provide the complete dataset supporting the findings of the study.
+
 ---
 
 ## Contents of This Repository
@@ -50,29 +65,6 @@ This repository also includes two Jupyter notebooks that demonstrate analysis wo
 - Imports metals from the Materials Project database and calculates the lattice mismatch percent from niobium
 - Imports the most stable oxide for  each metal, and plots the oxide formation energy vs the lattice mismatch percent
 - Plots these values for the metals along with their logistic predictions
-
----
-
-## Computational Details
-
-All first-principles calculations were performed using the **JDFTx** software package:
-
-> **JDFTx — Joint Density Functional Theory**
->  
-> https://jdftx.org
-
-JDFTx is an open-source plane-wave DFT code designed for high-performance electronic-structure calculations, including defect energetics and surface/interface systems.
-
-Key computational parameters (exchange–correlation functional, k-point sampling, energy cutoffs, supercell sizes, etc.) are documented within the individual input and output files.
-
----
-
-## Relation to Experimental Data
-
-This repository contains **only the theoretical DFT data**.  
-The corresponding **experimental characterization data (including XPS measurements)** are archived separately on Zenodo and are cited in the manuscript.
-
-Together, the GitHub and Zenodo repositories provide the complete dataset supporting the findings of the study.
 
 ---
 
