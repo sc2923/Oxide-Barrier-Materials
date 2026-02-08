@@ -55,12 +55,27 @@ This repository includes:
 This repository also includes two Jupyter notebooks that demonstrate analysis workflows. To get these to work, download them along with the `DFT_Data - Input.csv` cav file also in the repository, and run them cell by cell.
 
 ### `logistic_regression.ipynb`
+- Required Dependencies
+  - numpy
+  - matplotlib
+  - scikit-learn
+  - colour
+  - scipy
 - Plots diffusion barrier energies
 - Plots progression of DFT and experimental data acquisition
 - Performs logistic regression model at each iteration of data acquisition
 - Plots the formation energy as a third axis to demonstrate correlation
 
 ### `lattice_mismatch.ipynb`
+- Required dependencies
+  - mp-api
+  - emmet-core
+  - pymatgen
+  - pandas
+  - numpy
+  - matplotlib
+  - scikit-learn
+  - tqdm
 - Imports metals from the Materials Project database and calculates the lattice mismatch percent from niobium
 - Imports the most stable oxide for  each metal, and plots the oxide formation energy vs the lattice mismatch percent
 - Plots these values for the metals along with their logistic predictions
