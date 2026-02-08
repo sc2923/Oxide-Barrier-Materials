@@ -45,9 +45,8 @@ This repository includes:
 - These files enable full reproducibility of the reported defect-formation-energy calculations, when used with the JDFTx software available at https://jdftx.org.
 
 ### 2. Processed Defect Energetics Data
-- Tabulated defect formation energies extracted from the raw DFT outputs
-- CSV files used directly in the machine-learning analysis and descriptor maps
-- Data formatted for ease of reuse and inspection
+- Tabulated defect formation energies `DFT_Data - input.csv` extracted from the raw DFT outputs
+  - this CSV file is used directly in the machine-learning analysis and descriptor maps
 
 ---
 
