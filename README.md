@@ -17,7 +17,7 @@ JDFTx is an open-source plane-wave DFT code designed for high-performance electr
 Key computational parameters (exchange–correlation functional, k-point sampling, energy cutoffs, supercell sizes, etc.) are documented within the individual input and output files.
 
 This repository contains **only the theoretical DFT data**.  
-The corresponding **experimental characterization data (including XPS measurements)** are archived separately on Zenodo (https://zenodo.org/records/17665093) and are cited in the manuscript.
+The corresponding **experimental characterization data (including XPS measurements)** are archived separately on Zenodo (https://zenodo.org/records/17665093) and a citation is provided in the manuscript.
 
 Together, the GitHub and Zenodo repositories provide the complete dataset supporting the findings of the study.
 
@@ -31,8 +31,8 @@ This repository includes:
 - Complete DFT input and output files (`DFT_data` folder) for all calculations reported in the manuscript
 - Separated in interstitial (`DFT_data/interstitials` folder) and vacancy (`DFT_data/vacancies` folder) calculations
   - interstitial calculation folders (`DFT_data/interstitials/Xx` folder where `Xx` is the element name of the host metal) contain the following files:
-    - `Xx_ion.in`         - input file for the relaxation of the supercell of the metal
-    - `Xx_ion.out`        - output file for the relaxation of the supercell of the metal
+    - `Xx_ion.in`         - input file for the relaxation of the reference supercell of the bulk metal
+    - `Xx_ion.out`        - output file for the relaxation of the reference supercell of the bulk metal
     - `Xx_oct.in`         - input file for the relaxation of the supercell of the metal with an octohedral oxygen interstitial
     - `Xx_oct.out`        - output file for the relaxation of the supercell of the metal with an octohedral oxygen interstitial
     - `Xx_tet.in`         - input file for the relaxation of the supercell of the metal with an tetrahedral oxygen interstitial
