@@ -42,7 +42,7 @@ This repository includes:
     - `XxO_ion.out`       - output file for the relaxation of the reference supercell for the bulk metal oxide
     - `XxO_vac.in`        - input file for the relaxation of the supercell of the metal oxide with an oxygen vacancy
     - `XxO_vac.out`       - output file for the relaxation of the supercell of the metal oxide with an oxygen vacancy
-- These files enable full reproducibility of the reported defect-formation-energy calculations.
+- These files enable full reproducibility of the reported defect-formation-energy calculations, when used with the JDFTx software available at https://jdftx.org.
 
 ### 2. Processed Defect Energetics Data
 - Tabulated defect formation energies extracted from the raw DFT outputs
