@@ -6,7 +6,7 @@ This repository contains the first-principles density functional theory (DFT) da
 
 The preprint is available at https://arxiv.org/abs/2510.02544. The data provided here support the defect-energetics descriptors used in the theory–experiment–machine-learning workflow presented in the manuscript.
 
-All first-principles calculations were performed using the **JDFTx** software package:
+All first-principles calculations were performed using the **JDFTx** software package (version 1.7.0):
 
 > **JDFTx — Joint Density Functional Theory**
 >  
