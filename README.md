@@ -52,7 +52,7 @@ This repository includes:
 
 ## Jupyter Notebooks
 
-This repository also includes two Jupyter notebooks that demonstrate analysis workflows. To get these to work, download them along with the `DFT_Data - Input.csv` cav file also in the repository, and run them cell by cell.
+This repository also includes two Jupyter notebooks that demonstrate analysis workflows. To get these to work, download them along with the `DFT_Data - Input.csv` csv file also in the repository, and run them cell by cell.
 
 ### `logistic_regression.ipynb`
 - Required Dependencies
